@@ -1,9 +1,57 @@
+import type { ReactNode } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { trip } from '@/trip'
 import type { NamedPlace, StatusId, Trip } from '@/types/trip'
 
 const urgentStayIds = new Set(['tokyo-hotel', 'nozawa-hotel'])
+const contactPattern =
+  /([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|\+81[\d\- ]{8,}\d)/g
+
+function telHref(phone: string) {
+  return `tel:${phone.replace(/(?!^\+)\D/g, '')}`
+}
+
+function contactClassName() {
+  return 'text-sm text-zinc-600 underline-offset-2 hover:underline'
+}
+
+function linkedNote(text: string) {
+  const nodes: ReactNode[] = []
+  let last = 0
+  let key = 0
+  for (const match of text.matchAll(contactPattern)) {
+    const value = match[0]
+    const start = match.index ?? 0
+    if (start > last) nodes.push(text.slice(last, start))
+    nodes.push(
+      value.includes('@') ? (
+        <a key={key} href={`mailto:${value}`} className={contactClassName()}>
+          {value}
+        </a>
+      ) : (
+        <a key={key} href={telHref(value)} className={contactClassName()}>
+          {value}
+        </a>
+      ),
+    )
+    key += 1
+    last = start + value.length
+  }
+  if (last < text.length) nodes.push(text.slice(last))
+  return nodes
+}
+
+function displayNote(note: string, skip: string[]) {
+  let text = note
+    .replace(/\bAVAILABLE\.\s*/, '')
+    .replace(/満室/g, 'sold out')
+    .replace(/ Not booked\.$/, '')
+  for (const token of skip) {
+    text = text.replaceAll(token, '')
+  }
+  return text.replace(/\s{2,}/g, ' ').replace(/\s+\./g, '.').trim()
+}
 
 function statusLabel(status: StatusId) {
   return trip.statusLegend.find((item) => item.id === status)?.label ?? status
@@ -25,29 +73,41 @@ function daysByRoute(days: Trip['days'], stops: Trip['route']['stops']) {
 }
 
 function PlaceLine({ place }: { place: NamedPlace }) {
+  const note = place.note
+    ? displayNote(place.note, [place.email, place.phone].filter(Boolean) as string[])
+    : ''
+  const available = Boolean(place.note?.includes('AVAILABLE'))
+
   return (
     <li className="space-y-1 py-3">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        {place.url ? (
-          <a
-            href={place.url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium underline-offset-2 hover:underline"
-          >
-            {place.name}
-          </a>
-        ) : (
-          <p className="text-sm font-medium">{place.name}</p>
-        )}
-        {place.email ? (
-          <a
-            href={`mailto:${place.email}`}
-            className="text-sm text-zinc-600 underline-offset-2 hover:underline"
-          >
-            {place.email}
-          </a>
-        ) : null}
+        <div className="flex flex-wrap items-baseline gap-2">
+          {place.url ? (
+            <a
+              href={place.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium underline-offset-2 hover:underline"
+            >
+              {place.name}
+            </a>
+          ) : (
+            <p className="text-sm font-medium">{place.name}</p>
+          )}
+          {available ? <Badge variant="outline">Available</Badge> : null}
+        </div>
+        <div className="flex flex-wrap items-baseline justify-end gap-x-3">
+          {place.email ? (
+            <a href={`mailto:${place.email}`} className={contactClassName()}>
+              {place.email}
+            </a>
+          ) : null}
+          {place.phone ? (
+            <a href={telHref(place.phone)} className={contactClassName()}>
+              {place.phone}
+            </a>
+          ) : null}
+        </div>
       </div>
       {place.stayA || place.stayB ? (
         <div className="grid grid-cols-2 gap-x-4 text-sm text-zinc-600">
@@ -55,9 +115,7 @@ function PlaceLine({ place }: { place: NamedPlace }) {
           <p>{place.stayB}</p>
         </div>
       ) : null}
-      {place.note && place.note !== 'Not booked.' ? (
-        <p className="text-sm text-zinc-600">{place.note.replace(/ Not booked\.$/, '')}</p>
-      ) : null}
+      {note ? <p className="text-sm text-zinc-600">{linkedNote(note)}</p> : null}
     </li>
   )
 }
@@ -68,9 +126,7 @@ export default function App() {
   )
   const urgentStays = trip.checklist.filter((item) => urgentStayIds.has(item.id))
   const laterItems = trip.checklist.filter(
-    (item) =>
-      (item.priority === 'later' || item.id === 'hakutaka') &&
-      item.id !== 'ghibli-watch',
+    (item) => item.priority === 'later' || item.id === 'hakutaka',
   )
   const groups = daysByRoute(trip.days, trip.route.stops)
   const tokyoCandidates = trip.lodging.tokyo.candidates.filter(
@@ -165,11 +221,14 @@ export default function App() {
               </li>
             ))}
           </ul>
-          <p className="text-sm text-zinc-600">
-            Later
-            <span aria-hidden="true"> · </span>
-            {laterItems.map((item) => item.title).join(' · ')}
-          </p>
+          <div className="pt-4">
+            <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+              Later
+            </h2>
+            <p className="mt-2 text-sm text-zinc-600">
+              {laterItems.map((item) => item.title).join(' · ')}
+            </p>
+          </div>
         </section>
 
         <section className="mt-10 space-y-8">

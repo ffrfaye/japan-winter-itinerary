@@ -36,6 +36,7 @@ export type NamedPlace = {
   url?: string
   status?: StatusId
   email?: string
+  phone?: string
   stayA?: string
   stayB?: string
 }

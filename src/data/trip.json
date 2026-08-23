@@ -655,19 +655,22 @@
         },
         {
           "name": "Kamoshika",
-          "note": "Sold out 24 Dec–9 Jan. Waitlist. Also ask Bonbori and Tanuki in the same email. +81 269-85-3121. Not booked.",
+          "note": "Sold out 24 Dec–9 Jan. Waitlist. Also ask Bonbori and Tanuki in the same email. Not booked.",
           "email": "bookings@staynozawa.com",
+          "phone": "+81 269-85-3121",
           "status": "locked"
         }
       ],
       "halfBoard": [
         {
           "name": "Tokiwaya",
-          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. +81 269-85-3128. Not booked."
+          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. Not booked.",
+          "phone": "+81 269-85-3128"
         },
         {
           "name": "Kiriya",
-          "note": "No online NYE plans. Phone +81 269-85-2020. Not booked."
+          "note": "No online NYE plans. Not booked.",
+          "phone": "+81 269-85-2020"
         },
         {
           "name": "Shimataya",
