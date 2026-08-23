@@ -650,51 +650,46 @@
         },
         {
           "name": "Tamanegi House (Akari)",
-          "note": "Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. admin@akarihouse.jp",
-          "url": "https://www.akarihouse.jp/tamanegi-house"
+          "note": "Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. Not booked.",
+          "email": "admin@akarihouse.jp"
+        },
+        {
+          "name": "Kamoshika",
+          "note": "Sold out 24 Dec–9 Jan. Waitlist. Also ask Bonbori and Tanuki in the same email. +81 269-85-3121. Not booked.",
+          "email": "bookings@staynozawa.com",
+          "status": "locked"
         }
       ],
       "halfBoard": [
         {
-          "name": "Tokiwaya Ryokan",
-          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. +81 269-85-3128",
-          "url": "https://tokiwaya.jp/"
+          "name": "Tokiwaya",
+          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. +81 269-85-3128. Not booked."
         },
         {
-          "name": "Kiriya Ryokan",
-          "note": "No online NYE plans. Phone +81 269-85-2020.",
-          "url": "https://kiriya.jp/english/"
+          "name": "Kiriya",
+          "note": "No online NYE plans. Phone +81 269-85-2020. Not booked."
         },
         {
-          "name": "Nozawa View Hotel Shimataya",
-          "note": "No public calendar. Email view@nozawahospitality.com or res@nozawahospitality.com for 5 rooms half-board.",
-          "url": "https://nozawakanko.jp/"
+          "name": "Shimataya",
+          "note": "No public calendar. Ask for 5 rooms half-board. Also res@nozawahospitality.com. Not booked.",
+          "email": "view@nozawahospitality.com"
         }
       ],
       "closed": [
         {
           "name": "Stay Nozawa RoomBoss block",
           "note": "Kamoshika, Bonbori, Tanuki 4BR, Iroha, Dennojo, and MARU SUMI are blocked 24 Dec–6 Jan on RoomBoss. No instant-bookable whole house.",
-          "status": "locked",
-          "url": "https://www.staynozawa.com/all-accommodation"
-        },
-        {
-          "name": "Kamoshika Ski Lodge",
-          "note": "Sold out 24 Dec–9 Jan. Waitlist bookings@staynozawa.com / +81 269-85-3121. Ask Bonbori and Tanuki in the same email.",
-          "status": "locked",
-          "url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge"
+          "status": "locked"
         },
         {
           "name": "Nozawa Holidays chalets",
           "note": "Slopeside, Central 301, Villa, and Lodge Nagano sold out on Bookings247. 7-night minimum on the chalets anyway.",
-          "status": "locked",
-          "url": "https://www.nozawaholidays.com/"
+          "status": "locked"
         },
         {
-          "name": "Ryokan Sakaya",
+          "name": "Sakaya",
           "note": "Sold out NYE nights.",
-          "status": "locked",
-          "url": "https://www.ryokan-sakaya.co.jp/en.html"
+          "status": "locked"
         }
       ]
     }
