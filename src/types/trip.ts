@@ -35,6 +35,9 @@ export type NamedPlace = {
   note?: string
   url: string
   status?: StatusId
+  email?: string
+  stayA?: string
+  stayB?: string
 }
 
 export type ChecklistItem = {

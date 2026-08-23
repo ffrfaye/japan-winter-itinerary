@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Japan ski trip",
+    "title": "Japan · Winter 2026/27",
     "kicker": "A recommended winter",
     "japaneseTitle": "冬の旅",
     "seal": "雪",
@@ -13,9 +13,9 @@
     "cityBase": "Tokyo only",
     "airports": "HND / NRT — not yet chosen",
     "planningBanner": {
-      "eyebrow": "Locked · village NYE",
-      "title": "Route and village NYE are locked.",
-      "body": "Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–4 Jan (in 30 Dec, out 5 Jan, village NYE) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan HND/NRT. Full group skips Fukuoka. Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels. Lodging is not booked."
+      "eyebrow": "Dates locked",
+      "title": "Dates locked",
+      "body": "Village NYE in Nozawa. Hotels, headcount, airports, skis, and Ghibli are still open."
     }
   },
   "group": {
@@ -512,19 +512,19 @@
       "id": "uverworld",
       "status": "open",
       "title": "Fukuoka UVERworld — optional 1–2 people only",
-      "detail": "30 Dec concert is confirmed. Full group skips it. One or two people could peel off lightly and overnight in Fukuoka on the 30th. Same-night return is not realistic. There is also a 31 Dec show."
+      "detail": "Full group skips it. Optional 1–2 people only; overnight Fukuoka on the 30th. Same-night return is not realistic."
     },
     {
       "id": "lodging",
       "status": "open",
       "title": "Lodging is unbooked",
-      "detail": "No Tokyo hotel and no Nozawa property is held. Tokyo MIMARU shortlist is live. Nozawa: Kashmir House is available for 8 adults only; everything else is enquire, waitlist, or sold out for NYE. Do not treat any house as booked."
+      "detail": "Nothing is held. Tokyo MIMARU shortlist is live. Nozawa: Kashmir is available for 8 only."
     },
     {
       "id": "ghibli",
       "status": "open",
       "title": "Ghibli January 2027 days are unpublished",
-      "detail": "Do not claim tickets exist. Last year the museum closed 27 Dec 2025–2 Jan 2026. Lawson for January: 10 Dec 2026 at 10:00 JST."
+      "detail": "Do not claim tickets exist. Last year closed 27 Dec 2025–2 Jan 2026. Lawson: 10 Dec 2026, 10:00 JST."
     },
     {
       "id": "headcount-airport-gear",
@@ -595,32 +595,44 @@
       "candidates": [
         {
           "name": "MIMARU Tokyo Station East (recommended)",
-          "note": "Stay A 26 vacant / ¥345,519. Stay B 13 vacant / ¥261,702. 2-bed inventory, courier desk 07:00–22:00, no breakfast. tokyo-station-east@chm.cigr.co.jp",
-          "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/"
+          "note": "2-bed, courier 07:00–22:00, no breakfast. Not booked.",
+          "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+          "email": "tokyo-station-east@chm.cigr.co.jp",
+          "stayA": "26 vacant · ¥345,519",
+          "stayB": "13 vacant · ¥261,702"
         },
         {
           "name": "MIMARU Tokyo Hatchobori",
-          "note": "Stay A 37 vacant / ¥289,440. Stay B 25 vacant / ¥214,668. hatchobori@chm.cigr.co.jp",
-          "url": "https://mimaruhotels.com/en/hotel/hatchobori/"
+          "note": "Not booked.",
+          "url": "https://mimaruhotels.com/en/hotel/hatchobori/",
+          "email": "hatchobori@chm.cigr.co.jp",
+          "stayA": "37 vacant · ¥289,440",
+          "stayB": "25 vacant · ¥214,668"
         },
         {
           "name": "MIMARU SUITES Tokyo Nihombashi",
-          "note": "All 2-bed + in-room washer. Stay A 19 vacant / ¥542,700. Stay B 18 vacant / ¥462,200.",
-          "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/"
+          "note": "All 2-bed + in-room washer. Not booked.",
+          "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
+          "stayA": "19 vacant · ¥542,700",
+          "stayB": "18 vacant · ¥462,200"
         },
         {
           "name": "MIMARU Tokyo Ueno East",
-          "note": "Stay A 27 vacant / ¥290,043. Stay B 13 vacant / ¥253,260.",
-          "url": "https://mimaruhotels.com/en/hotel/ueno-east/"
+          "note": "Not booked.",
+          "url": "https://mimaruhotels.com/en/hotel/ueno-east/",
+          "stayA": "27 vacant · ¥290,043",
+          "stayB": "13 vacant · ¥253,260"
         },
         {
           "name": "MIMARU Tokyo Shinjuku West",
-          "note": "Most leftover. Last on the area rank. Stay A 39 vacant / ¥360,897. Stay B 35 vacant / ¥290,646.",
-          "url": "https://mimaruhotels.com/en/hotel/shinjuku-west/"
+          "note": "Most leftover. Last on the area rank. Not booked.",
+          "url": "https://mimaruhotels.com/en/hotel/shinjuku-west/",
+          "stayA": "39 vacant · ¥360,897",
+          "stayB": "35 vacant · ¥290,646"
         },
         {
           "name": "JR Granvia — no Tokyo property",
-          "note": "Hotel Granvia Tokyo does not exist. Granvia is a JR West brand.",
+          "note": "Hotel Granvia Tokyo does not exist (JR West brand).",
           "url": "https://www.jre-hotels.jp/e/"
         }
       ]
@@ -761,15 +773,15 @@
     },
     {
       "id": "tokyo-hotel",
-      "title": "Book one Tokyo hotel / apart-hotel, 5 doubles",
-      "detail": "Not booked. One MIMARU building can cover both stays (27–30 Dec + 5–9 Jan). Need 2–3 apartments. Member FROM for 1 apartment, whole stay. Recommended: Tokyo Station East — A 26 vacant / ¥345,519 · B 13 / ¥261,702; 2-bed; courier 07:00–22:00; no breakfast; tokyo-station-east@chm.cigr.co.jp. Hatchobori A 37 / ¥289,440 · B 25 / ¥214,668. SUITES Nihombashi (all 2-bed + washer) A 19 / ¥542,700 · B 18 / ¥462,200. Ueno East A 27 / ¥290,043 · B 13 / ¥253,260. Shinjuku West (most leftover, last on area rank) A 39 / ¥360,897 · B 35 / ¥290,646. Granvia Tokyo does not exist. Hilton / Keio / Hyatt / Tokyo Station Hotel: no live 5-room calendar this pass.",
+      "title": "Book Tokyo stay",
+      "detail": "Not booked. One MIMARU can cover both stays. Need 2–3 apartments.",
       "status": "open",
       "priority": "now"
     },
     {
       "id": "nozawa-hotel",
-      "title": "Book Nozawa lodging",
-      "detail": "Not booked. Stay 30 Dec 2026–5 Jan 2027 (6 nights). No instant-bookable whole house. Kashmir House is available for 8 adults only. Tamanegi is enquire. Kamoshika is sold out (waitlist). Tokiwaya cannot cover 31 Dec–1 Jan online. Kiriya and Shimataya need phone or email.",
+      "title": "Book Nozawa stay",
+      "detail": "Not booked. No instant-bookable whole house. Kashmir is available for 8 only.",
       "status": "open",
       "priority": "now"
     },
