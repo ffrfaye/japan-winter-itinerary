@@ -75,8 +75,8 @@ export default function App() {
   ]
 
   return (
-    <div className="min-h-svh bg-background text-foreground">
-      <main className="mx-auto w-full max-w-[672px] px-5 py-12 sm:px-6">
+    <div className="min-h-svh bg-zinc-50 text-zinc-950">
+      <main className="mx-auto w-full max-w-[672px] px-5 py-10 sm:px-6">
         <header className="space-y-2 py-4">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
           <p className="text-sm text-zinc-600">
@@ -84,14 +84,11 @@ export default function App() {
             <span aria-hidden="true"> · </span>
             {trip.group.sizeLabel}
           </p>
-          <div className="space-y-1">
-            <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
-            <p className="text-sm font-medium">{trip.meta.planningBanner.title}</p>
-            <p className="text-sm text-zinc-600">{trip.meta.planningBanner.body}</p>
-          </div>
+          <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
+          <p className="text-sm text-zinc-600">{trip.meta.planningBanner.body}</p>
         </header>
 
-        <section className="rounded-lg border px-4 py-4">
+        <section className="rounded-xl border border-zinc-200 bg-white px-4 py-4">
           <p className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
             {trip.route.label}
           </p>
@@ -108,11 +105,13 @@ export default function App() {
           </ol>
         </section>
 
-        <Separator className="my-8" />
+        <Separator className="my-8 bg-zinc-200" />
 
         <section className="space-y-2">
-          <h2 className="text-sm font-medium text-zinc-600">Open decisions</h2>
-          <ul className="divide-y">
+          <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+            Open decisions
+          </h2>
+          <ul className="divide-y divide-zinc-200">
             {openItems.map((item) => (
               <li key={item.id} className="space-y-1 px-0 py-4">
                 <div className="flex flex-wrap items-baseline gap-2">
@@ -126,8 +125,10 @@ export default function App() {
         </section>
 
         <section className="mt-8 space-y-2">
-          <h2 className="text-sm font-medium text-zinc-600">Book this month</h2>
-          <ul className="divide-y">
+          <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+            Book this month
+          </h2>
+          <ul className="divide-y divide-zinc-200">
             {urgentStays.map((item) => (
               <li key={item.id} className="space-y-2 px-0 py-4">
                 <div className="flex flex-wrap items-baseline gap-2">
@@ -136,14 +137,14 @@ export default function App() {
                 </div>
                 <p className="text-sm text-zinc-600">{item.detail}</p>
                 {item.id === 'tokyo-hotel' ? (
-                  <ul className="divide-y">
+                  <ul className="divide-y divide-zinc-200">
                     {tokyoCandidates.map((place) => (
                       <PlaceLine key={place.name} place={place} />
                     ))}
                   </ul>
                 ) : null}
                 {item.id === 'nozawa-hotel' ? (
-                  <ul className="divide-y">
+                  <ul className="divide-y divide-zinc-200">
                     {nozawaPlaces.map((place) => (
                       <PlaceLine key={place.name} place={place} />
                     ))}
@@ -159,10 +160,10 @@ export default function App() {
           </p>
         </section>
 
-        <section className="mt-8 space-y-8">
+        <section className="mt-10 space-y-8">
           {groups.map(({ stop, days }) => (
             <div key={stop.id}>
-              <h2 className="text-sm font-medium text-zinc-600">
+              <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
                 {stop.city}
                 {stop.nights > 0 ? (
                   <>
@@ -171,7 +172,7 @@ export default function App() {
                   </>
                 ) : null}
               </h2>
-              <ul className="divide-y">
+              <ul className="divide-y divide-zinc-200">
                 {days.map((day) => (
                   <li key={day.id} className="grid grid-cols-[4.5rem_1fr] gap-4 px-0 py-4">
                     <div className="text-sm">
@@ -179,12 +180,9 @@ export default function App() {
                       <p className="font-medium">{day.short}</p>
                     </div>
                     <div className="min-w-0 space-y-1">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <Badge variant="outline">{day.city}</Badge>
-                        {day.status !== 'recommended' && day.status !== 'locked' ? (
-                          <Badge variant="outline">{statusLabel(day.status)}</Badge>
-                        ) : null}
-                      </div>
+                      {day.status !== 'recommended' && day.status !== 'locked' ? (
+                        <Badge variant="outline">{statusLabel(day.status)}</Badge>
+                      ) : null}
                       <p className="text-sm font-medium">{day.title}</p>
                       <p className="text-sm text-zinc-600">{day.summary}</p>
                       {day.blocks.length > 0 ? (
