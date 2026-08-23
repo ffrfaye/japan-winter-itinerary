@@ -32,6 +32,7 @@ Keys this page actually reads:
 - `route.stops` — city blocks and night counts
 - `days[]` — `weekday`, `short`, `city`, `title`, `summary`, `blocks`, `status`
 - `lodging` / `ghibli.unpublished` — footer notes via the matching `openDecisions` items
+- `budget` — estimate-only per-person range; not locked, not a booking
 
 Status values:
 

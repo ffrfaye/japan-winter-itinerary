@@ -144,6 +144,14 @@ export type Trip = {
       closed: NamedPlace[]
     }
   }
+  budget: {
+    status: StatusId
+    heading: string
+    label: string
+    asOf: string
+    basis: string
+    lines: { id: string; title: string; detail: string }[]
+  }
   transport: {
     yamato: { status: StatusId; text: string; links: TripLink[] }
     train: { status: StatusId; text: string; links: TripLink[] }

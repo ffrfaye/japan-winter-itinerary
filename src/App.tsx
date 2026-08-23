@@ -231,6 +231,24 @@ export default function App() {
           </div>
         </section>
 
+        <section className="mt-8 space-y-2">
+          <div className="flex flex-wrap items-baseline gap-2">
+            <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+              {trip.budget.heading}
+            </h2>
+            <Badge variant="outline">{trip.budget.label}</Badge>
+          </div>
+          <p className="text-sm text-zinc-600">{trip.budget.basis}</p>
+          <ul className="divide-y divide-zinc-200">
+            {trip.budget.lines.map((item) => (
+              <li key={item.id} className="space-y-1 px-0 py-4">
+                <p className="text-sm font-medium">{item.title}</p>
+                <p className="text-sm text-zinc-600">{item.detail}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="mt-10 space-y-8">
           {groups.map(({ stop, days }) => (
             <div key={stop.id}>

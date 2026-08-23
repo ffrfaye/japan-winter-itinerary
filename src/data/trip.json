@@ -15,7 +15,7 @@
     "planningBanner": {
       "eyebrow": "Dates locked",
       "title": "Route and village NYE are locked.",
-      "body": "Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels."
+      "body": "Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels, budget."
     }
   },
   "group": {
@@ -702,6 +702,60 @@
         }
       ]
     }
+  },
+  "budget": {
+    "status": "open",
+    "heading": "Budget",
+    "label": "Estimate · not locked",
+    "asOf": "23 Aug 2026",
+    "basis": "Per person, SFO–TYO, ¥159/USD. Not booked. No live 27 Dec–9 Jan flight quote.",
+    "lines": [
+      {
+        "id": "range",
+        "title": "Working range",
+        "detail": "$4,000–5,500 economy. Realistic ~$4,500. Comfort $6k–7k."
+      },
+      {
+        "id": "flight",
+        "title": "Flight",
+        "detail": "No live 27 Dec–9 Jan quote. December aggregates $1,260–1,750 economy. Premium economy from ~$1,798."
+      },
+      {
+        "id": "tokyo-stay",
+        "title": "Tokyo stay",
+        "detail": "MIMARU Station East from-rate: ~$950 pp (8 in 2 apartments) / ~$1,150 (10 in 3). Not booked."
+      },
+      {
+        "id": "nozawa-stay",
+        "title": "Nozawa stay",
+        "detail": "Kashmir 8 people ~$870 (breakfast). Tamanegi enquire ~$730/10 if 6 nights allowed. Ryokan half-board could be $1k–1.9k. Not booked."
+      },
+      {
+        "id": "rail-taxi",
+        "title": "Rail + taxi",
+        "detail": "~$125."
+      },
+      {
+        "id": "lifts",
+        "title": "Lifts",
+        "detail": "5 days ~$225."
+      },
+      {
+        "id": "rental",
+        "title": "Ski rental",
+        "detail": "~$180."
+      },
+      {
+        "id": "activities",
+        "title": "Activities",
+        "detail": "~$110."
+      },
+      {
+        "id": "food",
+        "title": "Food",
+        "detail": "Estimate $400–700."
+      }
+    ]
   },
   "transport": {
     "yamato": {
