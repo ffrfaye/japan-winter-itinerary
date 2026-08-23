@@ -595,45 +595,49 @@
       "candidates": [
         {
           "name": "MIMARU Tokyo Station East (recommended)",
-          "note": "2-bed, courier 07:00–22:00, no breakfast. Not booked.",
+          "note": "2-bed inventory, courier desk 07:00–22:00, no breakfast. Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
           "email": "tokyo-station-east@chm.cigr.co.jp",
-          "stayA": "26 vacant · ¥345,519",
-          "stayB": "13 vacant · ¥261,702"
+          "status": "recommended",
+          "stayA": "A · 26 vacant · ¥345,519",
+          "stayB": "B · 13 vacant · ¥261,702"
         },
         {
           "name": "MIMARU Tokyo Hatchobori",
           "note": "Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/hatchobori/",
           "email": "hatchobori@chm.cigr.co.jp",
-          "stayA": "37 vacant · ¥289,440",
-          "stayB": "25 vacant · ¥214,668"
+          "stayA": "A · 37 vacant · ¥289,440",
+          "stayB": "B · 25 vacant · ¥214,668"
         },
         {
           "name": "MIMARU SUITES Tokyo Nihombashi",
           "note": "All 2-bed + in-room washer. Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
-          "stayA": "19 vacant · ¥542,700",
-          "stayB": "18 vacant · ¥462,200"
+          "stayA": "A · 19 vacant · ¥542,700",
+          "stayB": "B · 18 vacant · ¥462,200"
         },
         {
           "name": "MIMARU Tokyo Ueno East",
           "note": "Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/ueno-east/",
-          "stayA": "27 vacant · ¥290,043",
-          "stayB": "13 vacant · ¥253,260"
+          "stayA": "A · 27 vacant · ¥290,043",
+          "stayB": "B · 13 vacant · ¥253,260"
         },
         {
           "name": "MIMARU Tokyo Shinjuku West",
           "note": "Most leftover. Last on the area rank. Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/shinjuku-west/",
-          "stayA": "39 vacant · ¥360,897",
-          "stayB": "35 vacant · ¥290,646"
+          "stayA": "A · 39 vacant · ¥360,897",
+          "stayB": "B · 35 vacant · ¥290,646"
         },
         {
-          "name": "JR Granvia — no Tokyo property",
-          "note": "Hotel Granvia Tokyo does not exist (JR West brand).",
-          "url": "https://www.jre-hotels.jp/e/"
+          "name": "Hotel Granvia Tokyo",
+          "note": "Does not exist (JR West brand)."
+        },
+        {
+          "name": "Hilton / Keio Plaza / Hyatt / The Tokyo Station Hotel",
+          "note": "No live 5-room calendar this pass."
         }
       ]
     },

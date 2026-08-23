@@ -33,7 +33,7 @@ export type TripDay = {
 export type NamedPlace = {
   name: string
   note?: string
-  url: string
+  url?: string
   status?: StatusId
   email?: string
   stayA?: string

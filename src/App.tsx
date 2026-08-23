@@ -28,14 +28,18 @@ function PlaceLine({ place }: { place: NamedPlace }) {
   return (
     <li className="space-y-1 py-3">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-        <a
-          href={place.url}
-          target="_blank"
-          rel="noreferrer"
-          className="text-sm font-medium underline-offset-2 hover:underline"
-        >
-          {place.name}
-        </a>
+        {place.url ? (
+          <a
+            href={place.url}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm font-medium underline-offset-2 hover:underline"
+          >
+            {place.name}
+          </a>
+        ) : (
+          <p className="text-sm font-medium">{place.name}</p>
+        )}
         {place.email ? (
           <a
             href={`mailto:${place.email}`}
