@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { Badge } from '@/components/ui/badge'
 import type { ItineraryDay } from '@/lib/itinerary'
 
@@ -8,15 +10,33 @@ export function DaySheet({
   day: ItineraryDay
   onClose: () => void
 }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-zinc-950/40 p-3 md:items-center">
+  useEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      if (event.key === 'Escape') onClose()
+    }
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    document.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = previous
+      document.removeEventListener('keydown', onKey)
+    }
+  }, [onClose])
+
+  return createPortal(
+    <div className="pointer-events-auto fixed inset-0 z-[2000] isolate flex items-end justify-center bg-zinc-950/40 p-3 md:items-center">
       <button
         type="button"
         className="absolute inset-0 cursor-default"
         aria-label="Close day"
         onClick={onClose}
       />
-      <div className="relative max-h-[85svh] w-full max-w-lg overflow-y-auto rounded-xl border border-zinc-200 bg-white p-5 shadow-sm">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="day-sheet-title"
+        className="relative z-[2001] max-h-[85svh] w-full max-w-lg overflow-y-auto rounded-xl border border-zinc-200 bg-white p-5 shadow-lg"
+      >
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-sm text-zinc-600">
@@ -24,7 +44,9 @@ export function DaySheet({
             </p>
             <div className="mt-1 flex flex-wrap items-center gap-2">
               <Badge variant="outline">{day.city}</Badge>
-              <h2 className="text-base font-medium">{day.title}</h2>
+              <h2 id="day-sheet-title" className="text-base font-medium">
+                {day.title}
+              </h2>
             </div>
           </div>
           <button
@@ -53,6 +75,7 @@ export function DaySheet({
           </figure>
         ))}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

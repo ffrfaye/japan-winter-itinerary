@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import useEmblaCarousel from 'embla-carousel-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { DaySheet } from '@/components/DaySheet'
@@ -17,7 +18,14 @@ export function ItineraryPage() {
   const [mode, setMode] = useState<ViewMode>('cards')
   const [index, setIndex] = useState(0)
   const [openId, setOpenId] = useState<string | null>(null)
-  const scroller = useRef<HTMLDivElement>(null)
+  const dragged = useRef(false)
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    align: 'start',
+    containScroll: 'trimSnaps',
+    skipSnaps: false,
+    duration: 16,
+    dragFree: false,
+  })
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 768px)')
@@ -27,21 +35,32 @@ export function ItineraryPage() {
     return () => media.removeEventListener('change', sync)
   }, [])
 
+  useEffect(() => {
+    if (!emblaApi) return
+    const sync = () => setIndex(emblaApi.selectedScrollSnap())
+    const markDrag = () => {
+      dragged.current = true
+    }
+    const resetDrag = () => {
+      dragged.current = false
+    }
+    sync()
+    emblaApi.on('select', sync)
+    emblaApi.on('pointerDown', resetDrag)
+    emblaApi.on('scroll', markDrag)
+    return () => {
+      emblaApi.off('select', sync)
+      emblaApi.off('pointerDown', resetDrag)
+      emblaApi.off('scroll', markDrag)
+    }
+  }, [emblaApi])
+
   const active = days[index] ?? days[0]
   const openDay = days.find((day) => day.id === openId) ?? null
 
-  function scrollTo(next: number) {
-    const node = scroller.current
-    if (!node) return
-    const card = node.children[next] as HTMLElement | undefined
-    card?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' })
-  }
-
-  function onScroll() {
-    const node = scroller.current
-    if (!node) return
-    const next = Math.round(node.scrollLeft / node.clientWidth)
-    setIndex(Math.min(days.length - 1, Math.max(0, next)))
+  function openCard(id: string) {
+    if (dragged.current) return
+    setOpenId(id)
   }
 
   return (
@@ -78,32 +97,31 @@ export function ItineraryPage() {
       ) : (
         <div className="space-y-4">
           <JapanMap active={active.mapCity} travelTo={active.travelTo} />
-          <div
-            ref={scroller}
-            onScroll={onScroll}
-            className="-mx-px flex snap-x snap-mandatory overflow-x-auto"
-          >
-            {days.map((day) => (
-              <button
-                key={day.id}
-                type="button"
-                onClick={() => setOpenId(day.id)}
-                className="w-full shrink-0 snap-start px-px text-left"
-              >
-                <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                  <p className="text-sm text-zinc-600">
-                    {day.weekday} {day.short}
-                  </p>
-                  <div className="mt-1 flex flex-wrap items-center gap-2">
-                    <Badge variant="outline">{day.city}</Badge>
-                    <p className="text-sm font-medium">{day.title}</p>
-                  </div>
-                  <p className="mt-2 line-clamp-2 text-sm text-zinc-600">
-                    {day.summary}
-                  </p>
-                </article>
-              </button>
-            ))}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex">
+              {days.map((day) => (
+                <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full">
+                  <button
+                    type="button"
+                    onClick={() => openCard(day.id)}
+                    className="w-full px-px text-left"
+                  >
+                    <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+                      <p className="text-sm text-zinc-600">
+                        {day.weekday} {day.short}
+                      </p>
+                      <div className="mt-1 flex flex-wrap items-center gap-2">
+                        <Badge variant="outline">{day.city}</Badge>
+                        <p className="text-sm font-medium">{day.title}</p>
+                      </div>
+                      <p className="mt-2 line-clamp-2 text-sm text-zinc-600">
+                        {day.summary}
+                      </p>
+                    </article>
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="flex justify-center gap-1.5">
             {days.map((day, dayIndex) => (
@@ -111,7 +129,7 @@ export function ItineraryPage() {
                 key={day.id}
                 type="button"
                 aria-label={day.short}
-                onClick={() => scrollTo(dayIndex)}
+                onClick={() => emblaApi?.scrollTo(dayIndex)}
                 className={`size-1.5 rounded-full ${
                   dayIndex === index ? 'bg-zinc-900' : 'bg-zinc-300'
                 }`}
