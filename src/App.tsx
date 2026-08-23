@@ -55,19 +55,27 @@ function PlaceLine({ place }: { place: NamedPlace }) {
           <p>{place.stayB}</p>
         </div>
       ) : null}
-      {place.note ? <p className="text-sm text-zinc-600">{place.note}</p> : null}
+      {place.note && place.note !== 'Not booked.' ? (
+        <p className="text-sm text-zinc-600">{place.note.replace(/ Not booked\.$/, '')}</p>
+      ) : null}
     </li>
   )
 }
 
 export default function App() {
-  const openItems = trip.openDecisions.filter((item) => item.status === 'open')
+  const openItems = trip.openDecisions.filter(
+    (item) => item.status === 'open' && item.id !== 'lodging',
+  )
   const urgentStays = trip.checklist.filter((item) => urgentStayIds.has(item.id))
   const laterItems = trip.checklist.filter(
-    (item) => item.priority === 'later' || item.id === 'hakutaka',
+    (item) =>
+      (item.priority === 'later' || item.id === 'hakutaka') &&
+      item.id !== 'ghibli-watch',
   )
   const groups = daysByRoute(trip.days, trip.route.stops)
-  const tokyoCandidates = trip.lodging.tokyo.candidates
+  const tokyoCandidates = trip.lodging.tokyo.candidates.filter(
+    (place) => place.stayA || place.stayB,
+  )
   const nozawaPlaces = [
     ...trip.lodging.nozawa.selfCatered,
     ...trip.lodging.nozawa.halfBoard,
@@ -77,14 +85,16 @@ export default function App() {
   return (
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
       <main className="mx-auto w-full max-w-[672px] px-5 py-10 sm:px-6">
-        <header className="space-y-2 py-4">
+        <header className="space-y-1 py-4">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
-          <p className="text-sm text-zinc-600">
-            {trip.meta.datesLabel}
-            <span aria-hidden="true"> · </span>
-            {trip.group.sizeLabel}
-          </p>
-          <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <p className="text-sm text-zinc-600">
+              {trip.meta.datesLabel}
+              <span aria-hidden="true"> · </span>
+              {trip.group.sizeLabel}
+            </p>
+            <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
+          </div>
           <p className="text-sm text-zinc-600">{trip.meta.planningBanner.body}</p>
         </header>
 
@@ -135,7 +145,9 @@ export default function App() {
                   <p className="text-sm font-medium">{item.title}</p>
                   <Badge variant="outline">{statusLabel(item.status)}</Badge>
                 </div>
-                <p className="text-sm text-zinc-600">{item.detail}</p>
+                {item.id !== 'tokyo-hotel' ? (
+                  <p className="text-sm text-zinc-600">{item.detail}</p>
+                ) : null}
                 {item.id === 'tokyo-hotel' ? (
                   <ul className="divide-y divide-zinc-200">
                     {tokyoCandidates.map((place) => (
