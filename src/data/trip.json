@@ -13,9 +13,9 @@
     "cityBase": "Tokyo only",
     "airports": "HND / NRT — not yet chosen",
     "planningBanner": {
-      "eyebrow": "Planning status",
-      "title": "This skeleton is recommended — not user-locked.",
-      "body": "Faye has not confirmed this route with the group. Treat every day as a proposal. Open decisions stay visually distinct until someone actually books or says yes."
+      "eyebrow": "Locked · village NYE",
+      "title": "Route and village NYE are locked.",
+      "body": "Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–4 Jan (in 30 Dec, out 5 Jan, village NYE) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan HND/NRT. Full group skips Fukuoka. Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels. Lodging is not booked."
     }
   },
   "group": {
@@ -33,12 +33,12 @@
     },
     {
       "id": "nights",
-      "status": "recommended",
+      "status": "locked",
       "text": "13 nights: Tokyo 3 + Nozawa 6 + Tokyo 4."
     },
     {
       "id": "ski-days",
-      "status": "recommended",
+      "status": "locked",
       "text": "Ski Nozawa ~5 proper days plus an arrival afternoon."
     },
     {
@@ -65,8 +65,8 @@
     }
   ],
   "route": {
-    "label": "Recommended line",
-    "status": "recommended",
+    "label": "Locked line",
+    "status": "locked",
     "stops": [
       {
         "id": "tokyo-1",
@@ -260,9 +260,9 @@
           "status": "open"
         },
         {
-          "title": "NYE fork still open",
-          "detail": "Alternate: stay in Tokyo through 2 Jan, train 3 Jan, ski 4–8 Jan. Recommended remains village NYE in Nozawa.",
-          "status": "open"
+          "title": "Village NYE is locked",
+          "detail": "Nozawa village NYE is locked. The Tokyo-through-2-Jan / train-3-Jan fork is not chosen.",
+          "status": "locked"
         }
       ]
     },
@@ -503,16 +503,10 @@
   ],
   "openDecisions": [
     {
-      "id": "skeleton",
-      "status": "open",
-      "title": "The recommended skeleton is not confirmed",
-      "detail": "Tokyo 27–29 Dec → Nozawa 30 Dec–4 Jan → Tokyo 5–8 Jan → fly 9 Jan is a recommendation only. The group lead has not locked it."
-    },
-    {
       "id": "nye-fork",
-      "status": "open",
-      "title": "New Year’s Eve fork",
-      "detail": "Recommended: village NYE in Nozawa (arrive 30 Dec). Alternate: stay in Tokyo through 2 Jan, train 3 Jan, ski 4–8 Jan. Both are still open."
+      "status": "locked",
+      "title": "Village NYE is locked — Tokyo fork not chosen",
+      "detail": "Nozawa village NYE is locked (arrive 30 Dec). The alternate stay-in-Tokyo through 2 Jan / train 3 Jan / ski 4–8 Jan is not chosen."
     },
     {
       "id": "uverworld",
@@ -524,7 +518,7 @@
       "id": "lodging",
       "status": "open",
       "title": "Lodging is unbooked",
-      "detail": "No Tokyo hotel and no Nozawa property is held. Schneider is closed through December 2027 — do not email them."
+      "detail": "No Tokyo hotel and no Nozawa property is held. Tokyo MIMARU shortlist is live; Nozawa shortlist is still running. Schneider is closed through December 2027 — do not email them."
     },
     {
       "id": "ghibli",
@@ -596,33 +590,38 @@
   "lodging": {
     "status": "open",
     "tokyo": {
-      "rule": "One hotel or apart-hotel. 5 doubles. Not three Airbnbs.",
+      "rule": "Not booked. One MIMARU building can cover both Tokyo stays (in 27 Dec / out 30 Dec, and in 5 Jan / out 9 Jan). Prices are official member FROM for 1 apartment for the whole stay. Need 2–3 apartments. Hilton, Keio Plaza, Hyatt, and The Tokyo Station Hotel: no live 5-room calendar this pass. Hotel Granvia Tokyo does not exist (JR West brand).",
       "areaRank": ["Tokyo Station / Yaesu / Nihonbashi", "Ueno", "Shinjuku"],
       "candidates": [
         {
-          "name": "MIMARU",
-          "note": "Apart-hotel; apartment rooms suit couples sharing a kitchen.",
-          "url": "https://mimaruhotels.com/en/"
+          "name": "MIMARU Tokyo Station East (recommended)",
+          "note": "Stay A 26 vacant / ¥345,519. Stay B 13 vacant / ¥261,702. 2-bed inventory, courier desk 07:00–22:00, no breakfast. tokyo-station-east@chm.cigr.co.jp",
+          "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/"
         },
         {
-          "name": "The Tokyo Station Hotel",
-          "note": "Inside Tokyo Station. Strong for the Hakutaka morning.",
-          "url": "https://www.thetokyostationhotel.jp/en/"
+          "name": "MIMARU Tokyo Hatchobori",
+          "note": "Stay A 37 vacant / ¥289,440. Stay B 25 vacant / ¥214,668. hatchobori@chm.cigr.co.jp",
+          "url": "https://mimaruhotels.com/en/hotel/hatchobori/"
+        },
+        {
+          "name": "MIMARU SUITES Tokyo Nihombashi",
+          "note": "All 2-bed + in-room washer. Stay A 19 vacant / ¥542,700. Stay B 18 vacant / ¥462,200.",
+          "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/"
+        },
+        {
+          "name": "MIMARU Tokyo Ueno East",
+          "note": "Stay A 27 vacant / ¥290,043. Stay B 13 vacant / ¥253,260.",
+          "url": "https://mimaruhotels.com/en/hotel/ueno-east/"
+        },
+        {
+          "name": "MIMARU Tokyo Shinjuku West",
+          "note": "Most leftover. Last on the area rank. Stay A 39 vacant / ¥360,897. Stay B 35 vacant / ¥290,646.",
+          "url": "https://mimaruhotels.com/en/hotel/shinjuku-west/"
         },
         {
           "name": "JR Granvia — no Tokyo property",
-          "note": "Granvia is JR West’s station-hotel brand (Kyoto, Osaka, and others). There is no Hotel Granvia in Tokyo. The Tokyo-station JR equivalent is The Tokyo Station Hotel / JR East Hotels.",
+          "note": "Hotel Granvia Tokyo does not exist. Granvia is a JR West brand.",
           "url": "https://www.jre-hotels.jp/e/"
-        },
-        {
-          "name": "Keio Plaza Hotel Tokyo",
-          "note": "Shinjuku. Third on the area rank.",
-          "url": "https://www.keioplaza.com/"
-        },
-        {
-          "name": "Hilton Tokyo",
-          "note": "Shinjuku / west side. Third on the area rank.",
-          "url": "https://www.hilton.com/en/hotels/tyohitw-hilton-tokyo/"
         }
       ]
     },
@@ -716,9 +715,9 @@
   "checklist": [
     {
       "id": "confirm-skeleton",
-      "title": "Confirm or reject the recommended skeleton",
-      "detail": "Tokyo 27–29 → Nozawa 30–4 Jan → Tokyo 5–8 → fly 9. Still only recommended.",
-      "status": "open",
+      "title": "Route is locked",
+      "detail": "Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–4 Jan (in 30 Dec, out 5 Jan) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
+      "status": "locked",
       "priority": "now"
     },
     {
@@ -738,7 +737,7 @@
     {
       "id": "tokyo-hotel",
       "title": "Book one Tokyo hotel / apart-hotel, 5 doubles",
-      "detail": "Rank: Tokyo Station / Yaesu / Nihonbashi, then Ueno, then Shinjuku. MIMARU, Tokyo Station Hotel, Keio Plaza, Hilton Tokyo.",
+      "detail": "Not booked. One MIMARU building can cover both stays (27–30 Dec + 5–9 Jan). Need 2–3 apartments. Member FROM for 1 apartment, whole stay. Recommended: Tokyo Station East — A 26 vacant / ¥345,519 · B 13 / ¥261,702; 2-bed; courier 07:00–22:00; no breakfast; tokyo-station-east@chm.cigr.co.jp. Hatchobori A 37 / ¥289,440 · B 25 / ¥214,668. SUITES Nihombashi (all 2-bed + washer) A 19 / ¥542,700 · B 18 / ¥462,200. Ueno East A 27 / ¥290,043 · B 13 / ¥253,260. Shinjuku West (most leftover, last on area rank) A 39 / ¥360,897 · B 35 / ¥290,646. Granvia Tokyo does not exist. Hilton / Keio / Hyatt / Tokyo Station Hotel: no live 5-room calendar this pass.",
       "status": "open",
       "priority": "now"
     },
@@ -751,9 +750,9 @@
     },
     {
       "id": "nye",
-      "title": "Choose the NYE fork",
-      "detail": "Village NYE (recommended) vs Tokyo through 2 Jan / train 3 Jan.",
-      "status": "open",
+      "title": "Village NYE is locked",
+      "detail": "Nozawa village NYE is locked. The Tokyo-through-2-Jan fork is not chosen.",
+      "status": "locked",
       "priority": "now"
     },
     {

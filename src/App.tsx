@@ -26,14 +26,15 @@ function daysByRoute(days: Trip['days'], stops: Trip['route']['stops']) {
 }
 
 export default function App() {
-  const recommended = trip.statusLegend.find((item) => item.id === 'recommended')
   const lodgingDecision = trip.openDecisions.find((item) => item.id === 'lodging')
   const ghibliDecision = trip.openDecisions.find((item) => item.id === 'ghibli')
+  const openItems = trip.openDecisions.filter((item) => item.status === 'open')
   const urgentStays = trip.checklist.filter((item) => urgentStayIds.has(item.id))
   const laterItems = trip.checklist.filter(
     (item) => item.priority === 'later' || item.id === 'hakutaka',
   )
   const groups = daysByRoute(trip.days, trip.route.stops)
+  const tokyoCandidates = trip.lodging.tokyo.candidates
 
   return (
     <div className="min-h-svh bg-background text-foreground">
@@ -47,9 +48,7 @@ export default function App() {
               {trip.group.sizeLabel}
             </p>
           </div>
-          <Badge variant="outline">
-            {recommended?.label ?? 'Recommended'} · not locked
-          </Badge>
+          <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
           <p className="text-sm text-muted-foreground">{trip.meta.tone}</p>
         </header>
 
@@ -63,7 +62,7 @@ export default function App() {
         <section className="mt-14 space-y-5">
           <h2 className="text-sm font-medium text-muted-foreground">Open decisions</h2>
           <ul className="divide-y">
-            {trip.openDecisions.map((item) => (
+            {openItems.map((item) => (
               <li key={item.id} className="space-y-1 px-0 py-4 first:pt-0">
                 <div className="flex flex-wrap items-baseline gap-2">
                   <p className="text-sm font-medium">{item.title}</p>
@@ -85,6 +84,23 @@ export default function App() {
                   <Badge variant="outline">{statusLabel(item.status)}</Badge>
                 </div>
                 <p className="text-sm text-muted-foreground">{item.detail}</p>
+                {item.id === 'tokyo-hotel' ? (
+                  <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                    {tokyoCandidates.map((place) => (
+                      <li key={place.name}>
+                        <a
+                          href={place.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline underline-offset-2"
+                        >
+                          {place.name}
+                        </a>
+                        {place.note ? ` — ${place.note}` : ''}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
               </li>
             ))}
           </ul>

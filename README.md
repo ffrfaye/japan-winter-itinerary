@@ -2,7 +2,7 @@
 
 Shareable, no-login itinerary for a group winter in Tokyo and Nozawa Onsen (27 Dec 2026 – 9 Jan 2027). Vite + React + TypeScript + Tailwind + shadcn. Light zinc list. Mobile-first.
 
-This is a **recommended skeleton**, not a locked plan. Open decisions stay marked open. Ghibli January 2027 days are unpublished.
+The **route and village NYE are locked**. Lodging is not booked. Open decisions stay marked open. Ghibli January 2027 days are unpublished.
 
 ## Run locally
 
@@ -35,9 +35,9 @@ Keys this page actually reads:
 
 Status values:
 
-- `recommended` — suggested, not group-confirmed
+- `recommended` — a suggested extra, not a booking
 - `open` — still deciding, or unpublished
-- `locked` — a hard constraint or a closed window
+- `locked` — route, village NYE, or another closed window
 
 After you edit JSON, refresh the dev server.
 
