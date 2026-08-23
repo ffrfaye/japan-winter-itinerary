@@ -39,7 +39,7 @@ export default function App() {
 
   return (
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
-      <header className="hidden border-b border-zinc-200 bg-white md:block">
+      <header className="border-b border-zinc-200 bg-white max-md:hidden">
         <div className={cn('mx-auto flex gap-1 px-5 py-3', widths[tab])}>
           {tabs.map((item) => (
             <button
