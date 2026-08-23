@@ -46,12 +46,6 @@ export function ItineraryPage() {
 
   return (
     <div className="space-y-5">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
-        <p className="text-sm text-zinc-600">{trip.meta.shareLine}</p>
-        <p className="text-xs text-zinc-600">{trip.meta.lockedNote}</p>
-      </header>
-
       <div className="flex gap-2">
         {(['list', 'cards'] as const).map((value) => (
           <Button
