@@ -31,8 +31,10 @@ Keys this page actually reads:
 - `checklist[]` — urgent stays are `tokyo-hotel` and `nozawa-hotel`; later line uses `priority: "later"` plus `hakutaka`
 - `route.stops` — city blocks and night counts
 - `days[]` — `weekday`, `short`, `city`, `title`, `summary`, `blocks`, `status`
-- `lodging` / `ghibli.unpublished` — footer notes via the matching `openDecisions` items
-- `budget` — estimate-only per-person range; not locked, not a booking
+- `lodging` / `ghibli.unpublished` — Planning tab shortlists
+- `budget` — estimate-only per-person range on RSVP; not locked, not a booking
+- `rsvpHouses` — capacity-filtered lodging on RSVP
+- Hash tabs: `#itinerary` (default), `#rsvp`, `#planning`
 
 Status values:
 

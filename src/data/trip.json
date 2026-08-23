@@ -12,6 +12,9 @@
     "tone": "Un-hectic. Anime fans. May bring ski gear.",
     "cityBase": "Tokyo only",
     "airports": "HND / NRT — not yet chosen",
+    "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Nozawa Onsen",
+    "lockedNote": "Village NYE · dates locked",
+    "photoCredit": "Snow monkeys photo: Wikimedia Commons, Jigokudani / Yudanaka, March 2017.",
     "planningBanner": {
       "eyebrow": "Dates locked",
       "title": "Route and village NYE are locked.",
@@ -23,10 +26,15 @@
     "sizeLabel": "12 people · 6 pairs",
     "sizeOpen": "Headcount locked for display",
     "sizeStatus": "locked",
+    "invited": 12,
+    "rsvpHeadline": "Can you come?",
+    "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
+    "rsvpSaveNote": "Saving comes next — this is the layout.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out or waitlist. Lodging is not booked.",
     "pairs": [
       { "id": "fyll", "nickname": "Fyll", "names": ["Faye", "Will"] },
       { "id": "srimpe", "nickname": "Srimpe", "names": ["Lampe", "Sri"] },
-      { "id": "c2", "nickname": "C^2", "names": ["Cal", "Clem"] },
+      { "id": "c2", "nickname": "C²", "names": ["Cal", "Clem"] },
       { "id": "sophdu", "nickname": "Sophdu", "names": ["Eric", "Macy"] },
       { "id": "andriha", "nickname": "Andriha", "names": ["Andrew", "Spriha"] },
       { "id": "bunk-bed-boys", "nickname": "bunk bed boys", "names": ["James", "Seb"] }
@@ -729,55 +737,19 @@
   "budget": {
     "status": "open",
     "heading": "Budget",
-    "label": "Estimate · not locked",
+    "label": "Working · not locked",
     "asOf": "23 Aug 2026",
-    "basis": "Per person, SFO–TYO, ¥159/USD. Not booked. No live 27 Dec–9 Jan flight quote.",
+    "basis": "~$4,500 pp SFO. Band $4k–5.5k. Comfort $6k–7k. Not booked. No live 27 Dec–9 Jan flight quote.",
     "lines": [
-      {
-        "id": "range",
-        "title": "Working range",
-        "detail": "$4,000–5,500 economy. Realistic ~$4,500. Comfort $6k–7k."
-      },
-      {
-        "id": "flight",
-        "title": "Flight",
-        "detail": "No live 27 Dec–9 Jan quote. December aggregates $1,260–1,750 economy. Premium economy from ~$1,798."
-      },
-      {
-        "id": "tokyo-stay",
-        "title": "Tokyo stay",
-        "detail": "MIMARU Station East 3-apt from-rate ~$1,150 pp for 12. Not booked."
-      },
-      {
-        "id": "nozawa-stay",
-        "title": "Nozawa stay",
-        "detail": "No 12-person house rate locked. Tamanegi enquire ~$730/10 if 6 nights allowed. Kashmir 8-person ~$870 is not the 12-person path. Ryokan half-board could be $1k–1.9k. Not booked."
-      },
-      {
-        "id": "rail-taxi",
-        "title": "Rail + taxi",
-        "detail": "~$125."
-      },
-      {
-        "id": "lifts",
-        "title": "Lifts",
-        "detail": "5 days ~$225."
-      },
-      {
-        "id": "rental",
-        "title": "Ski rental",
-        "detail": "~$180."
-      },
-      {
-        "id": "activities",
-        "title": "Activities",
-        "detail": "~$110."
-      },
-      {
-        "id": "food",
-        "title": "Food",
-        "detail": "Estimate $400–700."
-      }
+      { "id": "flight", "title": "Flight", "detail": "$1,260–1,750" },
+      { "id": "tokyo-stay", "title": "Tokyo", "detail": "~$950 (8) / ~$1,150 (10–12)" },
+      { "id": "nozawa-stay", "title": "Nozawa", "detail": "Kashmir 8p ~$870 / Tamanegi ~$730" },
+      { "id": "rail-taxi", "title": "Trains + taxi", "detail": "~$125" },
+      { "id": "yamato", "title": "Yamato", "detail": "~$45" },
+      { "id": "lifts", "title": "Lifts", "detail": "5 days $225" },
+      { "id": "rental", "title": "Rental", "detail": "~$180" },
+      { "id": "tickets", "title": "Tickets", "detail": "~$110" },
+      { "id": "food", "title": "Food", "detail": "$400–700" }
     ]
   },
   "transport": {
@@ -894,7 +866,7 @@
     {
       "id": "hakutaka",
       "title": "Reserve Hakutaka seats both ways",
-      "detail": "Not Kagayaki. Not a JR Pass. JR-EAST Train Reservation.",
+      "detail": "Not Kagayaki. Not a JR Pass. JR-EAST Train Reservation. Reserve about 30 days out.",
       "status": "recommended",
       "priority": "soon"
     },
@@ -932,6 +904,161 @@
       "detail": "Half day 13:10–17:00, adult ¥9,000. No DIY.",
       "status": "open",
       "priority": "later"
+    }
+  ],
+  "rsvpHouses": [
+    {
+      "id": "kamoshika",
+      "name": "Kamoshika",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 16,
+      "note": "Sleeps 16. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com",
+      "phone": "+81 269-85-3121"
+    },
+    {
+      "id": "tanuki-4br-3f",
+      "name": "Tanuki 4BR 3F",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 12,
+      "note": "Sleeps 12. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tamanegi",
+      "name": "Tamanegi House (Akari)",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 10,
+      "max": 12,
+      "note": "Sleeps 10–12. Enquire. Not booked.",
+      "email": "admin@akarihouse.jp"
+    },
+    {
+      "id": "iroha-ichi-ni",
+      "name": "Iroha Ichi + Ni",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses, 8+8. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "dennojo-nw",
+      "name": "Dennojo N + W",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tanuki-3f-plus",
+      "name": "Tanuki 3F + another",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "bonbori-ichi-ni",
+      "name": "Bonbori Ichi + Ni",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "oguma-1-2",
+      "name": "Oguma 1 + 2",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "kashmir",
+      "name": "Kashmir House",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 8,
+      "note": "Sleeps 8. Not booked.",
+      "url": "https://book.staynozawa.com/search/"
+    },
+    {
+      "id": "slopeside",
+      "name": "Slopeside",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 10,
+      "note": "Sleeps 10. Sold out on Bookings247 this pass. Not booked."
+    },
+    {
+      "id": "bonbori-ichi",
+      "name": "Bonbori Ichi",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 10,
+      "note": "Sleeps 10. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tanuki-4f",
+      "name": "Tanuki 4F",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 11,
+      "note": "Sleeps 11. Short one for 12. Not booked."
+    },
+    {
+      "id": "mimaru-station-east",
+      "name": "MIMARU Tokyo Station East",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "email": "tokyo-station-east@chm.cigr.co.jp"
+    },
+    {
+      "id": "mimaru-hatchobori",
+      "name": "MIMARU Tokyo Hatchobori",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/hatchobori/",
+      "email": "hatchobori@chm.cigr.co.jp"
+    },
+    {
+      "id": "mimaru-suites",
+      "name": "MIMARU SUITES Tokyo Nihombashi",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
+      "email": "suites.tokyo-nihombashi@chm.cigr.co.jp",
+      "phone": "+81-3-6661-7821"
     }
   ]
 }

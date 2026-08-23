@@ -41,6 +41,19 @@ export type NamedPlace = {
   stayB?: string
 }
 
+export type RsvpHouse = {
+  id: string
+  name: string
+  city: 'Tokyo' | 'Nozawa'
+  kind: 'single' | 'two-house' | 'tokyo-apt'
+  min: number
+  max: number
+  note: string
+  email?: string
+  phone?: string
+  url?: string
+}
+
 export type ChecklistItem = {
   id: string
   title: string
@@ -63,6 +76,9 @@ export type Trip = {
     tone: string
     cityBase: string
     airports: string
+    shareLine: string
+    lockedNote: string
+    photoCredit: string
     planningBanner: {
       eyebrow: string
       title: string
@@ -75,6 +91,11 @@ export type Trip = {
     sizeOpen: string
     sizeStatus: StatusId
     pairs: { id: string; nickname: string; names: string[] }[]
+    invited: number
+    rsvpHeadline: string
+    rsvpSub: string
+    rsvpSaveNote: string
+    nyeSoldoutNote: string
     interests: string[]
     skiGear: string
   }
@@ -177,4 +198,5 @@ export type Trip = {
     url: string
   }
   checklist: ChecklistItem[]
+  rsvpHouses: RsvpHouse[]
 }
