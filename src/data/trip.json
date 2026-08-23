@@ -14,8 +14,8 @@
     "airports": "HND / NRT — not yet chosen",
     "planningBanner": {
       "eyebrow": "Dates locked",
-      "title": "Dates locked",
-      "body": "Village NYE in Nozawa. Hotels, headcount, airports, skis, and Ghibli are still open."
+      "title": "Route and village NYE are locked.",
+      "body": "Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–4 Jan (in 30 Dec, out 5 Jan) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan. Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels. Lodging is not booked."
     }
   },
   "group": {
@@ -51,7 +51,7 @@
     {
       "id": "recommended",
       "label": "Recommended",
-      "meaning": "Suggested skeleton. Not booked. Not group-confirmed."
+      "meaning": "A suggested extra on a locked route. Not a booking."
     },
     {
       "id": "open",
@@ -74,7 +74,7 @@
         "cityKey": "Tokyo",
         "dates": "27–29 Dec",
         "nights": 3,
-        "note": "Land, ship bags, easy Tokyo"
+        "note": "In 27, out 30"
       },
       {
         "id": "nozawa",
@@ -82,7 +82,7 @@
         "cityKey": "Nozawa",
         "dates": "30 Dec–4 Jan",
         "nights": 6,
-        "note": "Village NYE + ~5 ski days"
+        "note": "In 30 Dec, out 5 Jan · village NYE"
       },
       {
         "id": "tokyo-2",
@@ -90,7 +90,7 @@
         "cityKey": "Tokyo",
         "dates": "5–8 Jan",
         "nights": 4,
-        "note": "Ghibli-if, leftovers, bags"
+        "note": "In 5 Jan, out 9 Jan"
       },
       {
         "id": "fly",
@@ -231,7 +231,7 @@
         },
         {
           "title": "UVERworld Fukuoka — skip for the full group",
-          "detail": "Concert is confirmed the same night in Fukuoka. Full group stays on this Tokyo→Nozawa day. Optional 1–2 people only; see the concert card. Same-night return is not realistic.",
+          "detail": "Concert is confirmed the same night in Fukuoka. Full group stays on this Tokyo→Nozawa day. Optional 1–2 people only. Same-night return is not realistic.",
           "status": "locked"
         }
       ]
@@ -244,7 +244,7 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "Ski 1 · village New Year’s Eve",
-      "summary": "First proper ski day, then hotel dinner in the village. This is the recommended NYE, not the only fork.",
+      "summary": "First proper ski day, then hotel dinner in the village. Village NYE is locked.",
       "blocks": [
         {
           "title": "Ski day 1",

@@ -80,8 +80,9 @@ export default function App() {
             <span aria-hidden="true"> · </span>
             {trip.group.sizeLabel}
           </p>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="space-y-1">
             <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
+            <p className="text-sm font-medium">{trip.meta.planningBanner.title}</p>
             <p className="text-sm text-zinc-600">{trip.meta.planningBanner.body}</p>
           </div>
         </header>
