@@ -35,10 +35,15 @@ export default function App() {
   )
   const groups = daysByRoute(trip.days, trip.route.stops)
   const tokyoCandidates = trip.lodging.tokyo.candidates
+  const nozawaPlaces = [
+    ...trip.lodging.nozawa.selfCatered,
+    ...trip.lodging.nozawa.halfBoard,
+    ...trip.lodging.nozawa.closed,
+  ]
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <main className="mx-auto w-full max-w-2xl px-5 py-16 sm:px-6 sm:py-20">
+      <main className="mx-auto w-full max-w-[672px] px-5 py-16 sm:px-6 sm:py-20">
         <header className="space-y-4">
           <div className="space-y-2">
             <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
@@ -52,14 +57,31 @@ export default function App() {
           <p className="text-sm text-muted-foreground">{trip.meta.tone}</p>
         </header>
 
-        <Separator className="my-12" />
+        <section className="mt-10 rounded-lg border px-4 py-4">
+          <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
+            {trip.route.label}
+          </p>
+          <ol className="mt-3 grid gap-3 sm:grid-cols-4">
+            {trip.route.stops.map((stop) => (
+              <li key={stop.id} className="space-y-1">
+                <p className="text-sm font-medium">{stop.city}</p>
+                <p className="text-sm text-muted-foreground">{stop.dates}</p>
+                <p className="text-sm text-muted-foreground">
+                  {stop.nights > 0 ? `${stop.nights} nights` : stop.note}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </section>
 
-        <Alert>
+        <Alert className="mt-10">
           <AlertTitle>{trip.meta.planningBanner.title}</AlertTitle>
           <AlertDescription>{trip.meta.planningBanner.body}</AlertDescription>
         </Alert>
 
-        <section className="mt-14 space-y-5">
+        <Separator className="my-12" />
+
+        <section className="space-y-5">
           <h2 className="text-sm font-medium text-muted-foreground">Open decisions</h2>
           <ul className="divide-y">
             {openItems.map((item) => (
@@ -87,6 +109,23 @@ export default function App() {
                 {item.id === 'tokyo-hotel' ? (
                   <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
                     {tokyoCandidates.map((place) => (
+                      <li key={place.name}>
+                        <a
+                          href={place.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline underline-offset-2"
+                        >
+                          {place.name}
+                        </a>
+                        {place.note ? ` — ${place.note}` : ''}
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {item.id === 'nozawa-hotel' ? (
+                  <ul className="list-disc space-y-1 pl-4 text-sm text-muted-foreground">
+                    {nozawaPlaces.map((place) => (
                       <li key={place.name}>
                         <a
                           href={place.url}

@@ -518,7 +518,7 @@
       "id": "lodging",
       "status": "open",
       "title": "Lodging is unbooked",
-      "detail": "No Tokyo hotel and no Nozawa property is held. Tokyo MIMARU shortlist is live; Nozawa shortlist is still running. Schneider is closed through December 2027 — do not email them."
+      "detail": "No Tokyo hotel and no Nozawa property is held. Tokyo MIMARU shortlist is live. Nozawa: Kashmir House is available for 8 adults only; everything else is enquire, waitlist, or sold out for NYE. Do not treat any house as booked."
     },
     {
       "id": "ghibli",
@@ -627,33 +627,58 @@
     },
     "nozawa": {
       "selfCatered": [
-        { "name": "Stay Nozawa (operator + several houses)", "url": "https://www.staynozawa.com/" },
-        { "name": "Nozawa Holidays", "url": "https://www.nozawaholidays.com/" },
-        { "name": "Akari House", "url": "https://www.akarihouse.jp/" },
-        { "name": "Kamoshika Ski Lodge", "url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge" },
         {
-          "name": "Nozawa Slopeside Chalet",
-          "note": "¥160,000 / night in peak (20 Dec 2026–29 Feb 2027). 7-night minimum.",
-          "url": "https://www.nozawaholidays.com/properties/nozawa-slopeside-chalet/"
+          "name": "Kashmir House",
+          "note": "AVAILABLE. 3 Double + 1 Cosy Double = 8 adults only. Breakfast, no dinner. Not vehicle-accessible (Yu-Road walk). About ¥1,102,100 for 4 rooms / 6 nights. Not booked.",
+          "url": "https://book.staynozawa.com/search/"
         },
-        { "name": "Tanuki", "url": "https://www.staynozawa.com/all-accommodation" },
-        { "name": "Tamanegi House", "url": "https://www.akarihouse.jp/tamanegi-house" },
-        { "name": "Bonbori Ichi", "url": "https://www.staynozawa.com/all-accommodation" },
-        { "name": "Iroha Ichi + Ni", "url": "https://www.staynozawa.com/all-accommodation" },
-        { "name": "Dennojo North + West", "url": "https://www.dennojonozawa.com/" }
+        {
+          "name": "Tamanegi House (Akari)",
+          "note": "Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. admin@akarihouse.jp",
+          "url": "https://www.akarihouse.jp/tamanegi-house"
+        }
       ],
       "halfBoard": [
-        { "name": "Kiriya Ryokan", "url": "https://kiriya.jp/english/" },
-        { "name": "Nozawa View Hotel Shimataya", "url": "https://nozawakanko.jp/" },
-        { "name": "Tokiwaya Ryokan", "url": "https://tokiwaya.jp/" },
-        { "name": "Ryokan Sakaya", "url": "https://www.ryokan-sakaya.co.jp/en.html" }
+        {
+          "name": "Tokiwaya Ryokan",
+          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. +81 269-85-3128",
+          "url": "https://tokiwaya.jp/"
+        },
+        {
+          "name": "Kiriya Ryokan",
+          "note": "No online NYE plans. Phone +81 269-85-2020.",
+          "url": "https://kiriya.jp/english/"
+        },
+        {
+          "name": "Nozawa View Hotel Shimataya",
+          "note": "No public calendar. Email view@nozawahospitality.com or res@nozawahospitality.com for 5 rooms half-board.",
+          "url": "https://nozawakanko.jp/"
+        }
       ],
       "closed": [
         {
-          "name": "Schneider Hotel",
-          "note": "Closed for renovation 4 Apr 2026 through December 2027. Do not book.",
+          "name": "Stay Nozawa RoomBoss block",
+          "note": "Kamoshika, Bonbori, Tanuki 4BR, Iroha, Dennojo, and MARU SUMI are blocked 24 Dec–6 Jan on RoomBoss. No instant-bookable whole house.",
           "status": "locked",
-          "url": "https://www.staynozawa.com/properties/schneider-hotel"
+          "url": "https://www.staynozawa.com/all-accommodation"
+        },
+        {
+          "name": "Kamoshika Ski Lodge",
+          "note": "Sold out 24 Dec–9 Jan. Waitlist bookings@staynozawa.com / +81 269-85-3121. Ask Bonbori and Tanuki in the same email.",
+          "status": "locked",
+          "url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge"
+        },
+        {
+          "name": "Nozawa Holidays chalets",
+          "note": "Slopeside, Central 301, Villa, and Lodge Nagano sold out on Bookings247. 7-night minimum on the chalets anyway.",
+          "status": "locked",
+          "url": "https://www.nozawaholidays.com/"
+        },
+        {
+          "name": "Ryokan Sakaya",
+          "note": "Sold out NYE nights.",
+          "status": "locked",
+          "url": "https://www.ryokan-sakaya.co.jp/en.html"
         }
       ]
     }
@@ -744,7 +769,7 @@
     {
       "id": "nozawa-hotel",
       "title": "Book Nozawa lodging",
-      "detail": "Stay Nozawa, Nozawa Holidays, Akari, or a half-board ryokan. Schneider is closed through Dec 2027.",
+      "detail": "Not booked. Stay 30 Dec 2026–5 Jan 2027 (6 nights). No instant-bookable whole house. Kashmir House is available for 8 adults only. Tamanegi is enquire. Kamoshika is sold out (waitlist). Tokiwaya cannot cover 31 Dec–1 Jan online. Kiriya and Shimataya need phone or email.",
       "status": "open",
       "priority": "now"
     },
