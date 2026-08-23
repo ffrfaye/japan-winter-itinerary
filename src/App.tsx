@@ -77,6 +77,7 @@ function PlaceLine({ place }: { place: NamedPlace }) {
     ? displayNote(place.note, [place.email, place.phone].filter(Boolean) as string[])
     : ''
   const available = Boolean(place.note?.includes('AVAILABLE'))
+  const notAFit = Boolean(place.note?.includes('Not a fit for 12') || place.note?.includes('not a fit for 12'))
 
   return (
     <li className="space-y-1 py-3">
@@ -95,6 +96,7 @@ function PlaceLine({ place }: { place: NamedPlace }) {
             <p className="text-sm font-medium">{place.name}</p>
           )}
           {available ? <Badge variant="outline">Available</Badge> : null}
+          {notAFit ? <Badge variant="outline">Not a fit for 12</Badge> : null}
         </div>
         <div className="flex flex-wrap items-baseline justify-end gap-x-3">
           {place.email ? (
@@ -149,8 +151,18 @@ export default function App() {
               <span aria-hidden="true"> · </span>
               {trip.group.sizeLabel}
             </p>
+            <Badge variant="outline">{statusLabel(trip.group.sizeStatus)}</Badge>
             <Badge variant="outline">{trip.meta.planningBanner.eyebrow}</Badge>
           </div>
+          <ul className="text-sm text-zinc-600">
+            {trip.group.pairs.map((pair) => (
+              <li key={pair.id}>
+                {pair.nickname}
+                <span aria-hidden="true"> · </span>
+                {pair.names.join(', ')}
+              </li>
+            ))}
+          </ul>
           <p className="text-sm text-zinc-600">{trip.meta.planningBanner.body}</p>
         </header>
 
@@ -201,9 +213,7 @@ export default function App() {
                   <p className="text-sm font-medium">{item.title}</p>
                   <Badge variant="outline">{statusLabel(item.status)}</Badge>
                 </div>
-                {item.id !== 'tokyo-hotel' ? (
-                  <p className="text-sm text-zinc-600">{item.detail}</p>
-                ) : null}
+                <p className="text-sm text-zinc-600">{item.detail}</p>
                 {item.id === 'tokyo-hotel' ? (
                   <ul className="divide-y divide-zinc-200">
                     {tokyoCandidates.map((place) => (

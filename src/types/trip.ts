@@ -73,6 +73,8 @@ export type Trip = {
     lead: string
     sizeLabel: string
     sizeOpen: string
+    sizeStatus: StatusId
+    pairs: { id: string; nickname: string; names: string[] }[]
     interests: string[]
     skiGear: string
   }

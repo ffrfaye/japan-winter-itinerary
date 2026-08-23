@@ -15,13 +15,22 @@
     "planningBanner": {
       "eyebrow": "Dates locked",
       "title": "Route and village NYE are locked.",
-      "body": "Still open: 8 vs 10, HND vs NRT, bring vs rent, Ghibli calendar, hotels, budget."
+      "body": "Still open: HND vs NRT, bring vs rent, Ghibli calendar, hotels, budget."
     }
   },
   "group": {
     "lead": "Faye Fan",
-    "sizeLabel": "8–10 adults (4–5 couples)",
-    "sizeOpen": "8 vs 10 still open",
+    "sizeLabel": "12 people · 6 pairs",
+    "sizeOpen": "Headcount locked for display",
+    "sizeStatus": "locked",
+    "pairs": [
+      { "id": "fyll", "nickname": "Fyll", "names": ["Faye", "Will"] },
+      { "id": "srimpe", "nickname": "Srimpe", "names": ["Lampe", "Sri"] },
+      { "id": "c2", "nickname": "C^2", "names": ["Cal", "Clem"] },
+      { "id": "sophdu", "nickname": "Sophdu", "names": ["Eric", "Macy"] },
+      { "id": "andriha", "nickname": "Andriha", "names": ["Andrew", "Spriha"] },
+      { "id": "bunk-bed-boys", "nickname": "bunk bed boys", "names": ["James", "Seb"] }
+    ],
     "interests": ["anime", "skiing", "onsen", "un-hectic pace"],
     "skiGear": "Some people may bring gear; others will rent. Who does which is still open."
   },
@@ -44,7 +53,7 @@
     {
       "id": "lodging-style",
       "status": "locked",
-      "text": "Tokyo: one hotel or apart-hotel, 5 doubles — not 3 Airbnbs."
+      "text": "Tokyo: one MIMARU building, 3 two-beds (or a connecting 8 + one 2-bed) — not 3 Airbnbs."
     }
   ],
   "statusLegend": [
@@ -120,7 +129,7 @@
       "blocks": [
         {
           "title": "Hotel check-in",
-          "detail": "One shared hotel or apart-hotel, 5 doubles. Area still open: Tokyo Station / Yaesu / Nihonbashi first, then Ueno, then Shinjuku.",
+          "detail": "One MIMARU building for 12: 3 two-beds, or a connecting 8 + one 2-bed. Area still open: Tokyo Station / Yaesu / Nihonbashi first, then Ueno, then Shinjuku.",
           "status": "open"
         },
         {
@@ -142,7 +151,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Nakano Broadway + koshitsu izakaya",
-      "summary": "Anime-fan day in Nakano, then a private-room izakaya so 8–10 people can actually hear each other.",
+      "summary": "Anime-fan day in Nakano, then a private-room izakaya so the group can actually hear each other.",
       "blocks": [
         {
           "title": "Nakano Broadway",
@@ -154,7 +163,7 @@
         },
         {
           "title": "Koshitsu izakaya dinner",
-          "detail": "Book a private room (個室) for 8–10. Restaurant name TBD — do not invent one.",
+          "detail": "Book a private room (個室) for the group. Restaurant name TBD — do not invent one.",
           "status": "open"
         }
       ]
@@ -409,7 +418,7 @@
       "blocks": [
         {
           "title": "Ghibli Museum, Mitaka — IF the calendar says open",
-          "detail": "January 2027 days are unpublished. Do not claim tickets exist. Lawson sale for January is 10 Dec 2026, 10:00 JST. Max 6 tickets per account. For 8–10 people you need two named purchasers, and both must attend. Adult timed ticket ¥1,000. This is Mitaka, not Ghibli Park.",
+          "detail": "January 2027 days are unpublished. Do not claim tickets exist. Lawson sale for January is 10 Dec 2026, 10:00 JST. Max 6 tickets per account. For 12 people you need two named purchasers, and both must attend. Adult timed ticket ¥1,000. This is Mitaka, not Ghibli Park.",
           "status": "open",
           "links": [
             { "label": "Official ticket page", "url": "https://www.ghibli-museum.jp/en/tickets/" },
@@ -518,7 +527,7 @@
       "id": "lodging",
       "status": "open",
       "title": "Lodging is unbooked",
-      "detail": "Nothing is held. Tokyo MIMARU shortlist is live. Nozawa: Kashmir is available for 8 only."
+      "detail": "Nothing is held. Tokyo for 12: 3 MIMARU 2-beds, or a connecting 8 + one 2-bed. Nozawa: waitlist house or Iroha Ichi+Ni. Kashmir (8) and Slopeside (10) are not defaults."
     },
     {
       "id": "ghibli",
@@ -529,8 +538,8 @@
     {
       "id": "headcount-airport-gear",
       "status": "open",
-      "title": "Headcount, airport, ski bags",
-      "detail": "8 vs 10 adults. Haneda vs Narita. Who brings skis vs who rents."
+      "title": "Airport, ski bags",
+      "detail": "Haneda vs Narita. Who brings skis vs who rents. Headcount is 12."
     }
   ],
   "concert": {
@@ -578,7 +587,7 @@
     "sale": "Lawson Ticket, 10 Dec 2026, 10:00 JST, for January 2027 dates — if those dates are on sale.",
     "rules": [
       "Max 6 tickets per account.",
-      "For 8–10 people, two named purchasers. Both must attend.",
+      "For 12 people, two named purchasers. Both must attend.",
       "Adult timed ticket ¥1,000.",
       "Named purchaser ID may be checked. Absent purchaser can mean refused entry."
     ],
@@ -590,12 +599,12 @@
   "lodging": {
     "status": "open",
     "tokyo": {
-      "rule": "Not booked. One MIMARU building can cover both Tokyo stays (in 27 Dec / out 30 Dec, and in 5 Jan / out 9 Jan). Prices are official member FROM for 1 apartment for the whole stay. Need 2–3 apartments. Hilton, Keio Plaza, Hyatt, and The Tokyo Station Hotel: no live 5-room calendar this pass. Hotel Granvia Tokyo does not exist (JR West brand).",
+      "rule": "Not booked. One MIMARU building can cover both Tokyo stays (in 27 Dec / out 30 Dec, and in 5 Jan / out 9 Jan). For 12: 3 two-beds, or a connecting 8 + one 2-bed. Station East 3-apt from-rate ~$1,150 pp. Prices are official member FROM for 1 apartment for the whole stay. Hilton, Keio Plaza, Hyatt, and The Tokyo Station Hotel: no live 5-room calendar this pass. Hotel Granvia Tokyo does not exist (JR West brand).",
       "areaRank": ["Tokyo Station / Yaesu / Nihonbashi", "Ueno", "Shinjuku"],
       "candidates": [
         {
           "name": "MIMARU Tokyo Station East (recommended)",
-          "note": "2-bed inventory, courier desk 07:00–22:00, no breakfast. Not booked.",
+          "note": "Default for 12: 3 two-beds, or a connecting 8 + one 2-bed. 3-apt from-rate ~$1,150 pp. 2-bed inventory, courier desk 07:00–22:00, no breakfast. Not booked.",
           "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
           "email": "tokyo-station-east@chm.cigr.co.jp",
           "status": "recommended",
@@ -650,21 +659,35 @@
     "nozawa": {
       "selfCatered": [
         {
-          "name": "Kashmir House",
-          "note": "AVAILABLE. 3 Double + 1 Cosy Double = 8 adults only. Breakfast, no dinner. Not vehicle-accessible (Yu-Road walk). About ¥1,102,100 for 4 rooms / 6 nights. Not booked.",
-          "url": "https://book.staynozawa.com/search/"
-        },
-        {
-          "name": "Tamanegi House (Akari)",
-          "note": "Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. Not booked.",
-          "email": "admin@akarihouse.jp"
-        },
-        {
           "name": "Kamoshika",
-          "note": "Sold out 24 Dec–9 Jan. Waitlist. Also ask Bonbori and Tanuki in the same email. Not booked.",
+          "note": "Sleeps 16. Sold out 24 Dec–9 Jan. Waitlist for 12. Also ask Tanuki and Iroha in the same email. Not booked.",
           "email": "bookings@staynozawa.com",
           "phone": "+81 269-85-3121",
           "status": "locked"
+        },
+        {
+          "name": "Tanuki 4BR 3F",
+          "note": "Sleeps 12. Waitlist. Do not invent availability. Not booked.",
+          "email": "bookings@staynozawa.com"
+        },
+        {
+          "name": "Tamanegi House (Akari)",
+          "note": "Sleeps 10–12. Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. Not booked.",
+          "email": "admin@akarihouse.jp"
+        },
+        {
+          "name": "Iroha Ichi + Ni",
+          "note": "Two houses, 8+8. Blocked 24 Dec–6 Jan on RoomBoss this pass. Ask the waitlist. Not booked.",
+          "email": "bookings@staynozawa.com"
+        },
+        {
+          "name": "Tanuki 4F",
+          "note": "Sleeps 11. Short one — not a fit for 12. Not booked."
+        },
+        {
+          "name": "Kashmir House",
+          "note": "AVAILABLE. 8 adults only. Not a fit for 12. Breakfast, no dinner. Yu-Road walk. About ¥1,102,100 for 4 rooms / 6 nights. Not booked.",
+          "url": "https://book.staynozawa.com/search/"
         }
       ],
       "halfBoard": [
@@ -692,7 +715,7 @@
         },
         {
           "name": "Nozawa Holidays chalets",
-          "note": "Slopeside, Central 301, Villa, and Lodge Nagano sold out on Bookings247. 7-night minimum on the chalets anyway.",
+          "note": "Slopeside (10) is not a default for 12. Central 301, Villa, and Lodge Nagano sold out on Bookings247. 7-night minimum on the chalets anyway.",
           "status": "locked"
         },
         {
@@ -723,12 +746,12 @@
       {
         "id": "tokyo-stay",
         "title": "Tokyo stay",
-        "detail": "MIMARU Station East from-rate: ~$950 pp (8 in 2 apartments) / ~$1,150 (10 in 3). Not booked."
+        "detail": "MIMARU Station East 3-apt from-rate ~$1,150 pp for 12. Not booked."
       },
       {
         "id": "nozawa-stay",
         "title": "Nozawa stay",
-        "detail": "Kashmir 8 people ~$870 (breakfast). Tamanegi enquire ~$730/10 if 6 nights allowed. Ryokan half-board could be $1k–1.9k. Not booked."
+        "detail": "No 12-person house rate locked. Tamanegi enquire ~$730/10 if 6 nights allowed. Kashmir 8-person ~$870 is not the 12-person path. Ryokan half-board could be $1k–1.9k. Not booked."
       },
       {
         "id": "rail-taxi",
@@ -821,9 +844,9 @@
     },
     {
       "id": "headcount",
-      "title": "Lock 8 vs 10 adults",
-      "detail": "Room math, van vs two taxis, and Ghibli purchaser count all hang on this.",
-      "status": "open",
+      "title": "Headcount is 12",
+      "detail": "6 pairs locked for display. Room math uses 3 Tokyo apartments and a 12-person Nozawa path.",
+      "status": "locked",
       "priority": "now"
     },
     {
@@ -836,14 +859,14 @@
     {
       "id": "tokyo-hotel",
       "title": "Book Tokyo stay",
-      "detail": "Not booked. One MIMARU can cover both stays. Need 2–3 apartments.",
+      "detail": "Not booked. For 12: 3 MIMARU 2-beds, or a connecting 8 + one 2-bed. Station East 3-apt from-rate ~$1,150 pp.",
       "status": "open",
       "priority": "now"
     },
     {
       "id": "nozawa-hotel",
       "title": "Book Nozawa stay",
-      "detail": "Not booked. No instant-bookable whole house. Kashmir is available for 8 only.",
+      "detail": "Not booked. For 12: Kamoshika 16 waitlist, Tanuki 4BR 3F 12 waitlist, Tamanegi 10–12 enquire, or Iroha Ichi+Ni (8+8). Kashmir (8) and Tanuki 4F (11) are not a fit.",
       "status": "open",
       "priority": "now"
     },
@@ -892,7 +915,7 @@
     {
       "id": "ghibli-watch",
       "title": "Watch the Ghibli calendar — do not buy yet",
-      "detail": "January 2027 unpublished. If dates appear, Lawson 10 Dec 2026 10:00 JST. Two named purchasers for 8–10.",
+      "detail": "January 2027 unpublished. If dates appear, Lawson 10 Dec 2026 10:00 JST. Two named purchasers for 12.",
       "status": "open",
       "priority": "later"
     },
