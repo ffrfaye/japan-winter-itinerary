@@ -1,7 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { hasPin, nozawaLandmarks, tokyoLandmarks } from '@/lib/lodging'
+import {
+  hasPin,
+  isSoldOutWaitlistEmpty,
+  nozawaLandmarks,
+  tokyoLandmarks,
+} from '@/lib/lodging'
 import type { LodgingLocation, LodgingProperty } from '@/types/lodging'
 
 function landmarkIcon(label: string) {
@@ -16,14 +21,15 @@ function landmarkIcon(label: string) {
   })
 }
 
-function propertyIcon(name: string, active: boolean) {
+function propertyIcon(name: string, active: boolean, faded: boolean) {
   const disc = active
     ? 'background:#18181b;border:2px solid #18181b;'
     : 'background:#fff;border:2px solid #18181b;'
   const color = active ? '#18181b' : '#3f3f46'
+  const fade = faded ? 'opacity:0.5;' : ''
   return L.divIcon({
     className: 'trip-pin',
-    html: `<div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
+    html: `<div style="${fade}display:flex;flex-direction:column;align-items:center;gap:2px;">
       <span style="width:14px;height:14px;border-radius:999px;${disc}box-shadow:0 0 0 1px rgba(255,255,255,.8);"></span>
       <span style="font:600 10px/1 Inter Variable,Inter,sans-serif;color:${color};white-space:nowrap;">${name}</span>
     </div>`,
@@ -109,10 +115,11 @@ export function LodgingCompareMap({
 
     for (const card of cards) {
       if (!hasPin(card) || card.lat == null || card.lng == null) continue
+      const faded = isSoldOutWaitlistEmpty(card)
       const marker = L.marker([card.lat, card.lng], {
-        icon: propertyIcon(card.name, card.id === selectedId),
+        icon: propertyIcon(card.name, card.id === selectedId, faded),
         keyboard: true,
-        zIndexOffset: card.id === selectedId ? 200 : 50,
+        zIndexOffset: card.id === selectedId ? 200 : faded ? 20 : 50,
       }).addTo(map)
       marker.on('click', () => onSelect(card.id))
       markers.current.push(marker)

@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import {
   availabilityLabel,
   contactHref,
+  isSoldOutWaitlistEmpty,
   onsenLabel,
   priceLine,
   roomsLine,
@@ -38,6 +39,7 @@ export function LodgingCompareCard({
   ]
     .filter(Boolean)
     .join(' · ')
+  const faded = isSoldOutWaitlistEmpty(card)
 
   return (
     <article
@@ -52,11 +54,19 @@ export function LodgingCompareCard({
           <img
             src={photo}
             alt=""
-            className="aspect-[16/9] w-full object-cover"
+            className={cn(
+              'aspect-[16/9] w-full object-cover',
+              faded && 'opacity-50',
+            )}
           />
         ) : null}
         <div className="space-y-2 p-4">
-          <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm">
+          <div
+            className={cn(
+              'flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm',
+              faded && 'opacity-50',
+            )}
+          >
             <span className="font-medium">{card.name}</span>
             {card.type ? (
               <span className="text-zinc-600">· {card.type}</span>
@@ -65,12 +75,25 @@ export function LodgingCompareCard({
             {!price && typical ? (
               <span className="text-zinc-500">· {typical}</span>
             ) : null}
-            {card.badge ? (
-              <Badge variant="outline">{card.badge}</Badge>
-            ) : null}
           </div>
-          {rooms ? <p className="text-sm text-zinc-600">{rooms}</p> : null}
-          <div className="flex flex-wrap gap-1">
+          {card.badge || faded ? (
+            <div className="flex flex-wrap items-center gap-1">
+              {card.badge ? (
+                <Badge variant="outline">{card.badge}</Badge>
+              ) : null}
+              {faded ? (
+                <Badge variant="outline">
+                  {availabilityLabel(card.availability_status)}
+                </Badge>
+              ) : null}
+            </div>
+          ) : null}
+          {rooms ? (
+            <p className={cn('text-sm text-zinc-600', faded && 'opacity-50')}>
+              {rooms}
+            </p>
+          ) : null}
+          <div className={cn('flex flex-wrap gap-1', faded && 'opacity-50')}>
             {card.scenarios.map((count) => (
               <Badge key={count} variant="outline">
                 {count}
@@ -78,13 +101,22 @@ export function LodgingCompareCard({
             ))}
           </div>
           {card.scenario_notes ? (
-            <p className="text-sm text-zinc-500">{card.scenario_notes}</p>
+            <p className={cn('text-sm text-zinc-500', faded && 'opacity-50')}>
+              {card.scenario_notes}
+            </p>
           ) : null}
           {availability ? (
-            <p className="text-sm text-zinc-600">{availability}</p>
+            <p
+              className={cn(
+                'text-sm',
+                faded ? 'text-zinc-800' : 'text-zinc-600',
+              )}
+            >
+              {availability}
+            </p>
           ) : null}
           {card.booking_method || card.booking_url || contact ? (
-            <p className="text-sm text-zinc-600">
+            <p className={cn('text-sm text-zinc-600', faded && 'opacity-50')}>
               {card.booking_method ? <span>{card.booking_method}</span> : null}
               {card.booking_url ? (
                 <>
@@ -112,22 +144,40 @@ export function LodgingCompareCard({
               ) : null}
             </p>
           ) : null}
-          {onsen ? <p className="text-sm text-zinc-600">{onsen}</p> : null}
+          {onsen ? (
+            <p className={cn('text-sm text-zinc-600', faded && 'opacity-50')}>
+              {onsen}
+            </p>
+          ) : null}
           {card.location === 'nozawa' && ski ? (
-            <p className="text-sm text-zinc-600">{ski}</p>
+            <p className={cn('text-sm text-zinc-600', faded && 'opacity-50')}>
+              {ski}
+            </p>
           ) : null}
           {card.location === 'tokyo' && tokyo ? (
-            <p className="text-sm text-zinc-600">{tokyo}</p>
+            <p className={cn('text-sm text-zinc-600', faded && 'opacity-50')}>
+              {tokyo}
+            </p>
           ) : null}
           {card.pros.length > 0 ? (
-            <ul className="list-disc space-y-0.5 pl-4 text-sm text-zinc-600">
+            <ul
+              className={cn(
+                'list-disc space-y-0.5 pl-4 text-sm text-zinc-600',
+                faded && 'opacity-50',
+              )}
+            >
               {card.pros.slice(0, 4).map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           ) : null}
           {card.cons.length > 0 ? (
-            <ul className="list-disc space-y-0.5 pl-4 text-sm text-zinc-500">
+            <ul
+              className={cn(
+                'list-disc space-y-0.5 pl-4 text-sm text-zinc-500',
+                faded && 'opacity-50',
+              )}
+            >
               {card.cons.slice(0, 3).map((item) => (
                 <li key={item}>{item}</li>
               ))}

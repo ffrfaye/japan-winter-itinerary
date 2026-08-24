@@ -78,19 +78,46 @@ export function loadLodgingCards(): LodgingProperty[] {
   return loadLodgingFile().properties
 }
 
+const waitlistEmptyIds = new Set([
+  'tamanegi-house',
+  'view-hotel-shimataya',
+  'kamoshika-ski-lodge',
+  'tanuki-premium-4bed-3f',
+  'iroha-ichi-ni',
+  'slopeside-chalet',
+  'bonbori-ichi',
+  'nozawa-central-301',
+])
+
+export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
+  if (waitlistEmptyIds.has(card.id)) return true
+  if (card.id.toLowerCase().includes('sakaya')) return true
+  const status = card.availability_status.toLowerCase()
+  return status === 'sold-out' || status === 'inquiry sent'
+}
+
+export function lodgingSortRank(card: LodgingProperty) {
+  if (isSoldOutWaitlistEmpty(card)) return 2
+  if (card.availability_status.toLowerCase() === 'available') return 0
+  return 1
+}
+
 export function filterLodgingCards(
   cards: LodgingProperty[],
   location: LodgingLocation,
   bedrooms: BedroomCount,
 ) {
-  return cards.filter((card) => {
-    if (card.location !== location) return false
-    if (!card.scenarios.includes(bedrooms)) return false
-    if (card.default_card === false) {
-      return Boolean(card.nara_not_base && location === 'kyoto')
-    }
-    return true
-  })
+  return cards
+    .map((card, index) => ({ card, index }))
+    .filter(
+      ({ card }) =>
+        card.location === location && card.scenarios.includes(bedrooms),
+    )
+    .sort((a, b) => {
+      const rank = lodgingSortRank(a.card) - lodgingSortRank(b.card)
+      return rank !== 0 ? rank : a.index - b.index
+    })
+    .map(({ card }) => card)
 }
 
 export function hasPin(card: LodgingProperty) {
