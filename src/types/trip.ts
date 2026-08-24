@@ -1,4 +1,4 @@
-export type StatusId = 'recommended' | 'open' | 'locked'
+export type StatusId = 'recommended' | 'open' | 'locked' | 'deferred'
 
 export type TripLink = {
   label: string
@@ -104,7 +104,7 @@ export type ChecklistItem = {
 
 export type PlanningActivity = {
   id: string
-  group: 'tokyo' | 'nozawa'
+  group: 'tokyo' | 'nozawa' | 'last-block'
   title: string
   status: StatusId
   detail: string

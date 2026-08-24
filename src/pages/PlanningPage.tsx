@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui/badge'
 import {
+  lastBlockIdeas,
   nozawaIdeas,
   planningCalendar,
   planningOpenDecisions,
@@ -72,6 +73,7 @@ function DecisionRow({
 export function PlanningPage() {
   const tokyo = tokyoIdeas()
   const nozawa = nozawaIdeas()
+  const lastBlock = lastBlockIdeas()
   const open = planningOpenDecisions()
   const soon = planningCalendar('soon')
   const later = planningCalendar('later')
@@ -106,6 +108,19 @@ export function PlanningPage() {
           ))}
         </ul>
       </section>
+
+      {lastBlock.length > 0 ? (
+        <section className="space-y-2">
+          <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+            Last 4 nights
+          </h2>
+          <ul className="divide-y divide-zinc-200">
+            {lastBlock.map((idea) => (
+              <IdeaCard key={idea.id} idea={idea} />
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       <section className="space-y-2">
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">

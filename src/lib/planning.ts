@@ -25,6 +25,10 @@ export function nozawaIdeas(): PlanningIdea[] {
   return trip.activities.filter((item) => item.group === 'nozawa')
 }
 
+export function lastBlockIdeas(): PlanningIdea[] {
+  return trip.activities.filter((item) => item.group === 'last-block')
+}
+
 export function planningOpenDecisions() {
   const skeleton = trip.checklist.find((item) => item.id === 'confirm-skeleton')
   const fromTrip = trip.openDecisions.filter((item) => item.id !== 'lodging')

@@ -126,6 +126,11 @@
       "id": "locked",
       "label": "Locked",
       "meaning": "A hard constraint, a closed window, or a confirmed fact we will not pretend is flexible."
+    },
+    {
+      "id": "deferred",
+      "label": "Deferred / optional",
+      "meaning": "Parked until another fork is chosen. Not a booking."
     }
   ],
   "route": {
@@ -799,6 +804,21 @@
           "url": "https://en.jigokudani-yaenkoen.co.jp/guide/"
         }
       ]
+    },
+    {
+      "id": "disney-usj",
+      "group": "last-block",
+      "title": "DisneySea or USJ — not both",
+      "status": "deferred",
+      "when": "Last 4 nights, after Tokyo vs Kyoto is chosen",
+      "detail": "Faye deferred Disney vs USJ until the last 4 nights are Tokyo or Kyoto. Not booked. No tickets bought.",
+      "lines": [
+        "If last block is Tokyo: optional DisneySea 6–8 Jan.",
+        "If last block is Kyoto: optional USJ.",
+        "Not both.",
+        "NYE Disney overnight is off."
+      ],
+      "links": []
     }
   ],
   "lodging": {
