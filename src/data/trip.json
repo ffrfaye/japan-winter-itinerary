@@ -397,11 +397,11 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Travel day to Tokyo",
-      "summary": "Optional morning ski, then back to Tokyo.",
+      "summary": "Optional morning ski, then back to Tokyo. City travel starts after arrival.",
       "blocks": [
         {
           "title": "Return",
-          "detail": "Optional morning ski, then travel day back to Tokyo.",
+          "detail": "Optional morning ski, then travel day back to Tokyo. City travel starts after arrival — Tokyo or another city. Nothing booked yet.",
           "status": "recommended"
         }
       ]
@@ -468,12 +468,12 @@
       "dayNumber": 14,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Travel home",
-      "summary": "Fly home.",
+      "title": "Fly home",
+      "summary": "Fly home from wherever you are that morning.",
       "blocks": [
         {
           "title": "Depart",
-          "detail": "Travel home.",
+          "detail": "Fly home from wherever you are that morning. Airport not chosen.",
           "status": "recommended"
         }
       ]
