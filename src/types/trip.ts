@@ -54,6 +54,33 @@ export type NamedPlace = {
   stayB?: string
 }
 
+export type LodgingBookStatus =
+  | 'available'
+  | 'enquire'
+  | 'waitlist'
+  | 'sold-out'
+
+export type LodgingOption = {
+  id: string
+  property: string
+  city: 'Tokyo' | 'Nozawa'
+  beds: string
+  status: LodgingBookStatus
+  perPerson?: string
+  nextStep: string
+  url?: string
+  email?: string
+  phone?: string
+  note?: string
+}
+
+export type LodgingBand = {
+  id: '4' | '5' | '6'
+  heading: string
+  why: string
+  options: LodgingOption[]
+}
+
 export type RsvpHouse = {
   id: string
   name: string
@@ -169,16 +196,9 @@ export type Trip = {
   }
   lodging: {
     status: StatusId
-    tokyo: {
-      rule: string
-      areaRank: string[]
-      candidates: NamedPlace[]
-    }
-    nozawa: {
-      selfCatered: NamedPlace[]
-      halfBoard: NamedPlace[]
-      closed: NamedPlace[]
-    }
+    asOf: string
+    tokyoNote: string
+    bands: LodgingBand[]
   }
   budget: {
     status: StatusId

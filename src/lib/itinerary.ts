@@ -1,4 +1,4 @@
-import type { PlaceCard, RsvpHouse, Trip, TripDay } from '@/types/trip'
+import type { PlaceCard, Trip, TripDay } from '@/types/trip'
 
 export type TabId = 'itinerary' | 'rsvp' | 'planning'
 
@@ -196,21 +196,4 @@ export function remainingGuests(
 ) {
   const noCount = Object.values(answers).filter((value) => value === 'no').length
   return invited - noCount
-}
-
-export function filterHouses(
-  houses: RsvpHouse[],
-  remaining: number,
-): RsvpHouse[] {
-  return houses.filter((house) => {
-    if (house.kind === 'two-house' && remaining < 11) return false
-    if (house.kind === 'tokyo-apt') return remaining >= 1
-    return remaining >= house.min && remaining <= house.max
-  })
-}
-
-export function tokyoAptNote(remaining: number) {
-  return remaining <= 8
-    ? '2 apartments if yes ≤ 8. Unbooked.'
-    : '3 apartments. Unbooked.'
 }

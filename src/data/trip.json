@@ -14,7 +14,7 @@
     "airports": "HND / NRT — not yet chosen",
     "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Nozawa Onsen",
     "lockedNote": "",
-    "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite).",
+    "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite). Yamato Cool TA-Q-BIN truck, 2016.",
     "planningBanner": {
       "eyebrow": "",
       "title": "",
@@ -245,9 +245,19 @@
       ],
       "places": [
         {
-          "title": "Yamato",
-          "description": "Ship ski bags from the hotel desk. Not a convenience-store drop.",
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "thumb": "/tokyo.jpg",
+          "thumbPosition": "72% 42%",
+          "mark": "T"
+        },
+        {
+          "title": "Yamato Transport",
+          "description": "Ship bags ahead so you are not hauling them on the train.",
           "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/",
+          "thumb": "/yamato.jpg",
+          "thumbPosition": "70% 45%",
           "mark": "Y"
         }
       ]
@@ -291,6 +301,16 @@
           "title": "Hakutaka",
           "detail": "Hakutaka is the Hokuriku Shinkansen that stops at Iiyama, the station for Nozawa. Kagayaki skips Iiyama. Not a ski day.",
           "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Nozawa Onsen Snow Resort",
+          "description": "NYE and NYD are quiet in Tokyo, so we spend them at an onsen ski resort and get village life.",
+          "url": "https://en.nozawaski.com/",
+          "thumb": "/nozawa.jpg",
+          "thumbPosition": "50% 38%",
+          "mark": "N"
         }
       ]
     },
@@ -386,6 +406,16 @@
           "detail": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
           "status": "recommended"
         }
+      ],
+      "places": [
+        {
+          "title": "Yamato Transport",
+          "description": "Ship bags ahead so you are not hauling them on the train.",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/",
+          "thumb": "/yamato.jpg",
+          "thumbPosition": "70% 45%",
+          "mark": "Y"
+        }
       ]
     },
     {
@@ -403,6 +433,16 @@
           "title": "Return",
           "detail": "Optional morning ski, then travel day back to Tokyo. City travel starts after arrival — Tokyo or another city. Nothing booked yet.",
           "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "thumb": "/tokyo.jpg",
+          "thumbPosition": "72% 42%",
+          "mark": "T"
         }
       ]
     },
@@ -496,7 +536,7 @@
       "id": "lodging",
       "status": "open",
       "title": "Lodging is unbooked",
-      "detail": "Nothing is held. Tokyo for 12: 3 MIMARU 2-beds, or a connecting 8 + one 2-bed. Nozawa: waitlist house or Iroha Ichi+Ni. Kashmir (8) and Slopeside (10) are not defaults."
+      "detail": "Nothing is held. Bedroom = couple room. At least 4 couples committed (8 people). Invite list still 6 pairs / 12. Tokyo: Station East first. Nozawa: Kashmir is the available 4-room floor; Kamoshika is waitlist with no price. Slopeside is hidden."
     },
     {
       "id": "ghibli",
@@ -582,137 +622,197 @@
   },
   "lodging": {
     "status": "open",
-    "tokyo": {
-      "rule": "Not booked. One MIMARU building can cover both Tokyo stays (in 27 Dec / out 30 Dec, and in 5 Jan / out 9 Jan). For 12: 3 two-beds, or a connecting 8 + one 2-bed. Station East 3-apt from-rate ~$1,150 pp. Prices are official member FROM for 1 apartment for the whole stay. Hilton, Keio Plaza, Hyatt, and The Tokyo Station Hotel: no live 5-room calendar this pass. Hotel Granvia Tokyo does not exist (JR West brand).",
-      "areaRank": [
-        "Tokyo Station / Yaesu / Nihonbashi",
-        "Ueno",
-        "Shinjuku"
-      ],
-      "candidates": [
-        {
-          "name": "MIMARU Tokyo Station East (recommended)",
-          "note": "Default for 12: 3 two-beds, or a connecting 8 + one 2-bed. 3-apt from-rate ~$1,150 pp. 2-bed inventory, courier desk 07:00–22:00, no breakfast. Not booked.",
-          "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
-          "email": "tokyo-station-east@chm.cigr.co.jp",
-          "status": "recommended",
-          "stayA": "A · 26 vacant · ¥345,519",
-          "stayB": "B · 13 vacant · ¥261,702"
-        },
-        {
-          "name": "MIMARU Tokyo Hatchobori",
-          "note": "Not booked.",
-          "url": "https://mimaruhotels.com/en/hotel/hatchobori/",
-          "email": "hatchobori@chm.cigr.co.jp",
-          "stayA": "A · 37 vacant · ¥289,440",
-          "stayB": "B · 25 vacant · ¥214,668"
-        },
-        {
-          "name": "MIMARU SUITES Tokyo Nihombashi",
-          "note": "All 2-bed + in-room washer. Not booked.",
-          "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
-          "email": "suites.tokyo-nihombashi@chm.cigr.co.jp",
-          "phone": "+81-3-6661-7821",
-          "stayA": "A · 19 vacant · ¥542,700",
-          "stayB": "B · 18 vacant · ¥462,200"
-        },
-        {
-          "name": "MIMARU Tokyo Ueno East",
-          "note": "Not booked.",
-          "url": "https://mimaruhotels.com/en/hotel/ueno-east/",
-          "email": "ueno-east@chm.cigr.co.jp",
-          "phone": "+81-3-5811-1677",
-          "stayA": "A · 27 vacant · ¥290,043",
-          "stayB": "B · 13 vacant · ¥253,260"
-        },
-        {
-          "name": "MIMARU Tokyo Shinjuku West",
-          "note": "Most leftover. Last on the area rank. Not booked.",
-          "url": "https://mimaruhotels.com/en/hotel/shinjuku-west/",
-          "email": "shinjuku-west@chm.cigr.co.jp",
-          "phone": "+81-3-6258-1512",
-          "stayA": "A · 39 vacant · ¥360,897",
-          "stayB": "B · 35 vacant · ¥290,646"
-        },
-        {
-          "name": "Hotel Granvia Tokyo",
-          "note": "Does not exist (JR West brand)."
-        },
-        {
-          "name": "Hilton / Keio Plaza / Hyatt / The Tokyo Station Hotel",
-          "note": "No live 5-room calendar this pass."
-        }
-      ]
-    },
-    "nozawa": {
-      "selfCatered": [
-        {
-          "name": "Kamoshika",
-          "note": "Sleeps 16. Sold out 24 Dec–9 Jan. Waitlist for 12. Also ask Tanuki and Iroha in the same email. Not booked.",
-          "email": "bookings@staynozawa.com",
-          "phone": "+81 269-85-3121",
-          "status": "locked"
-        },
-        {
-          "name": "Tanuki 4BR 3F",
-          "note": "Sleeps 12. Waitlist. Do not invent availability. Not booked.",
-          "email": "bookings@staynozawa.com"
-        },
-        {
-          "name": "Tamanegi House (Akari)",
-          "note": "Sleeps 10–12. Enquire. Lodgify default ¥193,500/night (about ¥1,161,000 / 6 nights). A 7-night minimum may block this stay. Not booked.",
-          "email": "admin@akarihouse.jp"
-        },
-        {
-          "name": "Iroha Ichi + Ni",
-          "note": "Two houses, 8+8. Blocked 24 Dec–6 Jan on RoomBoss this pass. Ask the waitlist. Not booked.",
-          "email": "bookings@staynozawa.com"
-        },
-        {
-          "name": "Tanuki 4F",
-          "note": "Sleeps 11. Short one — not a fit for 12. Not booked."
-        },
-        {
-          "name": "Kashmir House",
-          "note": "AVAILABLE. 8 adults only. Not a fit for 12. Breakfast, no dinner. Yu-Road walk. About ¥1,102,100 for 4 rooms / 6 nights. Not booked.",
-          "url": "https://book.staynozawa.com/search/"
-        }
-      ],
-      "halfBoard": [
-        {
-          "name": "Tokiwaya",
-          "note": "30 Dec open; 31 Dec and 1 Jan 満室. Cannot book a 6-night block online. Not booked.",
-          "phone": "+81 269-85-3128"
-        },
-        {
-          "name": "Kiriya",
-          "note": "No online NYE plans. Not booked.",
-          "phone": "+81 269-85-2020"
-        },
-        {
-          "name": "Shimataya",
-          "note": "No public calendar. Ask for 5 rooms half-board. Also res@nozawahospitality.com. Not booked.",
-          "email": "view@nozawahospitality.com"
-        }
-      ],
-      "closed": [
-        {
-          "name": "Stay Nozawa RoomBoss block",
-          "note": "Kamoshika, Bonbori, Tanuki 4BR, Iroha, Dennojo, and MARU SUMI are blocked 24 Dec–6 Jan on RoomBoss. No instant-bookable whole house.",
-          "status": "locked"
-        },
-        {
-          "name": "Nozawa Holidays chalets",
-          "note": "Slopeside (10) is not a default for 12. Central 301, Villa, and Lodge Nagano sold out on Bookings247. 7-night minimum on the chalets anyway.",
-          "status": "locked"
-        },
-        {
-          "name": "Sakaya",
-          "note": "Sold out NYE nights.",
-          "status": "locked"
-        }
-      ]
-    }
+    "asOf": "23 Aug 2026",
+    "tokyoNote": "Station East member FROM for 1 apt, whole stay; group total = that × unit count, then ÷ people. Last 4 nights are city travel and may not be Tokyo — if not, only the first 3-night block is ~40% of those pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
+    "bands": [
+      {
+        "id": "4",
+        "heading": "4 bedrooms",
+        "why": "Committed floor (4 couples).",
+        "options": [
+          {
+            "id": "tokyo-4",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "2× two-bedroom · 8 people",
+            "status": "available",
+            "perPerson": "~$950",
+            "nextStep": "Book online or email sales.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "One building. Connecting-8 is 2 bedrooms / 8 singles in one lockup if they want one key. ~$950 is 2 apts × from-rate ÷ 8 for all 7 Tokyo nights."
+          },
+          {
+            "id": "kashmir",
+            "property": "Kashmir House",
+            "city": "Nozawa",
+            "beds": "4 rooms / 8 adults · 3 Double + 1 Cosy",
+            "status": "available",
+            "perPerson": "~$870",
+            "nextStep": "Book.",
+            "url": "https://book.staynozawa.com/search/",
+            "note": "Breakfast, no dinner. Walk-in lodge, no road. ~¥1,102,100 total."
+          },
+          {
+            "id": "tamanegi-4",
+            "property": "Tamanegi House (Akari)",
+            "city": "Nozawa",
+            "beds": "4BR duplex · listed 10–12",
+            "status": "enquire",
+            "nextStep": "Email.",
+            "email": "admin@akarihouse.jp",
+            "note": "Can grow if more pairs yes. ¥193,500/n default. 7-night min may block."
+          },
+          {
+            "id": "tanuki-4",
+            "property": "Tanuki 4BR 3F / 4F",
+            "city": "Nozawa",
+            "beds": "3F sleeps 12 · 4F sleeps 11",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "RoomBoss sold out 24 Dec–6 Jan."
+          },
+          {
+            "id": "kiriya-shimataya-4",
+            "property": "Kiriya or Shimataya",
+            "city": "Nozawa",
+            "beds": "4 rooms",
+            "status": "enquire",
+            "nextStep": "Phone or email.",
+            "email": "view@nozawahospitality.com",
+            "phone": "+81 269-85-2020",
+            "note": "Half-board possible."
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "heading": "5 bedrooms",
+        "why": "If one more pair is yes.",
+        "options": [
+          {
+            "id": "tokyo-5",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "2× two-bed + 1 smaller · or family suite (up to 6) + 1 two-bed",
+            "status": "enquire",
+            "perPerson": "~$1,150",
+            "nextStep": "Email sales for a 3-unit hold.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "Inventory exists. ~$1,150 is 3 cheapest Station East from-rates ÷ 10. Suites Nihombashi is the cleanest 2-bed+washer product (pricier)."
+          },
+          {
+            "id": "kamoshika-5",
+            "property": "Kamoshika Ski Lodge",
+            "city": "Nozawa",
+            "beds": "5BR / 5 bath · sleeps 16",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "Best one-house if a 5th couple is yes. Sold out 24 Dec–9 Jan."
+          },
+          {
+            "id": "tamanegi-5",
+            "property": "Tamanegi House (Akari)",
+            "city": "Nozawa",
+            "beds": "4BR + extra beds · not a true 5th room",
+            "status": "enquire",
+            "nextStep": "Email.",
+            "email": "admin@akarihouse.jp",
+            "note": "Only if 10 people and they allow extra beds."
+          },
+          {
+            "id": "kiriya-shimataya-tokiwaya-5",
+            "property": "Kiriya / Shimataya / Tokiwaya",
+            "city": "Nozawa",
+            "beds": "5 rooms",
+            "status": "enquire",
+            "nextStep": "Phone.",
+            "phone": "+81 269-85-2020",
+            "note": "Tokiwaya 31 Dec + 1 Jan 満室 online."
+          },
+          {
+            "id": "staynozawa-5",
+            "property": "Two Stay Nozawa units",
+            "city": "Nozawa",
+            "beds": "5 bedrooms combined",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "e.g. Dennojo West (ask layout) + a 2-bed, or Tanuki 3BR + 2BR. All blocked 24 Dec–6 Jan."
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "heading": "6 bedrooms",
+        "why": "If two more pairs are yes.",
+        "options": [
+          {
+            "id": "tokyo-6",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "3× two-bedroom · or connecting-8 + one two-bed",
+            "status": "enquire",
+            "perPerson": "~$960",
+            "nextStep": "Email sales same day.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "Connecting-8 + one two-bed is 3 bedrooms of space, 12 beds — only if two pairs share the connecting unit. B stay had 13 vacant."
+          },
+          {
+            "id": "kamoshika-6",
+            "property": "Kamoshika Ski Lodge",
+            "city": "Nozawa",
+            "beds": "5BR · sleeps 16",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "6 pairs only if two pairs share a bunk/flex room."
+          },
+          {
+            "id": "iroha",
+            "property": "Iroha Ichi + Iroha Ni",
+            "city": "Nozawa",
+            "beds": "3+3 bed · 8+8",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "True 6 bedrooms. Same operator, next to each other."
+          },
+          {
+            "id": "tanuki-6",
+            "property": "Tanuki 4BR 3F + a 2/3BR",
+            "city": "Nozawa",
+            "beds": "4BR + 2/3BR · same building",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com"
+          },
+          {
+            "id": "bonbori",
+            "property": "Bonbori Ichi + Bonbori Ni",
+            "city": "Nozawa",
+            "beds": "3BR/10 + 3BR/8",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com"
+          },
+          {
+            "id": "shimataya-6",
+            "property": "Shimataya",
+            "city": "Nozawa",
+            "beds": "6 rooms · hotel-scale",
+            "status": "enquire",
+            "nextStep": "Email.",
+            "email": "view@nozawahospitality.com",
+            "note": "Sakaya NYE sold out."
+          }
+        ]
+      }
+    ]
   },
   "budget": {
     "status": "open",
@@ -729,12 +829,12 @@
       {
         "id": "tokyo-stay",
         "title": "Tokyo",
-        "detail": "~$950 (8) / ~$1,150 (10–12)"
+        "detail": "~$950 (8) / ~$1,150 (10) / ~$960 (12)"
       },
       {
         "id": "nozawa-stay",
         "title": "Nozawa",
-        "detail": "Kashmir 8p ~$870 / Tamanegi ~$730"
+        "detail": "Kashmir 8p ~$870"
       },
       {
         "id": "rail-taxi",
@@ -1034,15 +1134,6 @@
       "max": 8,
       "note": "Sleeps 8. Not booked.",
       "url": "https://book.staynozawa.com/search/"
-    },
-    {
-      "id": "slopeside",
-      "name": "Slopeside",
-      "city": "Nozawa",
-      "kind": "single",
-      "min": 1,
-      "max": 10,
-      "note": "Sleeps 10. Sold out on Bookings247 this pass. Not booked."
     },
     {
       "id": "bonbori-ichi",
