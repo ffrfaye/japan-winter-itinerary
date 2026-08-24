@@ -270,6 +270,15 @@
         }
       ]
     },
+    "SEA": {
+      "id": "SEA",
+      "heading": "Seattle (SEA)",
+      "search_url": null,
+      "cheapest_economy_usd": null,
+      "cheapest_sane_usd": null,
+      "cheapest_sane_label": null,
+      "options": []
+    },
     "YVR": {
       "id": "YVR",
       "heading": "Vancouver (YVR)",

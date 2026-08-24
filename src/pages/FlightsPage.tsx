@@ -67,17 +67,21 @@ function OriginGroup({ group }: { group: FlightOriginGroup }) {
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
           {group.heading}
         </h2>
-        <p className="text-sm text-zinc-500">{group.cheapest_sane_label}</p>
-        <p className="text-sm text-zinc-600">
-          <a
-            href={group.search_url}
-            target="_blank"
-            rel="noreferrer"
-            className="underline-offset-2 hover:underline"
-          >
-            Google Flights
-          </a>
-        </p>
+        {group.cheapest_sane_label ? (
+          <p className="text-sm text-zinc-500">{group.cheapest_sane_label}</p>
+        ) : null}
+        {group.search_url ? (
+          <p className="text-sm text-zinc-600">
+            <a
+              href={group.search_url}
+              target="_blank"
+              rel="noreferrer"
+              className="underline-offset-2 hover:underline"
+            >
+              Google Flights
+            </a>
+          </p>
+        ) : null}
       </div>
       {group.options.length === 0 ? (
         <p className="py-4 text-sm text-zinc-500">Waiting on live quotes.</p>

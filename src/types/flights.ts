@@ -35,13 +35,15 @@ export type FlightOption = {
   sane_cheapest: boolean
 }
 
+export type FlightOriginId = 'SFO' | 'SEA' | 'YVR' | 'STL'
+
 export type FlightOriginGroup = {
-  id: 'SFO' | 'YVR' | 'STL'
+  id: FlightOriginId
   heading: string
-  search_url: string
-  cheapest_economy_usd: number
-  cheapest_sane_usd: number
-  cheapest_sane_label: string
+  search_url: string | null
+  cheapest_economy_usd: number | null
+  cheapest_sane_usd: number | null
+  cheapest_sane_label: string | null
   options: FlightOption[]
 }
 
@@ -51,9 +53,5 @@ export type FlightsScenarios = {
   source: string
   target_dates_actually_quoted: boolean
   caveats: string[]
-  origins: {
-    SFO: FlightOriginGroup
-    YVR: FlightOriginGroup
-    STL: FlightOriginGroup
-  }
+  origins: Partial<Record<FlightOriginId, FlightOriginGroup>>
 }
