@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { ChevronDown } from 'lucide-react'
+import { cn } from '@/lib/utils'
 import type { ItineraryDay } from '@/lib/itinerary'
 
 export function DayJump({
@@ -21,9 +22,13 @@ export function DayJump({
     onOpenChange?.(next)
   }
   const trigger = useRef<HTMLButtonElement>(null)
-  const menu = useRef<HTMLUListElement>(null)
+  const menu = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState({ top: 0, left: 0 })
   const current = days[index]
+  const overview = days.find((day) => day.overview)
+  const dated = days
+    .map((day, dayIndex) => ({ day, dayIndex }))
+    .filter(({ day }) => !day.overview)
 
   function placeMenu() {
     const rect = trigger.current?.getBoundingClientRect()
@@ -63,8 +68,28 @@ export function DayJump({
     }
   }, [open])
 
+  function option(day: ItineraryDay, dayIndex: number) {
+    return (
+      <button
+        type="button"
+        role="option"
+        aria-selected={dayIndex === index}
+        onClick={() => {
+          onJump(dayIndex)
+          setMenu(false)
+        }}
+        className={cn(
+          'w-full px-3 py-1.5 text-left text-sm hover:bg-zinc-50',
+          day.overview ? 'font-medium text-zinc-900' : 'text-zinc-700',
+        )}
+      >
+        {day.jumpLabel}
+      </button>
+    )
+  }
+
   return (
-    <div className="relative z-[3000] min-w-0 w-full">
+    <div className="relative z-[3000] w-fit min-w-0">
       <button
         ref={trigger}
         type="button"
@@ -74,34 +99,30 @@ export function DayJump({
         onClick={() => setMenu(!open)}
         className="relative z-[3000] inline-flex max-w-full min-w-0 items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
       >
-        <span className="min-w-0 truncate">{current?.jumpLabel ?? 'Day 0'}</span>
+        <span className="min-w-0 truncate">{current?.jumpLabel ?? 'Overview'}</span>
         <ChevronDown className="size-3.5 shrink-0" />
       </button>
       {open
         ? createPortal(
-            <ul
+            <div
               ref={menu}
               role="listbox"
               style={{ top: pos.top, left: pos.left }}
               className="fixed z-[3000] max-h-80 min-w-44 overflow-y-auto rounded-xl border border-zinc-200 bg-white py-1 shadow-sm"
             >
-              {days.map((day, dayIndex) => (
-                <li key={day.id}>
-                  <button
-                    type="button"
-                    role="option"
-                    aria-selected={dayIndex === index}
-                    onClick={() => {
-                      onJump(dayIndex)
-                      setMenu(false)
-                    }}
-                    className="w-full px-3 py-1.5 text-left text-sm text-zinc-700 hover:bg-zinc-50"
-                  >
-                    {day.jumpLabel}
-                  </button>
-                </li>
-              ))}
-            </ul>,
+              {overview ? option(overview, days.indexOf(overview)) : null}
+              {dated.length > 0 ? (
+                <>
+                  <div className="my-1 border-t border-zinc-200" />
+                  <p className="px-3 pt-1 pb-0.5 text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
+                    Days
+                  </p>
+                  {dated.map(({ day, dayIndex }) => (
+                    <div key={day.id}>{option(day, dayIndex)}</div>
+                  ))}
+                </>
+              ) : null}
+            </div>,
             document.body,
           )
         : null}

@@ -5,7 +5,6 @@ import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { PlaceCards } from '@/components/PlaceCards'
 import { JapanMap } from '@/components/JapanMap'
-import { ViewToggle } from '@/components/ViewToggle'
 import {
   dayHeading,
   groupDays,
@@ -15,10 +14,9 @@ import {
 } from '@/lib/itinerary'
 import { trip } from '@/trip'
 
-export function ItineraryPage() {
+export function ItineraryPage({ mode }: { mode: ViewMode }) {
   const days = useMemo(() => mapDays(trip), [])
   const groups = useMemo(() => groupDays(days), [days])
-  const [mode, setMode] = useState<ViewMode>('cards')
   const [desktop, setDesktop] = useState(false)
   const [index, setIndex] = useState(0)
   const [openId, setOpenId] = useState<string | null>(null)
@@ -34,10 +32,7 @@ export function ItineraryPage() {
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 768px)')
-    const sync = () => {
-      setDesktop(media.matches)
-      setMode(media.matches ? 'list' : 'cards')
-    }
+    const sync = () => setDesktop(media.matches)
     sync()
     media.addEventListener('change', sync)
     return () => media.removeEventListener('change', sync)
@@ -110,26 +105,16 @@ export function ItineraryPage() {
 
   return (
     <div className="space-y-5">
-      <div className="relative z-20 flex flex-nowrap items-center gap-2 whitespace-nowrap">
-        <div className="min-w-0 flex-1">
-          <DayJump
-            days={days}
-            index={index}
-            onJump={jumpTo}
-            onOpenChange={setJumpOpen}
-          />
-        </div>
-        <ViewToggle mode={mode} onChange={setMode} />
-      </div>
-
       {mode === 'list' ? (
         <div className="space-y-8">
           {groups.map((group) => (
             <section key={group.id}>
-              <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
-                {group.label}
-              </h2>
-              <ul className="divide-y divide-zinc-200">
+              {group.id === 'overview' ? null : (
+                <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
+                  {group.label}
+                </h2>
+              )}
+              <ul className={group.id === 'overview' ? '' : 'divide-y divide-zinc-200'}>
                 {group.days.map((day) => (
                   <DayRow key={day.id} day={day} />
                 ))}
@@ -139,12 +124,18 @@ export function ItineraryPage() {
         </div>
       ) : (
         <div className="relative z-10 space-y-4">
+          <DayJump
+            days={days}
+            index={index}
+            onJump={jumpTo}
+            onOpenChange={setJumpOpen}
+          />
           <JapanMap
             pins={active.pins}
             showTravelLine={active.showTravelLine}
             showCluster={active.showCluster}
             pinLinks={active.pinLinks}
-            softLabels={active.dayNumber === 0}
+            softLabels={active.overview}
           />
           <div className="relative">
             {showPager ? (
@@ -159,24 +150,28 @@ export function ItineraryPage() {
               <div className="flex">
                 {days.map((day) => (
                   <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full px-px">
-                    <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                      <button
-                        type="button"
-                        onClick={() => openCard(day.id)}
-                        className="w-full text-left"
-                      >
-                        <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
-                        <p className="mt-1 text-sm font-medium">{day.title}</p>
-                        <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
-                          {day.summary}
-                        </p>
-                      </button>
-                      {day.places.length > 0 ? (
-                        <div className="mt-3">
-                          <PlaceCards places={day.places} />
-                        </div>
-                      ) : null}
-                    </article>
+                    {day.overview ? (
+                      <OverviewCard day={day} />
+                    ) : (
+                      <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+                        <button
+                          type="button"
+                          onClick={() => openCard(day.id)}
+                          className="w-full text-left"
+                        >
+                          <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
+                          <p className="mt-1 text-sm font-medium">{day.title}</p>
+                          <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
+                            {day.summary}
+                          </p>
+                        </button>
+                        {day.places.length > 0 ? (
+                          <div className="mt-3">
+                            <PlaceCards places={day.places} />
+                          </div>
+                        ) : null}
+                      </article>
+                    )}
                   </div>
                 ))}
               </div>
@@ -187,7 +182,7 @@ export function ItineraryPage() {
               <button
                 key={day.id}
                 type="button"
-                aria-label={`Day ${day.dayNumber}`}
+                aria-label={day.overview ? 'Overview' : `Day ${day.dayNumber}`}
                 onClick={() => emblaApi?.scrollTo(dayIndex)}
                 className={`size-1.5 rounded-full ${
                   dayIndex === index ? 'bg-zinc-900' : 'bg-zinc-300'
@@ -205,16 +200,45 @@ export function ItineraryPage() {
   )
 }
 
+function OverviewCard({ day }: { day: ItineraryDay }) {
+  return (
+    <article className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+      <p className="text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
+        Overview
+      </p>
+      <p className="mt-1 text-sm font-medium">{day.title}</p>
+      <p className="mt-1 text-[13px] text-zinc-500">Trip at a glance</p>
+      <p className="mt-2 text-sm text-zinc-600">{day.summary}</p>
+      {day.places.length > 0 ? (
+        <div className="mt-3">
+          <PlaceCards places={day.places} />
+        </div>
+      ) : null}
+    </article>
+  )
+}
+
 function DayRow({ day }: { day: ItineraryDay }) {
+  if (day.overview) {
+    return (
+      <li className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4">
+        <p className="text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
+          Overview
+        </p>
+        <p className="mt-1 text-sm font-medium">{day.title}</p>
+        <p className="mt-1 text-sm text-zinc-600">{day.summary}</p>
+        <div className="mt-3">
+          <PlaceCards places={day.places} />
+        </div>
+      </li>
+    )
+  }
+
   return (
     <li className="grid grid-cols-[4.5rem_1fr] gap-4 px-0 py-4">
       <div className="text-sm">
         <p className="text-zinc-600">Day {day.dayNumber}</p>
-        {day.dayNumber === 0 ? (
-          <p className="font-medium">Overview</p>
-        ) : (
-          <p className="font-medium">{day.short}</p>
-        )}
+        <p className="font-medium">{day.short}</p>
       </div>
       <div className="min-w-0 space-y-1">
         <p className="text-sm font-medium">{day.title}</p>

@@ -51,17 +51,17 @@ export function PageMenu({
   }, [open])
 
   return (
-    <div className="relative z-[3000] w-fit">
+    <div className="relative z-[3000] min-w-0 w-fit max-w-full">
       <button
         ref={trigger}
         type="button"
         aria-haspopup="listbox"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="relative z-[3000] inline-flex items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
+        className="relative z-[3000] inline-flex max-w-full min-w-0 items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
       >
-        {current}
-        <ChevronDown className="size-3.5" />
+        <span className="min-w-0 truncate">{current}</span>
+        <ChevronDown className="size-3.5 shrink-0" />
       </button>
       {open
         ? createPortal(

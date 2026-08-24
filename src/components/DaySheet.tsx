@@ -39,7 +39,15 @@ export function DaySheet({
       >
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
+            <p
+              className={
+                day.overview
+                  ? 'text-[11px] font-medium tracking-wide text-zinc-500 uppercase'
+                  : 'text-sm text-zinc-600'
+              }
+            >
+              {dayHeading(day)}
+            </p>
             <h2 id="day-sheet-title" className="mt-1 text-base font-medium">
               {day.title}
             </h2>

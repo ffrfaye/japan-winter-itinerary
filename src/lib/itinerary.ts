@@ -24,6 +24,7 @@ export type ItineraryDay = {
   stayId: string
   stayLabel: string
   jumpLabel: string
+  overview: boolean
   pins: PinStates
   showTravelLine?: boolean
   showCluster?: boolean
@@ -103,7 +104,7 @@ export function parseTab(hash: string): TabId {
 }
 
 export function dayHeading(day: ItineraryDay) {
-  if (day.dayNumber === 0) return 'Day 0'
+  if (day.overview) return 'Overview'
   return `Day ${day.dayNumber} · ${day.weekday} ${day.short}`
 }
 
@@ -127,10 +128,8 @@ function toItinerary(
     places: day.places ?? [],
     stayId,
     stayLabel,
-    jumpLabel:
-      day.dayNumber === 0
-        ? 'Day 0 · The trip'
-        : `Day ${day.dayNumber} · ${day.short}`,
+    jumpLabel: day.overview ? 'Overview' : `${day.weekday} ${day.short}`,
+    overview: Boolean(day.overview),
     ...pinsFor(day),
   }
 }

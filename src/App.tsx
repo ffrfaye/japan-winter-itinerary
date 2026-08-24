@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { PageMenu } from '@/components/PageMenu'
+import { ViewToggle } from '@/components/ViewToggle'
 import { cn } from '@/lib/utils'
-import { parseTab, type TabId } from '@/lib/itinerary'
+import { parseTab, type TabId, type ViewMode } from '@/lib/itinerary'
 import { ItineraryPage } from '@/pages/ItineraryPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { RsvpPage } from '@/pages/RsvpPage'
@@ -17,6 +18,15 @@ export default function App() {
   const [tab, setTab] = useState<TabId>(() =>
     parseTab(typeof window === 'undefined' ? '' : window.location.hash),
   )
+  const [mode, setMode] = useState<ViewMode>('cards')
+
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 768px)')
+    const sync = () => setMode(media.matches ? 'list' : 'cards')
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
 
   useEffect(() => {
     const onHash = () => setTab(parseTab(window.location.hash))
@@ -38,9 +48,16 @@ export default function App() {
         <header className="relative z-20 mb-5 space-y-2">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
           <p className="text-sm text-zinc-600">{trip.meta.datesLabel}</p>
-          <PageMenu tab={tab} onChange={go} />
+          <div className="relative z-20 flex flex-nowrap items-center gap-2">
+            <div className="min-w-0 flex-1">
+              <PageMenu tab={tab} onChange={go} />
+            </div>
+            {tab === 'itinerary' ? (
+              <ViewToggle mode={mode} onChange={setMode} />
+            ) : null}
+          </div>
         </header>
-        {tab === 'itinerary' ? <ItineraryPage /> : null}
+        {tab === 'itinerary' ? <ItineraryPage mode={mode} /> : null}
         {tab === 'rsvp' ? <RsvpPage /> : null}
         {tab === 'planning' ? <PlanningPage /> : null}
       </main>
