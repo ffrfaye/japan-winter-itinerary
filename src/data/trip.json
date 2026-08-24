@@ -311,6 +311,14 @@
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
           "mark": "N"
+        },
+        {
+          "title": "The Waguri House",
+          "description": "Potential stay 10 min outside Nozawa (4WD). Not booked.",
+          "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+          "thumb": "/lodging-thumbs/waguri-house.jpg",
+          "thumbPosition": "50% 30%",
+          "mark": "W"
         }
       ]
     },
