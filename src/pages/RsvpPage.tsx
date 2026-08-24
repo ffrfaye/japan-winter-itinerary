@@ -75,7 +75,7 @@ export function RsvpPage() {
                 onClick={() => setBandId(item.id)}
                 className="h-7 rounded-lg px-3 py-0.5 text-[13px] font-medium leading-none"
               >
-                {item.heading}
+                {item.id}
               </Button>
             )
           })}
