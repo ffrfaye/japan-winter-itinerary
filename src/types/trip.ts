@@ -10,6 +10,7 @@ export type PlaceCard = {
   description: string
   url: string
   thumb?: string
+  thumbPosition?: string
   mark: string
 }
 

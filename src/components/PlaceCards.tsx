@@ -36,6 +36,11 @@ function PlaceThumb({ place }: { place: PlaceCard }) {
         src={place.thumb}
         alt=""
         className="size-[72px] shrink-0 rounded-md object-cover"
+        style={
+          place.thumbPosition
+            ? { objectPosition: place.thumbPosition }
+            : undefined
+        }
       />
     )
   }
