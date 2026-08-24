@@ -49,12 +49,20 @@ function isProperty(value: unknown): value is LodgingProperty {
   )
 }
 
+export function nozawaMapCaption(notes: LodgingCardsFile['nozawa_map_notes']) {
+  if (typeof notes === 'string' && notes.trim()) return notes.trim()
+  if (!notes || typeof notes !== 'object') return null
+  const parts = [notes.village, notes.nagasaka, notes.hikage].filter(
+    (value): value is string => typeof value === 'string' && value.length > 0,
+  )
+  return parts.length > 0 ? parts.join(' · ') : null
+}
+
 export function loadLodgingFile(): LodgingCardsFile {
   return {
     research_as_of:
-      typeof file.research_as_of === 'string' ? file.research_as_of : null,
-    nozawa_map_notes:
-      typeof file.nozawa_map_notes === 'string' ? file.nozawa_map_notes : null,
+      typeof file.research_as_of === 'string' ? file.research_as_of : '2026-08-23',
+    nozawa_map_notes: file.nozawa_map_notes ?? null,
     properties: Array.isArray(file.properties)
       ? file.properties.filter(isProperty)
       : [],
@@ -82,13 +90,13 @@ export function hasPin(card: LodgingProperty) {
   return typeof card.lat === 'number' && typeof card.lng === 'number'
 }
 
+const committedThumbs = new Set<string>([])
+
 export function thumbUrl(card: LodgingProperty) {
   const first = card.images?.[0]?.url
-  if (typeof first !== 'string') return null
-  if (first.startsWith('https://')) return first
-  if (first.startsWith('/lodging-thumbs/') || first.startsWith('/lodging/')) {
-    return first
-  }
+  if (typeof first === 'string' && first.startsWith('https://')) return first
+  if (typeof first === 'string' && first.startsWith('/lodging')) return first
+  if (committedThumbs.has(card.id)) return `/lodging-thumbs/${card.id}.jpg`
   return null
 }
 
@@ -96,25 +104,31 @@ export function priceLine(price: LodgingPrice | null) {
   if (!price || price.amount == null || !price.currency) return ''
   const amount = `${price.currency} ${price.amount.toLocaleString('en-US')}`
   const per = price.per ? ` / ${price.per}` : ''
-  const asOf = price.as_of ? ` · as of ${price.as_of}` : ''
-  return `${amount}${per}${asOf}`
+  return `${amount}${per}`
 }
 
 export function roomsLine(card: LodgingProperty) {
   const parts: string[] = []
-  if (typeof card.bedrooms === 'number') parts.push(`${card.bedrooms} rooms`)
-  if (typeof card.bathrooms === 'number') parts.push(`${card.bathrooms} baths`)
+  if (typeof card.bedrooms === 'number') {
+    parts.push(`${card.bedrooms} bedrooms`)
+  }
+  if (typeof card.bathrooms === 'number') {
+    parts.push(`${card.bathrooms} bathrooms`)
+  }
   if (typeof card.sleeps === 'number') parts.push(`sleeps ${card.sleeps}`)
   return parts.join(' · ')
 }
 
 export function onsenLabel(onsen: LodgingOnsen | null) {
   const kind = onsen?.type?.toLowerCase().replace(/_/g, '-')
-  if (kind === 'in-house') return 'In-house onsen'
-  if (kind === 'village-walk' || kind === 'village walk') return 'Village walk'
-  if (kind === 'none') return 'No onsen'
-  const nearest = onsen?.nearest ? ` · ${onsen.nearest}` : ''
-  return onsen?.type ? `${onsen.type}${nearest}` : ''
+  let label = ''
+  if (kind === 'in-house') label = 'In-house onsen'
+  else if (kind === 'village-walk' || kind === 'village walk') {
+    label = 'Village walk'
+  } else if (kind === 'none') label = 'No onsen'
+  else if (onsen?.type) label = onsen.type
+  if (!label) return ''
+  return onsen?.nearest ? `${label} · ${onsen.nearest}` : label
 }
 
 export function availabilityLabel(status: string) {

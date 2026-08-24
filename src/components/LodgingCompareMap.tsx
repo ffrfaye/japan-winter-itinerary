@@ -88,7 +88,8 @@ export function LodgingCompareMap({
     for (const marker of markers.current) marker.remove()
     markers.current = []
 
-    const bounds = L.latLngBounds([])
+    const landmarkBounds = L.latLngBounds([])
+    const pinBounds = L.latLngBounds([])
 
     for (const place of landmarks) {
       const marker = L.marker([place.lat, place.lng], {
@@ -98,7 +99,7 @@ export function LodgingCompareMap({
         zIndexOffset: 0,
       }).addTo(map)
       markers.current.push(marker)
-      bounds.extend([place.lat, place.lng])
+      landmarkBounds.extend([place.lat, place.lng])
     }
 
     for (const card of cards) {
@@ -110,13 +111,20 @@ export function LodgingCompareMap({
       }).addTo(map)
       marker.on('click', () => onSelect(card.id))
       markers.current.push(marker)
-      bounds.extend([card.lat, card.lng])
+      pinBounds.extend([card.lat, card.lng])
     }
+
+    const bounds =
+      location === 'tokyo' && pinBounds.isValid()
+        ? pinBounds.extend(landmarkBounds)
+        : location === 'nozawa'
+          ? landmarkBounds.extend(pinBounds)
+          : landmarkBounds.extend(pinBounds)
 
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 })
     }
-  }, [map, landmarks, cards, selectedId, onSelect])
+  }, [map, landmarks, cards, selectedId, onSelect, location])
 
   return (
     <div className="flex h-full min-h-[40vh] w-full flex-col md:min-h-[28rem]">

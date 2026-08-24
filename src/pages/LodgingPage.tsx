@@ -7,6 +7,7 @@ import {
   loadLodgingFile,
   lodgingBedrooms,
   lodgingLocations,
+  nozawaMapCaption,
 } from '@/lib/lodging'
 import type { BedroomCount, LodgingLocation } from '@/types/lodging'
 
@@ -64,7 +65,9 @@ export function LodgingPage() {
             selectedId={selectedId}
             onSelect={select}
             caption={
-              location === 'nozawa' ? catalog.nozawa_map_notes : null
+              location === 'nozawa'
+                ? nozawaMapCaption(catalog.nozawa_map_notes)
+                : null
             }
           />
         </div>

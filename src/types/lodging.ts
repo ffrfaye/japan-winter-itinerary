@@ -63,8 +63,14 @@ export type LodgingProperty = {
   default_card?: boolean
 }
 
+export type LodgingMapNotes = {
+  village?: string | null
+  nagasaka?: string | null
+  hikage?: string | null
+}
+
 export type LodgingCardsFile = {
   research_as_of?: string | null
-  nozawa_map_notes?: string | null
+  nozawa_map_notes?: string | LodgingMapNotes | null
   properties: LodgingProperty[]
 }
