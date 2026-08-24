@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { DayJump } from '@/components/DayJump'
 import { DayLinks } from '@/components/DayLinks'
 import { DaySheet } from '@/components/DaySheet'
 import { JapanMap } from '@/components/JapanMap'
@@ -15,8 +15,8 @@ import {
 import { trip } from '@/trip'
 
 export function ItineraryPage() {
-  const days = mapDays(trip)
-  const groups = groupDays(days)
+  const days = useMemo(() => mapDays(trip), [])
+  const groups = useMemo(() => groupDays(days), [days])
   const [mode, setMode] = useState<ViewMode>('cards')
   const [desktop, setDesktop] = useState(false)
   const [index, setIndex] = useState(0)
@@ -149,10 +149,17 @@ export function ItineraryPage() {
         </div>
       ) : (
         <div className="relative z-10 space-y-4">
+          <DayJump
+            days={days}
+            index={index}
+            onJump={(next) => emblaApi?.scrollTo(next)}
+          />
           <JapanMap
-            active={active.mapCity}
-            travelTo={active.travelTo}
-            fillAll={active.fillAll}
+            pins={active.pins}
+            showTravelLine={active.showTravelLine}
+            showCluster={active.showCluster}
+            pinLinks={active.pinLinks}
+            softLabels={active.dayNumber === 0}
           />
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
@@ -165,11 +172,8 @@ export function ItineraryPage() {
                       className="w-full text-left"
                     >
                       <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
-                      <div className="mt-1 flex flex-wrap items-center gap-2">
-                        <Badge variant="outline">{day.city}</Badge>
-                        <p className="text-sm font-medium">{day.title}</p>
-                      </div>
-                      <p className="mt-2 line-clamp-3 text-sm text-zinc-600">
+                      <p className="mt-1 text-sm font-medium">{day.title}</p>
+                      <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
                         {day.summary}
                       </p>
                     </button>
@@ -218,7 +222,6 @@ function DayRow({ day }: { day: ItineraryDay }) {
         )}
       </div>
       <div className="min-w-0 space-y-1">
-        <Badge variant="outline">{day.city}</Badge>
         <p className="text-sm font-medium">{day.title}</p>
         <p className="text-sm text-zinc-600">{day.summary}</p>
         <DayLinks links={day.links} />

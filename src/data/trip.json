@@ -190,23 +190,29 @@
       "overview": true,
       "city": "Overview",
       "status": "locked",
-      "title": "Tokyo, then Nozawa, then Tokyo",
-      "summary": "Land in Tokyo. Three nights in Tokyo, six nights at Nozawa Onsen Snow Resort, then four nights back in Tokyo.",
+      "title": "The trip",
+      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 Tokyo",
       "links": [
         {
           "label": "Tokyo",
           "url": "https://www.gotokyo.org/en/"
         },
         {
-          "label": "Nozawa Onsen Snow Resort",
+          "label": "Nozawa Onsen",
           "url": "https://en.nozawaski.com/"
         },
         {
-          "label": "Jigokudani snow monkeys",
+          "label": "Jigokudani",
           "url": "https://en.jigokudani-yaenkoen.co.jp/"
         }
       ],
-      "blocks": []
+      "blocks": [
+        {
+          "title": "Beats",
+          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights Tokyo",
+          "status": "locked"
+        }
+      ]
     },
     {
       "id": "2026-12-27",
@@ -217,14 +223,20 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Traveling to Tokyo",
-      "summary": "Traveling to Tokyo. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+      "summary": "Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
       "links": [
         {
           "label": "Yamato Ski TA-Q-BIN",
           "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
         }
       ],
-      "blocks": []
+      "blocks": [
+        {
+          "title": "Land",
+          "detail": "Traveling to Tokyo. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2026-12-28",
@@ -235,7 +247,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Free day in Tokyo",
-      "summary": "Free day in Tokyo.",
+      "summary": "Free day.",
       "blocks": []
     },
     {
@@ -247,7 +259,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Free day in Tokyo",
-      "summary": "Free day in Tokyo.",
+      "summary": "Free day.",
       "blocks": []
     },
     {
@@ -259,8 +271,14 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "Travel day to Nozawa",
-      "summary": "Hakutaka is the Hokuriku Shinkansen that stops at Iiyama, the station for Nozawa. Kagayaki skips Iiyama. Not a ski day.",
-      "blocks": []
+      "summary": "Hakutaka to Iiyama. Not a ski day.",
+      "blocks": [
+        {
+          "title": "Hakutaka",
+          "detail": "Hakutaka is the Hokuriku Shinkansen that stops at Iiyama, the station for Nozawa. Kagayaki skips Iiyama. Not a ski day.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2026-12-31",
@@ -271,8 +289,14 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "NYE · ski day 1",
-      "summary": "New Year’s Eve. First proper ski day.",
-      "blocks": []
+      "summary": "First proper ski day.",
+      "blocks": [
+        {
+          "title": "NYE",
+          "detail": "New Year’s Eve. First proper ski day.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-01",
@@ -283,8 +307,14 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "NYD · ski day 2",
-      "summary": "Second ski day. Optional: visit the village shrine for New Year.",
-      "blocks": []
+      "summary": "Optional: village shrine for New Year.",
+      "blocks": [
+        {
+          "title": "NYD",
+          "detail": "Second ski day. Optional: visit the village shrine for New Year.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-02",
@@ -295,14 +325,20 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "Rest day · snow monkeys",
-      "summary": "Rest day. Visit the snow monkeys.",
+      "summary": "Visit the snow monkeys.",
       "links": [
         {
-          "label": "Jigokudani Yaen-Koen",
+          "label": "Jigokudani",
           "url": "https://en.jigokudani-yaenkoen.co.jp/"
         }
       ],
-      "blocks": []
+      "blocks": [
+        {
+          "title": "Monkeys",
+          "detail": "Rest day. Visit the snow monkeys.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-03",
@@ -325,14 +361,14 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "Ski day 4",
-      "summary": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
-      "links": [
+      "summary": "Optional: send bags back to Tokyo.",
+      "blocks": [
         {
-          "label": "Yamato Ski TA-Q-BIN",
-          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
+          "title": "Ski 4",
+          "detail": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
+          "status": "recommended"
         }
-      ],
-      "blocks": []
+      ]
     },
     {
       "id": "2027-01-05",
@@ -343,8 +379,14 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Travel day to Tokyo",
-      "summary": "Optional morning ski, then travel day back to Tokyo.",
-      "blocks": []
+      "summary": "Optional morning ski, then back to Tokyo.",
+      "blocks": [
+        {
+          "title": "Return",
+          "detail": "Optional morning ski, then travel day back to Tokyo.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-06",
@@ -355,7 +397,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Free day in Tokyo",
-      "summary": "Free day in Tokyo.",
+      "summary": "Free day.",
       "blocks": []
     },
     {
@@ -367,7 +409,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Free day in Tokyo",
-      "summary": "Free day in Tokyo.",
+      "summary": "Free day.",
       "blocks": []
     },
     {
@@ -379,7 +421,7 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Free day in Tokyo",
-      "summary": "Free day in Tokyo.",
+      "summary": "Free day.",
       "blocks": []
     },
     {
@@ -391,8 +433,14 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Travel home",
-      "summary": "Travel home.",
-      "blocks": []
+      "summary": "Fly home.",
+      "blocks": [
+        {
+          "title": "Depart",
+          "detail": "Travel home.",
+          "status": "recommended"
+        }
+      ]
     }
   ],
   "openDecisions": [

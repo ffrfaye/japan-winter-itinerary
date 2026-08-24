@@ -6,6 +6,10 @@ export type ViewMode = 'list' | 'cards'
 
 export type MapPlace = 'Tokyo' | 'Nozawa' | 'Jigokudani'
 
+export type PinState = 'primary' | 'secondary' | 'idle'
+
+export type PinStates = Record<MapPlace, PinState>
+
 export type ItineraryDay = {
   id: string
   date: string
@@ -20,9 +24,11 @@ export type ItineraryDay = {
   photos: { src: string; caption: string }[]
   stayId: string
   stayLabel: string
-  mapCity: MapPlace
-  fillAll?: boolean
-  travelTo?: 'Tokyo' | 'Nozawa'
+  jumpLabel: string
+  pins: PinStates
+  showTravelLine?: boolean
+  showCluster?: boolean
+  pinLinks?: Partial<Record<MapPlace, string>>
 }
 
 export type StayGroup = {
@@ -47,9 +53,46 @@ export const tabs: { id: TabId; label: string }[] = [
   { id: 'planning', label: 'Planning' },
 ]
 
-const travelTo: Record<string, 'Tokyo' | 'Nozawa'> = {
-  '2026-12-30': 'Nozawa',
-  '2027-01-05': 'Tokyo',
+const pinUrls = {
+  Tokyo: 'https://www.gotokyo.org/en/',
+  Nozawa: 'https://en.nozawaski.com/',
+  Jigokudani: 'https://en.jigokudani-yaenkoen.co.jp/',
+} as const
+
+const skiDays = new Set(['2026-12-31', '2027-01-01', '2027-01-03', '2027-01-04'])
+const travelDays = new Set(['2026-12-30', '2027-01-05'])
+
+function pinsFor(day: TripDay): Pick<
+  ItineraryDay,
+  'pins' | 'showTravelLine' | 'showCluster' | 'pinLinks'
+> {
+  if (day.overview) {
+    return {
+      pins: { Tokyo: 'primary', Nozawa: 'primary', Jigokudani: 'primary' },
+      pinLinks: pinUrls,
+    }
+  }
+  if (travelDays.has(day.id)) {
+    return {
+      pins: { Tokyo: 'primary', Nozawa: 'primary', Jigokudani: 'idle' },
+      showTravelLine: true,
+    }
+  }
+  if (day.id === '2027-01-02') {
+    return {
+      pins: { Tokyo: 'idle', Nozawa: 'secondary', Jigokudani: 'primary' },
+      showCluster: true,
+      pinLinks: { Nozawa: pinUrls.Nozawa, Jigokudani: pinUrls.Jigokudani },
+    }
+  }
+  if (skiDays.has(day.id)) {
+    return {
+      pins: { Tokyo: 'idle', Nozawa: 'primary', Jigokudani: 'secondary' },
+    }
+  }
+  return {
+    pins: { Tokyo: 'primary', Nozawa: 'idle', Jigokudani: 'idle' },
+  }
 }
 
 export function parseTab(hash: string): TabId {
@@ -74,12 +117,9 @@ function toItinerary(
   day: TripDay,
   stayId: string,
   stayLabel: string,
-  mapCity: MapPlace,
 ): ItineraryDay {
-  const body = [
-    day.summary,
-    ...day.blocks.map((block) => block.detail).filter(Boolean),
-  ]
+  const details = day.blocks.map((block) => block.detail).filter(Boolean)
+  const body = details.length > 0 ? details : [day.summary]
   const photos =
     day.id === '2027-01-02'
       ? [
@@ -103,9 +143,11 @@ function toItinerary(
     photos,
     stayId,
     stayLabel,
-    mapCity,
-    fillAll: day.overview,
-    travelTo: travelTo[day.id],
+    jumpLabel:
+      day.dayNumber === 0
+        ? 'Day 0 · The trip'
+        : `Day ${day.dayNumber} · ${day.short}`,
+    ...pinsFor(day),
   }
 }
 
@@ -124,20 +166,10 @@ export function mapDays(trip: Trip): ItineraryDay[] {
       stop.id === 'fly'
         ? 'Depart 9 Jan'
         : `${stop.city} ${stop.dates} · ${stop.nights}n`
-    return slice.map((day) =>
-      toItinerary(
-        day,
-        stop.id,
-        stayLabel,
-        day.id === '2027-01-02' ? 'Jigokudani' : stop.cityKey,
-      ),
-    )
+    return slice.map((day) => toItinerary(day, stop.id, stayLabel))
   })
   if (!overview) return mapped
-  return [
-    toItinerary(overview, 'overview', 'Overview', 'Tokyo'),
-    ...mapped,
-  ]
+  return [toItinerary(overview, 'overview', 'Overview'), ...mapped]
 }
 
 export function groupDays(days: ItineraryDay[]): StayGroup[] {

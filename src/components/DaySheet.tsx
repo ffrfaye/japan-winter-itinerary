@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { Badge } from '@/components/ui/badge'
 import { DayLinks } from '@/components/DayLinks'
 import { dayHeading, type ItineraryDay } from '@/lib/itinerary'
 
@@ -41,12 +40,9 @@ export function DaySheet({
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
-            <div className="mt-1 flex flex-wrap items-center gap-2">
-              <Badge variant="outline">{day.city}</Badge>
-              <h2 id="day-sheet-title" className="text-base font-medium">
-                {day.title}
-              </h2>
-            </div>
+            <h2 id="day-sheet-title" className="mt-1 text-base font-medium">
+              {day.title}
+            </h2>
           </div>
           <button
             type="button"
