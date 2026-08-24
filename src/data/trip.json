@@ -854,8 +854,8 @@
       {
         "id": "tickets",
         "title": "Tickets (snow monkeys)",
-        "detail": "¥800 DIY / ¥9,000 tour",
-        "note": "Jigokudani only. Park admission adult 18+ ¥800. Default is the Nozawa Onsen Kotsu half-day tour; ¥9,000 includes the ¥800. Book from 1 Oct 2026."
+        "detail": "~$57 (¥9,000) per person",
+        "note": "Default: Kotsu half-day tour, adult ¥9,000 (includes bus + ¥800 admission). Park gate only ~$5 (¥800) per person. Optional child tour ~$31 (¥5,000). Jigokudani only. Book from 1 Oct 2026. FX 1 USD = 158.96 JPY, Xe mid-market 23 Aug 2026."
       }
     ]
   },
@@ -931,9 +931,10 @@
     "operator": "Nozawa Onsen Kotsu",
     "reservationsOpen": "1 Oct 2026",
     "window": "13:10–17:00 (check-in 12:30–13:00)",
-    "price": "Adult ¥9,000 (tour includes park admission)",
+    "price": "Adult ~$57 (¥9,000; tour includes bus + park admission)",
+    "childTour": "Child ~$31 (¥5,000)",
     "url": "https://nozawaonsen.info/en/snow-monkey-tour/",
-    "parkAdmission": "Adult 18+ ¥800",
+    "parkAdmission": "Adult 18+ ~$5 (¥800)",
     "parkUrl": "https://en.jigokudani-yaenkoen.co.jp/guide/"
   },
   "checklist": [

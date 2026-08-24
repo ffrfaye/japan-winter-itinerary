@@ -228,6 +228,7 @@ export type Trip = {
     reservationsOpen: string
     window: string
     price: string
+    childTour?: string
     parkAdmission?: string
     parkUrl?: string
     url: string
