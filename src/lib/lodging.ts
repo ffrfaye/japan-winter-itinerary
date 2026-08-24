@@ -78,20 +78,7 @@ export function loadLodgingCards(): LodgingProperty[] {
   return loadLodgingFile().properties
 }
 
-const waitlistEmptyIds = new Set([
-  'tamanegi-house',
-  'view-hotel-shimataya',
-  'kamoshika-ski-lodge',
-  'tanuki-premium-4bed-3f',
-  'iroha-ichi-ni',
-  'slopeside-chalet',
-  'bonbori-ichi',
-  'nozawa-central-301',
-])
-
 export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
-  if (waitlistEmptyIds.has(card.id)) return true
-  if (card.id.toLowerCase().includes('sakaya')) return true
   const status = card.availability_status.toLowerCase()
   return status === 'sold-out' || status === 'inquiry sent'
 }

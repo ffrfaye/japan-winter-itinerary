@@ -26,7 +26,7 @@ function propertyIcon(name: string, active: boolean, faded: boolean) {
     ? 'background:#18181b;border:2px solid #18181b;'
     : 'background:#fff;border:2px solid #18181b;'
   const color = active ? '#18181b' : '#3f3f46'
-  const fade = faded ? 'opacity:0.5;' : ''
+  const fade = faded ? 'opacity:0.48;' : ''
   return L.divIcon({
     className: 'trip-pin',
     html: `<div style="${fade}display:flex;flex-direction:column;align-items:center;gap:2px;">

@@ -20,9 +20,7 @@ export type BudgetWaguri = {
   heading: string
   label: string
   fx: string
-  identityBefore: string
   identityName: string
-  identityAfter: string
   identityUrl: string
   band: string
   foot: string
