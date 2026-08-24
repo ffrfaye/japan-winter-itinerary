@@ -12,8 +12,7 @@ function telHref(phone: string) {
   return `tel:${phone.replace(/(?!^\+)\D/g, '')}`
 }
 
-const contactClass =
-  'underline-offset-2 hover:underline'
+const contactClass = 'underline-offset-2 hover:underline'
 
 export function LodgingOption({ option }: { option: LodgingOptionData }) {
   const name = option.url ? (
@@ -31,10 +30,10 @@ export function LodgingOption({ option }: { option: LodgingOptionData }) {
 
   return (
     <li className="space-y-1 py-3">
-      <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 text-sm">
+      <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm">
         {name}
-        <span className="text-zinc-600">{option.city}</span>
-        <span className="text-zinc-600">{option.beds}</span>
+        <span className="text-zinc-600">· {option.city}</span>
+        <span className="text-zinc-600">· {option.beds}</span>
         <Badge variant="outline">{statusLabel[option.status]}</Badge>
         {option.perPerson ? (
           <span className="text-zinc-600">{option.perPerson} pp</span>
