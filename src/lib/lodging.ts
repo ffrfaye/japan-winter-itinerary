@@ -150,6 +150,7 @@ export function availabilityLabel(status: string) {
   if (status === 'enquire') return 'Enquire'
   if (status === 'available') return 'Available'
   if (status === 'unknown') return 'Unknown'
+  if (status === 'inquiry sent') return 'Inquiry sent'
   return status
 }
 
