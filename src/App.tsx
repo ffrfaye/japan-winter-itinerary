@@ -1,8 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { PageMenu } from '@/components/PageMenu'
 import { ViewToggle } from '@/components/ViewToggle'
 import { cn } from '@/lib/utils'
-import { parseTab, type TabId, type ViewMode } from '@/lib/itinerary'
+import {
+  emptyAnswers,
+  guestsFromTrip,
+  parseTab,
+  type TabId,
+  type ViewMode,
+} from '@/lib/itinerary'
 import { ItineraryPage } from '@/pages/ItineraryPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { RsvpPage } from '@/pages/RsvpPage'
@@ -19,6 +25,8 @@ export default function App() {
     parseTab(typeof window === 'undefined' ? '' : window.location.hash),
   )
   const [mode, setMode] = useState<ViewMode>('cards')
+  const guests = useMemo(() => guestsFromTrip(trip), [])
+  const [answers, setAnswers] = useState(() => emptyAnswers(guests))
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 768px)')
@@ -56,8 +64,20 @@ export default function App() {
           </div>
         </header>
         {tab === 'itinerary' ? <ItineraryPage mode={mode} /> : null}
-        {tab === 'rsvp' ? <RsvpPage /> : null}
-        {tab === 'planning' ? <PlanningPage /> : null}
+        {tab === 'rsvp' ? (
+          <RsvpPage
+            guests={guests}
+            answers={answers}
+            onAnswersChange={setAnswers}
+          />
+        ) : null}
+        {tab === 'planning' ? (
+          <PlanningPage
+            guests={guests}
+            answers={answers}
+            onAnswersChange={setAnswers}
+          />
+        ) : null}
       </main>
     </div>
   )

@@ -628,7 +628,7 @@
       {
         "id": "4",
         "heading": "4 bedrooms",
-        "why": "Committed floor.",
+        "why": "",
         "options": [
           {
             "id": "tokyo-4",
@@ -689,7 +689,7 @@
       {
         "id": "5",
         "heading": "5 bedrooms",
-        "why": "If one more pair.",
+        "why": "",
         "options": [
           {
             "id": "tokyo-5",
@@ -748,7 +748,7 @@
       {
         "id": "6",
         "heading": "6 bedrooms",
-        "why": "If two more pairs.",
+        "why": "",
         "options": [
           {
             "id": "tokyo-6",
