@@ -102,6 +102,17 @@ export type ChecklistItem = {
   priority: 'now' | 'soon' | 'later'
 }
 
+export type PlanningActivity = {
+  id: string
+  group: 'tokyo' | 'nozawa'
+  title: string
+  status: StatusId
+  detail: string
+  when?: string
+  lines: string[]
+  links: TripLink[]
+}
+
 export type Trip = {
   meta: {
     title: string
@@ -194,6 +205,7 @@ export type Trip = {
     rules: string[]
     links: TripLink[]
   }
+  activities: PlanningActivity[]
   lodging: {
     status: StatusId
     asOf: string
@@ -240,5 +252,6 @@ export type Trip = {
     url: string
   }
   checklist: ChecklistItem[]
+  bookNow: ChecklistItem[]
   rsvpHouses: RsvpHouse[]
 }

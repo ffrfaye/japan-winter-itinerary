@@ -1,11 +1,12 @@
 import { trip } from '@/trip'
-import type { ChecklistItem, StatusId, TripLink } from '@/types/trip'
+import type { StatusId, TripLink } from '@/types/trip'
 
 export type PlanningIdea = {
   id: string
   title: string
   status: StatusId
   detail: string
+  when?: string
   lines: string[]
   links: TripLink[]
 }
@@ -16,91 +17,12 @@ function statusLabel(status: StatusId) {
 
 export { statusLabel }
 
-const lodgingChecklistIds = new Set(['tokyo-hotel', 'nozawa-hotel'])
-
 export function tokyoIdeas(): PlanningIdea[] {
-  const teamlab = trip.checklist.find((item) => item.id === 'teamlab')
-  const ideas: PlanningIdea[] = [
-    {
-      id: 'ghibli',
-      title: trip.ghibli.museum,
-      status: trip.ghibli.status,
-      detail: trip.ghibli.unpublished
-        ? 'January 2027 days are unpublished. Do not claim tickets exist.'
-        : trip.ghibli.sale,
-      lines: [
-        trip.ghibli.sale,
-        trip.ghibli.lastYearClosure,
-        trip.ghibli.tuesdayNote,
-        trip.ghibli.primaryDay,
-        ...trip.ghibli.rules,
-      ],
-      links: trip.ghibli.links,
-    },
-  ]
-  if (teamlab) {
-    ideas.push({
-      id: teamlab.id,
-      title: teamlab.title,
-      status: teamlab.status,
-      detail: teamlab.detail,
-      lines: [],
-      links: [],
-    })
-  }
-  return ideas
+  return trip.activities.filter((item) => item.group === 'tokyo')
 }
 
 export function nozawaIdeas(): PlanningIdea[] {
-  return [
-    {
-      id: 'lifts',
-      title: `Lift tickets · ${trip.ski.mountain}`,
-      status: 'recommended',
-      detail: trip.ski.properDays,
-      lines: [
-        `Adult day ${trip.ski.tickets.adultDay}. Adult 3-day ${trip.ski.tickets.adult3Day}.`,
-        trip.ski.tickets.season,
-      ],
-      links: trip.ski.links.filter((link) => link.label === 'Ticket prices'),
-    },
-    {
-      id: 'rental',
-      title: trip.ski.rental.shop,
-      status: 'open',
-      detail: trip.group.skiGear,
-      lines: [`Adult day set ${trip.ski.rental.adultDaySet}.`],
-      links: trip.ski.links.filter((link) => link.label === 'Salomon rental'),
-    },
-    {
-      id: 'soto-yu',
-      title: 'Soto-yu',
-      status: 'recommended',
-      detail: trip.ski.onsen.sotoYu,
-      lines: [],
-      links: trip.ski.links.filter((link) => link.label === 'Soto-yu'),
-    },
-    {
-      id: 'monkeys',
-      title: 'Snow monkeys',
-      status: trip.snowMonkeys.status,
-      detail: `${trip.snowMonkeys.rule} ${trip.snowMonkeys.operator}. Reservations open ${trip.snowMonkeys.reservationsOpen}.`,
-      lines: [
-        trip.snowMonkeys.window,
-        trip.snowMonkeys.price,
-        trip.snowMonkeys.childTour,
-        trip.snowMonkeys.parkAdmission
-          ? `Park gate ${trip.snowMonkeys.parkAdmission}`
-          : undefined,
-      ].filter((line): line is string => Boolean(line)),
-      links: [
-        { label: 'Kotsu tour', url: trip.snowMonkeys.url },
-        ...(trip.snowMonkeys.parkUrl
-          ? [{ label: 'Park guide', url: trip.snowMonkeys.parkUrl }]
-          : []),
-      ],
-    },
-  ]
+  return trip.activities.filter((item) => item.group === 'nozawa')
 }
 
 export function planningOpenDecisions() {
@@ -123,16 +45,8 @@ export function planningOpenDecisions() {
   return items
 }
 
-export function planningCalendar(priority: ChecklistItem['priority']) {
-  return trip.checklist.filter(
-    (item) =>
-      item.priority === priority &&
-      !lodgingChecklistIds.has(item.id) &&
-      (item.id === 'teamlab' ||
-        item.id === 'ghibli-watch' ||
-        item.id === 'monkeys' ||
-        item.id === 'hakutaka'),
-  )
+export function planningCalendar(priority: 'soon' | 'later') {
+  return trip.bookNow.filter((item) => item.priority === priority)
 }
 
 export function quietConstraints() {

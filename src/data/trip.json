@@ -628,6 +628,179 @@
       }
     ]
   },
+  "activities": [
+    {
+      "id": "ghibli",
+      "group": "tokyo",
+      "title": "Ghibli Museum, Mitaka",
+      "status": "open",
+      "when": "6 Jan 2027 — only if the official calendar lists it as open.",
+      "detail": "January 2027 days are unpublished. Do not claim tickets exist.",
+      "lines": [
+        "Lawson Ticket, 10 Dec 2026, 10:00 JST, for January 2027 dates — if those dates are on sale.",
+        "Max 6 tickets per account.",
+        "For 8–10 people, two named purchasers. Both must attend.",
+        "Adult timed ticket ¥1,000.",
+        "Named purchaser ID may be checked. Absent purchaser can mean refused entry.",
+        "Closed 27 Dec 2025–2 Jan 2026. Next open day that year was 3 Jan 2026.",
+        "Usually closed Tuesdays, plus extra winter maintenance. 5 Jan 2027 is a Tuesday.",
+        "This is Mitaka, not Ghibli Park (Aichi)."
+      ],
+      "links": [
+        {
+          "label": "Official tickets & calendar",
+          "url": "https://www.ghibli-museum.jp/en/tickets/"
+        },
+        {
+          "label": "Lawson Ticket (l-tike via official English page)",
+          "url": "https://www.ghibli-museum.jp/en/tickets/"
+        },
+        {
+          "label": "Last winter closure",
+          "url": "https://www.ghibli-museum.jp/news/014038/"
+        }
+      ]
+    },
+    {
+      "id": "teamlab",
+      "group": "tokyo",
+      "title": "teamLab Planets or Borderless — pick one",
+      "status": "open",
+      "when": "29 Dec",
+      "detail": "Planets (Toyosu) is the water-walk museum, open through the end of 2027. Borderless is at Azabudai Hills. Timed tickets; buy ahead. Do not plan a van to Nozawa today.",
+      "lines": [
+        "Planets or Borderless, not both."
+      ],
+      "links": [
+        {
+          "label": "teamLab Planets official",
+          "url": "https://www.teamlab.art/e/planets/"
+        },
+        {
+          "label": "Planets tickets",
+          "url": "https://teamlabplanets.dmm.com/en/ticket"
+        },
+        {
+          "label": "teamLab Borderless official",
+          "url": "https://www.teamlab.art/e/tokyo/"
+        }
+      ]
+    },
+    {
+      "id": "nakano",
+      "group": "tokyo",
+      "title": "Nakano Broadway",
+      "status": "recommended",
+      "when": "28 Dec",
+      "detail": "Used-figure, doujin, and vintage floors. Un-hectic: pick one building and one coffee, not every shop.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Nakano Broadway",
+          "url": "https://nakano-broadway.com/"
+        }
+      ]
+    },
+    {
+      "id": "donguri",
+      "group": "tokyo",
+      "title": "Donguri Republic",
+      "status": "recommended",
+      "when": "29 Dec · Solamachi",
+      "detail": "Donguri is the official Ghibli shop (this is not Ghibli Park, and not museum tickets). Skytree is next door in Solamachi. Shibuya is the other fork if the group is tired of east Tokyo.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Donguri Republic",
+          "url": "https://www.donguri-kyowakoku.jp/"
+        },
+        {
+          "label": "Tokyo Skytree",
+          "url": "https://www.tokyo-skytree.jp/en/"
+        }
+      ]
+    },
+    {
+      "id": "kimono-shrine",
+      "group": "tokyo",
+      "title": "Afternoon kimono + a mid-size shrine",
+      "status": "recommended",
+      "when": "6 Jan",
+      "detail": "Shop and shrine names TBD. Keep it mid-size, not Meiji-jingu crowds if the group is tired.",
+      "lines": [],
+      "links": []
+    },
+    {
+      "id": "lifts",
+      "group": "nozawa",
+      "title": "Lift tickets · Nozawa Onsen",
+      "status": "recommended",
+      "detail": "~5 proper days plus arrival afternoon",
+      "lines": [
+        "Adult day ¥7,800. Adult 3-day ¥21,200.",
+        "2026–27 regular season (19 Dec 2026–28 Mar 2027 on the official table)"
+      ],
+      "links": [
+        {
+          "label": "Ticket prices",
+          "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/"
+        }
+      ]
+    },
+    {
+      "id": "rental",
+      "group": "nozawa",
+      "title": "Salomon Station (official resort rental, Nagasaka 3F)",
+      "status": "open",
+      "detail": "Some people may bring gear; others will rent. Who does which is still open.",
+      "lines": [
+        "Adult day set ¥5,800."
+      ],
+      "links": [
+        {
+          "label": "Salomon rental",
+          "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/"
+        }
+      ]
+    },
+    {
+      "id": "soto-yu",
+      "group": "nozawa",
+      "title": "Soto-yu",
+      "status": "recommended",
+      "detail": "13 free village soto-yu, run by Yunakama neighbourhoods. Bring your own towel and soap.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Soto-yu",
+          "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/"
+        }
+      ]
+    },
+    {
+      "id": "monkeys",
+      "group": "nozawa",
+      "title": "Snow monkeys",
+      "status": "open",
+      "detail": "Do not DIY. Nozawa Onsen Kotsu. Reservations open 1 Oct 2026.",
+      "lines": [
+        "13:10–17:00 (check-in 12:30–13:00)",
+        "Adult ~$57 (¥9,000; tour includes bus + park admission)",
+        "Child ~$31 (¥5,000)",
+        "Park gate Adult 18+ ~$5 (¥800)"
+      ],
+      "links": [
+        {
+          "label": "Kotsu tour",
+          "url": "https://nozawaonsen.info/en/snow-monkey-tour/"
+        },
+        {
+          "label": "Park guide",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/guide/"
+        }
+      ]
+    }
+  ],
   "lodging": {
     "status": "open",
     "asOf": "24 Aug 2026",
@@ -1051,6 +1224,50 @@
       "detail": "Planets or Borderless, not both, for 29 Dec.",
       "status": "recommended",
       "priority": "soon"
+    },
+    {
+      "id": "monkeys",
+      "title": "If monkeys: book Kotsu from 1 Oct 2026",
+      "detail": "Half day 13:10–17:00, adult ¥9,000. No DIY.",
+      "status": "open",
+      "priority": "later"
+    }
+  ],
+  "bookNow": [
+    {
+      "id": "teamlab",
+      "title": "Buy one teamLab timed entry",
+      "detail": "Planets or Borderless, not both, for 29 Dec.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "hakutaka",
+      "title": "Reserve Hakutaka seats both ways",
+      "detail": "Not Kagayaki. Not a JR Pass. JR-EAST Train Reservation. Reserve about 30 days out.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "koshitsu-dinner",
+      "title": "Book a koshitsu izakaya",
+      "detail": "Book a private room (個室) for 8–10. Restaurant name TBD — do not invent one.",
+      "status": "open",
+      "priority": "soon"
+    },
+    {
+      "id": "nye-dinner",
+      "title": "Village NYE hotel dinner",
+      "detail": "Eat where you sleep if the property does dinner; otherwise book early. Restaurant TBD.",
+      "status": "open",
+      "priority": "soon"
+    },
+    {
+      "id": "ghibli-watch",
+      "title": "Watch the Ghibli calendar — do not buy yet",
+      "detail": "January 2027 unpublished. If dates appear, Lawson 10 Dec 2026 10:00 JST. Two named purchasers for 8–10.",
+      "status": "open",
+      "priority": "later"
     },
     {
       "id": "monkeys",

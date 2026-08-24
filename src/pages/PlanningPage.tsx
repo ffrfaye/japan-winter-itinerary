@@ -18,6 +18,7 @@ function IdeaCard({ idea }: { idea: PlanningIdea }) {
         <p className="text-sm font-medium">{idea.title}</p>
         <Badge variant="outline">{statusLabel(idea.status)}</Badge>
       </div>
+      {idea.when ? <p className="text-sm text-zinc-500">{idea.when}</p> : null}
       <p className="text-sm text-zinc-600">{idea.detail}</p>
       {idea.lines.map((line) => (
         <p key={line} className="text-sm text-zinc-500">
@@ -35,7 +36,7 @@ function IdeaLinks({ links }: { links: TripLink[] }) {
     <p className="flex flex-wrap gap-x-3 gap-y-1 text-sm text-zinc-600">
       {links.map((link) => (
         <a
-          key={link.url}
+          key={`${link.label}-${link.url}`}
           href={link.url}
           target="_blank"
           rel="noreferrer"
@@ -155,7 +156,7 @@ export function PlanningPage() {
       {soon.length > 0 ? (
         <section className="space-y-2">
           <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
-            Book soon
+            Book this month
           </h2>
           <ul className="divide-y divide-zinc-200">
             {soon.map((item) => (
