@@ -1,18 +1,11 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PageDock } from '@/components/PageDock'
 import { cn } from '@/lib/utils'
-import {
-  emptyAnswers,
-  guestsFromTrip,
-  parseTab,
-  type TabId,
-  type ViewMode,
-} from '@/lib/itinerary'
+import { parseTab, type TabId, type ViewMode } from '@/lib/itinerary'
 import { ItineraryPage } from '@/pages/ItineraryPage'
 import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { BudgetPage } from '@/pages/BudgetPage'
-import { RsvpPage } from '@/pages/RsvpPage'
 import { trip } from '@/trip'
 
 const widths: Record<TabId, string> = {
@@ -28,8 +21,6 @@ export default function App() {
     parseTab(typeof window === 'undefined' ? '' : window.location.hash),
   )
   const [mode, setMode] = useState<ViewMode>('cards')
-  const guests = useMemo(() => guestsFromTrip(trip), [])
-  const [answers, setAnswers] = useState(() => emptyAnswers(guests))
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 768px)')
@@ -67,13 +58,6 @@ export default function App() {
         </header>
         {tab === 'itinerary' ? (
           <ItineraryPage mode={mode} onModeChange={setMode} />
-        ) : null}
-        {tab === 'rsvp' ? (
-          <RsvpPage
-            guests={guests}
-            answers={answers}
-            onAnswersChange={setAnswers}
-          />
         ) : null}
         {tab === 'planning' ? <PlanningPage /> : null}
         {tab === 'budget' ? <BudgetPage /> : null}

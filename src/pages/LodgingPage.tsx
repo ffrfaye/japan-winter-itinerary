@@ -67,7 +67,9 @@ export function LodgingPage() {
             caption={
               location === 'nozawa'
                 ? nozawaMapCaption(catalog.nozawa_map_notes)
-                : null
+                : location === 'kyoto'
+                  ? catalog.kyoto_notes ?? null
+                  : null
             }
           />
         </div>

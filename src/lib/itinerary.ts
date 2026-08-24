@@ -49,7 +49,7 @@ export type RsvpAnswer = 'yes' | 'maybe' | 'no' | null
 
 export const tabs: { id: TabId; label: string }[] = [
   { id: 'itinerary', label: 'Itinerary' },
-  { id: 'rsvp', label: 'RSVP' },
+  { id: 'lodging', label: 'Lodging' },
   { id: 'planning', label: 'Planning' },
   { id: 'budget', label: 'Budget' },
 ]
@@ -98,8 +98,8 @@ function pinsFor(day: TripDay): Pick<
 
 export function parseTab(hash: string): TabId {
   const value = hash.replace(/^#/, '')
+  if (value === 'rsvp') return 'budget'
   if (
-    value === 'rsvp' ||
     value === 'planning' ||
     value === 'itinerary' ||
     value === 'lodging' ||

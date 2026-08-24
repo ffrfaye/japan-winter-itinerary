@@ -5,16 +5,25 @@ export type BudgetLine = {
   note?: string
 }
 
+export type BudgetScenario = {
+  id: 4 | 5 | 6
+  label: string
+  people: 8 | 10 | 12
+  headcountLabel: string
+  hero: string
+  working9Note: string | null
+  tokyo: BudgetLine
+  waguri: BudgetLine
+}
+
 export type BudgetWaguri = {
   heading: string
   label: string
-  headcountLabel: string
   fx: string
   identityBefore: string
   identityName: string
   identityAfter: string
   identityUrl: string
-  hero: string
   band: string
   foot: string
   oldBandNote: string
@@ -22,5 +31,8 @@ export type BudgetWaguri = {
   optionalLead: string
   optionalIfAdded: string
   optionalLines: BudgetLine[]
-  lines: BudgetLine[]
+  sharedLines: BudgetLine[]
+  rental: BudgetLine
+  defaultBedrooms: 4 | 5 | 6
+  scenarios: BudgetScenario[]
 }

@@ -9,6 +9,7 @@ import {
   skiLine,
   thumbUrl,
   tokyoLine,
+  typicalPriceLine,
 } from '@/lib/lodging'
 import type { LodgingProperty } from '@/types/lodging'
 
@@ -24,6 +25,7 @@ export function LodgingCompareCard({
   const photo = thumbUrl(card)
   const rooms = roomsLine(card)
   const price = priceLine(card.price)
+  const typical = typicalPriceLine(card.price)
   const onsen = onsenLabel(card.onsen)
   const ski = skiLine(card)
   const tokyo = tokyoLine(card.tokyo_logistics)
@@ -60,6 +62,12 @@ export function LodgingCompareCard({
               <span className="text-zinc-600">· {card.type}</span>
             ) : null}
             {price ? <span className="text-zinc-600">· {price}</span> : null}
+            {!price && typical ? (
+              <span className="text-zinc-500">· {typical}</span>
+            ) : null}
+            {card.badge ? (
+              <Badge variant="outline">{card.badge}</Badge>
+            ) : null}
           </div>
           {rooms ? <p className="text-sm text-zinc-600">{rooms}</p> : null}
           <div className="flex flex-wrap gap-1">

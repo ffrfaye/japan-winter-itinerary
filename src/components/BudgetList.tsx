@@ -1,11 +1,12 @@
 import { budget } from '@/lib/budget'
+import type { BudgetLine } from '@/types/budget'
 
-export function BudgetList() {
+export function BudgetList({ lines }: { lines: BudgetLine[] }) {
   return (
     <div className="space-y-8">
       <section>
         <ul className="divide-y divide-zinc-200">
-          {budget.lines.map((item) => (
+          {lines.map((item) => (
             <li key={item.id} className="space-y-1 py-3">
               <div className="flex items-baseline justify-between gap-4">
                 <p className="text-sm font-medium">{item.title}</p>

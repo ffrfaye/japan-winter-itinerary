@@ -49,7 +49,12 @@ export function LodgingCompareMap({
   const [map, setMap] = useState<L.Map | null>(null)
   const markers = useRef<L.Marker[]>([])
 
-  const landmarks = location === 'tokyo' ? tokyoLandmarks : nozawaLandmarks
+  const landmarks =
+    location === 'tokyo'
+      ? tokyoLandmarks
+      : location === 'nozawa'
+        ? nozawaLandmarks
+        : []
 
   useEffect(() => {
     const node = root.current
@@ -114,12 +119,19 @@ export function LodgingCompareMap({
       pinBounds.extend([card.lat, card.lng])
     }
 
+    if (location === 'kyoto') {
+      if (pinBounds.isValid()) {
+        map.fitBounds(pinBounds, { padding: [28, 28], maxZoom: 15 })
+      } else {
+        map.setView([35.0116, 135.7681], 13)
+      }
+      return
+    }
+
     const bounds =
       location === 'tokyo' && pinBounds.isValid()
         ? pinBounds.extend(landmarkBounds)
-        : location === 'nozawa'
-          ? landmarkBounds.extend(pinBounds)
-          : landmarkBounds.extend(pinBounds)
+        : landmarkBounds.extend(pinBounds)
 
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 })
@@ -136,7 +148,9 @@ export function LodgingCompareMap({
           aria-label={
             location === 'tokyo'
               ? 'Map of Tokyo Station, Hatchobori, and Nihonbashi'
-              : 'Map of Nozawa village and ski base'
+              : location === 'nozawa'
+                ? 'Map of Nozawa village and ski base'
+                : 'Map of Kyoto. Listings without coordinates are not pinned.'
           }
         />
       </div>

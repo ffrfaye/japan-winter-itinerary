@@ -14,6 +14,7 @@ const file = raw as LodgingCardsFile
 export const lodgingLocations: { id: LodgingLocation; label: string }[] = [
   { id: 'tokyo', label: 'Tokyo' },
   { id: 'nozawa', label: 'Nozawa' },
+  { id: 'kyoto', label: 'Kyoto' },
 ]
 
 export const lodgingBedrooms: { id: BedroomCount; label: string }[] = [
@@ -43,7 +44,9 @@ function isProperty(value: unknown): value is LodgingProperty {
   return (
     typeof card.id === 'string' &&
     typeof card.name === 'string' &&
-    (card.location === 'tokyo' || card.location === 'nozawa') &&
+    (card.location === 'tokyo' ||
+      card.location === 'nozawa' ||
+      card.location === 'kyoto') &&
     Array.isArray(card.scenarios) &&
     card.scenarios.every(isBedroom)
   )
@@ -63,6 +66,8 @@ export function loadLodgingFile(): LodgingCardsFile {
     research_as_of:
       typeof file.research_as_of === 'string' ? file.research_as_of : '2026-08-23',
     nozawa_map_notes: file.nozawa_map_notes ?? null,
+    kyoto_notes:
+      typeof file.kyoto_notes === 'string' ? file.kyoto_notes : null,
     properties: Array.isArray(file.properties)
       ? file.properties.filter(isProperty)
       : [],
@@ -78,12 +83,14 @@ export function filterLodgingCards(
   location: LodgingLocation,
   bedrooms: BedroomCount,
 ) {
-  return cards.filter(
-    (card) =>
-      card.default_card !== false &&
-      card.location === location &&
-      card.scenarios.includes(bedrooms),
-  )
+  return cards.filter((card) => {
+    if (card.location !== location) return false
+    if (!card.scenarios.includes(bedrooms)) return false
+    if (card.default_card === false) {
+      return Boolean(card.nara_not_base && location === 'kyoto')
+    }
+    return true
+  })
 }
 
 export function hasPin(card: LodgingProperty) {
@@ -120,6 +127,11 @@ export function priceLine(price: LodgingPrice | null) {
   const amount = `${price.currency} ${price.amount.toLocaleString('en-US')}`
   const per = price.per ? ` / ${price.per}` : ''
   return `${amount}${per}`
+}
+
+export function typicalPriceLine(price: LodgingPrice | null) {
+  if (!price || price.amount != null) return ''
+  return typeof price.source === 'string' ? price.source : ''
 }
 
 export function roomsLine(card: LodgingProperty) {

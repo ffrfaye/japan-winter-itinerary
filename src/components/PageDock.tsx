@@ -1,10 +1,10 @@
-import { Calendar, ClipboardList, Users, Wallet } from 'lucide-react'
+import { BedDouble, Calendar, ClipboardList, Wallet } from 'lucide-react'
 import type { TabId } from '@/lib/itinerary'
 import { cn } from '@/lib/utils'
 
 const items = [
   { id: 'itinerary', label: 'Itinerary', Icon: Calendar },
-  { id: 'rsvp', label: 'RSVP', Icon: Users },
+  { id: 'lodging', label: 'Lodging', Icon: BedDouble },
   { id: 'planning', label: 'Planning', Icon: ClipboardList },
   { id: 'budget', label: 'Budget', Icon: Wallet },
 ] as const

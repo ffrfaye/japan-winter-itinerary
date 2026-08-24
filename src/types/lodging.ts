@@ -1,4 +1,4 @@
-export type LodgingLocation = 'tokyo' | 'nozawa'
+export type LodgingLocation = 'tokyo' | 'nozawa' | 'kyoto'
 
 export type BedroomCount = 4 | 5 | 6
 
@@ -61,6 +61,8 @@ export type LodgingProperty = {
   pros: string[]
   cons: string[]
   default_card?: boolean
+  nara_not_base?: boolean
+  badge?: string | null
 }
 
 export type LodgingMapNotes = {
@@ -72,5 +74,6 @@ export type LodgingMapNotes = {
 export type LodgingCardsFile = {
   research_as_of?: string | null
   nozawa_map_notes?: string | LodgingMapNotes | null
+  kyoto_notes?: string | null
   properties: LodgingProperty[]
 }
