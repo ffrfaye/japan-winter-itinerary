@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { Badge } from '@/components/ui/badge'
-import type { ItineraryDay } from '@/lib/itinerary'
+import { DayLinks } from '@/components/DayLinks'
+import { dayHeading, type ItineraryDay } from '@/lib/itinerary'
 
 export function DaySheet({
   day,
@@ -39,9 +40,7 @@ export function DaySheet({
       >
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-sm text-zinc-600">
-              {day.weekday} {day.short}
-            </p>
+            <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
             <div className="mt-1 flex flex-wrap items-center gap-2">
               <Badge variant="outline">{day.city}</Badge>
               <h2 id="day-sheet-title" className="text-base font-medium">
@@ -62,6 +61,11 @@ export function DaySheet({
             <p key={line}>{line}</p>
           ))}
         </div>
+        {day.links.length > 0 ? (
+          <div className="mt-4">
+            <DayLinks links={day.links} />
+          </div>
+        ) : null}
         {day.photos.map((photo) => (
           <figure key={photo.src} className="mt-4">
             <img

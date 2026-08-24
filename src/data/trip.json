@@ -32,14 +32,61 @@
     "rsvpSaveNote": "Saving comes next — this is the layout.",
     "nyeSoldoutNote": "NY week: many Nozawa houses are sold out or waitlist. Lodging is not booked.",
     "pairs": [
-      { "id": "fyll", "nickname": "Fyll", "names": ["Faye", "Will"] },
-      { "id": "srimpe", "nickname": "Srimpe", "names": ["Lampe", "Sri"] },
-      { "id": "c2", "nickname": "C²", "names": ["Cal", "Clem"] },
-      { "id": "sophdu", "nickname": "Sophdu", "names": ["Eric", "Macy"] },
-      { "id": "andriha", "nickname": "Andriha", "names": ["Andrew", "Spriha"] },
-      { "id": "bunk-bed-boys", "nickname": "bunk bed boys", "names": ["James", "Seb"] }
+      {
+        "id": "fyll",
+        "nickname": "Fyll",
+        "names": [
+          "Faye",
+          "Will"
+        ]
+      },
+      {
+        "id": "srimpe",
+        "nickname": "Srimpe",
+        "names": [
+          "Lampe",
+          "Sri"
+        ]
+      },
+      {
+        "id": "c2",
+        "nickname": "C²",
+        "names": [
+          "Cal",
+          "Clem"
+        ]
+      },
+      {
+        "id": "sophdu",
+        "nickname": "Sophdu",
+        "names": [
+          "Eric",
+          "Macy"
+        ]
+      },
+      {
+        "id": "andriha",
+        "nickname": "Andriha",
+        "names": [
+          "Andrew",
+          "Spriha"
+        ]
+      },
+      {
+        "id": "bunk-bed-boys",
+        "nickname": "bunk bed boys",
+        "names": [
+          "James",
+          "Seb"
+        ]
+      }
     ],
-    "interests": ["anime", "skiing", "onsen", "un-hectic pace"],
+    "interests": [
+      "anime",
+      "skiing",
+      "onsen",
+      "un-hectic pace"
+    ],
     "skiGear": "Some people may bring gear; others will rent. Who does which is still open."
   },
   "constraints": [
@@ -120,402 +167,232 @@
     ]
   },
   "filters": [
-    { "id": "all", "label": "All days" },
-    { "id": "Tokyo", "label": "Tokyo" },
-    { "id": "Nozawa", "label": "Nozawa" }
+    {
+      "id": "all",
+      "label": "All days"
+    },
+    {
+      "id": "Tokyo",
+      "label": "Tokyo"
+    },
+    {
+      "id": "Nozawa",
+      "label": "Nozawa"
+    }
   ],
   "days": [
+    {
+      "id": "overview",
+      "date": "",
+      "weekday": "",
+      "short": "Overview",
+      "dayNumber": 0,
+      "overview": true,
+      "city": "Overview",
+      "status": "locked",
+      "title": "Tokyo, then Nozawa, then Tokyo",
+      "summary": "Land in Tokyo. Three nights in Tokyo, six nights at Nozawa Onsen Snow Resort, then four nights back in Tokyo.",
+      "links": [
+        {
+          "label": "Tokyo",
+          "url": "https://www.gotokyo.org/en/"
+        },
+        {
+          "label": "Nozawa Onsen Snow Resort",
+          "url": "https://en.nozawaski.com/"
+        },
+        {
+          "label": "Jigokudani snow monkeys",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/"
+        }
+      ],
+      "blocks": []
+    },
     {
       "id": "2026-12-27",
       "date": "2026-12-27",
       "weekday": "Sun",
       "short": "27 Dec",
+      "dayNumber": 1,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Land, hotel, ship the ski bags",
-      "summary": "Check in. Send ski bags and bulky luggage ahead with Yamato so the next Tokyo days stay light.",
-      "blocks": [
+      "title": "Traveling to Tokyo",
+      "summary": "Traveling to Tokyo. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+      "links": [
         {
-          "title": "Hotel check-in",
-          "detail": "One MIMARU building for 12: 3 two-beds, or a connecting 8 + one 2-bed. Area still open: Tokyo Station / Yaesu / Nihonbashi first, then Ueno, then Shinjuku.",
-          "status": "open"
-        },
-        {
-          "title": "Yamato Ski TA-Q-BIN from the hotel desk",
-          "detail": "Hotel-desk Ski TA-Q-BIN is typically about ¥2,500–4,000 per piece. Aim the bags at the Nozawa front desk so they arrive before 30 Dec skiing. Round-trip cover is worth asking for.",
-          "status": "recommended",
-          "links": [
-            { "label": "Yamato Ski TA-Q-BIN", "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/" },
-            { "label": "How to use Ski TA-Q-BIN", "url": "https://faq-en.kuronekoyamato.co.jp/app/answers/detail/a_id/4020" }
-          ]
+          "label": "Yamato Ski TA-Q-BIN",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
         }
-      ]
+      ],
+      "blocks": []
     },
     {
       "id": "2026-12-28",
       "date": "2026-12-28",
       "weekday": "Mon",
       "short": "28 Dec",
+      "dayNumber": 2,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Nakano Broadway + koshitsu izakaya",
-      "summary": "Anime-fan day in Nakano, then a private-room izakaya so the group can actually hear each other.",
-      "blocks": [
-        {
-          "title": "Nakano Broadway",
-          "detail": "Used-figure, doujin, and vintage floors. Un-hectic: pick one building and one coffee, not every shop.",
-          "status": "recommended",
-          "links": [
-            { "label": "Nakano Broadway", "url": "https://nakano-broadway.com/" }
-          ]
-        },
-        {
-          "title": "Koshitsu izakaya dinner",
-          "detail": "Book a private room (個室) for the group. Restaurant name TBD — do not invent one.",
-          "status": "open"
-        }
-      ]
+      "title": "Free day in Tokyo",
+      "summary": "Free day in Tokyo.",
+      "blocks": []
     },
     {
       "id": "2026-12-29",
       "date": "2026-12-29",
       "weekday": "Tue",
       "short": "29 Dec",
+      "dayNumber": 3,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "teamLab, then Donguri / Skytree or Shibuya",
-      "summary": "One immersive museum, then a light neighbourhood. Not both museums.",
-      "blocks": [
-        {
-          "title": "teamLab Planets or Borderless — pick one",
-          "detail": "Planets (Toyosu) is the water-walk museum, open through the end of 2027. Borderless is at Azabudai Hills. Timed tickets; buy ahead. Do not plan a van to Nozawa today.",
-          "status": "open",
-          "links": [
-            { "label": "teamLab Planets official", "url": "https://www.teamlab.art/e/planets/" },
-            { "label": "Planets tickets", "url": "https://teamlabplanets.dmm.com/en/ticket" },
-            { "label": "teamLab Borderless official", "url": "https://www.teamlab.art/e/tokyo/" }
-          ]
-        },
-        {
-          "title": "Donguri Republic + Tokyo Skytree, or Shibuya",
-          "detail": "Donguri is the official Ghibli shop (this is not Ghibli Park, and not museum tickets). Skytree is next door in Solamachi. Shibuya is the other fork if the group is tired of east Tokyo.",
-          "status": "open",
-          "links": [
-            { "label": "Donguri Republic", "url": "https://www.donguri-kyowakoku.jp/" },
-            { "label": "Tokyo Skytree", "url": "https://www.tokyo-skytree.jp/en/" }
-          ]
-        }
-      ]
+      "title": "Free day in Tokyo",
+      "summary": "Free day in Tokyo.",
+      "blocks": []
     },
     {
       "id": "2026-12-30",
       "date": "2026-12-30",
       "weekday": "Wed",
       "short": "30 Dec",
+      "dayNumber": 4,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Hakutaka to Iiyama, then the village",
-      "summary": "Travel day. Hakutaka only. Fit rentals and a first onsen. Full group skips Fukuoka.",
-      "blocks": [
-        {
-          "title": "Hokuriku Shinkansen Hakutaka, Tokyo or Ueno → Iiyama",
-          "detail": "About 1h40. Typical fare about ¥8,300–8,900 depending on reserved vs unreserved and Tokyo vs Ueno. Kagayaki skips Iiyama — do not board it. No JR Pass for this trip. Book on JR-EAST Train Reservation (eki-net), not SmartEX.",
-          "status": "recommended",
-          "links": [
-            { "label": "JR-EAST Train Reservation", "url": "https://www.eki-net.com/en/jreast-train-reservation/" },
-            { "label": "Hokuriku Shinkansen (JR East)", "url": "https://www.jreast.co.jp/e/routemaps/hokurikushinkansen.html" },
-            { "label": "Ueno–Iiyama Hakutaka times / fares", "url": "https://ekitan.com/en/planner/shinkansen/section/ueno/iiyama/hakutaka" }
-          ]
-        },
-        {
-          "title": "Iiyama → Nozawa: jumbo taxi or Stay Nozawa van",
-          "detail": "Nozawa Onsen Kotsu jumbo taxi (up to 9, luggage can drop that number): about ¥12,500 winter Iiyama–village. Stay Nozawa private van: ¥13,000 up to 8, 09:00–17:00. Do not plan a van on 29–31 Dec or 2–4 Jan. Liner bus is the fallback (adult ¥600, no reservation).",
-          "status": "open",
-          "links": [
-            { "label": "Kotsu taxi / jumbo taxi", "url": "https://nozawaonsen.info/en/taxi/" },
-            { "label": "Stay Nozawa transfers", "url": "https://www.staynozawa.com/access/getting-to-nozawa" },
-            { "label": "Nozawa Onsen Liner", "url": "https://nozawaonsen.info/en/nozawa-onsen-liner/" }
-          ]
-        },
-        {
-          "title": "Onsen + rental fit",
-          "detail": "Afternoon is for boots, not a full ski day. Thirteen free soto-yu in the village. Salomon Station adult ski-set day rate is ¥5,800 for 2026–27.",
-          "status": "recommended",
-          "links": [
-            { "label": "Soto-yu trail", "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/" },
-            { "label": "Salomon Station rental", "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/" }
-          ]
-        },
-        {
-          "title": "UVERworld Fukuoka — skip for the full group",
-          "detail": "Concert is confirmed the same night in Fukuoka. Full group stays on this Tokyo→Nozawa day. Optional 1–2 people only. Same-night return is not realistic.",
-          "status": "locked"
-        }
-      ]
+      "title": "Travel day to Nozawa",
+      "summary": "Hakutaka is the Hokuriku Shinkansen that stops at Iiyama, the station for Nozawa. Kagayaki skips Iiyama. Not a ski day.",
+      "blocks": []
     },
     {
       "id": "2026-12-31",
       "date": "2026-12-31",
       "weekday": "Thu",
       "short": "31 Dec",
+      "dayNumber": 5,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Ski 1 · village New Year’s Eve",
-      "summary": "First proper ski day, then hotel dinner in the village. Village NYE is locked.",
-      "blocks": [
-        {
-          "title": "Ski day 1",
-          "detail": "Adult day ticket ¥7,800 (2026–27 regular season). A 3-day consecutive ticket is ¥21,200.",
-          "status": "recommended",
-          "links": [
-            { "label": "Nozawa lift tickets 2026–27", "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/" }
-          ]
-        },
-        {
-          "title": "Village NYE hotel dinner",
-          "detail": "Eat where you sleep if the property does dinner; otherwise book early. Restaurant TBD.",
-          "status": "open"
-        },
-        {
-          "title": "Village NYE is locked",
-          "detail": "Nozawa village NYE is locked. The Tokyo-through-2-Jan / train-3-Jan fork is not chosen.",
-          "status": "locked"
-        }
-      ]
+      "title": "NYE · ski day 1",
+      "summary": "New Year’s Eve. First proper ski day.",
+      "blocks": []
     },
     {
       "id": "2027-01-01",
       "date": "2027-01-01",
       "weekday": "Fri",
       "short": "1 Jan",
+      "dayNumber": 6,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Ski 2 · village shrine · hotel breakfast",
-      "summary": "Second ski day. Hatsumode at a village shrine. Hotel breakfast if the lodging includes it.",
-      "blocks": [
-        {
-          "title": "Ski day 2",
-          "detail": "Same mountain, un-hectic start after a late NYE.",
-          "status": "recommended"
-        },
-        {
-          "title": "Village shrine",
-          "detail": "Hatcho / village shrine hatsumode. Exact shrine time TBD.",
-          "status": "recommended"
-        },
-        {
-          "title": "Hotel breakfast",
-          "detail": "Depends on which lodging is booked. Lodging is still unbooked.",
-          "status": "open"
-        }
-      ]
+      "title": "NYD · ski day 2",
+      "summary": "Second ski day. Optional: visit the village shrine for New Year.",
+      "blocks": []
     },
     {
       "id": "2027-01-02",
       "date": "2027-01-02",
       "weekday": "Sat",
       "short": "2 Jan",
+      "dayNumber": 7,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Ski 3 · Hikage",
-      "summary": "Third proper ski day. Point the group at Hikage — gondola, kids park, gentler laps if anyone is tired.",
-      "blocks": [
+      "title": "Rest day · snow monkeys",
+      "summary": "Rest day. Visit the snow monkeys.",
+      "links": [
         {
-          "title": "Ski day 3 — Hikage side",
-          "detail": "Hikage is the village-side base with gondola access. Trail map on the official portal.",
-          "status": "recommended",
-          "links": [
-            { "label": "Nozawa Onsen ski resort", "url": "https://en.nozawaski.com/" }
-          ]
+          "label": "Jigokudani Yaen-Koen",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/"
         }
-      ]
+      ],
+      "blocks": []
     },
     {
       "id": "2027-01-03",
       "date": "2027-01-03",
       "weekday": "Sun",
       "short": "3 Jan",
+      "dayNumber": 8,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Ski 4 or snow monkeys",
-      "summary": "Fourth ski day, or the half-day monkey park. Do not DIY the monkeys.",
-      "blocks": [
-        {
-          "title": "Ski day 4 — default",
-          "detail": "Keep skiing if weather is good.",
-          "status": "recommended"
-        },
-        {
-          "title": "Or: Nozawa Onsen Kotsu snow-monkey tour",
-          "detail": "Do not DIY. Winter 2026–27 reservations open 1 Oct 2026. Adult ¥9,000. Check-in 12:30–13:00, depart 13:10, back about 17:00. Minimum 2 adults.",
-          "status": "open",
-          "links": [
-            { "label": "Kotsu snow monkey tour", "url": "https://nozawaonsen.info/en/snow-monkey-tour/" }
-          ]
-        }
-      ]
+      "title": "Ski day 3",
+      "summary": "Third ski day.",
+      "blocks": []
     },
     {
       "id": "2027-01-04",
       "date": "2027-01-04",
       "weekday": "Mon",
       "short": "4 Jan",
+      "dayNumber": 9,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Ski 5 · drop Yamato bags",
-      "summary": "Fifth proper ski day. Send bags back to the Tokyo hotel with 48–72 hours on the clock.",
-      "blocks": [
+      "title": "Ski day 4",
+      "summary": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
+      "links": [
         {
-          "title": "Ski day 5",
-          "detail": "Last full recommended ski day on this skeleton.",
-          "status": "recommended"
-        },
-        {
-          "title": "Yamato bags toward Tokyo — 48–72h",
-          "detail": "Drop at the lodging desk so bags are waiting at the Tokyo hotel before 8 Jan collection. Ski TA-Q-BIN wants the parcel at the destination the day before you need it.",
-          "status": "recommended",
-          "links": [
-            { "label": "Yamato Ski TA-Q-BIN", "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/" }
-          ]
+          "label": "Yamato Ski TA-Q-BIN",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
         }
-      ]
+      ],
+      "blocks": []
     },
     {
       "id": "2027-01-05",
       "date": "2027-01-05",
       "weekday": "Tue",
       "short": "5 Jan",
+      "dayNumber": 10,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Optional morning ski, midday train, buffer",
-      "summary": "Leave Nozawa with a buffer. Tuesday is often a Ghibli closed day — do not assume a museum visit today.",
-      "blocks": [
-        {
-          "title": "Optional AM ski",
-          "detail": "Only if legs and train time allow. This is extra, not one of the five proper days.",
-          "status": "open"
-        },
-        {
-          "title": "Midday Hakutaka Iiyama → Tokyo / Ueno",
-          "detail": "Same rule: Hakutaka, not Kagayaki. Build slack for taxi / liner and ticket gates.",
-          "status": "recommended",
-          "links": [
-            { "label": "Iiyama–Ueno Hakutaka", "url": "https://ekitan.com/en/planner/shinkansen/section/iiyama/ueno/hakutaka" }
-          ]
-        },
-        {
-          "title": "Ghibli is usually closed Tuesdays",
-          "detail": "January 2027 operating days are unpublished. Last winter the museum was closed 27 Dec 2025–2 Jan 2026. Do not buy or claim tickets for today.",
-          "status": "locked",
-          "links": [
-            { "label": "Ghibli Museum tickets & calendar", "url": "https://www.ghibli-museum.jp/en/tickets/" },
-            { "label": "Last winter closure notice", "url": "https://www.ghibli-museum.jp/news/014038/" }
-          ]
-        }
-      ]
+      "title": "Travel day to Tokyo",
+      "summary": "Optional morning ski, then travel day back to Tokyo.",
+      "blocks": []
     },
     {
       "id": "2027-01-06",
       "date": "2027-01-06",
       "weekday": "Wed",
       "short": "6 Jan",
+      "dayNumber": 11,
       "city": "Tokyo",
-      "status": "open",
-      "title": "Primary Ghibli day — only if the calendar exists",
-      "summary": "First-choice Ghibli Museum day if January 2027 is published and open. Otherwise Inokashira / Kichijoji / Donguri. Afternoon kimono and a mid-size shrine.",
-      "blocks": [
-        {
-          "title": "Ghibli Museum, Mitaka — IF the calendar says open",
-          "detail": "January 2027 days are unpublished. Do not claim tickets exist. Lawson sale for January is 10 Dec 2026, 10:00 JST. Max 6 tickets per account. For 12 people you need two named purchasers, and both must attend. Adult timed ticket ¥1,000. This is Mitaka, not Ghibli Park.",
-          "status": "open",
-          "links": [
-            { "label": "Official ticket page", "url": "https://www.ghibli-museum.jp/en/tickets/" },
-            { "label": "Lawson Ticket (follow official English link)", "url": "https://www.ghibli-museum.jp/en/tickets/" }
-          ]
-        },
-        {
-          "title": "Else: Inokashira, Kichijoji, Donguri",
-          "detail": "Park walk, Kichijoji lunch, Donguri if anyone still wants merch. Calm backup.",
-          "status": "recommended",
-          "links": [
-            { "label": "Inokashira Park (Mitaka city)", "url": "https://www.city.mitaka.lg.jp/foreign/english/visitors/parks.html" },
-            { "label": "Donguri Republic", "url": "https://www.donguri-kyowakoku.jp/" }
-          ]
-        },
-        {
-          "title": "Afternoon kimono + a mid-size shrine",
-          "detail": "Shop and shrine names TBD. Keep it mid-size, not Meiji-jingu crowds if the group is tired.",
-          "status": "open"
-        }
-      ]
+      "status": "recommended",
+      "title": "Free day in Tokyo",
+      "summary": "Free day in Tokyo.",
+      "blocks": []
     },
     {
       "id": "2027-01-07",
       "date": "2027-01-07",
       "weekday": "Thu",
       "short": "7 Jan",
+      "dayNumber": 12,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Leftovers: Asakusa, Akihabara",
-      "summary": "Whatever the group still wants — Senso-ji and the east-side streets, or Akihabara.",
-      "blocks": [
-        {
-          "title": "Asakusa",
-          "detail": "Senso-ji and Nakamise. Un-hectic: go early or late.",
-          "status": "recommended",
-          "links": [
-            { "label": "Senso-ji", "url": "https://www.senso-ji.jp/english/" }
-          ]
-        },
-        {
-          "title": "Akihabara",
-          "detail": "Radio-kaikan, hobby floors, one arcade. Not a full otaku marathon unless the group asks.",
-          "status": "recommended"
-        }
-      ]
+      "title": "Free day in Tokyo",
+      "summary": "Free day in Tokyo.",
+      "blocks": []
     },
     {
       "id": "2027-01-08",
       "date": "2027-01-08",
       "weekday": "Fri",
       "short": "8 Jan",
+      "dayNumber": 13,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Buffer day · collect bags",
-      "summary": "Nothing precious. Collect Yamato bags. Re-pack. Easy dinner near the hotel.",
-      "blocks": [
-        {
-          "title": "Collect forwarded bags",
-          "detail": "Hotel desk. Confirm the waybill the night before.",
-          "status": "recommended"
-        },
-        {
-          "title": "Open buffer",
-          "detail": "Neighbourhood leftover, laundry, or a long lunch. No new reservations that cannot slip.",
-          "status": "open"
-        }
-      ]
+      "title": "Free day in Tokyo",
+      "summary": "Free day in Tokyo.",
+      "blocks": []
     },
     {
       "id": "2027-01-09",
       "date": "2027-01-09",
       "weekday": "Sat",
       "short": "9 Jan",
+      "dayNumber": 14,
       "city": "Tokyo",
-      "status": "open",
-      "title": "Fly — HND or NRT",
-      "summary": "Airport is still open. Build the transfer only after someone picks Haneda or Narita.",
-      "blocks": [
-        {
-          "title": "Depart HND or NRT",
-          "detail": "Haneda vs Narita is an open decision. Do not lock a monorail or Skyliner plan until flights exist.",
-          "status": "open",
-          "links": [
-            { "label": "Haneda Airport", "url": "https://tokyo-haneda.com/en/" },
-            { "label": "Narita Airport", "url": "https://www.narita-airport.jp/en/" }
-          ]
-        }
-      ]
+      "status": "recommended",
+      "title": "Travel home",
+      "summary": "Travel home.",
+      "blocks": []
     }
   ],
   "openDecisions": [
@@ -579,9 +456,18 @@
     },
     "sameNightReturn": "Same-night return Tokyo or Nozawa is not realistic.",
     "links": [
-      { "label": "Official 2026 live page", "url": "https://www.uverworld.jp/feature/2026_live" },
-      { "label": "FC ticket notice (lotteries closed)", "url": "https://www.uverworld.jp/news/detail/3197" },
-      { "label": "Creator pre-sale notice (through 30 Aug)", "url": "https://uw-takuya-rooms.fanpla.jp/news/detail/87197" }
+      {
+        "label": "Official 2026 live page",
+        "url": "https://www.uverworld.jp/feature/2026_live"
+      },
+      {
+        "label": "FC ticket notice (lotteries closed)",
+        "url": "https://www.uverworld.jp/news/detail/3197"
+      },
+      {
+        "label": "Creator pre-sale notice (through 30 Aug)",
+        "url": "https://uw-takuya-rooms.fanpla.jp/news/detail/87197"
+      }
     ]
   },
   "ghibli": {
@@ -600,15 +486,25 @@
       "Named purchaser ID may be checked. Absent purchaser can mean refused entry."
     ],
     "links": [
-      { "label": "Official tickets & calendar", "url": "https://www.ghibli-museum.jp/en/tickets/" },
-      { "label": "Last winter closure", "url": "https://www.ghibli-museum.jp/news/014038/" }
+      {
+        "label": "Official tickets & calendar",
+        "url": "https://www.ghibli-museum.jp/en/tickets/"
+      },
+      {
+        "label": "Last winter closure",
+        "url": "https://www.ghibli-museum.jp/news/014038/"
+      }
     ]
   },
   "lodging": {
     "status": "open",
     "tokyo": {
       "rule": "Not booked. One MIMARU building can cover both Tokyo stays (in 27 Dec / out 30 Dec, and in 5 Jan / out 9 Jan). For 12: 3 two-beds, or a connecting 8 + one 2-bed. Station East 3-apt from-rate ~$1,150 pp. Prices are official member FROM for 1 apartment for the whole stay. Hilton, Keio Plaza, Hyatt, and The Tokyo Station Hotel: no live 5-room calendar this pass. Hotel Granvia Tokyo does not exist (JR West brand).",
-      "areaRank": ["Tokyo Station / Yaesu / Nihonbashi", "Ueno", "Shinjuku"],
+      "areaRank": [
+        "Tokyo Station / Yaesu / Nihonbashi",
+        "Ueno",
+        "Shinjuku"
+      ],
       "candidates": [
         {
           "name": "MIMARU Tokyo Station East (recommended)",
@@ -741,15 +637,51 @@
     "asOf": "23 Aug 2026",
     "basis": "~$4,500 pp SFO. Band $4k–5.5k. Comfort $6k–7k. Not booked. No live 27 Dec–9 Jan flight quote.",
     "lines": [
-      { "id": "flight", "title": "Flight", "detail": "$1,260–1,750" },
-      { "id": "tokyo-stay", "title": "Tokyo", "detail": "~$950 (8) / ~$1,150 (10–12)" },
-      { "id": "nozawa-stay", "title": "Nozawa", "detail": "Kashmir 8p ~$870 / Tamanegi ~$730" },
-      { "id": "rail-taxi", "title": "Trains + taxi", "detail": "~$125" },
-      { "id": "yamato", "title": "Yamato", "detail": "~$45" },
-      { "id": "lifts", "title": "Lifts", "detail": "5 days $225" },
-      { "id": "rental", "title": "Rental", "detail": "~$180" },
-      { "id": "tickets", "title": "Tickets", "detail": "~$110" },
-      { "id": "food", "title": "Food", "detail": "$400–700" }
+      {
+        "id": "flight",
+        "title": "Flight",
+        "detail": "$1,260–1,750"
+      },
+      {
+        "id": "tokyo-stay",
+        "title": "Tokyo",
+        "detail": "~$950 (8) / ~$1,150 (10–12)"
+      },
+      {
+        "id": "nozawa-stay",
+        "title": "Nozawa",
+        "detail": "Kashmir 8p ~$870 / Tamanegi ~$730"
+      },
+      {
+        "id": "rail-taxi",
+        "title": "Trains + taxi",
+        "detail": "~$125"
+      },
+      {
+        "id": "yamato",
+        "title": "Yamato",
+        "detail": "~$45"
+      },
+      {
+        "id": "lifts",
+        "title": "Lifts",
+        "detail": "5 days $225"
+      },
+      {
+        "id": "rental",
+        "title": "Rental",
+        "detail": "~$180"
+      },
+      {
+        "id": "tickets",
+        "title": "Tickets",
+        "detail": "~$110"
+      },
+      {
+        "id": "food",
+        "title": "Food",
+        "detail": "$400–700"
+      }
     ]
   },
   "transport": {
@@ -757,22 +689,34 @@
       "status": "recommended",
       "text": "Yamato Ski TA-Q-BIN from a hotel desk is typically about ¥2,500–4,000 per piece. Convenience-store drop-off is not available for Ski TA-Q-BIN. Ship so the bag is at the resort the day before you ski.",
       "links": [
-        { "label": "Ski TA-Q-BIN", "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/" }
+        {
+          "label": "Ski TA-Q-BIN",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
+        }
       ]
     },
     "train": {
       "status": "locked",
       "text": "Hakutaka only. Kagayaki skips Iiyama. Tokyo or Ueno → Iiyama about 1h40, about ¥8,300–8,900. No Japan Rail Pass for this itinerary (Tokyo–Iiyama return does not earn one). Book JR-EAST Train Reservation, not SmartEX.",
       "links": [
-        { "label": "JR-EAST Train Reservation", "url": "https://www.eki-net.com/en/jreast-train-reservation/" }
+        {
+          "label": "JR-EAST Train Reservation",
+          "url": "https://www.eki-net.com/en/jreast-train-reservation/"
+        }
       ]
     },
     "transfer": {
       "status": "open",
       "text": "Jumbo taxi about ¥12,500 for up to 9, or Stay Nozawa van ¥13,000 for up to 8. Do not plan a van on 29–31 Dec or 2–4 Jan. Liner bus adult ¥600 if the private options are gone.",
       "links": [
-        { "label": "Kotsu taxi", "url": "https://nozawaonsen.info/en/taxi/" },
-        { "label": "Stay Nozawa transfers", "url": "https://www.staynozawa.com/access/getting-to-nozawa" }
+        {
+          "label": "Kotsu taxi",
+          "url": "https://nozawaonsen.info/en/taxi/"
+        },
+        {
+          "label": "Stay Nozawa transfers",
+          "url": "https://www.staynozawa.com/access/getting-to-nozawa"
+        }
       ]
     }
   },
@@ -792,9 +736,18 @@
       "sotoYu": "13 free village soto-yu, run by Yunakama neighbourhoods. Bring your own towel and soap."
     },
     "links": [
-      { "label": "Ticket prices", "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/" },
-      { "label": "Salomon rental", "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/" },
-      { "label": "Soto-yu", "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/" }
+      {
+        "label": "Ticket prices",
+        "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/"
+      },
+      {
+        "label": "Salomon rental",
+        "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/"
+      },
+      {
+        "label": "Soto-yu",
+        "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/"
+      }
     ]
   },
   "snowMonkeys": {

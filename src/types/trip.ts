@@ -23,10 +23,13 @@ export type TripDay = {
   date: string
   weekday: string
   short: string
-  city: 'Tokyo' | 'Nozawa'
+  dayNumber: number
+  overview?: boolean
+  city: 'Tokyo' | 'Nozawa' | 'Overview'
   status: StatusId
   title: string
   summary: string
+  links?: TripLink[]
   blocks: TripBlock[]
 }
 

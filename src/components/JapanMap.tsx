@@ -1,23 +1,27 @@
 import { useEffect, useRef, useState } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import type { MapPlace } from '@/lib/itinerary'
 
 type JapanMapProps = {
-  active: 'Tokyo' | 'Nozawa'
+  active: MapPlace
   travelTo?: 'Tokyo' | 'Nozawa'
+  fillAll?: boolean
 }
 
 const places = {
   Tokyo: { lat: 35.6762, lng: 139.6503 },
   Nozawa: { lat: 36.9226, lng: 138.4406 },
+  Jigokudani: { lat: 36.7333, lng: 138.462 },
 } as const
 
 const labels = {
   Tokyo: 'Tokyo',
   Nozawa: 'Nozawa Onsen',
+  Jigokudani: 'Jigokudani',
 } as const
 
-function pinIcon(city: keyof typeof places, filled: boolean) {
+function pinIcon(city: MapPlace, filled: boolean) {
   const disc = filled
     ? 'background:#18181b;border:2px solid #18181b;'
     : 'background:#fff;border:2px solid #52525b;'
@@ -27,25 +31,25 @@ function pinIcon(city: keyof typeof places, filled: boolean) {
       <span style="width:14px;height:14px;border-radius:999px;${disc}box-shadow:0 0 0 1px rgba(255,255,255,.8);"></span>
       <span style="font:600 10px/1 Inter Variable,Inter,sans-serif;color:${filled ? '#18181b' : '#71717a'};white-space:nowrap;">${labels[city]}</span>
     </div>`,
-    iconSize: [88, 32],
-    iconAnchor: [44, 8],
+    iconSize: [104, 32],
+    iconAnchor: [52, 8],
   })
 }
 
 const bounds = L.latLngBounds(
   [places.Tokyo.lat, places.Tokyo.lng],
   [places.Nozawa.lat, places.Nozawa.lng],
-)
+).extend([places.Jigokudani.lat, places.Jigokudani.lng])
 
 function fitTrip(map: L.Map) {
   map.fitBounds(bounds, { padding: [40, 40], maxZoom: 8 })
 }
 
-export function JapanMap({ active, travelTo }: JapanMapProps) {
+export function JapanMap({ active, travelTo, fillAll }: JapanMapProps) {
   const destination = travelTo ?? active
   const root = useRef<HTMLDivElement>(null)
   const [map, setMap] = useState<L.Map | null>(null)
-  const markers = useRef<Partial<Record<keyof typeof places, L.Marker>>>({})
+  const markers = useRef<Partial<Record<MapPlace, L.Marker>>>({})
   const lineRef = useRef<L.Polyline | null>(null)
 
   useEffect(() => {
@@ -83,8 +87,8 @@ export function JapanMap({ active, travelTo }: JapanMapProps) {
   useEffect(() => {
     if (!map) return
 
-    for (const city of ['Tokyo', 'Nozawa'] as const) {
-      const filled = city === destination
+    for (const city of ['Tokyo', 'Nozawa', 'Jigokudani'] as const) {
+      const filled = fillAll || city === destination
       const latlng: L.LatLngExpression = [places[city].lat, places[city].lng]
       const existing = markers.current[city]
       if (existing) {
@@ -117,7 +121,7 @@ export function JapanMap({ active, travelTo }: JapanMapProps) {
       lineRef.current.remove()
       lineRef.current = null
     }
-  }, [map, destination, travelTo])
+  }, [map, destination, travelTo, fillAll])
 
   return (
     <div className="relative z-10 isolate aspect-square w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
@@ -125,7 +129,11 @@ export function JapanMap({ active, travelTo }: JapanMapProps) {
         ref={root}
         className="absolute inset-0 [&_.leaflet-container]:z-0 [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent"
         role="img"
-        aria-label={`Map of Tokyo and Nozawa Onsen. ${destination} is the active city.`}
+        aria-label={
+          fillAll
+            ? 'Map of Tokyo, Nozawa Onsen, and Jigokudani. All three places are marked.'
+            : `Map of Tokyo, Nozawa Onsen, and Jigokudani. ${destination} is the active place.`
+        }
       />
     </div>
   )

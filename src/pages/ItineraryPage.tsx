@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { DayLinks } from '@/components/DayLinks'
 import { DaySheet } from '@/components/DaySheet'
 import { JapanMap } from '@/components/JapanMap'
 import {
+  dayHeading,
   groupDays,
   mapDays,
   type ItineraryDay,
@@ -147,29 +149,36 @@ export function ItineraryPage() {
         </div>
       ) : (
         <div className="relative z-10 space-y-4">
-          <JapanMap active={active.mapCity} travelTo={active.travelTo} />
+          <JapanMap
+            active={active.mapCity}
+            travelTo={active.travelTo}
+            fillAll={active.fillAll}
+          />
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {days.map((day) => (
-                <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full">
-                  <button
-                    type="button"
-                    onClick={() => openCard(day.id)}
-                    className="w-full px-px text-left"
-                  >
-                    <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                      <p className="text-sm text-zinc-600">
-                        {day.weekday} {day.short}
-                      </p>
+                <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full px-px">
+                  <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+                    <button
+                      type="button"
+                      onClick={() => openCard(day.id)}
+                      className="w-full text-left"
+                    >
+                      <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
                       <div className="mt-1 flex flex-wrap items-center gap-2">
                         <Badge variant="outline">{day.city}</Badge>
                         <p className="text-sm font-medium">{day.title}</p>
                       </div>
-                      <p className="mt-2 line-clamp-2 text-sm text-zinc-600">
+                      <p className="mt-2 line-clamp-3 text-sm text-zinc-600">
                         {day.summary}
                       </p>
-                    </article>
-                  </button>
+                    </button>
+                    {day.links.length > 0 ? (
+                      <div className="mt-3">
+                        <DayLinks links={day.links} />
+                      </div>
+                    ) : null}
+                  </article>
                 </div>
               ))}
             </div>
@@ -179,7 +188,7 @@ export function ItineraryPage() {
               <button
                 key={day.id}
                 type="button"
-                aria-label={day.short}
+                aria-label={`Day ${day.dayNumber}`}
                 onClick={() => emblaApi?.scrollTo(dayIndex)}
                 className={`size-1.5 rounded-full ${
                   dayIndex === index ? 'bg-zinc-900' : 'bg-zinc-300'
@@ -201,13 +210,18 @@ function DayRow({ day }: { day: ItineraryDay }) {
   return (
     <li className="grid grid-cols-[4.5rem_1fr] gap-4 px-0 py-4">
       <div className="text-sm">
-        <p className="text-zinc-600">{day.weekday}</p>
-        <p className="font-medium">{day.short}</p>
+        <p className="text-zinc-600">Day {day.dayNumber}</p>
+        {day.dayNumber === 0 ? (
+          <p className="font-medium">Overview</p>
+        ) : (
+          <p className="font-medium">{day.short}</p>
+        )}
       </div>
       <div className="min-w-0 space-y-1">
         <Badge variant="outline">{day.city}</Badge>
         <p className="text-sm font-medium">{day.title}</p>
-        <p className="text-sm text-zinc-600">{day.body[0]}</p>
+        <p className="text-sm text-zinc-600">{day.summary}</p>
+        <DayLinks links={day.links} />
       </div>
     </li>
   )

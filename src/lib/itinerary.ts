@@ -1,22 +1,27 @@
-import type { RsvpHouse, Trip, TripDay } from '@/types/trip'
+import type { RsvpHouse, Trip, TripDay, TripLink } from '@/types/trip'
 
 export type TabId = 'itinerary' | 'rsvp' | 'planning'
 
 export type ViewMode = 'list' | 'cards'
+
+export type MapPlace = 'Tokyo' | 'Nozawa' | 'Jigokudani'
 
 export type ItineraryDay = {
   id: string
   date: string
   weekday: string
   short: string
+  dayNumber: number
   city: TripDay['city']
   title: string
   summary: string
   body: string[]
+  links: TripLink[]
   photos: { src: string; caption: string }[]
   stayId: string
   stayLabel: string
-  mapCity: 'Tokyo' | 'Nozawa'
+  mapCity: MapPlace
+  fillAll?: boolean
   travelTo?: 'Tokyo' | 'Nozawa'
 }
 
@@ -55,47 +60,84 @@ export function parseTab(hash: string): TabId {
   return 'itinerary'
 }
 
+export function dayHeading(day: ItineraryDay) {
+  if (day.dayNumber === 0) return 'Day 0'
+  return `Day ${day.dayNumber} · ${day.weekday} ${day.short}`
+}
+
+function dayLinks(day: TripDay): TripLink[] {
+  if (day.links?.length) return day.links
+  return day.blocks.flatMap((block) => block.links ?? [])
+}
+
+function toItinerary(
+  day: TripDay,
+  stayId: string,
+  stayLabel: string,
+  mapCity: MapPlace,
+): ItineraryDay {
+  const body = [
+    day.summary,
+    ...day.blocks.map((block) => block.detail).filter(Boolean),
+  ]
+  const photos =
+    day.id === '2027-01-02'
+      ? [
+          {
+            src: '/snow-monkeys.jpg',
+            caption: 'Jigokudani snow monkeys',
+          },
+        ]
+      : []
+  return {
+    id: day.id,
+    date: day.date,
+    weekday: day.weekday,
+    short: day.short,
+    dayNumber: day.dayNumber,
+    city: day.city,
+    title: day.title,
+    summary: day.summary,
+    body,
+    links: dayLinks(day),
+    photos,
+    stayId,
+    stayLabel,
+    mapCity,
+    fillAll: day.overview,
+    travelTo: travelTo[day.id],
+  }
+}
+
 export function mapDays(trip: Trip): ItineraryDay[] {
+  const overview = trip.days.find((day) => day.overview)
+  const calendar = trip.days.filter((day) => !day.overview)
   let cursor = 0
-  return trip.route.stops.flatMap((stop, stopIndex) => {
-    const remainingDays = trip.days.length - cursor
+  const mapped = trip.route.stops.flatMap((stop, stopIndex) => {
+    const remainingDays = calendar.length - cursor
     const remainingStops = trip.route.stops.length - stopIndex
     const take =
       stop.nights > 0 ? stop.nights : remainingStops === 1 ? remainingDays : 1
-    const slice = trip.days.slice(cursor, cursor + take)
+    const slice = calendar.slice(cursor, cursor + take)
     cursor += slice.length
     const stayLabel =
       stop.id === 'fly'
         ? 'Depart 9 Jan'
         : `${stop.city} ${stop.dates} · ${stop.nights}n`
-    return slice.map((day) => {
-      const body = [day.summary, ...day.blocks.map((block) => block.detail)]
-      const photos =
-        day.id === '2027-01-03'
-          ? [
-              {
-                src: '/snow-monkeys.jpg',
-                caption: 'Jigokudani snow monkeys',
-              },
-            ]
-          : []
-      return {
-        id: day.id,
-        date: day.date,
-        weekday: day.weekday,
-        short: day.short,
-        city: day.city,
-        title: day.title,
-        summary: day.summary,
-        body,
-        photos,
-        stayId: stop.id,
+    return slice.map((day) =>
+      toItinerary(
+        day,
+        stop.id,
         stayLabel,
-        mapCity: stop.cityKey,
-        travelTo: travelTo[day.id],
-      }
-    })
+        day.id === '2027-01-02' ? 'Jigokudani' : stop.cityKey,
+      ),
+    )
   })
+  if (!overview) return mapped
+  return [
+    toItinerary(overview, 'overview', 'Overview', 'Tokyo'),
+    ...mapped,
+  ]
 }
 
 export function groupDays(days: ItineraryDay[]): StayGroup[] {
