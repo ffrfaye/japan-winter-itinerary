@@ -835,44 +835,50 @@
     "status": "open",
     "heading": "Budget",
     "label": "Estimate",
-    "asOf": "23 Aug 2026",
-    "basis": "Per person. Estimate. Not booked. Flight is an aggregate, not a live 27 Dec–9 Jan quote.",
+    "asOf": "24 Aug 2026",
+    "placeholder": "Working estimate. Not locked.",
+    "workingNote": "Headcount 9. FX 1 USD = 158.96 JPY. Last 4 nights omitted. Waguri not booked.",
+    "basis": "USD per person at 9. Working estimate as of 24 Aug 2026. Last 4 nights omitted.",
+    "summary": "Subtotal ~$3,140 without rental, ~$3,270 with.",
+    "subtotalWithoutRental": "~$3,140",
+    "subtotalWithRental": "~$3,270",
+    "band": "$2,900–3,800 with airfare only",
     "lines": [
       {
         "id": "flight",
         "title": "Flight",
-        "detail": "$1,260–1,750",
-        "note": "SFO–TYO economy, Dec/Jan window. Aggregate, not a live quote."
+        "detail": "$1,400",
+        "note": "Working. Aggregate $1,260–1,750; not a live 12/27–1/9 quote."
       },
       {
         "id": "tokyo-stay",
         "title": "Tokyo accommodation",
-        "detail": "~$545",
-        "note": "MIMARU Station East, 3 nights (27–30 Dec). 8 people / 2 apts, ¥86,380 pp. Member FROM ¥345,519 / apt. 10p / 3 apts ~$650; 12p / 3 apts ~$545. Last 4 nights are city travel / unbooked — not in this total."
+        "detail": "$725",
+        "note": "3 nights 27–30 Dec. MIMARU 3 apts ÷ 9. 9 people need a 3rd unit. Last 4 nights omitted."
       },
       {
         "id": "nozawa-stay",
         "title": "Nozawa accommodation",
-        "detail": "~$870",
-        "note": "Kashmir House, 6 nights (30 Dec 2026–5 Jan 2027). 8 people, ~¥137,763 pp / ¥1,102,100 total."
+        "detail": "$776",
+        "note": "Waguri House, 6 nights. ¥1,110,000 total ÷ 9. Not Tamanegi. Not booked."
       },
       {
         "id": "lifts",
         "title": "Lift",
-        "detail": "$225",
-        "note": "5 ski days."
-      },
-      {
-        "id": "rental",
-        "title": "Rental (optional)",
-        "detail": "~$180",
-        "note": "Ski rental. Optional."
+        "detail": "$182",
+        "note": "4 days."
       },
       {
         "id": "tickets",
         "title": "Tickets (snow monkeys)",
-        "detail": "~$57 (¥9,000) per person",
-        "note": "Default: Kotsu half-day tour, adult ¥9,000 (includes bus + ¥800 admission). Park gate only ~$5 (¥800) per person. Optional child tour ~$31 (¥5,000). Jigokudani only. Book from 1 Oct 2026. FX 1 USD = 158.96 JPY, Xe mid-market 23 Aug 2026."
+        "detail": "$57",
+        "note": "Default tour, per person."
+      },
+      {
+        "id": "rental",
+        "title": "Rental (optional)",
+        "detail": "$127",
+        "note": "Optional. 4 days."
       }
     ]
   },

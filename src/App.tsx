@@ -11,6 +11,7 @@ import {
 import { ItineraryPage } from '@/pages/ItineraryPage'
 import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
+import { BudgetPage } from '@/pages/BudgetPage'
 import { RsvpPage } from '@/pages/RsvpPage'
 import { trip } from '@/trip'
 
@@ -18,6 +19,7 @@ const widths: Record<TabId, string> = {
   itinerary: 'max-w-lg',
   rsvp: 'max-w-xl',
   planning: 'max-w-lg',
+  budget: 'max-w-lg',
   lodging: 'max-w-6xl',
 }
 
@@ -74,6 +76,7 @@ export default function App() {
           />
         ) : null}
         {tab === 'planning' ? <PlanningPage /> : null}
+        {tab === 'budget' ? <BudgetPage /> : null}
         {tab === 'lodging' ? <LodgingPage /> : null}
       </main>
       <PageDock tab={tab} onChange={go} />

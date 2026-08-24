@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { BudgetList } from '@/components/BudgetList'
 import { GuestRsvpList } from '@/components/GuestRsvpList'
 import { LodgingOption } from '@/components/LodgingOption'
 import type { Guest, RsvpAnswer } from '@/lib/itinerary'
@@ -36,8 +35,6 @@ export function RsvpPage({
           onChange={onAnswersChange}
         />
       </section>
-
-      <BudgetList />
 
       <section className="space-y-2">
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">

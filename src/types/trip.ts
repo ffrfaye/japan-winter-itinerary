@@ -205,7 +205,13 @@ export type Trip = {
     heading: string
     label: string
     asOf: string
+    placeholder: string
+    workingNote: string
     basis: string
+    summary: string
+    subtotalWithoutRental: string
+    subtotalWithRental: string
+    band: string
     lines: { id: string; title: string; detail: string; note?: string }[]
   }
   transport: {
