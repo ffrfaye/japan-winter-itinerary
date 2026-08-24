@@ -47,3 +47,22 @@ export function flightNumbersLabel(option: FlightOption) {
   if (!option.flight_numbers || option.flight_numbers.length === 0) return null
   return option.flight_numbers.join(' · ')
 }
+
+export function originLastRefreshed(group: FlightOriginGroup): string {
+  return (
+    group.last_refreshed ??
+    group.refreshed_at?.label ??
+    group.refreshed_at?.pt ??
+    flights.refreshed_at.label
+  )
+}
+
+export function optionLastRefreshed(
+  option: FlightOption,
+  group: FlightOriginGroup,
+): string {
+  if (group.last_refreshed || group.refreshed_at) {
+    return originLastRefreshed(group)
+  }
+  return option.last_refreshed || flights.refreshed_at.label
+}

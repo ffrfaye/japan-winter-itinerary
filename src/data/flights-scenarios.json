@@ -14,7 +14,7 @@
     "Fares are live quotes as of refreshed_at; holiday peak inventory changes quickly.",
     "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
     "Flight numbers taken from Google Flights travel-impact itinerary URLs on the same result page.",
-    "No KIX/open-jaw needed: round-trips to HND/NRT exist from all three origins.",
+    "No KIX/open-jaw needed: round-trips to HND/NRT exist from SFO, SEA, YVR, and STL.",
     "Typical block times: SFO–TYO nonstop ~11h, YVR–TYO ~10h, STL via West Coast/ORD ~16–20h."
   ],
   "origins": {
@@ -273,11 +273,328 @@
     "SEA": {
       "id": "SEA",
       "heading": "Seattle (SEA)",
-      "search_url": null,
-      "cheapest_economy_usd": null,
-      "cheapest_sane_usd": null,
-      "cheapest_sane_label": null,
-      "options": []
+      "search_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09",
+      "cheapest_economy_usd": 1160,
+      "cheapest_sane_usd": 1500,
+      "cheapest_sane_label": "ANA NH117 $1,500 NS",
+      "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+      "refreshed_at": {
+        "utc": "2026-08-24T17:05:17Z",
+        "pt": "2026-08-24T10:05:17-07:00",
+        "label": "24 Aug 2026, 10:05 AM PT"
+      },
+      "options": [
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": true,
+          "sane_cheapest": false,
+          "notes": [
+            "Insane 31h via YVR+CTS."
+          ],
+          "layover": "17h41m YVR then 1h30m CTS",
+          "flight_numbers": [
+            "AC8811",
+            "AC55",
+            "NH74"
+          ],
+          "id": "sea-ac-1160",
+          "origin": "SEA",
+          "dest": "HND",
+          "airlines": "Air Canada/ANA",
+          "depart_local": "2026-12-27 19:05",
+          "arrive_local": "2026-12-29 19:10",
+          "duration": "31h5m",
+          "stops": 2,
+          "price_usd": 1160,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": true,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "NH117"
+          ],
+          "id": "sea-nh117",
+          "origin": "SEA",
+          "dest": "HND",
+          "airlines": "ANA/United",
+          "depart_local": "2026-12-27 15:40",
+          "arrive_local": "2026-12-28 19:15",
+          "duration": "10h35m",
+          "stops": 0,
+          "price_usd": 1500,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "JL67"
+          ],
+          "id": "sea-jl67",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "JAL/American",
+          "depart_local": "2026-12-27 12:00",
+          "arrive_local": "2026-12-28 15:30",
+          "duration": "10h30m",
+          "stops": 0,
+          "price_usd": 1694,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "DL167"
+          ],
+          "id": "sea-dl167",
+          "origin": "SEA",
+          "dest": "HND",
+          "airlines": "Delta",
+          "depart_local": "2026-12-27 10:45",
+          "arrive_local": "2026-12-28 14:35",
+          "duration": "10h50m",
+          "stops": 0,
+          "price_usd": 1774,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "AS123"
+          ],
+          "id": "sea-as123",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "Alaska",
+          "depart_local": "2026-12-27 11:55",
+          "arrive_local": "2026-12-28 15:25",
+          "duration": "10h30m",
+          "stops": 0,
+          "price_usd": 2220,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "3h20m SFO",
+          "flight_numbers": [
+            "UA2070",
+            "UA837"
+          ],
+          "id": "sea-ua2070-ua837",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "United",
+          "depart_local": "2026-12-27 05:00",
+          "arrive_local": "2026-12-28 15:00",
+          "duration": "17h",
+          "stops": 1,
+          "price_usd": 1504,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "3h40m SFO",
+          "flight_numbers": [
+            "UA2070",
+            "NH7"
+          ],
+          "id": "sea-ua2070-nh7",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "United/ANA",
+          "depart_local": "2026-12-27 05:00",
+          "arrive_local": "2026-12-28 15:20",
+          "duration": "17h20m",
+          "stops": 1,
+          "price_usd": 1504,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "3h40m ICN",
+          "flight_numbers": [
+            "OZ271",
+            "OZ102"
+          ],
+          "id": "sea-oz271",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "Asiana",
+          "depart_local": "2026-12-27 00:10",
+          "arrive_local": "2026-12-28 11:20",
+          "duration": "18h10m",
+          "stops": 1,
+          "price_usd": 1572,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "20h35m YYC overnight",
+          "flight_numbers": [
+            "WS1553",
+            "WS80"
+          ],
+          "id": "sea-ws1553",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "WestJet",
+          "depart_local": "2026-12-27 14:30",
+          "arrive_local": "2026-12-29 16:30",
+          "duration": "33h",
+          "stops": 1,
+          "price_usd": 1441,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 10:05 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "17h41m YVR then 4h30m CTS",
+          "flight_numbers": [
+            "AC8811",
+            "AC55",
+            "GK120"
+          ],
+          "id": "sea-gk120",
+          "origin": "SEA",
+          "dest": "NRT",
+          "airlines": "Air Canada/Jetstar",
+          "depart_local": "2026-12-27 19:05",
+          "arrive_local": "2026-12-29 22:15",
+          "duration": "34h10m",
+          "stops": 2,
+          "price_usd": 1290,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Seattle%20on%202026-12-27%20through%202027-01-09"
+        }
+      ]
     },
     "YVR": {
       "id": "YVR",

@@ -4,12 +4,19 @@ import {
   flightGroups,
   flightNumbersLabel,
   flights,
+  optionLastRefreshed,
   stopsLabel,
   usd,
 } from '@/lib/flights'
 import type { FlightOption, FlightOriginGroup } from '@/types/flights'
 
-function FlightRow({ option }: { option: FlightOption }) {
+function FlightRow({
+  option,
+  group,
+}: {
+  option: FlightOption
+  group: FlightOriginGroup
+}) {
   const faded = option.not_recommended
   const numbers = flightNumbersLabel(option)
 
@@ -45,7 +52,9 @@ function FlightRow({ option }: { option: FlightOption }) {
           {note}
         </p>
       ))}
-      <p className="text-sm text-zinc-500">{option.last_refreshed}</p>
+      <p className="text-sm text-zinc-500">
+        {optionLastRefreshed(option, group)}
+      </p>
       <p className="text-sm text-zinc-600">
         <a
           href={option.booking_url}
@@ -88,7 +97,7 @@ function OriginGroup({ group }: { group: FlightOriginGroup }) {
       ) : (
         <ul className="divide-y divide-zinc-200">
           {group.options.map((option) => (
-            <FlightRow key={option.id} option={option} />
+            <FlightRow key={option.id} option={option} group={group} />
           ))}
         </ul>
       )}

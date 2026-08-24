@@ -44,6 +44,8 @@ export type FlightOriginGroup = {
   cheapest_economy_usd: number | null
   cheapest_sane_usd: number | null
   cheapest_sane_label: string | null
+  last_refreshed?: string
+  refreshed_at?: FlightRefreshedAt
   options: FlightOption[]
 }
 
