@@ -228,6 +228,76 @@
       ]
     },
     {
+      "id": "waguri-house",
+      "name": "The Waguri House",
+      "location": "nozawa",
+      "operator": "Akari House",
+      "official_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "type": "whole-house",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "sleeps": 12,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "5-bed default. 4-bed if only 8 (same house rate). 6 couples only if two pairs share a room (sleeps 12 / 5 BR). Listing also says 4–5 bedrooms and 10–12 guests.",
+      "price": {
+        "amount": 185000,
+        "currency": "JPY",
+        "covers": "whole house, same rate for 8/10/12",
+        "per": "night",
+        "as_of": "2026-08-24",
+        "source": "Akari email quote (overrides listing extras; not +€40/guest)",
+        "how_to_get_quote": "Email Gabriel Sutter, admin@akarihouse.jp, or WhatsApp +81 70 9026 60 26 for a hold or official quote"
+      },
+      "availability_status": "available",
+      "availability_notes": "Available via Akari quote, 30 Dec 2026–5 Jan 2027 (6 nights OK). Hold or official quote offered. Not booked. 20% now, balance 90 days out, prepaid non-refundable (listing policy). Check-in 15:00, out 10:00.",
+      "booking_method": "email or WhatsApp",
+      "booking_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "booking_contact": "admin@akarihouse.jp",
+      "onsen": {
+        "type": "none",
+        "nearest": "Village soto-yu, 10 min drive"
+      },
+      "ski_logistics": {
+        "walk_to_lift": null,
+        "walk_to_village": "10 min outside town (Kijimadaira)",
+        "vehicle_access": "Own transport required, 4WD + studless. Private parking."
+      },
+      "tokyo_logistics": null,
+      "address": "393 Hotaka, Kijimadaira, Shimotakai District, Nagano 389-2301",
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://l.icdbcdn.com/oh/b2e45f3c-9f19-4def-9e0f-27ad61b37583.jpg",
+          "source": "official"
+        },
+        {
+          "url": "https://l.icdbcdn.com/oh/e35e1843-8316-4cc1-9b8f-884168babce8.jpg",
+          "source": "official"
+        },
+        {
+          "url": "https://l.icdbcdn.com/oh/8b555a0e-ca3d-4593-b098-13952ba0649d.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "¥185,000/n flat for 8/10/12, ¥1,110,000 / 6 nights tax-in",
+        "Newly renovated this winter",
+        "Kitchen, washer, wifi, AC, private parking",
+        "Fits 4, 5, and 6 by occupancy"
+      ],
+      "cons": [
+        "10 min outside town — own 4WD + studless required",
+        "No onsen; village soto-yu is a 10 min drive",
+        "6 couples only if two pairs share a room",
+        "List-only — no map pin"
+      ]
+    },
+    {
       "id": "tamanegi-house",
       "name": "Tamanegi House",
       "location": "nozawa",
@@ -252,8 +322,8 @@
         "source": null,
         "how_to_get_quote": "Email admin@akarihouse.jp"
       },
-      "availability_status": "inquiry sent",
-      "availability_notes": "Not booked. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. 7-night min may block the 6-night Nozawa stay.",
+      "availability_status": "sold-out",
+      "availability_notes": "Unavailable those dates. Reply 24 Aug 2026 morning PT. Not booked.",
       "booking_method": "email",
       "booking_url": "https://www.akarihouse.jp/tamanegi-house",
       "booking_contact": "admin@akarihouse.jp",
@@ -282,9 +352,10 @@
         "Fits 4, 5, and 6"
       ],
       "cons": [
-        "Enquire only",
-        "7-night minimum may block"
-      ]
+        "Unavailable those dates",
+        "Hidden from default filters"
+      ],
+      "default_card": false
     },
     {
       "id": "tanuki-premium-4bed-3f",
@@ -304,7 +375,7 @@
       "scenario_notes": "3F sleeps 12. Pair with another unit for 6 bedrooms.",
       "price": null,
       "availability_status": "inquiry sent",
-      "availability_notes": "Not booked. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist; RoomBoss sold out 24 Dec–6 Jan.",
+      "availability_notes": "Not booked. No reply as of 24 Aug 2026 morning PT. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist; RoomBoss sold out 24 Dec–6 Jan.",
       "booking_method": "email waitlist",
       "booking_url": "https://www.staynozawa.com/stay/tanuki-premium-four-bedroom-apartment-3f",
       "booking_contact": "bookings@staynozawa.com",
@@ -351,7 +422,7 @@
       "scenario_notes": "6 pairs only if two pairs share a bunk/flex room.",
       "price": null,
       "availability_status": "inquiry sent",
-      "availability_notes": "Not booked. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist; sold out 24 Dec–9 Jan.",
+      "availability_notes": "Not booked. No reply as of 24 Aug 2026 morning PT. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist; sold out 24 Dec–9 Jan.",
       "booking_method": "email waitlist",
       "booking_url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge",
       "booking_contact": "bookings@staynozawa.com",
@@ -397,7 +468,7 @@
       "scenario_notes": "True 6 bedrooms. Same operator, next to each other. 3+3 / 8+8.",
       "price": null,
       "availability_status": "inquiry sent",
-      "availability_notes": "Not booked. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist.",
+      "availability_notes": "Not booked. No reply as of 24 Aug 2026 morning PT. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com. Was sold-out waitlist.",
       "booking_method": "email waitlist",
       "booking_url": "https://www.staynozawa.com/properties/iroha-nozawa",
       "booking_contact": "bookings@staynozawa.com",
@@ -493,8 +564,8 @@
       ],
       "scenario_notes": "Hotel-scale rooms. Half-board possible.",
       "price": null,
-      "availability_status": "inquiry sent",
-      "availability_notes": "Not booked. Inquiry sent 23 Aug 2026 ~11:05pm PT from rffan812@gmail.com.",
+      "availability_status": "sold-out",
+      "availability_notes": "No availability those dates. They asked if later in the season; Faye has not answered. Reply 24 Aug 2026 morning PT. Not booked.",
       "booking_method": "phone or email",
       "booking_url": "https://www.viewhotelshimataya.com/",
       "booking_contact": "view@nozawahospitality.com",
@@ -523,9 +594,10 @@
         "Hotel-scale"
       ],
       "cons": [
-        "Availability unknown",
-        "No amount quoted"
-      ]
+        "No availability those dates",
+        "Hidden from default filters"
+      ],
+      "default_card": false
     },
     {
       "id": "slopeside-chalet",

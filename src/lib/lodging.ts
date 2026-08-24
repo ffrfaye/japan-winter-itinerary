@@ -104,6 +104,7 @@ const committedThumbs = new Set([
   'slopeside-chalet',
   'bonbori-ichi',
   'nozawa-central-301',
+  'waguri-house',
 ])
 
 export function thumbUrl(card: LodgingProperty) {

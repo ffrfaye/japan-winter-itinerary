@@ -622,7 +622,7 @@
   },
   "lodging": {
     "status": "open",
-    "asOf": "23 Aug 2026",
+    "asOf": "24 Aug 2026",
     "tokyoNote": "Default Tokyo lodging is the first 3 nights (27–30 Dec). Station East member FROM ¥345,519 / apt for those nights. Last 4 nights are city travel and may not be Tokyo — not in the pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
     "bands": [
       {
@@ -654,14 +654,17 @@
             "note": "Breakfast, no dinner. Walk-in lodge, no road. 6 nights (30 Dec 2026–5 Jan 2027). ~¥137,763 pp / ¥1,102,100 total."
           },
           {
-            "id": "tamanegi-4",
-            "property": "Tamanegi House (Akari)",
+            "id": "waguri-4",
+            "property": "The Waguri House (Akari)",
             "city": "Nozawa",
-            "beds": "4BR duplex · listed 10–12",
-            "status": "enquire",
-            "nextStep": "Email.",
+            "beds": "5 BR / 3 bath · sleeps 12 · 4-bed if only 8",
+            "status": "available",
+            "perPerson": "~$870",
+            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
-            "note": "Can grow if more pairs yes. ¥193,500/n default. 7-night min may block."
+            "phone": "+81 70 9026 60 26",
+            "note": "6 nights (30 Dec 2026–5 Jan 2027) OK. ¥185,000/n flat for 8/10/12, ¥1,110,000 tax-in. Same house rate. ~$870 pp at 8 (FX 158.96). 10 min outside town, 4WD + studless. Not booked."
           },
           {
             "id": "tanuki-4",
@@ -674,15 +677,15 @@
             "note": "RoomBoss sold out 24 Dec–6 Jan."
           },
           {
-            "id": "kiriya-shimataya-4",
-            "property": "Kiriya or Shimataya",
+            "id": "kiriya-4",
+            "property": "Kiriya Ryokan",
             "city": "Nozawa",
             "beds": "4 rooms",
             "status": "enquire",
             "nextStep": "Phone or email.",
             "email": "view@nozawahospitality.com",
             "phone": "+81 269-85-2020",
-            "note": "Half-board possible."
+            "note": "Half-board possible. Shimataya has no availability those dates."
           }
         ]
       },
@@ -714,24 +717,27 @@
             "note": "Best one-house if a 5th couple is yes. Sold out 24 Dec–9 Jan."
           },
           {
-            "id": "tamanegi-5",
-            "property": "Tamanegi House (Akari)",
+            "id": "waguri-5",
+            "property": "The Waguri House (Akari)",
             "city": "Nozawa",
-            "beds": "4BR + extra beds · not a true 5th room",
-            "status": "enquire",
-            "nextStep": "Email.",
+            "beds": "5 BR / 3 bath · sleeps 12",
+            "status": "available",
+            "perPerson": "~$700",
+            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
-            "note": "Only if 10 people and they allow extra beds."
+            "phone": "+81 70 9026 60 26",
+            "note": "5-bed default. ¥185,000/n flat, ¥1,110,000 / 6 nights tax-in. ~$700 pp at 10 (FX 158.96). 10 min outside town, 4WD + studless. Not booked."
           },
           {
-            "id": "kiriya-shimataya-tokiwaya-5",
-            "property": "Kiriya / Shimataya / Tokiwaya",
+            "id": "kiriya-tokiwaya-5",
+            "property": "Kiriya / Tokiwaya",
             "city": "Nozawa",
             "beds": "5 rooms",
             "status": "enquire",
             "nextStep": "Phone.",
             "phone": "+81 269-85-2020",
-            "note": "Tokiwaya 31 Dec + 1 Jan 満室 online."
+            "note": "Tokiwaya 31 Dec + 1 Jan 満室 online. Shimataya has no availability those dates."
           },
           {
             "id": "staynozawa-5",
@@ -761,6 +767,19 @@
             "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
             "email": "tokyo-station-east@chm.cigr.co.jp",
             "note": "3 nights (27–30 Dec). 3 apts × Station East member FROM ¥345,519 ÷ 12 = ¥86,380. Connecting-8 + one two-bed is 3 bedrooms of space, 12 beds — only if two pairs share the connecting unit. Last 4 nights are city travel / unbooked — not in this total."
+          },
+          {
+            "id": "waguri-6",
+            "property": "The Waguri House (Akari)",
+            "city": "Nozawa",
+            "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
+            "status": "available",
+            "perPerson": "~$580",
+            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+            "email": "admin@akarihouse.jp",
+            "phone": "+81 70 9026 60 26",
+            "note": "6 couples only if two pairs share a room. ¥185,000/n flat, ¥1,110,000 / 6 nights tax-in. ~$580 pp at 12 (FX 158.96). Not booked."
           },
           {
             "id": "kamoshika-6",
@@ -799,16 +818,6 @@
             "status": "waitlist",
             "nextStep": "Email waitlist.",
             "email": "bookings@staynozawa.com"
-          },
-          {
-            "id": "shimataya-6",
-            "property": "Shimataya",
-            "city": "Nozawa",
-            "beds": "6 rooms · hotel-scale",
-            "status": "enquire",
-            "nextStep": "Email.",
-            "email": "view@nozawahospitality.com",
-            "note": "Sakaya NYE sold out."
           }
         ]
       }
@@ -1066,8 +1075,20 @@
       "kind": "single",
       "min": 10,
       "max": 12,
-      "note": "Sleeps 10–12. Enquire. Not booked.",
+      "note": "Unavailable those dates. Reply 24 Aug 2026 morning PT. Not booked.",
       "email": "admin@akarihouse.jp"
+    },
+    {
+      "id": "waguri",
+      "name": "The Waguri House (Akari)",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 8,
+      "max": 12,
+      "note": "5 BR / sleeps 12. Available via Akari quote. Not booked.",
+      "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "email": "admin@akarihouse.jp",
+      "phone": "+81 70 9026 60 26"
     },
     {
       "id": "iroha-ichi-ni",
