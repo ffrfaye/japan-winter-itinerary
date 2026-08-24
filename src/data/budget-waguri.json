@@ -1,0 +1,48 @@
+{
+  "heading": "Budget",
+  "label": "Working · not locked",
+  "headcountLabel": "Working headcount 9 (pending).",
+  "fx": "FX ¥158.96.",
+  "identityBefore": "Asked “Wagyu E-House” → ",
+  "identityName": "The Waguri House (Akari)",
+  "identityAfter": ", a stay, not a restaurant.",
+  "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+  "hero": "~$3,140 pp without rental / ~$3,270 with.",
+  "band": "$2,900–3,800 with airfare.",
+  "foot": "Last 4 Tokyo nights unbooked, not in the total. Waguri not booked (hold requested).",
+  "oldBandNote": "Earlier band included food + 7 Tokyo nights + 5 ski days.",
+  "lines": [
+    {
+      "id": "flight",
+      "title": "Flight",
+      "detail": "$1,400",
+      "note": "$1,260–1,750."
+    },
+    {
+      "id": "tokyo-stay",
+      "title": "Tokyo 3n MIMARU Station East",
+      "detail": "$725"
+    },
+    {
+      "id": "waguri",
+      "title": "Nozawa accommodation — The Waguri House, 6 nights",
+      "detail": "$776",
+      "note": "House ¥1,110,000."
+    },
+    {
+      "id": "lifts",
+      "title": "Lifts 4d",
+      "detail": "$182"
+    },
+    {
+      "id": "rental",
+      "title": "Rental (optional)",
+      "detail": "$127"
+    },
+    {
+      "id": "tickets",
+      "title": "Monkey tour",
+      "detail": "$57"
+    }
+  ]
+}
