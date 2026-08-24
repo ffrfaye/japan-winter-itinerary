@@ -7,12 +7,19 @@ export function DayJump({
   days,
   index,
   onJump,
+  onOpenChange,
 }: {
   days: ItineraryDay[]
   index: number
   onJump: (next: number) => void
+  onOpenChange?: (open: boolean) => void
 }) {
   const [open, setOpen] = useState(false)
+
+  function setMenu(next: boolean) {
+    setOpen(next)
+    onOpenChange?.(next)
+  }
   const trigger = useRef<HTMLButtonElement>(null)
   const menu = useRef<HTMLUListElement>(null)
   const [pos, setPos] = useState({ top: 0, left: 0 })
@@ -29,16 +36,20 @@ export function DayJump({
   }, [open])
 
   useEffect(() => {
+    return () => onOpenChange?.(false)
+  }, [onOpenChange])
+
+  useEffect(() => {
     if (!open) return
     function onPointer(event: MouseEvent) {
       const target = event.target as Node
       if (trigger.current?.contains(target) || menu.current?.contains(target)) {
         return
       }
-      setOpen(false)
+      setMenu(false)
     }
     function onKey(event: KeyboardEvent) {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key === 'Escape') setMenu(false)
     }
     window.addEventListener('resize', placeMenu)
     window.addEventListener('scroll', placeMenu, true)
@@ -60,7 +71,7 @@ export function DayJump({
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label="Jump to day"
-        onClick={() => setOpen((value) => !value)}
+        onClick={() => setMenu(!open)}
         className="relative z-[3000] inline-flex items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
       >
         {current?.jumpLabel ?? 'Day 0'}
@@ -82,7 +93,7 @@ export function DayJump({
                     aria-selected={dayIndex === index}
                     onClick={() => {
                       onJump(dayIndex)
-                      setOpen(false)
+                      setMenu(false)
                     }}
                     className="w-full px-3 py-1.5 text-left text-sm text-zinc-700 hover:bg-zinc-50"
                   >

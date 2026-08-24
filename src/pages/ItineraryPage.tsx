@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Button } from '@/components/ui/button'
+import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { PlaceCards } from '@/components/PlaceCards'
@@ -21,6 +22,7 @@ export function ItineraryPage() {
   const [desktop, setDesktop] = useState(false)
   const [index, setIndex] = useState(0)
   const [openId, setOpenId] = useState<string | null>(null)
+  const [jumpOpen, setJumpOpen] = useState(false)
   const dragged = useRef(false)
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -66,7 +68,7 @@ export function ItineraryPage() {
 
     function onKey(event: KeyboardEvent) {
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
-      if (openId) return
+      if (openId || jumpOpen) return
       const target = event.target
       if (!(target instanceof HTMLElement)) return
       if (
@@ -83,13 +85,13 @@ export function ItineraryPage() {
 
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [mode, openId, emblaApi])
+  }, [mode, openId, jumpOpen, emblaApi])
 
   const active = days[index] ?? days[0]
   const openDay = days.find((day) => day.id === openId) ?? null
   const canPrev = index > 0
   const canNext = index < days.length - 1
-  const showPager = mode === 'cards' && desktop && !openDay
+  const showPager = mode === 'cards' && desktop && !openDay && !jumpOpen
 
   function openCard(id: string) {
     if (dragged.current) return
@@ -99,24 +101,12 @@ export function ItineraryPage() {
   return (
     <div className="space-y-5">
       {showPager ? (
-        <>
-          <button
-            type="button"
-            tabIndex={-1}
-            aria-label="Previous day"
-            disabled={!canPrev}
-            onClick={() => emblaApi?.scrollPrev()}
-            className="fixed inset-y-0 left-0 z-[1] w-1/3 cursor-w-resize bg-transparent disabled:pointer-events-none disabled:cursor-default"
-          />
-          <button
-            type="button"
-            tabIndex={-1}
-            aria-label="Next day"
-            disabled={!canNext}
-            onClick={() => emblaApi?.scrollNext()}
-            className="fixed inset-y-0 right-0 z-[1] w-1/3 cursor-e-resize bg-transparent disabled:pointer-events-none disabled:cursor-default"
-          />
-        </>
+        <CardPager
+          canPrev={canPrev}
+          canNext={canNext}
+          onPrev={() => emblaApi?.scrollPrev()}
+          onNext={() => emblaApi?.scrollNext()}
+        />
       ) : null}
       <div className="relative z-10 flex gap-2">
         {(['list', 'cards'] as const).map((value) => (
@@ -153,6 +143,7 @@ export function ItineraryPage() {
             days={days}
             index={index}
             onJump={(next) => emblaApi?.scrollTo(next)}
+            onOpenChange={setJumpOpen}
           />
           <JapanMap
             pins={active.pins}
