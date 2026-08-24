@@ -8,7 +8,7 @@
     "start": "2026-12-27",
     "end": "2027-01-09",
     "nights": 13,
-    "nightsBreakdown": "Tokyo 3 + Nozawa 6 + Tokyo 4 = 13",
+    "nightsBreakdown": "Tokyo 3 + Nozawa 6 + Tokyo or other city 4 = 13",
     "tone": "Un-hectic. Anime fans. May bring ski gear.",
     "cityBase": "Tokyo only",
     "airports": "HND / NRT — not yet chosen",
@@ -98,7 +98,7 @@
     {
       "id": "nights",
       "status": "locked",
-      "text": "13 nights: Tokyo 3 + Nozawa 6 + Tokyo 4."
+      "text": "13 nights: Tokyo 3 + Nozawa 6 + Tokyo or other city 4."
     },
     {
       "id": "ski-days",
@@ -191,11 +191,11 @@
       "city": "Overview",
       "status": "locked",
       "title": "The trip",
-      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 city travel",
+      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 Tokyo or other city travel",
       "blocks": [
         {
           "title": "Beats",
-          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights city travel — Tokyo or another city. Nothing booked yet.",
+          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
           "status": "locked"
         }
       ],
