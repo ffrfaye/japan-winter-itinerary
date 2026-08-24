@@ -1,29 +1,9 @@
 {
   "heading": "Budget",
   "label": "Working · not locked",
-  "fx": "FX ¥158.96.",
   "identityName": "The Waguri House (Akari)",
   "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
-  "band": "$2,900–3,800 with airfare.",
   "foot": "Waguri not booked (hold requested).",
-  "oldBandNote": "Earlier band included food + 7 Tokyo nights + 5 ski days.",
-  "optionalHeading": "Last 4 nights, 5–9 Jan 2027",
-  "optionalLead": "Optional. Not locked. Not in the working total.",
-  "optionalIfAdded": "If added: Tokyo last block +$550. Kyoto last block ~$280–$461 + fare/airport change, softer.",
-  "optionalLines": [
-    {
-      "id": "option-a-tokyo",
-      "title": "Option A · Tokyo",
-      "detail": "$550",
-      "note": "MIMARU Station East Stay B FROM ¥261,702/apt/4n. 3 apts ÷ 9. Inventory existed 23 Aug."
-    },
-    {
-      "id": "option-b-kyoto",
-      "title": "Option B · Kyoto base",
-      "detail": "~$280–$461",
-      "note": "Nara is a day trip, not a 4-night base. Miyagawacho Samurai machiya published tariff ~$280 pp / 4n for 9 (not a dated hold). MIMARU Kyoto typical $294–$461 pp (no live calendar). Shinkansen Tokyo–Kyoto ~¥14,170 ≈ $89 one way. Fly 9 Jan from KIX if they stay Kansai."
-    }
-  ],
   "sharedLines": [
     {
       "id": "flight",
@@ -47,14 +27,24 @@
     "title": "Rental (optional)",
     "detail": "$127"
   },
+  "last4": {
+    "id": "last-4",
+    "title": "Last 4 nights",
+    "tokyo": {
+      "detail": "~$550",
+      "note": "Tokyo MIMARU Stay B ~$550 pp (3 apts, inventory 23 Aug)"
+    },
+    "kyoto": {
+      "detail": "~$280–$461",
+      "note": "Kyoto ~$280–$461 pp typical (machiya/MIMARU; not a hold) + ~$89 shinkansen"
+    }
+  },
   "defaultBedrooms": 4,
   "scenarios": [
     {
       "id": 4,
       "label": "4 bedrooms",
-      "people": 8,
-      "headcountLabel": "8 people · 4 pairs.",
-      "hero": "~$3,057 pp without rental / ~$3,184 with.",
+      "hero": "~$3,057",
       "working9Note": null,
       "tokyo": {
         "id": "tokyo-stay",
@@ -72,9 +62,7 @@
     {
       "id": 5,
       "label": "5 bedrooms",
-      "people": 10,
-      "headcountLabel": "10 people · 5 pairs.",
-      "hero": "~$2,989 pp without rental / ~$3,116 with.",
+      "hero": "~$2,989",
       "working9Note": "Working-9 (4 couples + 1 single): Tokyo 3 apts ≈ $725, Waguri ≈ $776.",
       "tokyo": {
         "id": "tokyo-stay",
@@ -92,9 +80,7 @@
     {
       "id": 6,
       "label": "6 bedrooms",
-      "people": 12,
-      "headcountLabel": "12 people · 6 pairs.",
-      "hero": "~$2,766 pp without rental / ~$2,893 with.",
+      "hero": "~$2,766",
       "working9Note": null,
       "tokyo": {
         "id": "tokyo-stay",

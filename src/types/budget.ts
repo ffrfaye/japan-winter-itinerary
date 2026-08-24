@@ -3,13 +3,24 @@ export type BudgetLine = {
   title: string
   detail: string
   note?: string
+  notes?: string[]
+}
+
+export type BudgetSide = {
+  detail: string | null
+  note?: string | null
+}
+
+export type BudgetLast4 = {
+  id: string
+  title: string
+  tokyo: BudgetSide | null
+  kyoto: BudgetSide | null
 }
 
 export type BudgetScenario = {
   id: 4 | 5 | 6
   label: string
-  people: 8 | 10 | 12
-  headcountLabel: string
   hero: string
   working9Note: string | null
   tokyo: BudgetLine
@@ -19,18 +30,12 @@ export type BudgetScenario = {
 export type BudgetWaguri = {
   heading: string
   label: string
-  fx: string
   identityName: string
   identityUrl: string
-  band: string
   foot: string
-  oldBandNote: string
-  optionalHeading: string
-  optionalLead: string
-  optionalIfAdded: string
-  optionalLines: BudgetLine[]
   sharedLines: BudgetLine[]
   rental: BudgetLine
+  last4: BudgetLast4
   defaultBedrooms: 4 | 5 | 6
   scenarios: BudgetScenario[]
 }

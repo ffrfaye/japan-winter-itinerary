@@ -36,19 +36,16 @@ export function BudgetPage() {
       />
 
       <header className="space-y-2">
-        <p className="text-sm text-zinc-600">
-          {scenario.headcountLabel} {budget.fx}
-        </p>
         <p className="text-sm font-medium">{scenario.hero}</p>
         {scenario.working9Note ? (
           <p className="text-sm text-zinc-500">{scenario.working9Note}</p>
         ) : null}
-        <div className="flex flex-wrap items-baseline gap-2">
-          <Badge variant="outline">{budget.label}</Badge>
-          <p className="text-sm text-zinc-500">{budget.band}</p>
-        </div>
+        <Badge variant="outline">{budget.label}</Badge>
       </header>
       <BudgetList lines={lines} />
+      {budget.foot ? (
+        <p className="text-sm text-zinc-600">{budget.foot}</p>
+      ) : null}
     </div>
   )
 }
