@@ -23,6 +23,7 @@ export type BudgetScenario = {
   label: string
   hero: string
   working9Note: string | null
+  quietNote?: string | null
   tokyo: BudgetLine
   waguri: BudgetLine
 }

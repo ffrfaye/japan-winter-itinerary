@@ -40,6 +40,9 @@ export function BudgetPage() {
         {scenario.working9Note ? (
           <p className="text-sm text-zinc-500">{scenario.working9Note}</p>
         ) : null}
+        {scenario.quietNote ? (
+          <p className="text-sm text-zinc-500">{scenario.quietNote}</p>
+        ) : null}
         <Badge variant="outline">{budget.label}</Badge>
       </header>
       <BudgetList lines={lines} />
