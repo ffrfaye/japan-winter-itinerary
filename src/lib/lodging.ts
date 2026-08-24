@@ -90,7 +90,21 @@ export function hasPin(card: LodgingProperty) {
   return typeof card.lat === 'number' && typeof card.lng === 'number'
 }
 
-const committedThumbs = new Set<string>([])
+const committedThumbs = new Set([
+  'mimaru-tokyo-station-east',
+  'mimaru-tokyo-hatchobori',
+  'mimaru-suites-tokyo-nihombashi',
+  'kashmir-house',
+  'tamanegi-house',
+  'tanuki-premium-4bed-3f',
+  'kamoshika-ski-lodge',
+  'iroha-ichi-ni',
+  'kiriya-ryokan',
+  'view-hotel-shimataya',
+  'slopeside-chalet',
+  'bonbori-ichi',
+  'nozawa-central-301',
+])
 
 export function thumbUrl(card: LodgingProperty) {
   const first = card.images?.[0]?.url
@@ -142,8 +156,14 @@ export function availabilityLabel(status: string) {
 export function skiLine(card: LodgingProperty) {
   const ski = card.ski_logistics
   if (!ski) return ''
-  return [ski.walk_to_lift, ski.walk_to_village, ski.vehicle_access]
-    .filter(Boolean)
+  const vehicle =
+    ski.vehicle_access === false
+      ? 'No vehicle'
+      : ski.vehicle_access === true
+        ? 'Vehicle access'
+        : ski.vehicle_access
+  return [ski.walk_to_lift, ski.walk_to_village, vehicle]
+    .filter((value) => typeof value === 'string' && value.length > 0)
     .join(' · ')
 }
 

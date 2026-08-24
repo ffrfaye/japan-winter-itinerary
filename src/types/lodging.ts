@@ -20,7 +20,7 @@ export type LodgingOnsen = {
 export type LodgingSkiLogistics = {
   walk_to_lift?: string | null
   walk_to_village?: string | null
-  vehicle_access?: string | null
+  vehicle_access?: string | boolean | null
 }
 
 export type LodgingTokyoLogistics = {
