@@ -20,11 +20,11 @@ export function ViewToggle({
           <Button
             key={value}
             type="button"
-            size="sm"
+            size="xs"
             variant={active ? 'default' : 'outline'}
             aria-pressed={active}
             onClick={() => onChange(value)}
-            className="h-auto rounded-lg px-3 py-1 text-[13px] font-medium"
+            className="h-7 min-h-0 rounded-lg px-3 py-0.5 text-[13px] font-medium leading-none"
           >
             {value === 'list' ? 'List' : 'Cards'}
           </Button>
