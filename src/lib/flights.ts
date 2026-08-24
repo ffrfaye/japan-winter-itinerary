@@ -10,6 +10,11 @@ export const flights = raw as FlightsScenarios
 
 export const flightOriginOrder: FlightOriginId[] = ['SFO', 'SEA', 'YVR', 'STL']
 
+export const flightOriginTabs = flightOriginOrder.map((id) => ({
+  id,
+  label: id,
+}))
+
 const emptyHeadings: Record<FlightOriginId, string> = {
   SFO: 'SFO',
   SEA: 'Seattle (SEA)',

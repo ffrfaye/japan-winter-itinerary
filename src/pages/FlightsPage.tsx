@@ -1,14 +1,22 @@
+import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
+import { SegmentedControl } from '@/components/SegmentedControl'
 import { cn } from '@/lib/utils'
 import {
   flightGroups,
   flightNumbersLabel,
+  flightOriginTabs,
   flights,
   optionLastRefreshed,
+  originLastRefreshed,
   stopsLabel,
   usd,
 } from '@/lib/flights'
-import type { FlightOption, FlightOriginGroup } from '@/types/flights'
+import type {
+  FlightOption,
+  FlightOriginGroup,
+  FlightOriginId,
+} from '@/types/flights'
 
 function FlightRow({
   option,
@@ -76,6 +84,7 @@ function OriginGroup({ group }: { group: FlightOriginGroup }) {
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
           {group.heading}
         </h2>
+        <p className="text-sm text-zinc-500">{originLastRefreshed(group)}</p>
         {group.cheapest_sane_label ? (
           <p className="text-sm text-zinc-500">{group.cheapest_sane_label}</p>
         ) : null}
@@ -107,7 +116,8 @@ function OriginGroup({ group }: { group: FlightOriginGroup }) {
 
 export function FlightsPage() {
   const groups = flightGroups()
-  const refreshed = flights.refreshed_at.label
+  const [origin, setOrigin] = useState<FlightOriginId>('SFO')
+  const group = groups.find((item) => item.id === origin) ?? groups[0]
   const caveat = flights.caveats[0]
   const returnLeg = flights.caveats[1]
   const kix = flights.caveats[3]
@@ -120,7 +130,6 @@ export function FlightsPage() {
           Quotes for 27 Dec 2026 – 9 Jan 2027, 1 adult economy RT, Google
           Flights. Target dates were quoted.
         </p>
-        <p className="text-sm text-zinc-500">{refreshed}</p>
         {caveat ? <p className="text-sm text-zinc-500">{caveat}</p> : null}
         {returnLeg ? (
           <p className="text-sm text-zinc-500">
@@ -130,9 +139,15 @@ export function FlightsPage() {
         {kix ? <p className="text-sm text-zinc-500">{kix}</p> : null}
       </header>
 
-      {groups.map((group) => (
-        <OriginGroup key={group.id} group={group} />
-      ))}
+      <div className="space-y-4">
+        <SegmentedControl
+          label="Origin"
+          value={origin}
+          onChange={setOrigin}
+          options={flightOriginTabs}
+        />
+        <OriginGroup group={group} />
+      </div>
     </div>
   )
 }
