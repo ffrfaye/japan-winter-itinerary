@@ -574,9 +574,11 @@
           "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
           "last_refreshed": "24 Aug 2026, 10:05 AM PT",
           "unbundled": false,
-          "not_recommended": false,
+          "not_recommended": true,
           "sane_cheapest": false,
-          "notes": [],
+          "notes": [
+            "Insane via YVR+CTS."
+          ],
           "layover": "17h41m YVR then 4h30m CTS",
           "flight_numbers": [
             "AC8811",
