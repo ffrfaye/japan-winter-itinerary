@@ -16,6 +16,7 @@ export function ItineraryPage() {
   const days = mapDays(trip)
   const groups = groupDays(days)
   const [mode, setMode] = useState<ViewMode>('cards')
+  const [desktop, setDesktop] = useState(false)
   const [index, setIndex] = useState(0)
   const [openId, setOpenId] = useState<string | null>(null)
   const dragged = useRef(false)
@@ -29,7 +30,10 @@ export function ItineraryPage() {
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 768px)')
-    const sync = () => setMode(media.matches ? 'list' : 'cards')
+    const sync = () => {
+      setDesktop(media.matches)
+      setMode(media.matches ? 'list' : 'cards')
+    }
     sync()
     media.addEventListener('change', sync)
     return () => media.removeEventListener('change', sync)
@@ -55,8 +59,35 @@ export function ItineraryPage() {
     }
   }, [emblaApi])
 
+  useEffect(() => {
+    if (mode !== 'cards') return
+
+    function onKey(event: KeyboardEvent) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return
+      if (openId) return
+      const target = event.target
+      if (!(target instanceof HTMLElement)) return
+      if (
+        target.closest(
+          'input, textarea, select, [contenteditable="true"], [role="dialog"], [role="listbox"]',
+        )
+      ) {
+        return
+      }
+      event.preventDefault()
+      if (event.key === 'ArrowLeft') emblaApi?.scrollPrev()
+      else emblaApi?.scrollNext()
+    }
+
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [mode, openId, emblaApi])
+
   const active = days[index] ?? days[0]
   const openDay = days.find((day) => day.id === openId) ?? null
+  const canPrev = index > 0
+  const canNext = index < days.length - 1
+  const showPager = mode === 'cards' && desktop && !openDay
 
   function openCard(id: string) {
     if (dragged.current) return
@@ -65,7 +96,27 @@ export function ItineraryPage() {
 
   return (
     <div className="space-y-5">
-      <div className="flex gap-2">
+      {showPager ? (
+        <>
+          <button
+            type="button"
+            tabIndex={-1}
+            aria-label="Previous day"
+            disabled={!canPrev}
+            onClick={() => emblaApi?.scrollPrev()}
+            className="fixed inset-y-0 left-0 z-[1] w-1/3 cursor-w-resize bg-transparent disabled:pointer-events-none disabled:cursor-default"
+          />
+          <button
+            type="button"
+            tabIndex={-1}
+            aria-label="Next day"
+            disabled={!canNext}
+            onClick={() => emblaApi?.scrollNext()}
+            className="fixed inset-y-0 right-0 z-[1] w-1/3 cursor-e-resize bg-transparent disabled:pointer-events-none disabled:cursor-default"
+          />
+        </>
+      ) : null}
+      <div className="relative z-10 flex gap-2">
         {(['list', 'cards'] as const).map((value) => (
           <Button
             key={value}
@@ -95,7 +146,7 @@ export function ItineraryPage() {
           ))}
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="relative z-10 space-y-4">
           <JapanMap active={active.mapCity} travelTo={active.travelTo} />
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">

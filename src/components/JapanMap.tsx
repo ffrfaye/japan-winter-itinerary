@@ -120,7 +120,7 @@ export function JapanMap({ active, travelTo }: JapanMapProps) {
   }, [map, destination, travelTo])
 
   return (
-    <div className="relative z-0 isolate aspect-square w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
+    <div className="relative z-10 isolate aspect-square w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
       <div
         ref={root}
         className="absolute inset-0 [&_.leaflet-container]:z-0 [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent"

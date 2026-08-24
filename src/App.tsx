@@ -35,7 +35,7 @@ export default function App() {
   return (
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
       <main className={cn('mx-auto w-full px-5 py-8 md:py-10', widths[tab])}>
-        <header className="mb-5 space-y-2">
+        <header className="relative z-20 mb-5 space-y-2">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
           <p className="text-sm text-zinc-600">{trip.meta.datesLabel}</p>
           <PageMenu tab={tab} onChange={go} />
