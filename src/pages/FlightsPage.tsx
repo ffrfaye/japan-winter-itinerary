@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Badge } from '@/components/ui/badge'
-import { SegmentedControl } from '@/components/SegmentedControl'
+import { GhostTabs } from '@/components/GhostTabs'
 import { cn } from '@/lib/utils'
 import {
   flightGroups,
@@ -140,7 +140,7 @@ export function FlightsPage() {
       </header>
 
       <div className="space-y-4">
-        <SegmentedControl
+        <GhostTabs
           label="Origin"
           value={origin}
           onChange={setOrigin}
