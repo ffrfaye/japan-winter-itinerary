@@ -179,7 +179,7 @@ export function ItineraryPage() {
                     </button>
                     {day.places.length > 0 ? (
                       <div className="mt-3">
-                        <PlaceCards places={day.places} variant="card" />
+                        <PlaceCards places={day.places} />
                       </div>
                     ) : null}
                   </article>
@@ -224,7 +224,7 @@ function DayRow({ day }: { day: ItineraryDay }) {
       <div className="min-w-0 space-y-1">
         <p className="text-sm font-medium">{day.title}</p>
         <p className="text-sm text-zinc-600">{day.summary}</p>
-        <PlaceCards places={day.places} variant="card" />
+        <PlaceCards places={day.places} />
       </div>
     </li>
   )

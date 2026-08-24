@@ -59,7 +59,7 @@ export function DaySheet({
         </div>
         {day.places.length > 0 ? (
           <div className="mt-4">
-            <PlaceCards places={day.places} variant="sheet" />
+            <PlaceCards places={day.places} />
           </div>
         ) : null}
       </div>
