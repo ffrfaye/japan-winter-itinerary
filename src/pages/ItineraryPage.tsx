@@ -4,6 +4,7 @@ import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { PlaceCards } from '@/components/PlaceCards'
+import { ViewToggle } from '@/components/ViewToggle'
 import { JapanMap } from '@/components/JapanMap'
 import {
   dayHeading,
@@ -14,7 +15,13 @@ import {
 } from '@/lib/itinerary'
 import { trip } from '@/trip'
 
-export function ItineraryPage({ mode }: { mode: ViewMode }) {
+export function ItineraryPage({
+  mode,
+  onModeChange,
+}: {
+  mode: ViewMode
+  onModeChange: (next: ViewMode) => void
+}) {
   const days = useMemo(() => mapDays(trip), [])
   const groups = useMemo(() => groupDays(days), [days])
   const [desktop, setDesktop] = useState(false)
@@ -100,11 +107,29 @@ export function ItineraryPage({ mode }: { mode: ViewMode }) {
 
   function jumpTo(next: number) {
     setIndex(next)
-    emblaApi?.scrollTo(next)
+    if (mode === 'cards') {
+      emblaApi?.scrollTo(next)
+      return
+    }
+    const day = days[next]
+    if (!day) return
+    document.getElementById(`day-${day.id}`)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
   }
 
   return (
     <div className="space-y-5">
+      <div className="relative z-20 flex flex-nowrap items-center justify-start gap-[18px]">
+        <DayJump
+          days={days}
+          index={index}
+          onJump={jumpTo}
+          onOpenChange={setJumpOpen}
+        />
+        <ViewToggle mode={mode} onChange={onModeChange} />
+      </div>
       {mode === 'list' ? (
         <div className="space-y-8">
           {groups.map((group) => (
@@ -124,12 +149,6 @@ export function ItineraryPage({ mode }: { mode: ViewMode }) {
         </div>
       ) : (
         <div className="relative z-10 space-y-4">
-          <DayJump
-            days={days}
-            index={index}
-            onJump={jumpTo}
-            onOpenChange={setJumpOpen}
-          />
           <JapanMap
             pins={active.pins}
             showTravelLine={active.showTravelLine}
@@ -221,7 +240,10 @@ function OverviewCard({ day }: { day: ItineraryDay }) {
 function DayRow({ day }: { day: ItineraryDay }) {
   if (day.overview) {
     return (
-      <li className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4">
+      <li
+        id={`day-${day.id}`}
+        className="scroll-mt-6 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4"
+      >
         <p className="text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
           Overview
         </p>
@@ -235,7 +257,10 @@ function DayRow({ day }: { day: ItineraryDay }) {
   }
 
   return (
-    <li className="grid grid-cols-[4.5rem_1fr] gap-4 px-0 py-4">
+    <li
+      id={`day-${day.id}`}
+      className="grid scroll-mt-6 grid-cols-[4.5rem_1fr] gap-4 px-0 py-4"
+    >
       <div className="text-sm">
         <p className="text-zinc-600">Day {day.dayNumber}</p>
         <p className="font-medium">{day.short}</p>

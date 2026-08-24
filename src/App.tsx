@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { PageMenu } from '@/components/PageMenu'
-import { ViewToggle } from '@/components/ViewToggle'
+import { PageDock } from '@/components/PageDock'
 import { cn } from '@/lib/utils'
 import {
   emptyAnswers,
@@ -54,18 +53,19 @@ export default function App() {
 
   return (
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
-      <main className={cn('mx-auto w-full px-5 py-8 md:py-10', widths[tab])}>
+      <main
+        className={cn(
+          'mx-auto w-full px-5 pt-8 pb-28 md:pt-10 md:pb-28',
+          widths[tab],
+        )}
+      >
         <header className="relative z-20 mb-5 space-y-2">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
           <p className="text-sm text-zinc-600">{trip.meta.datesLabel}</p>
-          <div className="relative z-20 flex flex-nowrap items-center justify-start gap-[18px]">
-            <PageMenu tab={tab} onChange={go} />
-            {tab === 'itinerary' ? (
-              <ViewToggle mode={mode} onChange={setMode} />
-            ) : null}
-          </div>
         </header>
-        {tab === 'itinerary' ? <ItineraryPage mode={mode} /> : null}
+        {tab === 'itinerary' ? (
+          <ItineraryPage mode={mode} onModeChange={setMode} />
+        ) : null}
         {tab === 'rsvp' ? (
           <RsvpPage
             guests={guests}
@@ -76,6 +76,7 @@ export default function App() {
         {tab === 'planning' ? <PlanningPage /> : null}
         {tab === 'lodging' ? <LodgingPage /> : null}
       </main>
+      <PageDock tab={tab} onChange={go} />
     </div>
   )
 }
