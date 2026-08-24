@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-import { nozawaLandmarks, tokyoLandmarks } from '@/lib/lodging'
-import type { LodgingCompareCard, LodgingLocation } from '@/types/lodging'
+import { hasPin, nozawaLandmarks, tokyoLandmarks } from '@/lib/lodging'
+import type { LodgingLocation, LodgingProperty } from '@/types/lodging'
 
 function landmarkIcon(label: string) {
   return L.divIcon({
@@ -37,17 +37,19 @@ export function LodgingCompareMap({
   cards,
   selectedId,
   onSelect,
+  caption,
 }: {
   location: LodgingLocation
-  cards: LodgingCompareCard[]
+  cards: LodgingProperty[]
   selectedId: string | null
   onSelect: (id: string) => void
+  caption?: string | null
 }) {
   const root = useRef<HTMLDivElement>(null)
   const [map, setMap] = useState<L.Map | null>(null)
   const markers = useRef<L.Marker[]>([])
 
-  const landmarks = location === 'Tokyo' ? tokyoLandmarks : nozawaLandmarks
+  const landmarks = location === 'tokyo' ? tokyoLandmarks : nozawaLandmarks
 
   useEffect(() => {
     const node = root.current
@@ -100,6 +102,7 @@ export function LodgingCompareMap({
     }
 
     for (const card of cards) {
+      if (!hasPin(card) || card.lat == null || card.lng == null) continue
       const marker = L.marker([card.lat, card.lng], {
         icon: propertyIcon(card.name, card.id === selectedId),
         keyboard: true,
@@ -111,22 +114,27 @@ export function LodgingCompareMap({
     }
 
     if (bounds.isValid()) {
-      map.fitBounds(bounds, { padding: [28, 28], maxZoom: location === 'Tokyo' ? 15 : 15 })
+      map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 })
     }
-  }, [map, landmarks, cards, selectedId, onSelect, location])
+  }, [map, landmarks, cards, selectedId, onSelect])
 
   return (
-    <div className="h-full min-h-[40vh] w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm md:min-h-[28rem]">
-      <div
-        ref={root}
-        className="h-full min-h-[40vh] w-full [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent md:min-h-[28rem]"
-        role="img"
-        aria-label={
-          location === 'Tokyo'
-            ? 'Map of Tokyo Station, Hatchobori, and Nihonbashi'
-            : 'Map of Nozawa village and ski base'
-        }
-      />
+    <div className="flex h-full min-h-[40vh] w-full flex-col md:min-h-[28rem]">
+      <div className="min-h-0 flex-1 overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
+        <div
+          ref={root}
+          className="h-full min-h-[40vh] w-full [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent md:min-h-[28rem]"
+          role="img"
+          aria-label={
+            location === 'tokyo'
+              ? 'Map of Tokyo Station, Hatchobori, and Nihonbashi'
+              : 'Map of Nozawa village and ski base'
+          }
+        />
+      </div>
+      {caption ? (
+        <p className="mt-2 text-xs text-zinc-500">{caption}</p>
+      ) : null}
     </div>
   )
 }

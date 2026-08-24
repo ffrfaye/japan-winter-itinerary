@@ -14,7 +14,9 @@ export function PageMenu({
   const trigger = useRef<HTMLButtonElement>(null)
   const menu = useRef<HTMLUListElement>(null)
   const [pos, setPos] = useState({ top: 0, left: 0 })
-  const current = tabs.find((item) => item.id === tab)?.label ?? 'Itinerary'
+  const current =
+    tabs.find((item) => item.id === tab)?.label ??
+    (tab === 'lodging' ? 'Lodging' : 'Itinerary')
 
   function placeMenu() {
     const rect = trigger.current?.getBoundingClientRect()

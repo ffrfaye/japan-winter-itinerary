@@ -1,18 +1,41 @@
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
-import { onsenLabel, roomsLine } from '@/lib/lodging'
-import type { LodgingCompareCard as CardData } from '@/types/lodging'
+import {
+  availabilityLabel,
+  contactHref,
+  onsenLabel,
+  priceLine,
+  roomsLine,
+  skiLine,
+  thumbUrl,
+  tokyoLine,
+} from '@/lib/lodging'
+import type { LodgingProperty } from '@/types/lodging'
 
 export function LodgingCompareCard({
   card,
   active,
   onSelect,
 }: {
-  card: CardData
+  card: LodgingProperty
   active: boolean
   onSelect: () => void
 }) {
+  const photo = thumbUrl(card)
   const rooms = roomsLine(card)
+  const price = priceLine(card.price)
+  const onsen = onsenLabel(card.onsen)
+  const ski = skiLine(card)
+  const tokyo = tokyoLine(card.tokyo_logistics)
+  const contact = card.booking_contact
+    ? contactHref(card.booking_contact)
+    : null
+  const availability = [
+    availabilityLabel(card.availability_status),
+    card.availability_notes,
+  ]
+    .filter(Boolean)
+    .join(' · ')
 
   return (
     <article
@@ -23,9 +46,9 @@ export function LodgingCompareCard({
       )}
     >
       <button type="button" onClick={onSelect} className="w-full text-left">
-        {card.photo ? (
+        {photo ? (
           <img
-            src={card.photo}
+            src={photo}
             alt=""
             className="aspect-[16/9] w-full object-cover"
           />
@@ -33,30 +56,60 @@ export function LodgingCompareCard({
         <div className="space-y-2 p-4">
           <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm">
             <span className="font-medium">{card.name}</span>
-            <span className="text-zinc-600">· {card.lodgingType}</span>
-            {card.price ? (
-              <span className="text-zinc-600">· {card.price}</span>
+            {card.type ? (
+              <span className="text-zinc-600">· {card.type}</span>
             ) : null}
-            {rooms ? <span className="text-zinc-600">· {rooms}</span> : null}
+            {price ? <span className="text-zinc-600">· {price}</span> : null}
           </div>
+          {rooms ? <p className="text-sm text-zinc-600">{rooms}</p> : null}
           <div className="flex flex-wrap gap-1">
-            {card.fits.map((count) => (
+            {card.scenarios.map((count) => (
               <Badge key={count} variant="outline">
-                Fits {count}
+                {count}
               </Badge>
             ))}
           </div>
-          <p className="text-sm text-zinc-600">
-            {[card.availability, card.bookingMethod, onsenLabel(card.onsen)]
-              .filter(Boolean)
-              .join(' · ')}
-          </p>
-          {card.location === 'Nozawa' ? (
+          {card.scenario_notes ? (
+            <p className="text-sm text-zinc-500">{card.scenario_notes}</p>
+          ) : null}
+          {availability ? (
+            <p className="text-sm text-zinc-600">{availability}</p>
+          ) : null}
+          {card.booking_method || card.booking_url || contact ? (
             <p className="text-sm text-zinc-600">
-              {[card.walkToLift, card.walkToVillage, card.vehicleAccess]
-                .filter(Boolean)
-                .join(' · ')}
+              {card.booking_method ? <span>{card.booking_method}</span> : null}
+              {card.booking_url ? (
+                <>
+                  {card.booking_method ? ' · ' : null}
+                  <a
+                    href={card.booking_url}
+                    className="underline-offset-2 hover:underline"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    Book
+                  </a>
+                </>
+              ) : null}
+              {contact ? (
+                <>
+                  {card.booking_method || card.booking_url ? ' · ' : null}
+                  <a
+                    href={contact}
+                    className="underline-offset-2 hover:underline"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    {card.booking_contact}
+                  </a>
+                </>
+              ) : null}
             </p>
+          ) : null}
+          {onsen ? <p className="text-sm text-zinc-600">{onsen}</p> : null}
+          {card.location === 'nozawa' && ski ? (
+            <p className="text-sm text-zinc-600">{ski}</p>
+          ) : null}
+          {card.location === 'tokyo' && tokyo ? (
+            <p className="text-sm text-zinc-600">{tokyo}</p>
           ) : null}
           {card.pros.length > 0 ? (
             <ul className="list-disc space-y-0.5 pl-4 text-sm text-zinc-600">

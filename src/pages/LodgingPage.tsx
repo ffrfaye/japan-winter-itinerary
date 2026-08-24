@@ -4,20 +4,20 @@ import { LodgingCompareCard } from '@/components/LodgingCompareCard'
 import { LodgingCompareMap } from '@/components/LodgingCompareMap'
 import {
   filterLodgingCards,
-  loadLodgingCards,
+  loadLodgingFile,
   lodgingBedrooms,
   lodgingLocations,
 } from '@/lib/lodging'
 import type { BedroomCount, LodgingLocation } from '@/types/lodging'
 
 export function LodgingPage() {
-  const catalog = useMemo(() => loadLodgingCards(), [])
-  const [location, setLocation] = useState<LodgingLocation>('Tokyo')
+  const catalog = useMemo(() => loadLodgingFile(), [])
+  const [location, setLocation] = useState<LodgingLocation>('tokyo')
   const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
   const cards = useMemo(
-    () => filterLodgingCards(catalog, location, bedrooms),
+    () => filterLodgingCards(catalog.properties, location, bedrooms),
     [catalog, location, bedrooms],
   )
 
@@ -33,6 +33,9 @@ export function LodgingPage() {
     <div className="space-y-4">
       <header className="space-y-3">
         <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
+        {catalog.research_as_of ? (
+          <p className="text-sm text-zinc-500">{catalog.research_as_of}</p>
+        ) : null}
         <GhostTabs
           label="Location"
           value={location}
@@ -60,11 +63,14 @@ export function LodgingPage() {
             cards={cards}
             selectedId={selectedId}
             onSelect={select}
+            caption={
+              location === 'nozawa' ? catalog.nozawa_map_notes : null
+            }
           />
         </div>
         <div className="order-2 min-w-0 space-y-4 md:order-1 md:w-[60%]">
           {cards.length === 0 ? (
-            <p className="text-sm text-zinc-600">Properties coming</p>
+            <p className="text-sm text-zinc-600">No places in this filter</p>
           ) : (
             cards.map((card) => (
               <LodgingCompareCard
