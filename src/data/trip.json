@@ -13,11 +13,11 @@
     "cityBase": "Tokyo only",
     "airports": "HND / NRT — not yet chosen",
     "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Nozawa Onsen",
-    "lockedNote": "Village NYE · dates locked",
+    "lockedNote": "",
     "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite).",
     "planningBanner": {
-      "eyebrow": "Dates locked",
-      "title": "Route and village NYE are locked.",
+      "eyebrow": "",
+      "title": "",
       "body": "Still open: HND vs NRT, bring vs rent, Ghibli calendar, hotels, budget."
     }
   },
@@ -210,7 +210,7 @@
         },
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "Village ski week and locked NYE.",
+          "description": "NYE and NYD are quiet in Tokyo, so we spend them at an onsen ski resort and get village life.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -717,7 +717,7 @@
   "budget": {
     "status": "open",
     "heading": "Budget",
-    "label": "Working · not locked",
+    "label": "Estimate",
     "asOf": "23 Aug 2026",
     "basis": "~$4,500 pp SFO. Band $4k–5.5k. Comfort $6k–7k. Not booked. No live 27 Dec–9 Jan flight quote.",
     "lines": [
