@@ -71,13 +71,7 @@ export default function App() {
             onAnswersChange={setAnswers}
           />
         ) : null}
-        {tab === 'planning' ? (
-          <PlanningPage
-            guests={guests}
-            answers={answers}
-            onAnswersChange={setAnswers}
-          />
-        ) : null}
+        {tab === 'planning' ? <PlanningPage /> : null}
       </main>
     </div>
   )

@@ -29,11 +29,19 @@ export function RsvpPage({
         <p className="text-sm text-zinc-600">{trip.group.rsvpSub}</p>
       </header>
 
+      <section className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+        <GuestRsvpList
+          guests={guests}
+          answers={answers}
+          onChange={onAnswersChange}
+        />
+      </section>
+
       <BudgetList />
 
       <section className="space-y-2">
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
-          Lodging
+          Accommodation
         </h2>
         <div
           role="tablist"
@@ -64,12 +72,6 @@ export function RsvpPage({
           ))}
         </ul>
       </section>
-
-      <GuestRsvpList
-        guests={guests}
-        answers={answers}
-        onChange={onAnswersChange}
-      />
     </div>
   )
 }
