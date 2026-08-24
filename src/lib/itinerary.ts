@@ -1,6 +1,6 @@
 import type { PlaceCard, Trip, TripDay } from '@/types/trip'
 
-export type TabId = 'itinerary' | 'rsvp' | 'planning' | 'budget' | 'lodging'
+export type TabId = 'itinerary' | 'rsvp' | 'planning' | 'budget' | 'lodging' | 'flights'
 
 export type ViewMode = 'list' | 'cards'
 
@@ -52,6 +52,7 @@ export const tabs: { id: TabId; label: string }[] = [
   { id: 'lodging', label: 'Lodging' },
   { id: 'planning', label: 'Planning' },
   { id: 'budget', label: 'Budget' },
+  { id: 'flights', label: 'Flights' },
 ]
 
 const pinUrls = {
@@ -103,7 +104,8 @@ export function parseTab(hash: string): TabId {
     value === 'planning' ||
     value === 'itinerary' ||
     value === 'lodging' ||
-    value === 'budget'
+    value === 'budget' ||
+    value === 'flights'
   ) {
     return value
   }

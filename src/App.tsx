@@ -6,6 +6,7 @@ import { ItineraryPage } from '@/pages/ItineraryPage'
 import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { BudgetPage } from '@/pages/BudgetPage'
+import { FlightsPage } from '@/pages/FlightsPage'
 import { trip } from '@/trip'
 
 const widths: Record<TabId, string> = {
@@ -14,6 +15,7 @@ const widths: Record<TabId, string> = {
   planning: 'max-w-lg',
   budget: 'max-w-lg',
   lodging: 'max-w-6xl',
+  flights: 'max-w-lg',
 }
 
 export default function App() {
@@ -62,6 +64,7 @@ export default function App() {
         {tab === 'planning' ? <PlanningPage /> : null}
         {tab === 'budget' ? <BudgetPage /> : null}
         {tab === 'lodging' ? <LodgingPage /> : null}
+        {tab === 'flights' ? <FlightsPage /> : null}
       </main>
       <PageDock tab={tab} onChange={go} />
     </div>

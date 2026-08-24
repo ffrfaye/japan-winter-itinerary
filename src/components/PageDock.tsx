@@ -1,4 +1,4 @@
-import { BedDouble, Calendar, ClipboardList, Wallet } from 'lucide-react'
+import { BedDouble, Calendar, ClipboardList, Plane, Wallet } from 'lucide-react'
 import type { TabId } from '@/lib/itinerary'
 import { cn } from '@/lib/utils'
 
@@ -7,6 +7,7 @@ const items = [
   { id: 'lodging', label: 'Lodging', Icon: BedDouble },
   { id: 'planning', label: 'Planning', Icon: ClipboardList },
   { id: 'budget', label: 'Budget', Icon: Wallet },
+  { id: 'flights', label: 'Flights', Icon: Plane },
 ] as const
 
 export function PageDock({

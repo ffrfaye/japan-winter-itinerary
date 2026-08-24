@@ -1,0 +1,771 @@
+{
+  "refreshed_at": {
+    "utc": "2026-08-24T16:46:00Z",
+    "pt": "2026-08-24T09:46:00-07:00",
+    "label": "24 Aug 2026, 9:46 AM PT"
+  },
+  "trip_dates": {
+    "start": "2026-12-27",
+    "end": "2027-01-09"
+  },
+  "source": "Google Flights live search (USD, 1 adult, Economy)",
+  "target_dates_actually_quoted": true,
+  "caveats": [
+    "Fares are live quotes as of refreshed_at; holiday peak inventory changes quickly.",
+    "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+    "Flight numbers taken from Google Flights travel-impact itinerary URLs on the same result page.",
+    "No KIX/open-jaw needed: round-trips to HND/NRT exist from all three origins.",
+    "Typical block times: SFO–TYO nonstop ~11h, YVR–TYO ~10h, STL via West Coast/ORD ~16–20h."
+  ],
+  "origins": {
+    "SFO": {
+      "id": "SFO",
+      "heading": "SFO",
+      "search_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09",
+      "cheapest_economy_usd": 1363,
+      "cheapest_sane_usd": 1363,
+      "cheapest_sane_label": "ZIPAIR $1,363 NS NRT",
+      "options": [
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": true,
+          "not_recommended": false,
+          "sane_cheapest": true,
+          "notes": [
+            "Bags/meals extra. Unbundled."
+          ],
+          "layover": null,
+          "flight_numbers": [
+            "ZG25"
+          ],
+          "id": "sfo-zg25",
+          "origin": "SFO",
+          "dest": "NRT",
+          "airlines": "ZIPAIR",
+          "depart_local": "2026-12-27 15:35",
+          "arrive_local": "2026-12-28 19:55",
+          "duration": "11h20m",
+          "stops": 0,
+          "price_usd": 1363,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "UA837"
+          ],
+          "id": "sfo-ua837",
+          "origin": "SFO",
+          "dest": "NRT",
+          "airlines": "United/ANA",
+          "depart_local": "2026-12-27 10:40",
+          "arrive_local": "2026-12-28 15:00",
+          "duration": "11h20m",
+          "stops": 0,
+          "price_usd": 1381,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "NH7"
+          ],
+          "id": "sfo-nh7",
+          "origin": "SFO",
+          "dest": "NRT",
+          "airlines": "ANA/United",
+          "depart_local": "2026-12-27 11:00",
+          "arrive_local": "2026-12-28 15:20",
+          "duration": "11h20m",
+          "stops": 0,
+          "price_usd": 1381,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "JL57"
+          ],
+          "id": "sfo-jl57",
+          "origin": "SFO",
+          "dest": "NRT",
+          "airlines": "JAL/Alaska/American",
+          "depart_local": "2026-12-27 11:45",
+          "arrive_local": "2026-12-28 16:00",
+          "duration": "11h15m",
+          "stops": 0,
+          "price_usd": 1553,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [
+            "Overnight."
+          ],
+          "layover": null,
+          "flight_numbers": [
+            "NH107"
+          ],
+          "id": "sfo-nh107",
+          "origin": "SFO",
+          "dest": "HND",
+          "airlines": "ANA/United",
+          "depart_local": "2026-12-27 00:20",
+          "arrive_local": "2026-12-28 04:50",
+          "duration": "11h30m",
+          "stops": 0,
+          "price_usd": 1482,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "UA875"
+          ],
+          "id": "sfo-ua875",
+          "origin": "SFO",
+          "dest": "HND",
+          "airlines": "United",
+          "depart_local": "2026-12-27 10:20",
+          "arrive_local": "2026-12-28 14:50",
+          "duration": "11h30m",
+          "stops": 0,
+          "price_usd": 1482,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "JL1"
+          ],
+          "id": "sfo-jl1",
+          "origin": "SFO",
+          "dest": "HND",
+          "airlines": "JAL",
+          "depart_local": "2026-12-27 12:50",
+          "arrive_local": "2026-12-28 17:20",
+          "duration": "11h30m",
+          "stops": 0,
+          "price_usd": 2212,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "3h45m TPE",
+          "flight_numbers": null,
+          "id": "sfo-ci",
+          "origin": "SFO",
+          "dest": "NRT",
+          "airlines": "China Airlines",
+          "depart_local": "2026-12-27 23:40",
+          "arrive_local": "2026-12-29 13:30",
+          "duration": "20h50m",
+          "stops": 1,
+          "price_usd": 1722,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20San%20Francisco%20on%202026-12-27%20through%202027-01-09"
+        }
+      ]
+    },
+    "YVR": {
+      "id": "YVR",
+      "heading": "Vancouver (YVR)",
+      "search_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09",
+      "cheapest_economy_usd": 931,
+      "cheapest_sane_usd": 1154,
+      "cheapest_sane_label": "JAL JL17 $1,154 NS",
+      "options": [
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": true,
+          "sane_cheapest": false,
+          "notes": [
+            "Backtrack / not sane."
+          ],
+          "layover": "YLW then YYC",
+          "flight_numbers": [
+            "WS3560",
+            "WS186",
+            "WS80"
+          ],
+          "id": "yvr-ws-931-a",
+          "origin": "YVR",
+          "dest": "NRT",
+          "airlines": "WestJet",
+          "depart_local": "2026-12-27 08:55",
+          "arrive_local": "2026-12-28 16:30",
+          "duration": "15h35m",
+          "stops": 2,
+          "price_usd": 931,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": true,
+          "notes": [
+            "Best nonstop."
+          ],
+          "layover": null,
+          "flight_numbers": [
+            "JL17"
+          ],
+          "id": "yvr-jl17",
+          "origin": "YVR",
+          "dest": "NRT",
+          "airlines": "JAL",
+          "depart_local": "2026-12-27 13:45",
+          "arrive_local": "2026-12-28 16:00",
+          "duration": "10h15m",
+          "stops": 0,
+          "price_usd": 1154,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "AC3"
+          ],
+          "id": "yvr-ac3",
+          "origin": "YVR",
+          "dest": "NRT",
+          "airlines": "Air Canada/ANA",
+          "depart_local": "2026-12-27 14:30",
+          "arrive_local": "2026-12-28 16:40",
+          "duration": "10h10m",
+          "stops": 0,
+          "price_usd": 1434,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": null,
+          "flight_numbers": [
+            "NH115"
+          ],
+          "id": "yvr-nh115",
+          "origin": "YVR",
+          "dest": "HND",
+          "airlines": "ANA",
+          "depart_local": "2026-12-27 16:15",
+          "arrive_local": "2026-12-28 18:45",
+          "duration": "10h30m",
+          "stops": 0,
+          "price_usd": 1860,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "6h15m YYC",
+          "flight_numbers": [
+            "WS104",
+            "WS80"
+          ],
+          "id": "yvr-ws104",
+          "origin": "YVR",
+          "dest": "NRT",
+          "airlines": "WestJet",
+          "depart_local": "2026-12-27 06:00",
+          "arrive_local": "2026-12-28 16:30",
+          "duration": "18h30m",
+          "stops": 1,
+          "price_usd": 1080,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": true,
+          "sane_cheapest": false,
+          "notes": [
+            "Backtrack / not sane."
+          ],
+          "layover": null,
+          "flight_numbers": [
+            "WS494",
+            "WS3676",
+            "WS80"
+          ],
+          "id": "yvr-ws-931-b",
+          "origin": "YVR",
+          "dest": "NRT",
+          "airlines": "WestJet",
+          "depart_local": "2026-12-27 22:20",
+          "arrive_local": "2026-12-29 16:30",
+          "duration": "26h10m",
+          "stops": 2,
+          "price_usd": 931,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [
+            "Not sane."
+          ],
+          "layover": "25h45m ICN-GMP",
+          "flight_numbers": [
+            "KE72",
+            "KE2105"
+          ],
+          "id": "yvr-ke",
+          "origin": "YVR",
+          "dest": "HND",
+          "airlines": "Korean Air",
+          "depart_local": "2026-12-27 14:00",
+          "arrive_local": "2026-12-29 21:35",
+          "duration": "39h35m",
+          "stops": 1,
+          "price_usd": 1374,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20Vancouver%20on%202026-12-27%20through%202027-01-09"
+        }
+      ]
+    },
+    "STL": {
+      "id": "STL",
+      "heading": "St. Louis (STL)",
+      "search_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09",
+      "cheapest_economy_usd": 1902,
+      "cheapest_sane_usd": 1902,
+      "cheapest_sane_label": "UA/ANA $1,902 1-stop ORD",
+      "options": [
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": true,
+          "notes": [],
+          "layover": "3h27m ORD",
+          "flight_numbers": [
+            "UA4183",
+            "NH111"
+          ],
+          "id": "stl-ua4183-nh111",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "United/ANA",
+          "depart_local": "2026-12-27 08:05",
+          "arrive_local": "2026-12-28 17:45",
+          "duration": "18h40m",
+          "stops": 1,
+          "price_usd": 1902,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": true,
+          "notes": [],
+          "layover": "3h32m ORD",
+          "flight_numbers": [
+            "UA4439",
+            "NH11"
+          ],
+          "id": "stl-ua4439-nh11",
+          "origin": "STL",
+          "dest": "NRT",
+          "airlines": "United/ANA",
+          "depart_local": "2026-12-27 05:20",
+          "arrive_local": "2026-12-28 15:00",
+          "duration": "18h40m",
+          "stops": 1,
+          "price_usd": 1902,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "1h30m ORD",
+          "flight_numbers": [
+            "UA4571",
+            "NH111"
+          ],
+          "id": "stl-ua4571-nh111",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "United/ANA",
+          "depart_local": "2026-12-27 13:13",
+          "arrive_local": "2026-12-28 21:05",
+          "duration": "16h52m",
+          "stops": 1,
+          "price_usd": 1916,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "PHX then LAX",
+          "flight_numbers": [
+            "AA2303",
+            "AA1441",
+            "AA169"
+          ],
+          "id": "stl-aa-2stop",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "American",
+          "depart_local": "2026-12-27 14:45",
+          "arrive_local": "2026-12-29 05:05",
+          "duration": "23h20m",
+          "stops": 2,
+          "price_usd": 1905,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [
+            "Tight."
+          ],
+          "layover": "1h07m LAX",
+          "flight_numbers": [
+            "AA4912",
+            "AA27"
+          ],
+          "id": "stl-aa4912-aa27",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "American/JAL",
+          "depart_local": "2026-12-27 06:02",
+          "arrive_local": "2026-12-28 15:05",
+          "duration": "18h03m",
+          "stops": 1,
+          "price_usd": 2137,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "2h57m MSP",
+          "flight_numbers": [
+            "DL1597",
+            "DL121"
+          ],
+          "id": "stl-dl",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "Delta",
+          "depart_local": "2026-12-27 06:30",
+          "arrive_local": "2026-12-28 15:05",
+          "duration": "17h35m",
+          "stops": 1,
+          "price_usd": 2217,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [
+            "Very tight."
+          ],
+          "layover": "47m IAD",
+          "flight_numbers": [
+            "UA4506",
+            "UA803"
+          ],
+          "id": "stl-ua4506-ua803",
+          "origin": "STL",
+          "dest": "HND",
+          "airlines": "United",
+          "depart_local": "2026-12-27 08:22",
+          "arrive_local": "2026-12-28 16:50",
+          "duration": "17h28m",
+          "stops": 1,
+          "price_usd": 2019,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        },
+        {
+          "currency": "USD",
+          "cabin": "economy",
+          "trip_type": "round_trip",
+          "quoted_dates": {
+            "start": "2026-12-27",
+            "end": "2027-01-09"
+          },
+          "refundable": null,
+          "return_leg": "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
+          "last_refreshed": "24 Aug 2026, 9:46 AM PT",
+          "unbundled": false,
+          "not_recommended": false,
+          "sane_cheapest": false,
+          "notes": [],
+          "layover": "1h02m ORD",
+          "flight_numbers": [
+            "UA4183",
+            "UA867"
+          ],
+          "id": "stl-ua4183-ua867",
+          "origin": "STL",
+          "dest": "NRT",
+          "airlines": "United",
+          "depart_local": "2026-12-27 08:05",
+          "arrive_local": "2026-12-28 15:15",
+          "duration": "16h10m",
+          "stops": 1,
+          "price_usd": 2020,
+          "booking_url": "https://www.google.com/travel/flights?hl=en&gl=us&curr=USD&q=Flights%20to%20Tokyo%20from%20St.%20Louis%20on%202026-12-27%20through%202027-01-09"
+        }
+      ]
+    }
+  }
+}
