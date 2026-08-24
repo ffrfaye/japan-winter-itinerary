@@ -33,7 +33,7 @@ function last4Line(last4: BudgetLast4): BudgetLine {
   return {
     id: last4.id,
     title: last4.title,
-    detail: `${sideDetail(last4.tokyo)} / ${sideDetail(last4.kyoto)}`,
+    detail: `Tokyo ${sideDetail(last4.tokyo)} · Kyoto ${sideDetail(last4.kyoto)}`,
     notes,
   }
 }
