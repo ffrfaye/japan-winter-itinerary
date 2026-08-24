@@ -29,7 +29,7 @@
     "invited": 12,
     "rsvpHeadline": "Can you come?",
     "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
-    "rsvpSaveNote": "Saving comes next — this is the layout.",
+    "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
     "nyeSoldoutNote": "NY week: many Nozawa houses are sold out or waitlist. Lodging is not booked.",
     "pairs": [
       {
@@ -623,7 +623,7 @@
   "lodging": {
     "status": "open",
     "asOf": "23 Aug 2026",
-    "tokyoNote": "Station East member FROM for 1 apt, whole stay; group total = that × unit count, then ÷ people. Last 4 nights are city travel and may not be Tokyo — if not, only the first 3-night block is ~40% of those pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
+    "tokyoNote": "Default Tokyo lodging is the first 3 nights (27–30 Dec). Station East member FROM ¥345,519 / apt for those nights. Last 4 nights are city travel and may not be Tokyo — not in the pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
     "bands": [
       {
         "id": "4",
@@ -636,11 +636,11 @@
             "city": "Tokyo",
             "beds": "2× two-bedroom · 8 people",
             "status": "available",
-            "perPerson": "~$950",
+            "perPerson": "~$545",
             "nextStep": "Book online or email sales.",
             "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
             "email": "tokyo-station-east@chm.cigr.co.jp",
-            "note": "One building. Connecting-8 is 2 bedrooms / 8 singles in one lockup if they want one key. ~$950 is 2 apts × from-rate ÷ 8 for all 7 Tokyo nights."
+            "note": "3 nights (27–30 Dec). 2 apts × Station East member FROM ¥345,519 ÷ 8 = ¥86,380. Connecting-8 is 2 bedrooms / 8 singles in one lockup if they want one key. Last 4 nights are city travel / unbooked — not in this total."
           },
           {
             "id": "kashmir",
@@ -651,7 +651,7 @@
             "perPerson": "~$870",
             "nextStep": "Book.",
             "url": "https://book.staynozawa.com/search/",
-            "note": "Breakfast, no dinner. Walk-in lodge, no road. ~¥1,102,100 total."
+            "note": "Breakfast, no dinner. Walk-in lodge, no road. 6 nights (30 Dec 2026–5 Jan 2027). ~¥137,763 pp / ¥1,102,100 total."
           },
           {
             "id": "tamanegi-4",
@@ -697,11 +697,11 @@
             "city": "Tokyo",
             "beds": "2× two-bed + 1 smaller · or family suite (up to 6) + 1 two-bed",
             "status": "enquire",
-            "perPerson": "~$1,150",
+            "perPerson": "~$650",
             "nextStep": "Email sales for a 3-unit hold.",
             "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
             "email": "tokyo-station-east@chm.cigr.co.jp",
-            "note": "Inventory exists. ~$1,150 is 3 cheapest Station East from-rates ÷ 10. Suites Nihombashi is the cleanest 2-bed+washer product (pricier)."
+            "note": "3 nights (27–30 Dec). 3 apts × Station East member FROM ¥345,519 ÷ 10 = ¥103,656. Inventory exists. Suites Nihombashi is the cleanest 2-bed+washer product (pricier). Last 4 nights are city travel / unbooked — not in this total."
           },
           {
             "id": "kamoshika-5",
@@ -756,11 +756,11 @@
             "city": "Tokyo",
             "beds": "3× two-bedroom · or connecting-8 + one two-bed",
             "status": "enquire",
-            "perPerson": "~$960",
+            "perPerson": "~$545",
             "nextStep": "Email sales same day.",
             "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
             "email": "tokyo-station-east@chm.cigr.co.jp",
-            "note": "Connecting-8 + one two-bed is 3 bedrooms of space, 12 beds — only if two pairs share the connecting unit. B stay had 13 vacant."
+            "note": "3 nights (27–30 Dec). 3 apts × Station East member FROM ¥345,519 ÷ 12 = ¥86,380. Connecting-8 + one two-bed is 3 bedrooms of space, 12 beds — only if two pairs share the connecting unit. Last 4 nights are city travel / unbooked — not in this total."
           },
           {
             "id": "kamoshika-6",
@@ -819,52 +819,43 @@
     "heading": "Budget",
     "label": "Estimate",
     "asOf": "23 Aug 2026",
-    "basis": "~$4,500 pp SFO. Band $4k–5.5k. Comfort $6k–7k. Not booked. No live 27 Dec–9 Jan flight quote.",
+    "basis": "Per person. Estimate. Not booked. Flight is an aggregate, not a live 27 Dec–9 Jan quote.",
     "lines": [
       {
         "id": "flight",
         "title": "Flight",
-        "detail": "$1,260–1,750"
+        "detail": "$1,260–1,750",
+        "note": "SFO–TYO economy, Dec/Jan window. Aggregate, not a live quote."
       },
       {
         "id": "tokyo-stay",
-        "title": "Tokyo",
-        "detail": "~$950 (8) / ~$1,150 (10) / ~$960 (12)"
+        "title": "Tokyo accommodation",
+        "detail": "~$545",
+        "note": "MIMARU Station East, 3 nights (27–30 Dec). 8 people / 2 apts, ¥86,380 pp. Member FROM ¥345,519 / apt. 10p / 3 apts ~$650; 12p / 3 apts ~$545. Last 4 nights are city travel / unbooked — not in this total."
       },
       {
         "id": "nozawa-stay",
-        "title": "Nozawa",
-        "detail": "Kashmir 8p ~$870"
-      },
-      {
-        "id": "rail-taxi",
-        "title": "Trains + taxi",
-        "detail": "~$125"
-      },
-      {
-        "id": "yamato",
-        "title": "Yamato",
-        "detail": "~$45"
+        "title": "Nozawa accommodation",
+        "detail": "~$870",
+        "note": "Kashmir House, 6 nights (30 Dec 2026–5 Jan 2027). 8 people, ~¥137,763 pp / ¥1,102,100 total."
       },
       {
         "id": "lifts",
-        "title": "Lifts",
-        "detail": "5 days $225"
+        "title": "Lift",
+        "detail": "$225",
+        "note": "5 ski days."
       },
       {
         "id": "rental",
-        "title": "Rental",
-        "detail": "~$180"
+        "title": "Rental (optional)",
+        "detail": "~$180",
+        "note": "Ski rental. Optional."
       },
       {
         "id": "tickets",
-        "title": "Tickets",
-        "detail": "~$110"
-      },
-      {
-        "id": "food",
-        "title": "Food",
-        "detail": "$400–700"
+        "title": "Tickets (snow monkeys)",
+        "detail": "¥800 DIY / ¥9,000 tour",
+        "note": "Jigokudani only. Park admission adult 18+ ¥800. Default is the Nozawa Onsen Kotsu half-day tour; ¥9,000 includes the ¥800. Book from 1 Oct 2026."
       }
     ]
   },
@@ -940,8 +931,10 @@
     "operator": "Nozawa Onsen Kotsu",
     "reservationsOpen": "1 Oct 2026",
     "window": "13:10–17:00 (check-in 12:30–13:00)",
-    "price": "Adult ¥9,000",
-    "url": "https://nozawaonsen.info/en/snow-monkey-tour/"
+    "price": "Adult ¥9,000 (tour includes park admission)",
+    "url": "https://nozawaonsen.info/en/snow-monkey-tour/",
+    "parkAdmission": "Adult 18+ ¥800",
+    "parkUrl": "https://en.jigokudani-yaenkoen.co.jp/guide/"
   },
   "checklist": [
     {

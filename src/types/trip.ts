@@ -206,7 +206,7 @@ export type Trip = {
     label: string
     asOf: string
     basis: string
-    lines: { id: string; title: string; detail: string }[]
+    lines: { id: string; title: string; detail: string; note?: string }[]
   }
   transport: {
     yamato: { status: StatusId; text: string; links: TripLink[] }
@@ -228,6 +228,8 @@ export type Trip = {
     reservationsOpen: string
     window: string
     price: string
+    parkAdmission?: string
+    parkUrl?: string
     url: string
   }
   checklist: ChecklistItem[]
