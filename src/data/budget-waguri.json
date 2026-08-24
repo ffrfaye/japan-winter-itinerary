@@ -9,8 +9,25 @@
   "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
   "hero": "~$3,140 pp without rental / ~$3,270 with.",
   "band": "$2,900–3,800 with airfare.",
-  "foot": "Last 4 Tokyo nights unbooked, not in the total. Waguri not booked (hold requested).",
+  "foot": "Waguri not booked (hold requested).",
   "oldBandNote": "Earlier band included food + 7 Tokyo nights + 5 ski days.",
+  "optionalHeading": "Last 4 nights, 5–9 Jan 2027",
+  "optionalLead": "Optional. Not locked. Not in the working total.",
+  "optionalIfAdded": "If added to slim 9p ~$3,140: +$550 Tokyo last block ≈ $3,690. Kyoto last block ≈ $3,420–$3,600 + fare/airport change, softer.",
+  "optionalLines": [
+    {
+      "id": "option-a-tokyo",
+      "title": "Option A · Tokyo",
+      "detail": "$550",
+      "note": "MIMARU Station East Stay B FROM ¥261,702/apt/4n. 3 apts ÷ 9. Inventory existed 23 Aug."
+    },
+    {
+      "id": "option-b-kyoto",
+      "title": "Option B · Kyoto base",
+      "detail": "~$280–$461",
+      "note": "Nara is a day trip, not a 4-night base. Miyagawacho Samurai machiya published tariff ~$280 pp / 4n for 9 (not a dated hold). MIMARU Kyoto typical $294–$461 pp (no live calendar). Shinkansen Tokyo–Kyoto ~¥14,170 ≈ $89 one way. Fly 9 Jan from KIX if they stay Kansai."
+    }
+  ],
   "lines": [
     {
       "id": "flight",

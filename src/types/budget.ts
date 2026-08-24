@@ -18,5 +18,9 @@ export type BudgetWaguri = {
   band: string
   foot: string
   oldBandNote: string
+  optionalHeading: string
+  optionalLead: string
+  optionalIfAdded: string
+  optionalLines: BudgetLine[]
   lines: BudgetLine[]
 }
