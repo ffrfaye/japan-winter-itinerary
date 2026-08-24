@@ -10,6 +10,7 @@ import {
   type ViewMode,
 } from '@/lib/itinerary'
 import { ItineraryPage } from '@/pages/ItineraryPage'
+import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { RsvpPage } from '@/pages/RsvpPage'
 import { trip } from '@/trip'
@@ -18,6 +19,7 @@ const widths: Record<TabId, string> = {
   itinerary: 'max-w-lg',
   rsvp: 'max-w-xl',
   planning: 'max-w-lg',
+  lodging: 'max-w-6xl',
 }
 
 export default function App() {
@@ -72,6 +74,7 @@ export default function App() {
           />
         ) : null}
         {tab === 'planning' ? <PlanningPage /> : null}
+        {tab === 'lodging' ? <LodgingPage /> : null}
       </main>
     </div>
   )

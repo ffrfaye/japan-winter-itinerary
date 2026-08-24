@@ -1,6 +1,6 @@
 import type { PlaceCard, Trip, TripDay } from '@/types/trip'
 
-export type TabId = 'itinerary' | 'rsvp' | 'planning'
+export type TabId = 'itinerary' | 'rsvp' | 'planning' | 'lodging'
 
 export type ViewMode = 'list' | 'cards'
 
@@ -97,7 +97,12 @@ function pinsFor(day: TripDay): Pick<
 
 export function parseTab(hash: string): TabId {
   const value = hash.replace(/^#/, '')
-  if (value === 'rsvp' || value === 'planning' || value === 'itinerary') {
+  if (
+    value === 'rsvp' ||
+    value === 'planning' ||
+    value === 'itinerary' ||
+    value === 'lodging'
+  ) {
     return value
   }
   return 'itinerary'
