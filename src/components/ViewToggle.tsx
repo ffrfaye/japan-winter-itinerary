@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils'
+import { Button } from '@/components/ui/button'
 import type { ViewMode } from '@/lib/itinerary'
 
 export function ViewToggle({
@@ -17,20 +17,17 @@ export function ViewToggle({
       {(['list', 'cards'] as const).map((value) => {
         const active = mode === value
         return (
-          <button
+          <Button
             key={value}
             type="button"
+            size="sm"
+            variant={active ? 'default' : 'outline'}
             aria-pressed={active}
             onClick={() => onChange(value)}
-            className={cn(
-              'rounded-xl px-3 py-1.5 text-[13px] font-medium',
-              active
-                ? 'border border-zinc-900 bg-zinc-100 text-zinc-900'
-                : 'border border-transparent bg-transparent text-zinc-500',
-            )}
+            className="h-auto rounded-lg px-3.5 py-2 text-sm font-medium"
           >
             {value === 'list' ? 'List' : 'Cards'}
-          </button>
+          </Button>
         )
       })}
     </div>

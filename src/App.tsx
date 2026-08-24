@@ -48,10 +48,8 @@ export default function App() {
         <header className="relative z-20 mb-5 space-y-2">
           <h1 className="text-3xl font-medium tracking-tight">{trip.meta.title}</h1>
           <p className="text-sm text-zinc-600">{trip.meta.datesLabel}</p>
-          <div className="relative z-20 flex flex-nowrap items-center gap-2">
-            <div className="min-w-0 flex-1">
-              <PageMenu tab={tab} onChange={go} />
-            </div>
+          <div className="relative z-20 flex flex-nowrap items-center justify-start gap-2">
+            <PageMenu tab={tab} onChange={go} />
             {tab === 'itinerary' ? (
               <ViewToggle mode={mode} onChange={setMode} />
             ) : null}
