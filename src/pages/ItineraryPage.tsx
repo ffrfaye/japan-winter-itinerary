@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import { Button } from '@/components/ui/button'
 import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { PlaceCards } from '@/components/PlaceCards'
 import { JapanMap } from '@/components/JapanMap'
+import { ViewToggle } from '@/components/ViewToggle'
 import {
   dayHeading,
   groupDays,
@@ -64,6 +64,11 @@ export function ItineraryPage() {
   }, [emblaApi])
 
   useEffect(() => {
+    if (mode !== 'cards' || !emblaApi) return
+    emblaApi.scrollTo(index, true)
+  }, [mode, emblaApi])
+
+  useEffect(() => {
     if (mode !== 'cards') return
 
     function onKey(event: KeyboardEvent) {
@@ -98,28 +103,23 @@ export function ItineraryPage() {
     setOpenId(id)
   }
 
+  function jumpTo(next: number) {
+    setIndex(next)
+    emblaApi?.scrollTo(next)
+  }
+
   return (
     <div className="space-y-5">
-      {showPager ? (
-        <CardPager
-          canPrev={canPrev}
-          canNext={canNext}
-          onPrev={() => emblaApi?.scrollPrev()}
-          onNext={() => emblaApi?.scrollNext()}
-        />
-      ) : null}
-      <div className="relative z-10 flex gap-2">
-        {(['list', 'cards'] as const).map((value) => (
-          <Button
-            key={value}
-            type="button"
-            size="sm"
-            variant={mode === value ? 'default' : 'outline'}
-            onClick={() => setMode(value)}
-          >
-            {value === 'list' ? 'List' : 'Cards'}
-          </Button>
-        ))}
+      <div className="relative z-20 flex flex-nowrap items-center gap-2 whitespace-nowrap">
+        <div className="min-w-0 flex-1">
+          <DayJump
+            days={days}
+            index={index}
+            onJump={jumpTo}
+            onOpenChange={setJumpOpen}
+          />
+        </div>
+        <ViewToggle mode={mode} onChange={setMode} />
       </div>
 
       {mode === 'list' ? (
@@ -139,12 +139,6 @@ export function ItineraryPage() {
         </div>
       ) : (
         <div className="relative z-10 space-y-4">
-          <DayJump
-            days={days}
-            index={index}
-            onJump={(next) => emblaApi?.scrollTo(next)}
-            onOpenChange={setJumpOpen}
-          />
           <JapanMap
             pins={active.pins}
             showTravelLine={active.showTravelLine}
@@ -152,30 +146,40 @@ export function ItineraryPage() {
             pinLinks={active.pinLinks}
             softLabels={active.dayNumber === 0}
           />
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
-              {days.map((day) => (
-                <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full px-px">
-                  <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                    <button
-                      type="button"
-                      onClick={() => openCard(day.id)}
-                      className="w-full text-left"
-                    >
-                      <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
-                      <p className="mt-1 text-sm font-medium">{day.title}</p>
-                      <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
-                        {day.summary}
-                      </p>
-                    </button>
-                    {day.places.length > 0 ? (
-                      <div className="mt-3">
-                        <PlaceCards places={day.places} />
-                      </div>
-                    ) : null}
-                  </article>
-                </div>
-              ))}
+          <div className="relative">
+            {showPager ? (
+              <CardPager
+                canPrev={canPrev}
+                canNext={canNext}
+                onPrev={() => emblaApi?.scrollPrev()}
+                onNext={() => emblaApi?.scrollNext()}
+              />
+            ) : null}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {days.map((day) => (
+                  <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full px-px">
+                    <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
+                      <button
+                        type="button"
+                        onClick={() => openCard(day.id)}
+                        className="w-full text-left"
+                      >
+                        <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
+                        <p className="mt-1 text-sm font-medium">{day.title}</p>
+                        <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
+                          {day.summary}
+                        </p>
+                      </button>
+                      {day.places.length > 0 ? (
+                        <div className="mt-3">
+                          <PlaceCards places={day.places} />
+                        </div>
+                      ) : null}
+                    </article>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex justify-center gap-1.5">

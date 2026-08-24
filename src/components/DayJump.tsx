@@ -64,7 +64,7 @@ export function DayJump({
   }, [open])
 
   return (
-    <div className="relative z-[3000] w-fit">
+    <div className="relative z-[3000] min-w-0 w-full">
       <button
         ref={trigger}
         type="button"
@@ -72,10 +72,10 @@ export function DayJump({
         aria-expanded={open}
         aria-label="Jump to day"
         onClick={() => setMenu(!open)}
-        className="relative z-[3000] inline-flex items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
+        className="relative z-[3000] inline-flex max-w-full min-w-0 items-center gap-1 rounded-xl border border-zinc-200 bg-white px-2.5 py-1 text-sm text-zinc-600 shadow-sm"
       >
-        {current?.jumpLabel ?? 'Day 0'}
-        <ChevronDown className="size-3.5" />
+        <span className="min-w-0 truncate">{current?.jumpLabel ?? 'Day 0'}</span>
+        <ChevronDown className="size-3.5 shrink-0" />
       </button>
       {open
         ? createPortal(
