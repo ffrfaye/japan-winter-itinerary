@@ -191,11 +191,11 @@
       "city": "Overview",
       "status": "locked",
       "title": "The trip",
-      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 Tokyo",
+      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 city travel",
       "blocks": [
         {
           "title": "Beats",
-          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights Tokyo",
+          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights city travel — Tokyo or another city. Nothing booked yet.",
           "status": "locked"
         }
       ],
@@ -414,9 +414,15 @@
       "dayNumber": 11,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Free day in Tokyo",
-      "summary": "Free day.",
-      "blocks": []
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-07",
@@ -426,9 +432,15 @@
       "dayNumber": 12,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Free day in Tokyo",
-      "summary": "Free day.",
-      "blocks": []
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-08",
@@ -438,9 +450,15 @@
       "dayNumber": 13,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Free day in Tokyo",
-      "summary": "Free day.",
-      "blocks": []
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
     },
     {
       "id": "2027-01-09",
