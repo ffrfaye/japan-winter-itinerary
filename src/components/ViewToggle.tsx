@@ -24,7 +24,7 @@ export function ViewToggle({
             variant={active ? 'default' : 'outline'}
             aria-pressed={active}
             onClick={() => onChange(value)}
-            className="h-8 min-h-8 rounded-lg px-3 py-1 text-[13px] font-medium"
+            className="h-7 rounded-lg px-3 py-0.5 text-[13px] font-medium leading-none"
           >
             {value === 'list' ? 'List' : 'Cards'}
           </Button>
