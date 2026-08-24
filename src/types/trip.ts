@@ -5,6 +5,14 @@ export type TripLink = {
   url: string
 }
 
+export type PlaceCard = {
+  title: string
+  description: string
+  url: string
+  thumb?: string
+  mark: string
+}
+
 export type StatusLegend = {
   id: StatusId
   label: string
@@ -30,6 +38,7 @@ export type TripDay = {
   title: string
   summary: string
   links?: TripLink[]
+  places?: PlaceCard[]
   blocks: TripBlock[]
 }
 

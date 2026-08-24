@@ -192,25 +192,32 @@
       "status": "locked",
       "title": "The trip",
       "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 Tokyo",
-      "links": [
-        {
-          "label": "Tokyo",
-          "url": "https://www.gotokyo.org/en/"
-        },
-        {
-          "label": "Nozawa Onsen",
-          "url": "https://en.nozawaski.com/"
-        },
-        {
-          "label": "Jigokudani",
-          "url": "https://en.jigokudani-yaenkoen.co.jp/"
-        }
-      ],
       "blocks": [
         {
           "title": "Beats",
           "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights Tokyo",
           "status": "locked"
+        }
+      ],
+      "places": [
+        {
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "mark": "T"
+        },
+        {
+          "title": "Nozawa Onsen Snow Resort",
+          "description": "Village ski week and locked NYE.",
+          "url": "https://en.nozawaski.com/",
+          "mark": "N"
+        },
+        {
+          "title": "Jigokudani",
+          "description": "Wild macaques in the hot spring. Rest-day trip from Nozawa.",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/",
+          "thumb": "/snow-monkeys.jpg",
+          "mark": "J"
         }
       ]
     },
@@ -224,17 +231,19 @@
       "status": "recommended",
       "title": "Traveling to Tokyo",
       "summary": "Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
-      "links": [
-        {
-          "label": "Yamato Ski TA-Q-BIN",
-          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
-        }
-      ],
       "blocks": [
         {
           "title": "Land",
           "detail": "Traveling to Tokyo. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
           "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Yamato",
+          "description": "Ship ski bags from the hotel desk. Not a convenience-store drop.",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/",
+          "mark": "Y"
         }
       ]
     },
@@ -326,17 +335,20 @@
       "status": "recommended",
       "title": "Rest day · snow monkeys",
       "summary": "Visit the snow monkeys.",
-      "links": [
-        {
-          "label": "Jigokudani",
-          "url": "https://en.jigokudani-yaenkoen.co.jp/"
-        }
-      ],
       "blocks": [
         {
           "title": "Monkeys",
           "detail": "Rest day. Visit the snow monkeys.",
           "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Jigokudani",
+          "description": "Wild macaques in the hot spring. Rest-day trip from Nozawa.",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/",
+          "thumb": "/snow-monkeys.jpg",
+          "mark": "J"
         }
       ]
     },

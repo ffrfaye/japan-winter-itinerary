@@ -1,4 +1,4 @@
-import type { RsvpHouse, Trip, TripDay, TripLink } from '@/types/trip'
+import type { PlaceCard, RsvpHouse, Trip, TripDay } from '@/types/trip'
 
 export type TabId = 'itinerary' | 'rsvp' | 'planning'
 
@@ -20,8 +20,7 @@ export type ItineraryDay = {
   title: string
   summary: string
   body: string[]
-  links: TripLink[]
-  photos: { src: string; caption: string }[]
+  places: PlaceCard[]
   stayId: string
   stayLabel: string
   jumpLabel: string
@@ -108,11 +107,6 @@ export function dayHeading(day: ItineraryDay) {
   return `Day ${day.dayNumber} · ${day.weekday} ${day.short}`
 }
 
-function dayLinks(day: TripDay): TripLink[] {
-  if (day.links?.length) return day.links
-  return day.blocks.flatMap((block) => block.links ?? [])
-}
-
 function toItinerary(
   day: TripDay,
   stayId: string,
@@ -120,15 +114,6 @@ function toItinerary(
 ): ItineraryDay {
   const details = day.blocks.map((block) => block.detail).filter(Boolean)
   const body = details.length > 0 ? details : [day.summary]
-  const photos =
-    day.id === '2027-01-02'
-      ? [
-          {
-            src: '/snow-monkeys.jpg',
-            caption: 'Jigokudani snow monkeys',
-          },
-        ]
-      : []
   return {
     id: day.id,
     date: day.date,
@@ -139,8 +124,7 @@ function toItinerary(
     title: day.title,
     summary: day.summary,
     body,
-    links: dayLinks(day),
-    photos,
+    places: day.places ?? [],
     stayId,
     stayLabel,
     jumpLabel:

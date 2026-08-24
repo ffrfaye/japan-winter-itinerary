@@ -55,7 +55,7 @@ const bounds = L.latLngBounds(
 ).extend([places.Jigokudani.lat, places.Jigokudani.lng])
 
 function fitTrip(map: L.Map) {
-  map.fitBounds(bounds, { padding: [40, 40], maxZoom: 8 })
+  map.fitBounds(bounds, { padding: [24, 24], maxZoom: 7 })
 }
 
 export function JapanMap({
@@ -78,6 +78,8 @@ export function JapanMap({
     const next = L.map(node, {
       scrollWheelZoom: false,
       attributionControl: true,
+      minZoom: 5,
+      maxZoom: 8,
     })
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution:
@@ -189,7 +191,7 @@ export function JapanMap({
     .join(', ')
 
   return (
-    <div className="relative z-10 isolate aspect-square w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
+    <div className="relative z-10 isolate aspect-[2/1] w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 shadow-sm">
       <div
         ref={root}
         className="absolute inset-0 [&_.leaflet-container]:z-0 [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent"

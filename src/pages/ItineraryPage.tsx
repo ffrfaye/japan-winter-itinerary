@@ -2,8 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Button } from '@/components/ui/button'
 import { DayJump } from '@/components/DayJump'
-import { DayLinks } from '@/components/DayLinks'
 import { DaySheet } from '@/components/DaySheet'
+import { PlaceCards } from '@/components/PlaceCards'
 import { JapanMap } from '@/components/JapanMap'
 import {
   dayHeading,
@@ -177,9 +177,9 @@ export function ItineraryPage() {
                         {day.summary}
                       </p>
                     </button>
-                    {day.links.length > 0 ? (
+                    {day.places.length > 0 ? (
                       <div className="mt-3">
-                        <DayLinks links={day.links} />
+                        <PlaceCards places={day.places} variant="card" />
                       </div>
                     ) : null}
                   </article>
@@ -224,7 +224,7 @@ function DayRow({ day }: { day: ItineraryDay }) {
       <div className="min-w-0 space-y-1">
         <p className="text-sm font-medium">{day.title}</p>
         <p className="text-sm text-zinc-600">{day.summary}</p>
-        <DayLinks links={day.links} />
+        <PlaceCards places={day.places} variant="card" />
       </div>
     </li>
   )

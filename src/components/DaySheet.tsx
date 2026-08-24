@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import { DayLinks } from '@/components/DayLinks'
+import { PlaceCards } from '@/components/PlaceCards'
 import { dayHeading, type ItineraryDay } from '@/lib/itinerary'
 
 export function DaySheet({
@@ -57,23 +57,11 @@ export function DaySheet({
             <p key={line}>{line}</p>
           ))}
         </div>
-        {day.links.length > 0 ? (
+        {day.places.length > 0 ? (
           <div className="mt-4">
-            <DayLinks links={day.links} />
+            <PlaceCards places={day.places} variant="sheet" />
           </div>
         ) : null}
-        {day.photos.map((photo) => (
-          <figure key={photo.src} className="mt-4">
-            <img
-              src={photo.src}
-              alt={photo.caption}
-              className="w-full rounded-xl border border-zinc-200 object-cover"
-            />
-            <figcaption className="mt-2 text-sm text-zinc-600">
-              {photo.caption}
-            </figcaption>
-          </figure>
-        ))}
       </div>
     </div>,
     document.body,
