@@ -18,7 +18,7 @@
     "planningBanner": {
       "eyebrow": "",
       "title": "",
-      "body": "Still open: HND vs NRT, bring vs rent, Ghibli calendar, hotels, budget."
+      "body": "Still open: HND vs NRT, bring vs rent, Ghibli Lawson sale, hotels, budget."
     }
   },
   "group": {
@@ -121,6 +121,11 @@
       "id": "open",
       "label": "Open / TBD",
       "meaning": "A fork, unpublished calendar, or decision the group still has to make."
+    },
+    {
+      "id": "calendar-published",
+      "label": "Calendar published / open days known",
+      "meaning": "Official open days are listed. Not a booking. Do not claim tickets exist."
     },
     {
       "id": "locked",
@@ -553,9 +558,9 @@
     },
     {
       "id": "ghibli",
-      "status": "open",
-      "title": "Ghibli January 2027 days are unpublished",
-      "detail": "Do not claim tickets exist. Last year closed 27 Dec 2025–2 Jan 2026. Lawson: 10 Dec 2026, 10:00 JST."
+      "status": "calendar-published",
+      "title": "Ghibli calendar is published — tickets not purchased",
+      "detail": "Closed 27–31 Dec 2026 and 1–2 Jan 2027. Open 3–9 Jan 2027, including Tue 5 Jan. Skip 27 Dec–2 Jan for this trip. Realistic after Nozawa: 5–8 Jan (5 Jan is travel day; museum is open). 3–4 Jan the museum is open but the group is still in Nozawa. Lawson: 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist."
     },
     {
       "id": "headcount-airport-gear",
@@ -608,14 +613,14 @@
     ]
   },
   "ghibli": {
-    "status": "open",
-    "unpublished": true,
+    "status": "calendar-published",
+    "unpublished": false,
     "doNotClaimTickets": true,
     "museum": "Ghibli Museum, Mitaka — not Ghibli Park (Aichi).",
-    "lastYearClosure": "Closed 27 Dec 2025–2 Jan 2026. Next open day that year was 3 Jan 2026.",
-    "tuesdayNote": "Usually closed Tuesdays, plus extra winter maintenance. 5 Jan 2027 is a Tuesday.",
-    "primaryDay": "6 Jan 2027 — only if the official calendar lists it as open.",
-    "sale": "Lawson Ticket, 10 Dec 2026, 10:00 JST, for January 2027 dates — if those dates are on sale.",
+    "lastYearClosure": "CLOSED winter: 27–31 Dec 2026 and 1–2 Jan 2027.",
+    "tuesdayNote": "Usually closed Tuesdays, but Tue 5 Jan 2027 is marked open. Regular Tuesday closes resume 12, 19, and 26 Jan 2027.",
+    "primaryDay": "Realistic after Nozawa: 5–8 Jan 2027 (5 Jan is travel day; museum is open). 3–4 Jan the museum is open but the group is still in Nozawa. Do not lock a Ghibli day on the itinerary.",
+    "sale": "Lawson Ticket, 10th of the prior month, 10:00 JST. January 2027 tickets go on sale 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist.",
     "rules": [
       "Max 6 tickets per account.",
       "For 12 people, two named purchasers. Both must attend.",
@@ -628,8 +633,8 @@
         "url": "https://www.ghibli-museum.jp/en/tickets/"
       },
       {
-        "label": "Last winter closure",
-        "url": "https://www.ghibli-museum.jp/news/014038/"
+        "label": "Lawson Ticket (l-tike via official English page)",
+        "url": "https://www.ghibli-museum.jp/en/tickets/"
       }
     ]
   },
@@ -638,17 +643,19 @@
       "id": "ghibli",
       "group": "tokyo",
       "title": "Ghibli Museum, Mitaka",
-      "status": "open",
-      "when": "6 Jan 2027 — only if the official calendar lists it as open.",
-      "detail": "January 2027 days are unpublished. Do not claim tickets exist.",
+      "status": "calendar-published",
+      "when": "Realistic after Nozawa: 5–8 Jan 2027 (5 Jan is travel day; museum is open). Not a locked itinerary day.",
+      "detail": "Calendar published. Do not claim tickets exist or are purchased.",
       "lines": [
-        "Lawson Ticket, 10 Dec 2026, 10:00 JST, for January 2027 dates — if those dates are on sale.",
+        "CLOSED winter: 27–31 Dec 2026 and 1–2 Jan 2027.",
+        "OPEN in the trip window: 3–9 Jan 2027, including Tue 5 Jan (usually Tuesdays close; regular Tuesday closes resume 12, 19, and 26 Jan).",
+        "Skip 27 Dec–2 Jan for this trip.",
+        "Realistic visit after Nozawa is 5–8 Jan. 3–4 Jan the museum is open but the group is still in Nozawa — do not move ski days.",
+        "Lawson Ticket, 10th of the prior month, 10:00 JST. January 2027 tickets go on sale 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec).",
         "Max 6 tickets per account.",
         "For 8–10 people, two named purchasers. Both must attend.",
         "Adult timed ticket ¥1,000.",
         "Named purchaser ID may be checked. Absent purchaser can mean refused entry.",
-        "Closed 27 Dec 2025–2 Jan 2026. Next open day that year was 3 Jan 2026.",
-        "Usually closed Tuesdays, plus extra winter maintenance. 5 Jan 2027 is a Tuesday.",
         "This is Mitaka, not Ghibli Park (Aichi)."
       ],
       "links": [
@@ -659,10 +666,6 @@
         {
           "label": "Lawson Ticket (l-tike via official English page)",
           "url": "https://www.ghibli-museum.jp/en/tickets/"
-        },
-        {
-          "label": "Last winter closure",
-          "url": "https://www.ghibli-museum.jp/news/014038/"
         }
       ]
     },
@@ -1233,9 +1236,9 @@
     },
     {
       "id": "ghibli-watch",
-      "title": "Watch the Ghibli calendar — do not buy yet",
-      "detail": "January 2027 unpublished. If dates appear, Lawson 10 Dec 2026 10:00 JST. Two named purchasers for 12.",
-      "status": "open",
+      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
+      "detail": "Calendar published. Closed 27 Dec–2 Jan. Open 3–9 Jan 2027 including Tue 5 Jan. Realistic after Nozawa: 5–8 Jan. Lawson 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist. Two named purchasers for 12.",
+      "status": "calendar-published",
       "priority": "later"
     },
     {
@@ -1284,9 +1287,9 @@
     },
     {
       "id": "ghibli-watch",
-      "title": "Watch the Ghibli calendar — do not buy yet",
-      "detail": "January 2027 unpublished. If dates appear, Lawson 10 Dec 2026 10:00 JST. Two named purchasers for 8–10.",
-      "status": "open",
+      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
+      "detail": "Calendar published. Closed 27 Dec–2 Jan. Open 3–9 Jan 2027 including Tue 5 Jan. Realistic after Nozawa: 5–8 Jan. Lawson 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist. Two named purchasers for 8–10.",
+      "status": "calendar-published",
       "priority": "later"
     },
     {

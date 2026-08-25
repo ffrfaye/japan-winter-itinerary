@@ -2,7 +2,7 @@
 
 Shareable, no-login itinerary for a group winter in Tokyo and Nozawa Onsen (27 Dec 2026 – 9 Jan 2027). Vite + React + TypeScript + Tailwind + shadcn. Light zinc list. Mobile-first.
 
-The **route and village NYE are locked**. Lodging is not booked. Open decisions stay marked open. Ghibli January 2027 days are unpublished.
+The **route and village NYE are locked**. Lodging is not booked. Open decisions stay marked open. Ghibli Museum Mitaka calendar is published (open 3–9 Jan 2027; closed 27 Dec 2026–2 Jan 2027). Tickets are not purchased.
 
 ## Run locally
 
@@ -26,7 +26,7 @@ Keys this page actually reads:
 
 - `meta.title`, `meta.datesLabel`, `meta.tone`, `meta.planningBanner`
 - `group.sizeLabel`
-- `statusLegend` — labels for recommended / open / locked
+- `statusLegend` — labels for recommended / open / calendar-published / locked
 - `openDecisions[]` — `title`, `detail`, `status`
 - `checklist[]` — urgent stays are `tokyo-hotel` and `nozawa-hotel`; later line uses `priority: "later"` plus `hakutaka`
 - `route.stops` — city blocks and night counts
@@ -40,6 +40,7 @@ Status values:
 
 - `recommended` — a suggested extra, not a booking
 - `open` — still deciding, or unpublished
+- `calendar-published` — official open days are listed; not a booking
 - `locked` — route, village NYE, or another closed window
 
 After you edit JSON, refresh the dev server.

@@ -1,4 +1,9 @@
-export type StatusId = 'recommended' | 'open' | 'locked' | 'deferred'
+export type StatusId =
+  | 'recommended'
+  | 'open'
+  | 'locked'
+  | 'deferred'
+  | 'calendar-published'
 
 export type TripLink = {
   label: string
