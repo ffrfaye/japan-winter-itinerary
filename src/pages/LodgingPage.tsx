@@ -4,6 +4,7 @@ import { LodgingCompareCard } from '@/components/LodgingCompareCard'
 import { LodgingCompareMap } from '@/components/LodgingCompareMap'
 import {
   filterLodgingCards,
+  isFadedCard,
   loadLodgingFile,
   lodgingBedrooms,
   lodgingLocations,
@@ -13,7 +14,7 @@ import type { BedroomCount, LodgingLocation } from '@/types/lodging'
 
 export function LodgingPage() {
   const catalog = useMemo(() => loadLodgingFile(), [])
-  const [location, setLocation] = useState<LodgingLocation>('tokyo')
+  const [location, setLocation] = useState<LodgingLocation>('nozawa')
   const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
@@ -34,7 +35,9 @@ export function LodgingPage() {
     <div className="space-y-4">
       <header className="space-y-3">
         <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
-        {catalog.research_as_of ? (
+        {location === 'nozawa' && catalog.nozawa_as_of ? (
+          <p className="text-sm text-zinc-500">{catalog.nozawa_as_of}</p>
+        ) : catalog.research_as_of ? (
           <p className="text-sm text-zinc-500">{catalog.research_as_of}</p>
         ) : null}
         <GhostTabs
@@ -62,6 +65,7 @@ export function LodgingPage() {
           <LodgingCompareMap
             location={location}
             cards={cards}
+            bedrooms={bedrooms}
             selectedId={selectedId}
             onSelect={select}
             caption={
@@ -81,6 +85,7 @@ export function LodgingPage() {
               <LodgingCompareCard
                 key={card.id}
                 card={card}
+                faded={isFadedCard(card, bedrooms)}
                 active={card.id === selectedId}
                 onSelect={() => setSelectedId(card.id)}
               />

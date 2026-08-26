@@ -39,6 +39,7 @@ export type LodgingProperty = {
   location: LodgingLocation
   operator: string | null
   official_url: string | null
+  property_url?: string | null
   type: string | null
   bedrooms: number | null
   bathrooms: number | null
@@ -73,6 +74,9 @@ export type LodgingMapNotes = {
 
 export type LodgingCardsFile = {
   research_as_of?: string | null
+  checked_at?: string | null
+  nozawa_as_of?: string | null
+  nozawa_checked_at?: string | null
   nozawa_map_notes?: string | LodgingMapNotes | null
   kyoto_notes?: string | null
   properties: LodgingProperty[]

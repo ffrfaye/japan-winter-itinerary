@@ -3,11 +3,11 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import {
   hasPin,
-  isSoldOutWaitlistEmpty,
+  isFadedCard,
   nozawaLandmarks,
   tokyoLandmarks,
 } from '@/lib/lodging'
-import type { LodgingLocation, LodgingProperty } from '@/types/lodging'
+import type { BedroomCount, LodgingLocation, LodgingProperty } from '@/types/lodging'
 
 function landmarkIcon(label: string) {
   return L.divIcon({
@@ -41,12 +41,14 @@ function propertyIcon(name: string, active: boolean, faded: boolean) {
 export function LodgingCompareMap({
   location,
   cards,
+  bedrooms,
   selectedId,
   onSelect,
   caption,
 }: {
   location: LodgingLocation
   cards: LodgingProperty[]
+  bedrooms: BedroomCount
   selectedId: string | null
   onSelect: (id: string) => void
   caption?: string | null
@@ -115,7 +117,7 @@ export function LodgingCompareMap({
 
     for (const card of cards) {
       if (!hasPin(card) || card.lat == null || card.lng == null) continue
-      const faded = isSoldOutWaitlistEmpty(card)
+      const faded = isFadedCard(card, bedrooms)
       const marker = L.marker([card.lat, card.lng], {
         icon: propertyIcon(card.name, card.id === selectedId, faded),
         keyboard: true,
@@ -143,7 +145,7 @@ export function LodgingCompareMap({
     if (bounds.isValid()) {
       map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 })
     }
-  }, [map, landmarks, cards, selectedId, onSelect, location])
+  }, [map, landmarks, cards, bedrooms, selectedId, onSelect, location])
 
   return (
     <div className="flex h-full min-h-[40vh] w-full flex-col md:min-h-[28rem]">

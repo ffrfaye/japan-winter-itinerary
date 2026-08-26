@@ -3,9 +3,9 @@ import { cn } from '@/lib/utils'
 import {
   availabilityLabel,
   contactHref,
-  isSoldOutWaitlistEmpty,
   onsenLabel,
   priceLine,
+  propertyUrl,
   roomsLine,
   skiLine,
   thumbUrl,
@@ -16,10 +16,12 @@ import type { LodgingProperty } from '@/types/lodging'
 
 export function LodgingCompareCard({
   card,
+  faded,
   active,
   onSelect,
 }: {
   card: LodgingProperty
+  faded: boolean
   active: boolean
   onSelect: () => void
 }) {
@@ -33,13 +35,13 @@ export function LodgingCompareCard({
   const contact = card.booking_contact
     ? contactHref(card.booking_contact)
     : null
+  const listing = propertyUrl(card)
   const availability = [
     availabilityLabel(card.availability_status),
     card.availability_notes,
   ]
     .filter(Boolean)
     .join(' · ')
-  const faded = isSoldOutWaitlistEmpty(card)
 
   return (
     <article
@@ -47,22 +49,28 @@ export function LodgingCompareCard({
       className={cn(
         'w-full overflow-hidden rounded-xl border bg-white shadow-sm',
         active ? 'border-zinc-900' : 'border-zinc-200',
+        faded && 'opacity-[0.48]',
       )}
     >
       <button type="button" onClick={onSelect} className="w-full text-left">
         {photo ? (
-          <img
-            src={photo}
-            alt=""
-            className={cn(
-              'aspect-[16/9] w-full object-cover',
-              faded && 'opacity-[0.48]',
-            )}
-          />
+          <img src={photo} alt="" className="aspect-[16/9] w-full object-cover" />
         ) : null}
         <div className="space-y-2 p-4">
           <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm">
-            <span className="font-medium text-zinc-900">{card.name}</span>
+            {listing ? (
+              <a
+                href={listing}
+                target="_blank"
+                rel="noreferrer"
+                className="font-medium text-zinc-900 underline-offset-2 hover:underline"
+                onClick={(event) => event.stopPropagation()}
+              >
+                {card.name}
+              </a>
+            ) : (
+              <span className="font-medium text-zinc-900">{card.name}</span>
+            )}
             {card.type ? (
               <span className="text-zinc-600">· {card.type}</span>
             ) : null}
@@ -97,24 +105,36 @@ export function LodgingCompareCard({
           {availability ? (
             <p className="text-sm text-zinc-600">{availability}</p>
           ) : null}
-          {card.booking_method || card.booking_url || contact ? (
+          {listing || card.booking_url || contact ? (
             <p className="text-sm text-zinc-600">
-              {card.booking_method ? <span>{card.booking_method}</span> : null}
+              {listing ? (
+                <a
+                  href={listing}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline-offset-2 hover:underline"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  Official page
+                </a>
+              ) : null}
               {card.booking_url ? (
                 <>
-                  {card.booking_method ? ' · ' : null}
+                  {listing ? ' · ' : null}
                   <a
                     href={card.booking_url}
+                    target="_blank"
+                    rel="noreferrer"
                     className="underline-offset-2 hover:underline"
                     onClick={(event) => event.stopPropagation()}
                   >
-                    Book
+                    Check dates
                   </a>
                 </>
               ) : null}
               {contact ? (
                 <>
-                  {card.booking_method || card.booking_url ? ' · ' : null}
+                  {listing || card.booking_url ? ' · ' : null}
                   <a
                     href={contact}
                     className="underline-offset-2 hover:underline"

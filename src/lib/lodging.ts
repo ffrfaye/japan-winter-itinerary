@@ -65,6 +65,11 @@ export function loadLodgingFile(): LodgingCardsFile {
   return {
     research_as_of:
       typeof file.research_as_of === 'string' ? file.research_as_of : '2026-08-23',
+    checked_at: typeof file.checked_at === 'string' ? file.checked_at : null,
+    nozawa_as_of:
+      typeof file.nozawa_as_of === 'string' ? file.nozawa_as_of : null,
+    nozawa_checked_at:
+      typeof file.nozawa_checked_at === 'string' ? file.nozawa_checked_at : null,
     nozawa_map_notes: file.nozawa_map_notes ?? null,
     kyoto_notes:
       typeof file.kyoto_notes === 'string' ? file.kyoto_notes : null,
@@ -78,15 +83,52 @@ export function loadLodgingCards(): LodgingProperty[] {
   return loadLodgingFile().properties
 }
 
-export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
-  const status = card.availability_status.toLowerCase()
-  return status === 'sold-out' || status === 'inquiry sent'
+export function availabilityKey(status: string) {
+  return status.toLowerCase().replaceAll('_', '-')
 }
 
-export function lodgingSortRank(card: LodgingProperty) {
-  if (isSoldOutWaitlistEmpty(card)) return 2
-  if (card.availability_status.toLowerCase() === 'available') return 0
-  return 1
+export function lodgingStatusRank(card: LodgingProperty) {
+  const status = availabilityKey(card.availability_status)
+  if (status === 'available') return 0
+  if (status === 'enquire' || status === 'enquire/hold' || status === 'hold') {
+    return 1
+  }
+  if (status === 'unknown') return 2
+  if (status === 'sold-out') return 3
+  return 2
+}
+
+export function isSoldOut(card: LodgingProperty) {
+  return availabilityKey(card.availability_status) === 'sold-out'
+}
+
+export function isOversizeOrMismatch(
+  card: LodgingProperty,
+  bedrooms: BedroomCount,
+) {
+  if (card.location !== 'nozawa') return false
+  if (typeof card.bedrooms === 'number' && card.bedrooms < bedrooms) return true
+  if (
+    !card.scenarios.includes(bedrooms) &&
+    typeof card.bedrooms === 'number' &&
+    card.bedrooms > bedrooms
+  ) {
+    return true
+  }
+  return false
+}
+
+export function isFadedCard(card: LodgingProperty, bedrooms: BedroomCount) {
+  return isSoldOut(card) || isOversizeOrMismatch(card, bedrooms)
+}
+
+export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
+  return isSoldOut(card)
+}
+
+export function lodgingSortRank(card: LodgingProperty, bedrooms: BedroomCount) {
+  const faded = isFadedCard(card, bedrooms) ? 10 : 0
+  return faded + lodgingStatusRank(card)
 }
 
 export function filterLodgingCards(
@@ -96,12 +138,14 @@ export function filterLodgingCards(
 ) {
   return cards
     .map((card, index) => ({ card, index }))
-    .filter(
-      ({ card }) =>
-        card.location === location && card.scenarios.includes(bedrooms),
-    )
+    .filter(({ card }) => {
+      if (card.location !== location) return false
+      if (location === 'nozawa') return true
+      return card.scenarios.includes(bedrooms)
+    })
     .sort((a, b) => {
-      const rank = lodgingSortRank(a.card) - lodgingSortRank(b.card)
+      const rank =
+        lodgingSortRank(a.card, bedrooms) - lodgingSortRank(b.card, bedrooms)
       return rank !== 0 ? rank : a.index - b.index
     })
     .map(({ card }) => card)
@@ -111,34 +155,22 @@ export function hasPin(card: LodgingProperty) {
   return typeof card.lat === 'number' && typeof card.lng === 'number'
 }
 
-const committedThumbs = new Set([
-  'mimaru-tokyo-station-east',
-  'mimaru-tokyo-hatchobori',
-  'mimaru-suites-tokyo-nihombashi',
-  'kashmir-house',
-  'tamanegi-house',
-  'tanuki-premium-4bed-3f',
-  'kamoshika-ski-lodge',
-  'iroha-ichi-ni',
-  'kiriya-ryokan',
-  'view-hotel-shimataya',
-  'slopeside-chalet',
-  'bonbori-ichi',
-  'nozawa-central-301',
-  'waguri-house',
-])
+export function propertyUrl(card: LodgingProperty) {
+  return card.property_url || card.official_url
+}
 
 export function thumbUrl(card: LodgingProperty) {
   const first = card.images?.[0]?.url
   if (typeof first === 'string' && first.startsWith('https://')) return first
-  if (typeof first === 'string' && first.startsWith('/lodging')) return first
-  if (committedThumbs.has(card.id)) return `/lodging-thumbs/${card.id}.jpg`
   return null
 }
 
 export function priceLine(price: LodgingPrice | null) {
   if (!price || price.amount == null || !price.currency) return ''
-  const amount = `${price.currency} ${price.amount.toLocaleString('en-US')}`
+  const amount =
+    price.currency === 'JPY'
+      ? `¥${price.amount.toLocaleString('en-US')}`
+      : `${price.currency} ${price.amount.toLocaleString('en-US')}`
   const per = price.per ? ` / ${price.per}` : ''
   return `${amount}${per}`
 }
@@ -173,11 +205,13 @@ export function onsenLabel(onsen: LodgingOnsen | null) {
 }
 
 export function availabilityLabel(status: string) {
-  if (status === 'sold-out') return 'Sold out'
-  if (status === 'enquire') return 'Enquire'
-  if (status === 'available') return 'Available'
-  if (status === 'unknown') return 'Unknown'
-  if (status === 'inquiry sent') return 'Inquiry sent'
+  const key = availabilityKey(status)
+  if (key === 'sold-out') return 'Sold out'
+  if (key === 'enquire') return 'Enquire'
+  if (key === 'enquire/hold' || key === 'hold') return 'Hold'
+  if (key === 'available') return 'Available'
+  if (key === 'unknown') return 'Unknown'
+  if (key === 'inquiry sent') return 'Inquiry sent'
   return status
 }
 
