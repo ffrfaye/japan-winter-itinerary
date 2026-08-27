@@ -102,10 +102,17 @@ export function LodgingCompareCard({
           {card.scenario_notes ? (
             <p className="text-sm text-zinc-500">{card.scenario_notes}</p>
           ) : null}
+          {card.quiet_notes && card.quiet_notes.length > 0
+            ? card.quiet_notes.map((note) => (
+                <p key={note} className="text-sm text-zinc-500">
+                  {note}
+                </p>
+              ))
+            : null}
           {availability ? (
             <p className="text-sm text-zinc-600">{availability}</p>
           ) : null}
-          {listing || card.booking_url || contact ? (
+          {listing || card.booking_url || card.listing_url || contact ? (
             <p className="text-sm text-zinc-600">
               {listing ? (
                 <a
@@ -132,9 +139,25 @@ export function LodgingCompareCard({
                   </a>
                 </>
               ) : null}
-              {contact ? (
+              {card.listing_url ? (
                 <>
                   {listing || card.booking_url ? ' · ' : null}
+                  <a
+                    href={card.listing_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-zinc-500 underline-offset-2 hover:underline"
+                    onClick={(event) => event.stopPropagation()}
+                  >
+                    Listing
+                  </a>
+                </>
+              ) : null}
+              {contact ? (
+                <>
+                  {listing || card.booking_url || card.listing_url
+                    ? ' · '
+                    : null}
                   <a
                     href={contact}
                     className="underline-offset-2 hover:underline"

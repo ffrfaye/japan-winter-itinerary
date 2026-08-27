@@ -183,19 +183,24 @@
         4
       ],
       "scenario_notes": "4 rooms (3 Double + 1 Cosy Double) / 8 adults, not 9. 5-night min so 6 nights OK.",
+      "quiet_notes": [
+        "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms.",
+        "Family/Triple still 0. 4 couples still use 3 Double + 1 Cosy."
+      ],
       "price": {
         "amount": 1102100,
         "currency": "JPY",
         "covers": "4 rooms / 8 adults, breakfast",
         "per": "6 nights",
-        "as_of": "2026-08-26",
+        "as_of": "2026-08-27",
         "source": "Live RoomBoss 30 Dec 2026–5 Jan 2027",
         "how_to_get_quote": "Instant book at book.staynozawa.com"
       },
       "availability_status": "available",
-      "availability_notes": "Instant RoomBoss. Breakfast included.",
+      "availability_notes": "Instant RoomBoss. Breakfast included. Same mix as 26 Aug.",
       "booking_method": "RoomBoss instant",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "listing_url": "https://book.staynozawa.com/search/listing/402890829f0f7f29019f124c465544e8?sv=1&segment=Website&i18n=en&checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
       "onsen": {
         "type": "Shared lodge baths",
@@ -848,6 +853,44 @@
       ]
     },
     {
+      "id": "tanuki-lodge-premium-3br",
+      "name": "Tanuki Lodge Premium 3BR",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/tanuki-lodge-premium-three-bedroom-apartment",
+      "property_url": "https://www.staynozawa.com/stay/tanuki-lodge-premium-three-bedroom-apartment",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "sleeps": 8,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "3BR — faded on the 4BR list. Stay Nozawa apt. 7-night min still applies.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "3 bedrooms",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
       "id": "iroha-ichi-ni",
       "name": "Iroha Ichi + Ni",
       "location": "nozawa",
@@ -1068,6 +1111,43 @@
       "cons": [
         "Sold out",
         "No waitlist",
+        "No dedicated property URL"
+      ]
+    },
+    {
+      "id": "hei-hachi",
+      "name": "Hei Hachi",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/all-accommodation",
+      "property_url": "https://www.staynozawa.com/all-accommodation",
+      "type": "apartment",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "2BR anyway — faded on the 4BR list. No dedicated Stay Nozawa property page found (hei-hachi slugs 404); catalog is the official listing.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "2 bedrooms",
         "No dedicated property URL"
       ]
     },
@@ -1444,7 +1524,7 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "26 Aug 2026, 6:34 AM PT",
-  "nozawa_checked_at": "2026-08-26T13:34:13Z",
-  "checked_at": "2026-08-26T13:34:13Z"
+  "nozawa_as_of": "27 Aug 2026, 6:43 AM PT",
+  "nozawa_checked_at": "2026-08-27T13:43:00Z",
+  "checked_at": "2026-08-27T13:43:00Z"
 }

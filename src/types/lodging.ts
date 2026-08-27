@@ -40,12 +40,14 @@ export type LodgingProperty = {
   operator: string | null
   official_url: string | null
   property_url?: string | null
+  listing_url?: string | null
   type: string | null
   bedrooms: number | null
   bathrooms: number | null
   sleeps: number | null
   scenarios: BedroomCount[]
   scenario_notes: string | null
+  quiet_notes?: string[]
   price: LodgingPrice | null
   availability_status: string
   availability_notes: string | null
