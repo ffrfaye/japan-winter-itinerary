@@ -38,6 +38,21 @@ function last4Line(last4: BudgetLast4): BudgetLine {
   }
 }
 
+function carsLine(scenario: BudgetScenario): BudgetLine {
+  const shared = budget.carRental
+  const notes = [
+    shared.label,
+    scenario.cars.note,
+    ...(shared.notes ?? []),
+  ].filter((note): note is string => typeof note === 'string' && note.length > 0)
+  return {
+    id: shared.id,
+    title: shared.title,
+    detail: scenario.cars.detail,
+    notes,
+  }
+}
+
 export function scenarioLines(scenario: BudgetScenario): BudgetLine[] {
   const byId = (id: string) =>
     budget.sharedLines.find((line) => line.id === id)
@@ -45,6 +60,7 @@ export function scenarioLines(scenario: BudgetScenario): BudgetLine[] {
     byId('flight'),
     scenario.tokyo,
     scenario.waguri,
+    carsLine(scenario),
     byId('lifts'),
     byId('tickets'),
     budget.rental,

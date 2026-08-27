@@ -16,6 +16,9 @@ export function BudgetPage() {
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="text-3xl font-medium tracking-tight">{budget.heading}</h1>
+        {budget.last_refreshed ? (
+          <p className="text-sm text-zinc-500">{budget.last_refreshed}</p>
+        ) : null}
         <p className="text-sm text-zinc-600">
           <a
             href={budget.identityUrl}

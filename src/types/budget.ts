@@ -18,6 +18,13 @@ export type BudgetLast4 = {
   kyoto: BudgetSide | null
 }
 
+export type BudgetCarRental = {
+  id: string
+  title: string
+  label: string
+  notes: string[]
+}
+
 export type BudgetScenario = {
   id: 4 | 5 | 6
   label: string
@@ -26,6 +33,7 @@ export type BudgetScenario = {
   quietNote?: string | null
   tokyo: BudgetLine
   waguri: BudgetLine
+  cars: Pick<BudgetLine, 'detail' | 'note'>
 }
 
 export type BudgetWaguri = {
@@ -34,8 +42,10 @@ export type BudgetWaguri = {
   identityName: string
   identityUrl: string
   foot: string
+  last_refreshed?: string | null
   sharedLines: BudgetLine[]
   rental: BudgetLine
+  carRental: BudgetCarRental
   last4: BudgetLast4
   defaultBedrooms: 4 | 5 | 6
   scenarios: BudgetScenario[]
