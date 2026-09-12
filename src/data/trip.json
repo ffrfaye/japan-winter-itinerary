@@ -1,0 +1,1461 @@
+{
+  "meta": {
+    "title": "Japan · Winter 2026/27",
+    "kicker": "A recommended winter",
+    "japaneseTitle": "冬の旅",
+    "seal": "雪",
+    "datesLabel": "Sun 27 Dec 2026 – Sat 9 Jan 2027",
+    "start": "2026-12-27",
+    "end": "2027-01-09",
+    "nights": 13,
+    "nightsBreakdown": "Tokyo 3 + Nozawa 6 + Tokyo or other city 4 = 13",
+    "tone": "Un-hectic. Anime fans. May bring ski gear.",
+    "cityBase": "Tokyo only",
+    "airports": "Land 27 Dec NRT. Faye + Will booked UA837 (GSCT9K). Other tickets not booked.",
+    "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Nozawa Onsen",
+    "lockedNote": "",
+    "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite). Yamato Cool TA-Q-BIN truck, 2016.",
+    "planningBanner": {
+      "eyebrow": "",
+      "title": "",
+      "body": "Still open: bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
+    }
+  },
+  "group": {
+    "lead": "Faye Fan",
+    "sizeLabel": "12 people · 6 pairs",
+    "sizeOpen": "Headcount locked for display",
+    "sizeStatus": "locked",
+    "invited": 12,
+    "rsvpHeadline": "Can you come?",
+    "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
+    "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is The Waguri House, booked.",
+    "pairs": [
+      {
+        "id": "fyll",
+        "nickname": "Fyll",
+        "names": [
+          "Faye",
+          "Will"
+        ]
+      },
+      {
+        "id": "srimpe",
+        "nickname": "Srimpe",
+        "names": [
+          "Lampe",
+          "Sri"
+        ]
+      },
+      {
+        "id": "c2",
+        "nickname": "C²",
+        "names": [
+          "Cal",
+          "Clem"
+        ]
+      },
+      {
+        "id": "sophdu",
+        "nickname": "Sophdu",
+        "names": [
+          "Eric",
+          "Macy"
+        ]
+      },
+      {
+        "id": "andriha",
+        "nickname": "Andriha",
+        "names": [
+          "Andrew",
+          "Spriha"
+        ]
+      },
+      {
+        "id": "bunk-bed-boys",
+        "nickname": "bunk bed boys",
+        "names": [
+          "James",
+          "Seb"
+        ]
+      }
+    ],
+    "interests": [
+      "anime",
+      "skiing",
+      "onsen",
+      "un-hectic pace"
+    ],
+    "skiGear": "Some people may bring gear; others will rent. Who does which is still open."
+  },
+  "constraints": [
+    {
+      "id": "tokyo-base",
+      "status": "locked",
+      "text": "City base is Tokyo only. No Osaka, Kyoto, Nagoya, or Ghibli Park."
+    },
+    {
+      "id": "nights",
+      "status": "locked",
+      "text": "13 nights: Tokyo 3 + Nozawa 6 + Tokyo or other city 4."
+    },
+    {
+      "id": "ski-days",
+      "status": "locked",
+      "text": "Ski Nozawa ~5 proper days plus an arrival afternoon."
+    },
+    {
+      "id": "lodging-style",
+      "status": "locked",
+      "text": "Tokyo: one MIMARU building, 3 two-beds (or a connecting 8 + one 2-bed) — not 3 Airbnbs."
+    }
+  ],
+  "statusLegend": [
+    {
+      "id": "recommended",
+      "label": "Recommended",
+      "meaning": "A suggested extra on a locked route. Not a booking."
+    },
+    {
+      "id": "open",
+      "label": "Open / TBD",
+      "meaning": "A fork, unpublished calendar, or decision the group still has to make."
+    },
+    {
+      "id": "calendar-published",
+      "label": "Calendar published / open days known",
+      "meaning": "Official open days are listed. Not a booking. Do not claim tickets exist."
+    },
+    {
+      "id": "locked",
+      "label": "Locked",
+      "meaning": "A hard constraint, a closed window, or a confirmed fact we will not pretend is flexible."
+    },
+    {
+      "id": "deferred",
+      "label": "Deferred / optional",
+      "meaning": "Parked until another fork is chosen. Not a booking."
+    }
+  ],
+  "route": {
+    "label": "Quiet Tokyo then Waguri",
+    "status": "recommended",
+    "stops": [
+      {
+        "id": "tokyo-1",
+        "city": "Tokyo",
+        "cityKey": "Tokyo",
+        "dates": "27–29 Dec",
+        "nights": 3,
+        "note": "In 27, out 30"
+      },
+      {
+        "id": "nozawa",
+        "city": "Nozawa",
+        "cityKey": "Nozawa",
+        "dates": "30 Dec–4 Jan",
+        "nights": 6,
+        "note": "In 30 Dec, out 5 Jan · Waguri booked"
+      },
+      {
+        "id": "tokyo-2",
+        "city": "Tokyo",
+        "cityKey": "Tokyo",
+        "dates": "5–8 Jan",
+        "nights": 4,
+        "note": "In 5 Jan, out 9 Jan"
+      },
+      {
+        "id": "fly",
+        "city": "Fly",
+        "cityKey": "Tokyo",
+        "dates": "9 Jan",
+        "nights": 0,
+        "note": "Faye + Will UA838 NRT 9 Jan. Other returns not booked."
+      }
+    ]
+  },
+  "filters": [
+    {
+      "id": "all",
+      "label": "All days"
+    },
+    {
+      "id": "Tokyo",
+      "label": "Tokyo"
+    },
+    {
+      "id": "Nozawa",
+      "label": "Nozawa"
+    }
+  ],
+  "days": [
+    {
+      "id": "overview",
+      "date": "",
+      "weekday": "",
+      "short": "Overview",
+      "dayNumber": 0,
+      "overview": true,
+      "city": "Overview",
+      "status": "locked",
+      "title": "The trip",
+      "summary": "13 nights · quiet Tokyo 3 · Waguri booked 6 · 4 Tokyo or other city travel",
+      "blocks": [
+        {
+          "title": "Beats",
+          "detail": "Quiet Tokyo 27–29 Dec → The Waguri House booked 30 Dec–5 Jan → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "thumb": "/tokyo.jpg",
+          "thumbPosition": "72% 42%",
+          "mark": "T"
+        },
+        {
+          "title": "Nozawa Onsen Snow Resort",
+          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
+          "url": "https://en.nozawaski.com/",
+          "thumb": "/nozawa.jpg",
+          "thumbPosition": "50% 38%",
+          "mark": "N"
+        },
+        {
+          "title": "Jigokudani Wild Snow Monkey Park",
+          "description": "Wild macaques in a hot spring. Rest-day trip from Nozawa.",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/",
+          "thumb": "/jigokudani.jpg",
+          "thumbPosition": "42% 72%",
+          "mark": "J"
+        }
+      ]
+    },
+    {
+      "id": "2026-12-27",
+      "date": "2026-12-27",
+      "weekday": "Sun",
+      "short": "27 Dec",
+      "dayNumber": 1,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "Land NRT",
+      "summary": "27 Dec NRT. Faye + Will booked UA837 (GSCT9K). Other arrivals not booked.",
+      "blocks": [
+        {
+          "title": "Land",
+          "detail": "Land 27 Dec NRT. Faye + Will booked UA837, arrive 15:00. Other air tickets not booked. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "thumb": "/tokyo.jpg",
+          "thumbPosition": "72% 42%",
+          "mark": "T"
+        },
+        {
+          "title": "Yamato Transport",
+          "description": "Ship bags ahead so you are not hauling them on the train.",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/",
+          "thumb": "/yamato.jpg",
+          "thumbPosition": "70% 45%",
+          "mark": "Y"
+        }
+      ]
+    },
+    {
+      "id": "2026-12-28",
+      "date": "2026-12-28",
+      "weekday": "Mon",
+      "short": "28 Dec",
+      "dayNumber": 2,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "Free day in Tokyo",
+      "summary": "Free day.",
+      "blocks": []
+    },
+    {
+      "id": "2026-12-29",
+      "date": "2026-12-29",
+      "weekday": "Tue",
+      "short": "29 Dec",
+      "dayNumber": 3,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "Free day in Tokyo",
+      "summary": "Free day.",
+      "blocks": []
+    },
+    {
+      "id": "2026-12-30",
+      "date": "2026-12-30",
+      "weekday": "Wed",
+      "short": "30 Dec",
+      "dayNumber": 4,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "Travel day to Nozawa",
+      "summary": "Hakutaka to Iiyama. Not a ski day.",
+      "blocks": [
+        {
+          "title": "Hakutaka",
+          "detail": "Hakutaka is the Hokuriku Shinkansen that stops at Iiyama, the station for Nozawa. Kagayaki skips Iiyama. Not a ski day.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Nozawa Onsen Snow Resort",
+          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
+          "url": "https://en.nozawaski.com/",
+          "thumb": "/nozawa.jpg",
+          "thumbPosition": "50% 38%",
+          "mark": "N"
+        },
+        {
+          "title": "The Waguri House",
+          "description": "Booked · B22754491. 10 min outside Nozawa (4WD). Cars required — not village-walkable.",
+          "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+          "thumb": "/lodging-thumbs/waguri-house.jpg",
+          "thumbPosition": "50% 30%",
+          "mark": "W"
+        }
+      ]
+    },
+    {
+      "id": "2026-12-31",
+      "date": "2026-12-31",
+      "weekday": "Thu",
+      "short": "31 Dec",
+      "dayNumber": 5,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "NYE · ski day 1",
+      "summary": "First proper ski day.",
+      "blocks": [
+        {
+          "title": "NYE",
+          "detail": "New Year’s Eve. First proper ski day.",
+          "status": "recommended"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-01",
+      "date": "2027-01-01",
+      "weekday": "Fri",
+      "short": "1 Jan",
+      "dayNumber": 6,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "NYD · ski day 2",
+      "summary": "Optional: village shrine for New Year.",
+      "blocks": [
+        {
+          "title": "NYD",
+          "detail": "Second ski day. Optional: visit the village shrine for New Year.",
+          "status": "recommended"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-02",
+      "date": "2027-01-02",
+      "weekday": "Sat",
+      "short": "2 Jan",
+      "dayNumber": 7,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "Rest day · snow monkeys",
+      "summary": "Visit the snow monkeys.",
+      "blocks": [
+        {
+          "title": "Monkeys",
+          "detail": "Rest day. Visit the snow monkeys.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Jigokudani Wild Snow Monkey Park",
+          "description": "Wild macaques in a hot spring. Rest-day trip from Nozawa.",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/",
+          "thumb": "/jigokudani.jpg",
+          "thumbPosition": "42% 72%",
+          "mark": "J"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-03",
+      "date": "2027-01-03",
+      "weekday": "Sun",
+      "short": "3 Jan",
+      "dayNumber": 8,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "Ski day 3",
+      "summary": "Third ski day.",
+      "blocks": []
+    },
+    {
+      "id": "2027-01-04",
+      "date": "2027-01-04",
+      "weekday": "Mon",
+      "short": "4 Jan",
+      "dayNumber": 9,
+      "city": "Nozawa",
+      "status": "recommended",
+      "title": "Ski day 4",
+      "summary": "Optional: send bags back to Tokyo.",
+      "blocks": [
+        {
+          "title": "Ski 4",
+          "detail": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Yamato Transport",
+          "description": "Ship bags ahead so you are not hauling them on the train.",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/",
+          "thumb": "/yamato.jpg",
+          "thumbPosition": "70% 45%",
+          "mark": "Y"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-05",
+      "date": "2027-01-05",
+      "weekday": "Tue",
+      "short": "5 Jan",
+      "dayNumber": 10,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "Travel day to Tokyo",
+      "summary": "Optional morning ski, then back to Tokyo. City travel starts after arrival.",
+      "blocks": [
+        {
+          "title": "Return",
+          "detail": "Optional morning ski, then travel day back to Tokyo. City travel starts after arrival — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ],
+      "places": [
+        {
+          "title": "Tokyo",
+          "description": "City base. First and last nights; trains leave from here.",
+          "url": "https://www.gotokyo.org/en/",
+          "thumb": "/tokyo.jpg",
+          "thumbPosition": "72% 42%",
+          "mark": "T"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-06",
+      "date": "2027-01-06",
+      "weekday": "Wed",
+      "short": "6 Jan",
+      "dayNumber": 11,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-07",
+      "date": "2027-01-07",
+      "weekday": "Thu",
+      "short": "7 Jan",
+      "dayNumber": 12,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-08",
+      "date": "2027-01-08",
+      "weekday": "Fri",
+      "short": "8 Jan",
+      "dayNumber": 13,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "City travel",
+      "summary": "City travel — Tokyo or another city. Nothing booked yet.",
+      "blocks": [
+        {
+          "title": "City travel",
+          "detail": "City travel — Tokyo or another city. Nothing booked yet.",
+          "status": "recommended"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-09",
+      "date": "2027-01-09",
+      "weekday": "Sat",
+      "short": "9 Jan",
+      "dayNumber": 14,
+      "city": "Tokyo",
+      "status": "recommended",
+      "title": "Fly home",
+      "summary": "Faye + Will UA838 NRT 9 Jan. Other returns not booked.",
+      "blocks": [
+        {
+          "title": "Depart",
+          "detail": "Faye + Will UA838 NRT 16:50 → SFO. Other returns not booked.",
+          "status": "recommended"
+        }
+      ]
+    }
+  ],
+  "openDecisions": [
+    {
+      "id": "nye-fork",
+      "status": "recommended",
+      "title": "Quiet Tokyo, then Waguri",
+      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then The Waguri House booked 30 Dec–5 Jan. Not a village-walkable stay."
+    },
+    {
+      "id": "uverworld",
+      "status": "open",
+      "title": "Fukuoka UVERworld — optional 1–2 people only",
+      "detail": "Full group skips it. Optional 1–2 people only; overnight Fukuoka on the 30th. Same-night return is not realistic."
+    },
+    {
+      "id": "lodging",
+      "status": "recommended",
+      "title": "Ski lodging is Waguri, booked",
+      "detail": "The Waguri House booked B22754491, ¥990,000 / 6n for 8 guests (30 Dec 2026–5 Jan 2027). Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
+    },
+    {
+      "id": "ghibli",
+      "status": "calendar-published",
+      "title": "Ghibli calendar is published — tickets not purchased",
+      "detail": "Closed 27–31 Dec 2026 and 1–2 Jan 2027. Open 3–9 Jan 2027, including Tue 5 Jan. Skip 27 Dec–2 Jan for this trip. Realistic after Nozawa: 5–8 Jan (5 Jan is travel day; museum is open). 3–4 Jan the museum is open but the group is still in Nozawa. Lawson: 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist."
+    },
+    {
+      "id": "headcount-airport-gear",
+      "status": "open",
+      "title": "Other flights, ski bags",
+      "detail": "Land is 27 Dec NRT. Faye + Will booked GSCT9K (2 tickets). Other air tickets not booked — do not invent RSVPs. Who brings skis vs who rents is still open."
+    }
+  ],
+  "concert": {
+    "status": "locked",
+    "groupRule": "SKIP for the full group. Optional 1–2 people, light, overnight Fukuoka on the 30th.",
+    "artist": "UVERworld",
+    "tour": "UVERworld LIVE “危ない” TOUR 2026",
+    "venue": "Marine Messe Fukuoka Hall A",
+    "shows": [
+      {
+        "date": "2026-12-30",
+        "doors": "16:00",
+        "start": "17:00",
+        "seat": "Reserved",
+        "price": "¥9,800"
+      },
+      {
+        "date": "2026-12-31",
+        "doors": "15:00",
+        "start": "16:00",
+        "seat": "Reserved",
+        "price": "¥9,800"
+      }
+    ],
+    "tickets": {
+      "fcLotteries": "Fan-club NSW 1st and 2nd lotteries are closed.",
+      "creatorLifeSize": "TAKUYA∞の創り方 and LIFEsize lotteries run through about 30 Aug 2026 (23:59).",
+      "generalSale": "Fukuoka general sale is not posted. Do not invent a date."
+    },
+    "sameNightReturn": "Same-night return Tokyo or Nozawa is not realistic.",
+    "links": [
+      {
+        "label": "Official 2026 live page",
+        "url": "https://www.uverworld.jp/feature/2026_live"
+      },
+      {
+        "label": "FC ticket notice (lotteries closed)",
+        "url": "https://www.uverworld.jp/news/detail/3197"
+      },
+      {
+        "label": "Creator pre-sale notice (through 30 Aug)",
+        "url": "https://uw-takuya-rooms.fanpla.jp/news/detail/87197"
+      }
+    ]
+  },
+  "ghibli": {
+    "status": "calendar-published",
+    "unpublished": false,
+    "doNotClaimTickets": true,
+    "museum": "Ghibli Museum, Mitaka — not Ghibli Park (Aichi).",
+    "lastYearClosure": "CLOSED winter: 27–31 Dec 2026 and 1–2 Jan 2027.",
+    "tuesdayNote": "Usually closed Tuesdays, but Tue 5 Jan 2027 is marked open. Regular Tuesday closes resume 12, 19, and 26 Jan 2027.",
+    "primaryDay": "Realistic after Nozawa: 5–8 Jan 2027 (5 Jan is travel day; museum is open). 3–4 Jan the museum is open but the group is still in Nozawa. Do not lock a Ghibli day on the itinerary.",
+    "sale": "Lawson Ticket, 10th of the prior month, 10:00 JST. January 2027 tickets go on sale 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist.",
+    "rules": [
+      "Max 6 tickets per account.",
+      "For 12 people, two named purchasers. Both must attend.",
+      "Adult timed ticket ¥1,000.",
+      "Named purchaser ID may be checked. Absent purchaser can mean refused entry."
+    ],
+    "links": [
+      {
+        "label": "Official tickets & calendar",
+        "url": "https://www.ghibli-museum.jp/en/tickets/"
+      },
+      {
+        "label": "Lawson Ticket (l-tike via official English page)",
+        "url": "https://www.ghibli-museum.jp/en/tickets/"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "id": "ghibli",
+      "group": "tokyo",
+      "title": "Ghibli Museum, Mitaka",
+      "status": "calendar-published",
+      "when": "Realistic after Nozawa: 5–8 Jan 2027 (5 Jan is travel day; museum is open). Not a locked itinerary day.",
+      "detail": "Calendar published. Do not claim tickets exist or are purchased.",
+      "lines": [
+        "CLOSED winter: 27–31 Dec 2026 and 1–2 Jan 2027.",
+        "OPEN in the trip window: 3–9 Jan 2027, including Tue 5 Jan (usually Tuesdays close; regular Tuesday closes resume 12, 19, and 26 Jan).",
+        "Skip 27 Dec–2 Jan for this trip.",
+        "Realistic visit after Nozawa is 5–8 Jan. 3–4 Jan the museum is open but the group is still in Nozawa — do not move ski days.",
+        "Lawson Ticket, 10th of the prior month, 10:00 JST. January 2027 tickets go on sale 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec).",
+        "Max 6 tickets per account.",
+        "For 8–10 people, two named purchasers. Both must attend.",
+        "Adult timed ticket ¥1,000.",
+        "Named purchaser ID may be checked. Absent purchaser can mean refused entry.",
+        "This is Mitaka, not Ghibli Park (Aichi)."
+      ],
+      "links": [
+        {
+          "label": "Official tickets & calendar",
+          "url": "https://www.ghibli-museum.jp/en/tickets/"
+        },
+        {
+          "label": "Lawson Ticket (l-tike via official English page)",
+          "url": "https://www.ghibli-museum.jp/en/tickets/"
+        }
+      ]
+    },
+    {
+      "id": "teamlab",
+      "group": "tokyo",
+      "title": "teamLab Planets or Borderless — pick one",
+      "status": "open",
+      "when": "29 Dec",
+      "detail": "Planets (Toyosu) is the water-walk museum, open through the end of 2027. Borderless is at Azabudai Hills. Timed tickets; buy ahead. Do not plan a van to Nozawa today.",
+      "lines": [
+        "Planets or Borderless, not both."
+      ],
+      "links": [
+        {
+          "label": "teamLab Planets official",
+          "url": "https://www.teamlab.art/e/planets/"
+        },
+        {
+          "label": "Planets tickets",
+          "url": "https://teamlabplanets.dmm.com/en/ticket"
+        },
+        {
+          "label": "teamLab Borderless official",
+          "url": "https://www.teamlab.art/e/tokyo/"
+        }
+      ]
+    },
+    {
+      "id": "nakano",
+      "group": "tokyo",
+      "title": "Nakano Broadway",
+      "status": "recommended",
+      "when": "28 Dec",
+      "detail": "Used-figure, doujin, and vintage floors. Un-hectic: pick one building and one coffee, not every shop.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Nakano Broadway",
+          "url": "https://nakano-broadway.com/"
+        }
+      ]
+    },
+    {
+      "id": "donguri",
+      "group": "tokyo",
+      "title": "Donguri Republic",
+      "status": "recommended",
+      "when": "29 Dec · Solamachi",
+      "detail": "Donguri is the official Ghibli shop (this is not Ghibli Park, and not museum tickets). Skytree is next door in Solamachi. Shibuya is the other fork if the group is tired of east Tokyo.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Donguri Republic",
+          "url": "https://www.donguri-kyowakoku.jp/"
+        },
+        {
+          "label": "Tokyo Skytree",
+          "url": "https://www.tokyo-skytree.jp/en/"
+        }
+      ]
+    },
+    {
+      "id": "kimono-shrine",
+      "group": "tokyo",
+      "title": "Afternoon kimono + a mid-size shrine",
+      "status": "recommended",
+      "when": "6 Jan",
+      "detail": "Shop and shrine names TBD. Keep it mid-size, not Meiji-jingu crowds if the group is tired.",
+      "lines": [],
+      "links": []
+    },
+    {
+      "id": "lifts",
+      "group": "nozawa",
+      "title": "Lift tickets · Nozawa Onsen",
+      "status": "recommended",
+      "detail": "~5 proper days plus arrival afternoon",
+      "lines": [
+        "Adult day ¥7,800. Adult 3-day ¥21,200.",
+        "2026–27 regular season (19 Dec 2026–28 Mar 2027 on the official table)"
+      ],
+      "links": [
+        {
+          "label": "Ticket prices",
+          "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/"
+        }
+      ]
+    },
+    {
+      "id": "rental",
+      "group": "nozawa",
+      "title": "Salomon Station (official resort rental, Nagasaka 3F)",
+      "status": "open",
+      "detail": "Some people may bring gear; others will rent. Who does which is still open.",
+      "lines": [
+        "Adult day set ¥5,800."
+      ],
+      "links": [
+        {
+          "label": "Salomon rental",
+          "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/"
+        }
+      ]
+    },
+    {
+      "id": "soto-yu",
+      "group": "nozawa",
+      "title": "Soto-yu",
+      "status": "recommended",
+      "detail": "13 free village soto-yu, run by Yunakama neighbourhoods. Bring your own towel and soap.",
+      "lines": [],
+      "links": [
+        {
+          "label": "Soto-yu",
+          "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/"
+        }
+      ]
+    },
+    {
+      "id": "monkeys",
+      "group": "nozawa",
+      "title": "Snow monkeys",
+      "status": "open",
+      "detail": "Do not DIY. Nozawa Onsen Kotsu. Reservations open 1 Oct 2026.",
+      "lines": [
+        "13:10–17:00 (check-in 12:30–13:00)",
+        "Adult ~$57 (¥9,000; tour includes bus + park admission)",
+        "Child ~$31 (¥5,000)",
+        "Park gate Adult 18+ ~$5 (¥800)"
+      ],
+      "links": [
+        {
+          "label": "Kotsu tour",
+          "url": "https://nozawaonsen.info/en/snow-monkey-tour/"
+        },
+        {
+          "label": "Park guide",
+          "url": "https://en.jigokudani-yaenkoen.co.jp/guide/"
+        }
+      ]
+    },
+    {
+      "id": "disney-usj",
+      "group": "last-block",
+      "title": "DisneySea or USJ — not both",
+      "status": "deferred",
+      "when": "Last 4 nights, after Tokyo vs Kyoto is chosen",
+      "detail": "Faye deferred Disney vs USJ until the last 4 nights are Tokyo or Kyoto. Not booked. No tickets bought.",
+      "lines": [
+        "If last block is Tokyo: optional DisneySea 6–8 Jan.",
+        "If last block is Kyoto: optional USJ.",
+        "Not both.",
+        "NYE Disney overnight is off."
+      ],
+      "links": []
+    }
+  ],
+  "lodging": {
+    "status": "open",
+    "asOf": "24 Aug 2026",
+    "tokyoNote": "Default Tokyo lodging is the first 3 nights (27–30 Dec). Station East member FROM ¥345,519 / apt for those nights. Last 4 nights are city travel and may not be Tokyo — not in the pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
+    "bands": [
+      {
+        "id": "4",
+        "heading": "4 bedrooms",
+        "why": "",
+        "options": [
+          {
+            "id": "tokyo-4",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "2× two-bedroom · 8 people",
+            "status": "available",
+            "perPerson": "~$545",
+            "nextStep": "Book online or email sales.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "3 nights (27–30 Dec). 2 apts × Station East member FROM ¥345,519 ÷ 8 = ¥86,380. Connecting-8 is 2 bedrooms / 8 singles in one lockup if they want one key. Last 4 nights are city travel / unbooked — not in this total."
+          },
+          {
+            "id": "kashmir",
+            "property": "Kashmir House",
+            "city": "Nozawa",
+            "beds": "4 rooms / 8 adults · 3 Double + 1 Cosy",
+            "status": "available",
+            "perPerson": "~$870",
+            "nextStep": "Book.",
+            "url": "https://book.staynozawa.com/search/",
+            "note": "Breakfast, no dinner. Walk-in lodge, no road. 6 nights (30 Dec 2026–5 Jan 2027). ~¥137,763 pp / ¥1,102,100 total."
+          },
+          {
+            "id": "waguri-4",
+            "property": "The Waguri House (Akari)",
+            "city": "Nozawa",
+            "beds": "5 BR / 3 bath · sleeps 12 · booked for 8",
+            "status": "available",
+            "perPerson": "~$777",
+            "nextStep": "Booked B22754491.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+            "email": "admin@akarihouse.jp",
+            "phone": "+81 70 9026 60 26",
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Cars required. 10 min outside town, 4WD + studless. Not village-walkable."
+          },
+          {
+            "id": "tanuki-4",
+            "property": "Tanuki 4BR 3F / 4F",
+            "city": "Nozawa",
+            "beds": "3F sleeps 12 · 4F sleeps 11",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "RoomBoss sold out 24 Dec–6 Jan."
+          },
+          {
+            "id": "kiriya-4",
+            "property": "Kiriya Ryokan",
+            "city": "Nozawa",
+            "beds": "4 rooms",
+            "status": "enquire",
+            "nextStep": "Phone or email.",
+            "email": "view@nozawahospitality.com",
+            "phone": "+81 269-85-2020",
+            "note": "Half-board possible. Shimataya has no availability those dates."
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "heading": "5 bedrooms",
+        "why": "",
+        "options": [
+          {
+            "id": "tokyo-5",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "2× two-bed + 1 smaller · or family suite (up to 6) + 1 two-bed",
+            "status": "enquire",
+            "perPerson": "~$650",
+            "nextStep": "Email sales for a 3-unit hold.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "3 nights (27–30 Dec). 3 apts × Station East member FROM ¥345,519 ÷ 10 = ¥103,656. Inventory exists. Suites Nihombashi is the cleanest 2-bed+washer product (pricier). Last 4 nights are city travel / unbooked — not in this total."
+          },
+          {
+            "id": "kamoshika-5",
+            "property": "Kamoshika Ski Lodge",
+            "city": "Nozawa",
+            "beds": "5BR / 5 bath · sleeps 16",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "Best one-house if a 5th couple is yes. Sold out 24 Dec–9 Jan."
+          },
+          {
+            "id": "waguri-5",
+            "property": "The Waguri House (Akari)",
+            "city": "Nozawa",
+            "beds": "5 BR / 3 bath · sleeps 12",
+            "status": "available",
+            "perPerson": "~$621",
+            "nextStep": "Booked B22754491 for 8 guests.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+            "email": "admin@akarihouse.jp",
+            "phone": "+81 70 9026 60 26",
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 10-person split is illustrative. Cars required. Not village-walkable."
+          },
+          {
+            "id": "kiriya-tokiwaya-5",
+            "property": "Kiriya / Tokiwaya",
+            "city": "Nozawa",
+            "beds": "5 rooms",
+            "status": "enquire",
+            "nextStep": "Phone.",
+            "phone": "+81 269-85-2020",
+            "note": "Tokiwaya 31 Dec + 1 Jan 満室 online. Shimataya has no availability those dates."
+          },
+          {
+            "id": "staynozawa-5",
+            "property": "Two Stay Nozawa units",
+            "city": "Nozawa",
+            "beds": "5 bedrooms combined",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "e.g. Dennojo West (ask layout) + a 2-bed, or Tanuki 3BR + 2BR. All blocked 24 Dec–6 Jan."
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "heading": "6 bedrooms",
+        "why": "",
+        "options": [
+          {
+            "id": "tokyo-6",
+            "property": "MIMARU Tokyo Station East",
+            "city": "Tokyo",
+            "beds": "3× two-bedroom · or connecting-8 + one two-bed",
+            "status": "enquire",
+            "perPerson": "~$545",
+            "nextStep": "Email sales same day.",
+            "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+            "email": "tokyo-station-east@chm.cigr.co.jp",
+            "note": "3 nights (27–30 Dec). 3 apts × Station East member FROM ¥345,519 ÷ 12 = ¥86,380. Connecting-8 + one two-bed is 3 bedrooms of space, 12 beds — only if two pairs share the connecting unit. Last 4 nights are city travel / unbooked — not in this total."
+          },
+          {
+            "id": "waguri-6",
+            "property": "The Waguri House (Akari)",
+            "city": "Nozawa",
+            "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
+            "status": "available",
+            "perPerson": "~$518",
+            "nextStep": "Booked B22754491 for 8 guests.",
+            "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+            "email": "admin@akarihouse.jp",
+            "phone": "+81 70 9026 60 26",
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 12-person split is illustrative. Cars required. Not village-walkable."
+          },
+          {
+            "id": "kamoshika-6",
+            "property": "Kamoshika Ski Lodge",
+            "city": "Nozawa",
+            "beds": "5BR · sleeps 16",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "6 pairs only if two pairs share a bunk/flex room."
+          },
+          {
+            "id": "iroha",
+            "property": "Iroha Ichi + Iroha Ni",
+            "city": "Nozawa",
+            "beds": "3+3 bed · 8+8",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com",
+            "note": "True 6 bedrooms. Same operator, next to each other."
+          },
+          {
+            "id": "tanuki-6",
+            "property": "Tanuki 4BR 3F + a 2/3BR",
+            "city": "Nozawa",
+            "beds": "4BR + 2/3BR · same building",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com"
+          },
+          {
+            "id": "bonbori",
+            "property": "Bonbori Ichi + Bonbori Ni",
+            "city": "Nozawa",
+            "beds": "3BR/10 + 3BR/8",
+            "status": "waitlist",
+            "nextStep": "Email waitlist.",
+            "email": "bookings@staynozawa.com"
+          }
+        ]
+      }
+    ]
+  },
+  "budget": {
+    "status": "open",
+    "heading": "Budget",
+    "label": "Estimate",
+    "asOf": "24 Aug 2026",
+    "placeholder": "Working estimate. Not locked.",
+    "workingNote": "Tabs 8/10/12. FX 1 USD = 159.31 JPY. Last 4 nights omitted. Waguri booked ¥990,000.",
+    "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
+    "summary": "Subtotal ~$3,143 without rental at 8, with Waguri cars.",
+    "subtotalWithoutRental": "~$3,143",
+    "subtotalWithRental": "~$3,270",
+    "band": "$2,900–3,800 with airfare only",
+    "lines": [
+      {
+        "id": "flight",
+        "title": "Flight",
+        "detail": "$1,400",
+        "note": "Working. Aggregate $1,260–1,750; not a live 12/27–1/9 quote."
+      },
+      {
+        "id": "tokyo-stay",
+        "title": "Tokyo accommodation",
+        "detail": "$545",
+        "note": "3 nights 27–30 Dec. MIMARU 2 apts ÷ 8. Last 4 nights omitted."
+      },
+      {
+        "id": "nozawa-stay",
+        "title": "Nozawa accommodation — The Waguri House, 6 nights",
+        "detail": "$777",
+        "note": "The Waguri House booked B22754491. ¥990,000 / 6n for 8 guests. Not Tamanegi."
+      },
+      {
+        "id": "lifts",
+        "title": "Lift",
+        "detail": "$182",
+        "note": "4 days."
+      },
+      {
+        "id": "tickets",
+        "title": "Tickets (snow monkeys)",
+        "detail": "$57",
+        "note": "Default tour, per person."
+      },
+      {
+        "id": "rental",
+        "title": "Rental (optional)",
+        "detail": "$127",
+        "note": "Optional. 4 days."
+      }
+    ]
+  },
+  "transport": {
+    "yamato": {
+      "status": "recommended",
+      "text": "Yamato Ski TA-Q-BIN from a hotel desk is typically about ¥2,500–4,000 per piece. Convenience-store drop-off is not available for Ski TA-Q-BIN. Ship so the bag is at the resort the day before you ski.",
+      "links": [
+        {
+          "label": "Ski TA-Q-BIN",
+          "url": "https://www.kuronekoyamato.co.jp/ytc/en/send/services/ski/"
+        }
+      ]
+    },
+    "train": {
+      "status": "locked",
+      "text": "Hakutaka only. Kagayaki skips Iiyama. Tokyo or Ueno → Iiyama about 1h40, about ¥8,300–8,900. No Japan Rail Pass for this itinerary (Tokyo–Iiyama return does not earn one). Book JR-EAST Train Reservation, not SmartEX.",
+      "links": [
+        {
+          "label": "JR-EAST Train Reservation",
+          "url": "https://www.eki-net.com/en/jreast-train-reservation/"
+        }
+      ]
+    },
+    "transfer": {
+      "status": "open",
+      "text": "Jumbo taxi about ¥12,500 for up to 9, or Stay Nozawa van ¥13,000 for up to 8. Do not plan a van on 29–31 Dec or 2–4 Jan. Liner bus adult ¥600 if the private options are gone.",
+      "links": [
+        {
+          "label": "Kotsu taxi",
+          "url": "https://nozawaonsen.info/en/taxi/"
+        },
+        {
+          "label": "Stay Nozawa transfers",
+          "url": "https://www.staynozawa.com/access/getting-to-nozawa"
+        }
+      ]
+    }
+  },
+  "ski": {
+    "mountain": "Nozawa Onsen",
+    "properDays": "~5 proper days plus arrival afternoon",
+    "tickets": {
+      "adultDay": "¥7,800",
+      "adult3Day": "¥21,200",
+      "season": "2026–27 regular season (19 Dec 2026–28 Mar 2027 on the official table)"
+    },
+    "rental": {
+      "shop": "Salomon Station (official resort rental, Nagasaka 3F)",
+      "adultDaySet": "¥5,800"
+    },
+    "onsen": {
+      "sotoYu": "13 free village soto-yu, run by Yunakama neighbourhoods. Bring your own towel and soap."
+    },
+    "links": [
+      {
+        "label": "Ticket prices",
+        "url": "https://en.nozawaski.com/the-mountain/lift-ticket/ticket-prices/"
+      },
+      {
+        "label": "Salomon rental",
+        "url": "https://en.nozawaski.com/the-mountain/hire/resort-rental-shop/"
+      },
+      {
+        "label": "Soto-yu",
+        "url": "https://en.nozawaski.com/the-village/activities/onsen-trail/"
+      }
+    ]
+  },
+  "snowMonkeys": {
+    "status": "open",
+    "rule": "Do not DIY.",
+    "operator": "Nozawa Onsen Kotsu",
+    "reservationsOpen": "1 Oct 2026",
+    "window": "13:10–17:00 (check-in 12:30–13:00)",
+    "price": "Adult ~$57 (¥9,000; tour includes bus + park admission)",
+    "childTour": "Child ~$31 (¥5,000)",
+    "url": "https://nozawaonsen.info/en/snow-monkey-tour/",
+    "parkAdmission": "Adult 18+ ~$5 (¥800)",
+    "parkUrl": "https://en.jigokudani-yaenkoen.co.jp/guide/"
+  },
+  "checklist": [
+    {
+      "id": "confirm-skeleton",
+      "title": "Quiet Tokyo then Waguri",
+      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → Waguri booked 30 Dec–5 Jan → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
+      "status": "recommended",
+      "priority": "now"
+    },
+    {
+      "id": "headcount",
+      "title": "Headcount is 12",
+      "detail": "6 pairs locked for display. Room math uses 3 Tokyo apartments and a 12-person Nozawa path.",
+      "status": "locked",
+      "priority": "now"
+    },
+    {
+      "id": "airport",
+      "title": "Land is 27 Dec NRT",
+      "detail": "Faye + Will booked UA837/UA838 (GSCT9K). Other air tickets not booked. Do not invent RSVPs.",
+      "status": "recommended",
+      "priority": "now"
+    },
+    {
+      "id": "tokyo-hotel",
+      "title": "Book Tokyo stay",
+      "detail": "Not booked. For 12: 3 MIMARU 2-beds, or a connecting 8 + one 2-bed. Station East 3-apt from-rate ~$1,150 pp.",
+      "status": "open",
+      "priority": "now"
+    },
+    {
+      "id": "nozawa-hotel",
+      "title": "Ski lodging is Waguri, booked",
+      "detail": "The Waguri House B22754491, ¥990,000 / 6n for 8 guests. Bakery and Tamanegi sold out. Stay Nozawa houses sold out, not on hold.",
+      "status": "recommended",
+      "priority": "now"
+    },
+    {
+      "id": "nye",
+      "title": "Quiet Tokyo then Waguri",
+      "detail": "Quiet Tokyo 27–29 Dec, then Waguri booked 30 Dec–5 Jan. Not village-walkable; cars required.",
+      "status": "recommended",
+      "priority": "now"
+    },
+    {
+      "id": "gear",
+      "title": "Who brings skis vs who rents",
+      "detail": "Changes Yamato volume and Salomon Station reservations.",
+      "status": "open",
+      "priority": "now"
+    },
+    {
+      "id": "uver-optional",
+      "title": "Optional: 1–2 people UVERworld Fukuoka",
+      "detail": "Creator / LIFEsize through ~30 Aug 2026. FC lotteries closed. Fukuoka general sale not posted. Overnight 30 Dec if anyone goes.",
+      "status": "open",
+      "priority": "now"
+    },
+    {
+      "id": "hakutaka",
+      "title": "Reserve Hakutaka seats both ways",
+      "detail": "Not Kagayaki. Not a JR Pass. JR-EAST Train Reservation. Reserve about 30 days out.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "transfer",
+      "title": "Book Iiyama ↔ Nozawa transfer",
+      "detail": "Jumbo taxi or Stay Nozawa van. No van 29–31 Dec or 2–4 Jan.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "yamato",
+      "title": "Plan Yamato Ski TA-Q-BIN both ways",
+      "detail": "Desk drop 27 Dec outbound; 4 Jan return with 48–72h.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "ghibli-watch",
+      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
+      "detail": "Calendar published. Closed 27 Dec–2 Jan. Open 3–9 Jan 2027 including Tue 5 Jan. Realistic after Nozawa: 5–8 Jan. Lawson 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist. Two named purchasers for 12.",
+      "status": "calendar-published",
+      "priority": "later"
+    },
+    {
+      "id": "teamlab",
+      "title": "Buy one teamLab timed entry",
+      "detail": "Planets or Borderless, not both, for 29 Dec.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "monkeys",
+      "title": "If monkeys: book Kotsu from 1 Oct 2026",
+      "detail": "Half day 13:10–17:00, adult ¥9,000. No DIY.",
+      "status": "open",
+      "priority": "later"
+    }
+  ],
+  "bookNow": [
+    {
+      "id": "teamlab",
+      "title": "Buy one teamLab timed entry",
+      "detail": "Planets or Borderless, not both, for 29 Dec.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "hakutaka",
+      "title": "Reserve Hakutaka seats both ways",
+      "detail": "Not Kagayaki. Not a JR Pass. JR-EAST Train Reservation. Reserve about 30 days out.",
+      "status": "recommended",
+      "priority": "soon"
+    },
+    {
+      "id": "koshitsu-dinner",
+      "title": "Book a koshitsu izakaya",
+      "detail": "Book a private room (個室) for 8–10. Restaurant name TBD — do not invent one.",
+      "status": "open",
+      "priority": "soon"
+    },
+    {
+      "id": "nye-dinner",
+      "title": "NYE dinner",
+      "detail": "Eat where you sleep if the property does dinner; otherwise book early. Restaurant TBD.",
+      "status": "open",
+      "priority": "soon"
+    },
+    {
+      "id": "ghibli-watch",
+      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
+      "detail": "Calendar published. Closed 27 Dec–2 Jan. Open 3–9 Jan 2027 including Tue 5 Jan. Realistic after Nozawa: 5–8 Jan. Lawson 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec). Do not claim tickets exist. Two named purchasers for 8–10.",
+      "status": "calendar-published",
+      "priority": "later"
+    },
+    {
+      "id": "monkeys",
+      "title": "If monkeys: book Kotsu from 1 Oct 2026",
+      "detail": "Half day 13:10–17:00, adult ¥9,000. No DIY.",
+      "status": "open",
+      "priority": "later"
+    }
+  ],
+  "rsvpHouses": [
+    {
+      "id": "kamoshika",
+      "name": "Kamoshika",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 16,
+      "note": "Sleeps 16. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com",
+      "phone": "+81 269-85-3121"
+    },
+    {
+      "id": "tanuki-4br-3f",
+      "name": "Tanuki 4BR 3F",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 12,
+      "note": "Sleeps 12. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tamanegi",
+      "name": "Tamanegi House (Akari)",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 10,
+      "max": 12,
+      "note": "Unavailable those dates. Reply 24 Aug 2026 morning PT. Not booked.",
+      "email": "admin@akarihouse.jp"
+    },
+    {
+      "id": "waguri",
+      "name": "The Waguri House (Akari)",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 8,
+      "max": 12,
+      "note": "Booked B22754491. ¥990,000 / 6n for 8 guests. Cars required.",
+      "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "email": "admin@akarihouse.jp",
+      "phone": "+81 70 9026 60 26"
+    },
+    {
+      "id": "iroha-ichi-ni",
+      "name": "Iroha Ichi + Ni",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses, 8+8. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "dennojo-nw",
+      "name": "Dennojo N + W",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tanuki-3f-plus",
+      "name": "Tanuki 3F + another",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "bonbori-ichi-ni",
+      "name": "Bonbori Ichi + Ni",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "oguma-1-2",
+      "name": "Oguma 1 + 2",
+      "city": "Nozawa",
+      "kind": "two-house",
+      "min": 11,
+      "max": 16,
+      "note": "Two houses. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "kashmir",
+      "name": "Kashmir House",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 8,
+      "note": "Sleeps 8. Not booked.",
+      "url": "https://book.staynozawa.com/search/"
+    },
+    {
+      "id": "bonbori-ichi",
+      "name": "Bonbori Ichi",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 10,
+      "note": "Sleeps 10. Waitlist. Not booked.",
+      "email": "bookings@staynozawa.com"
+    },
+    {
+      "id": "tanuki-4f",
+      "name": "Tanuki 4F",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 11,
+      "note": "Sleeps 11. Short one for 12. Not booked."
+    },
+    {
+      "id": "mimaru-station-east",
+      "name": "MIMARU Tokyo Station East",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "email": "tokyo-station-east@chm.cigr.co.jp"
+    },
+    {
+      "id": "mimaru-hatchobori",
+      "name": "MIMARU Tokyo Hatchobori",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/hatchobori/",
+      "email": "hatchobori@chm.cigr.co.jp"
+    },
+    {
+      "id": "mimaru-suites",
+      "name": "MIMARU SUITES Tokyo Nihombashi",
+      "city": "Tokyo",
+      "kind": "tokyo-apt",
+      "min": 1,
+      "max": 12,
+      "note": "3 apartments, or 2 if yes ≤ 8. Unbooked.",
+      "url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
+      "email": "suites.tokyo-nihombashi@chm.cigr.co.jp",
+      "phone": "+81-3-6661-7821"
+    }
+  ]
+}

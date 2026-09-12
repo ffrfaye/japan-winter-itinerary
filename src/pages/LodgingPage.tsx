@@ -1,0 +1,98 @@
+import { useCallback, useMemo, useState } from 'react'
+import { GhostTabs } from '@/components/GhostTabs'
+import { LodgingCompareCard } from '@/components/LodgingCompareCard'
+import { LodgingCompareMap } from '@/components/LodgingCompareMap'
+import {
+  filterLodgingCards,
+  isFadedCard,
+  loadLodgingFile,
+  lodgingBedrooms,
+  lodgingLocations,
+  nozawaMapCaption,
+} from '@/lib/lodging'
+import type { BedroomCount, LodgingLocation } from '@/types/lodging'
+
+export function LodgingPage() {
+  const catalog = useMemo(() => loadLodgingFile(), [])
+  const [location, setLocation] = useState<LodgingLocation>('nozawa')
+  const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
+
+  const cards = useMemo(
+    () => filterLodgingCards(catalog.properties, location, bedrooms),
+    [catalog, location, bedrooms],
+  )
+
+  const select = useCallback((id: string) => {
+    setSelectedId(id)
+    document.getElementById(`lodging-card-${id}`)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+    })
+  }, [])
+
+  return (
+    <div className="space-y-4">
+      <header className="space-y-3">
+        <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
+        {location === 'nozawa' && catalog.nozawa_as_of ? (
+          <p className="text-sm text-zinc-500">{catalog.nozawa_as_of}</p>
+        ) : catalog.research_as_of ? (
+          <p className="text-sm text-zinc-500">{catalog.research_as_of}</p>
+        ) : null}
+        <GhostTabs
+          label="Location"
+          value={location}
+          onChange={(next) => {
+            setLocation(next)
+            setSelectedId(null)
+          }}
+          options={lodgingLocations}
+        />
+        <GhostTabs
+          label="Bedrooms"
+          value={bedrooms}
+          onChange={(next) => {
+            setBedrooms(next)
+            setSelectedId(null)
+          }}
+          options={lodgingBedrooms}
+        />
+      </header>
+
+      <div className="flex flex-col gap-4 md:flex-row md:items-start">
+        <div className="order-1 h-[40vh] md:order-2 md:sticky md:top-6 md:h-[calc(100svh-8rem)] md:w-[40%] md:shrink-0">
+          <LodgingCompareMap
+            location={location}
+            cards={cards}
+            bedrooms={bedrooms}
+            selectedId={selectedId}
+            onSelect={select}
+            caption={
+              location === 'nozawa'
+                ? nozawaMapCaption(catalog.nozawa_map_notes)
+                : location === 'kyoto'
+                  ? catalog.kyoto_notes ?? null
+                  : null
+            }
+          />
+        </div>
+        <div className="order-2 min-w-0 space-y-4 md:order-1 md:w-[60%]">
+          {cards.length === 0 ? (
+            <p className="text-sm text-zinc-600">No places in this filter</p>
+          ) : (
+            cards.map((card) => (
+              <LodgingCompareCard
+                key={card.id}
+                card={card}
+                faded={isFadedCard(card, bedrooms)}
+                active={card.id === selectedId}
+                onSelect={() => setSelectedId(card.id)}
+              />
+            ))
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}

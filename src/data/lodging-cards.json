@@ -1,0 +1,1531 @@
+{
+  "research_as_of": "2026-08-23",
+  "nozawa_map_notes": {
+    "village": "Village",
+    "nagasaka": "Nagasaka",
+    "hikage": "Hikage"
+  },
+  "properties": [
+    {
+      "id": "mimaru-tokyo-station-east",
+      "name": "MIMARU Tokyo Station East",
+      "location": "tokyo",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Fits 4–6 via 2–3 apartments. Connecting-8 is 2 bedrooms / 8 singles in one lockup.",
+      "price": {
+        "amount": 345519,
+        "currency": "JPY",
+        "covers": "1 apt",
+        "per": "3 nights",
+        "as_of": "2026-08-23",
+        "source": "member FROM 27–30 Dec 2026",
+        "how_to_get_quote": "Book online or email tokyo-station-east@chm.cigr.co.jp"
+      },
+      "availability_status": "available",
+      "availability_notes": "Live vacant Station East A:26 / B:13 as of 23 Aug 2026.",
+      "booking_method": "online or email",
+      "booking_url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "booking_contact": "tokyo-station-east@chm.cigr.co.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": {
+        "neighborhood": "Tokyo Station East",
+        "walk_to_tokyo_shinkansen_min": null
+      },
+      "address": null,
+      "lat": 35.677035,
+      "lng": 139.778664,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-2.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Available for 27–30 Dec",
+        "Member FROM ¥345,519 / apt for 3 nights",
+        "Fits 4, 5, and 6 via extra apartments",
+        "Official booking page"
+      ],
+      "cons": [
+        "Price is per apartment, not a whole-group lockup",
+        "Last 4 Tokyo nights are city travel / unbooked"
+      ]
+    },
+    {
+      "id": "mimaru-tokyo-hatchobori",
+      "name": "MIMARU Tokyo Hatchobori",
+      "location": "tokyo",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/hatchobori/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Backup to Station East for 4 bedrooms.",
+      "price": {
+        "amount": 289440,
+        "currency": "JPY",
+        "covers": null,
+        "per": null,
+        "as_of": "2026-08-23",
+        "source": null,
+        "how_to_get_quote": "Book online or email hatchobori@chm.cigr.co.jp"
+      },
+      "availability_status": "available",
+      "availability_notes": null,
+      "booking_method": "online or email",
+      "booking_url": "https://mimaruhotels.com/en/hotel/hatchobori/",
+      "booking_contact": "hatchobori@chm.cigr.co.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": {
+        "neighborhood": "Hatchobori",
+        "walk_to_tokyo_shinkansen_min": null
+      },
+      "address": null,
+      "lat": 35.677288,
+      "lng": 139.778355,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-11.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Available",
+        "Official MIMARU apartment hotel",
+        "Fits 4"
+      ],
+      "cons": [
+        "Listed for 4 bedrooms only"
+      ]
+    },
+    {
+      "id": "mimaru-suites-tokyo-nihombashi",
+      "name": "MIMARU SUITES Tokyo Nihombashi",
+      "location": "tokyo",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Cleanest 2-bed+washer product; pricier than Station East.",
+      "price": {
+        "amount": 542700,
+        "currency": "JPY",
+        "covers": null,
+        "per": null,
+        "as_of": "2026-08-23",
+        "source": null,
+        "how_to_get_quote": "Book online or email suites.tokyo-nihombashi@chm.cigr.co.jp"
+      },
+      "availability_status": "available",
+      "availability_notes": null,
+      "booking_method": "online or email",
+      "booking_url": "https://mimaruhotels.com/en/hotel/suites-tokyo-nihombashi/",
+      "booking_contact": "suites.tokyo-nihombashi@chm.cigr.co.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": {
+        "neighborhood": "Nihombashi",
+        "walk_to_tokyo_shinkansen_min": null
+      },
+      "address": "2-10-9 Nihombashi, Horidome-cho, Chuo-ku, Tokyo 103-0012",
+      "lat": 35.687985,
+      "lng": 139.782243,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/b2293ecf3693a5b4d99d18c22f1a609a.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Available",
+        "Fits 4, 5, and 6",
+        "Washer in suite product"
+      ],
+      "cons": [
+        "Higher quoted amount than Station East"
+      ]
+    },
+    {
+      "id": "kashmir-house",
+      "name": "Kashmir House",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/properties/kashmir-house-ski-lodge",
+      "property_url": "https://www.staynozawa.com/properties/kashmir-house-ski-lodge",
+      "type": "ski lodge",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": 8,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "4 rooms (3 Double + 1 Cosy Double) / 8 adults, not 9. 5-night min so 6 nights OK.",
+      "quiet_notes": [
+        "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms.",
+        "Family/Triple still 0. 4 couples still use 3 Double + 1 Cosy."
+      ],
+      "price": {
+        "amount": 1102100,
+        "currency": "JPY",
+        "covers": "4 rooms / 8 adults, breakfast",
+        "per": "6 nights",
+        "as_of": "2026-08-27",
+        "source": "Live RoomBoss 30 Dec 2026–5 Jan 2027",
+        "how_to_get_quote": "Instant book at book.staynozawa.com"
+      },
+      "availability_status": "available",
+      "availability_notes": "Instant RoomBoss. Breakfast included. Same mix as 26 Aug.",
+      "booking_method": "RoomBoss instant",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "listing_url": "https://book.staynozawa.com/search/listing/402890829f0f7f29019f124c465544e8?sv=1&segment=Website&i18n=en&checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": {
+        "type": "Shared lodge baths",
+        "nearest": null
+      },
+      "ski_logistics": {
+        "walk_to_lift": "Ski-in Hikage",
+        "walk_to_village": null,
+        "vehicle_access": false
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": 36.9270377,
+      "lng": 138.4528828,
+      "images": [
+        {
+          "url": "https://cdn.prod.website-files.com/64b8b38c2fd64bfc7cfd8685/6a59b39afc148f90c1805643_Exterior-1.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Available for 6 nights",
+        "Ski-in Hikage",
+        "Instant RoomBoss",
+        "Breakfast included"
+      ],
+      "cons": [
+        "8 adults, not 9",
+        "Shared lodge baths",
+        "No dinner"
+      ]
+    },
+    {
+      "id": "waguri-house",
+      "name": "The Waguri House",
+      "location": "nozawa",
+      "operator": "Akari House",
+      "official_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "property_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "type": "whole-house",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "sleeps": 12,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "5BR sleeps 12. Booked for 8 guests. ¥990,000 tax-in / 6n. Same house on the 8/10/12 tabs.",
+      "confirmation": "B22754491",
+      "price": {
+        "amount": 990000,
+        "currency": "JPY",
+        "covers": "whole house, 8 guests, tax-in",
+        "per": "6 nights",
+        "as_of": "2026-09-08",
+        "source": "Booked B22754491. Supersedes Aug verbal ¥1,110,000 and Lodgify defaults. Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
+        "how_to_get_quote": null
+      },
+      "availability_status": "booked",
+      "availability_notes": "¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
+      "booking_method": "booked",
+      "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/821269/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
+      "booking_contact": "admin@akarihouse.jp",
+      "onsen": {
+        "type": "none",
+        "nearest": null
+      },
+      "ski_logistics": {
+        "walk_to_lift": null,
+        "walk_to_village": "Kijimadaira ~10 min drive. NOT village-walkable.",
+        "vehicle_access": "4WD+studless required"
+      },
+      "tokyo_logistics": null,
+      "address": "393 Hotaka, Kijimadaira, Shimotakai District, Nagano 389-2301",
+      "lat": 36.8585206,
+      "lng": 138.4066807,
+      "images": [
+        {
+          "url": "https://l.icdbcdn.com/oh/b2e45f3c-9f19-4def-9e0f-27ad61b37583.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Booked B22754491",
+        "¥990,000 tax-in / 6 nights for 8 guests",
+        "Deposit ¥198,000 paid 8 Sep 2026"
+      ],
+      "cons": [
+        "Kijimadaira ~10 min drive, 4WD+studless",
+        "NOT village-walkable",
+        "No in-house onsen"
+      ]
+    },
+    {
+      "id": "akari-4br-bakery",
+      "name": "Akari 4BR bakery apt",
+      "location": "nozawa",
+      "operator": "Akari House",
+      "official_url": "https://booking.akarihouse.jp/en/2711658/akari-bright-4bedroom-apartment-above-swiss-bakery",
+      "property_url": "https://booking.akarihouse.jp/en/2711658/akari-bright-4bedroom-apartment-above-swiss-bakery",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Sold out for 30 Dec–5 Jan. Gab: only free Dec 22–31.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Gab: not available 30 Dec–5 Jan (only free Dec 22–31).",
+      "booking_method": "enquire",
+      "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/390089/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
+      "booking_contact": "admin@akarihouse.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out 30 Dec–5 Jan",
+        "Only free Dec 22–31",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "shinden-5br",
+      "name": "Shinden 5BR",
+      "location": "nozawa",
+      "operator": "Akari House",
+      "official_url": "https://booking.akarihouse.jp/en/shinden-5-bedroom-nozawa-townhouse",
+      "property_url": "https://booking.akarihouse.jp/en/shinden-5-bedroom-nozawa-townhouse",
+      "type": "townhouse",
+      "bedrooms": 5,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5
+      ],
+      "scenario_notes": "5BR. Enquire. Gab did not offer 24 Aug.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "Enquire. Gab did not offer 24 Aug.",
+      "booking_method": "enquire",
+      "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/391343/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
+      "booking_contact": "admin@akarihouse.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "No hold",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "kiriya-ryokan",
+      "name": "Kiriya Ryokan",
+      "location": "nozawa",
+      "operator": "Kiriya Ryokan",
+      "official_url": "https://kiriya.jp/eng/accommodation",
+      "property_url": "https://kiriya.jp/eng/accommodation",
+      "type": "ryokan",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5
+      ],
+      "scenario_notes": "Enquire / phone.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "Enquire / phone.",
+      "booking_method": "phone",
+      "booking_url": "https://reserve.489ban.net/client/kiriya/4/plan",
+      "booking_contact": null,
+      "onsen": {
+        "type": "in_house",
+        "nearest": null
+      },
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://kiriya.jp/eng/wp-content/themes/kiriya-e/img/eng/mainimg01.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "In-house onsen"
+      ],
+      "cons": [
+        "Enquire / phone"
+      ]
+    },
+    {
+      "id": "tokiwaya-ryokan",
+      "name": "Tokiwaya Ryokan",
+      "location": "nozawa",
+      "operator": "Tokiwaya Ryokan",
+      "official_url": "https://tokiwaya.jp/",
+      "property_url": "https://tokiwaya.jp/",
+      "type": "ryokan",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Enquire (calendar 429). Do not reuse old 満室 cells.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "Enquire (calendar 429). Do not reuse old 満室 cells.",
+      "booking_method": "enquire",
+      "booking_url": "https://reserve.489ban.net/nozawakanko/tokiwaya-ryokan/0/plan",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar 429",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "karabiner-4br",
+      "name": "Karabiner 4BR",
+      "location": "nozawa",
+      "operator": "Samurai Snow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/karabiner/4-bedroom-house",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/karabiner/4-bedroom-house",
+      "type": "house",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Calendar didn’t load.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out.",
+      "booking_method": null,
+      "booking_url": null,
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "kawamotoya-4br",
+      "name": "Kawamotoya 4BR",
+      "location": "nozawa",
+      "operator": "Samurai Snow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/kawamotoya/4-bedroom-apartment",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/kawamotoya/4-bedroom-apartment",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Calendar didn’t load.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out.",
+      "booking_method": null,
+      "booking_url": "https://www.booking.com/hotel/jp/kawamotoya.html",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "nozawa-central-301",
+      "name": "Nozawa Central 301",
+      "location": "nozawa",
+      "operator": "Nozawa Holidays",
+      "official_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-301/",
+      "property_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-301/",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "3BR — keep faded if not 4BR. 7-night min still applies to Nozawa Holidays houses.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out. 7-night min.",
+      "booking_method": null,
+      "booking_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-301/",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "3 bedrooms",
+        "Calendar didn’t load",
+        "7-night min"
+      ]
+    },
+    {
+      "id": "slopeside-chalet",
+      "name": "Slopeside Chalet",
+      "location": "nozawa",
+      "operator": "Nozawa Holidays",
+      "official_url": "https://www.nozawaholidays.com/properties/nozawa-slopeside-chalet/",
+      "property_url": "https://www.nozawaholidays.com/properties/nozawa-slopeside-chalet/",
+      "type": "chalet",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": 10,
+      "scenarios": [
+        4,
+        5
+      ],
+      "scenario_notes": "Calendar didn’t load. 7-night min still applies to Nozawa Holidays houses.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out. 7-night min.",
+      "booking_method": null,
+      "booking_url": "https://www.nozawaholidays.com/properties/nozawa-slopeside-chalet/",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "7-night min",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "ryokan-sakaya",
+      "name": "Ryokan Sakaya",
+      "location": "nozawa",
+      "operator": "Ryokan Sakaya",
+      "official_url": "https://www.ryokan-sakaya.co.jp/en.html",
+      "property_url": "https://www.ryokan-sakaya.co.jp/en.html",
+      "type": "ryokan",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Calendar didn’t load.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out.",
+      "booking_method": null,
+      "booking_url": null,
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "ridge-nozawa-4br",
+      "name": "Ridge Nozawa 4BR",
+      "location": "nozawa",
+      "operator": "Snow Monkey Resorts",
+      "official_url": "https://www.snowmonkeyresorts.com/hotels/the-ridge-nozawa-apartments/",
+      "property_url": "https://www.snowmonkeyresorts.com/hotels/the-ridge-nozawa-apartments/",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Calendar didn’t load.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out.",
+      "booking_method": null,
+      "booking_url": null,
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "view-hotel-shimataya",
+      "name": "View Hotel Shimataya",
+      "location": "nozawa",
+      "operator": "Nozawa Hospitality",
+      "official_url": "https://www.viewhotelshimataya.com/",
+      "property_url": "https://www.viewhotelshimataya.com/",
+      "type": "hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Calendar didn’t load. Do not reuse old 満室 cells.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Calendar didn’t load — not sold out.",
+      "booking_method": null,
+      "booking_url": "https://www.viewhotelshimataya.com/",
+      "booking_contact": null,
+      "onsen": {
+        "type": "in_house",
+        "nearest": null
+      },
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": "8858 Toyosato, Nozawaonsen-mura, Shimotakai-gun, Nagano Prefecture 389-2502, Japan",
+      "lat": 36.9247892,
+      "lng": 138.4456965,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Calendar didn’t load",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "tamanegi-house",
+      "name": "Tamanegi House",
+      "location": "nozawa",
+      "operator": "Akari House",
+      "official_url": "https://www.akarihouse.jp/tamanegi-house",
+      "property_url": "https://www.akarihouse.jp/tamanegi-house",
+      "type": "house",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "4BR duplex.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Operator sold out Gab 24 Aug.",
+      "booking_method": "email",
+      "booking_url": "https://www.akarihouse.jp/tamanegi-house",
+      "booking_contact": "admin@akarihouse.jp",
+      "onsen": {
+        "type": "village_walk",
+        "nearest": "Nakao 50m"
+      },
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": 36.917944,
+      "lng": 138.443552,
+      "images": [
+        {
+          "url": "https://l.icdbcdn.com/oh/d1ee6d32-922c-493f-b27d-db1efc1ad506.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [],
+      "cons": [
+        "Sold out"
+      ]
+    },
+    {
+      "id": "kamoshika-ski-lodge",
+      "name": "Kamoshika Ski Lodge",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge",
+      "property_url": "https://www.staynozawa.com/properties/kamoshika-ski-lodge",
+      "type": "ski lodge",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "sleeps": 16,
+      "scenarios": [
+        5,
+        6
+      ],
+      "scenario_notes": "5BR. Stay Nozawa still sold out.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://cdn.prod.website-files.com/64b8b38c2fd64bfc7cfd8685/66973196ce23f73d96940b4f_Kamoshika-Exterior-1920x1280.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [],
+      "cons": [
+        "Sold out"
+      ]
+    },
+    {
+      "id": "tanuki-premium-4bed-3f",
+      "name": "Tanuki Premium 4Bed 3F",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/tanuki-premium-four-bedroom-apartment-3f",
+      "property_url": "https://www.staynozawa.com/stay/tanuki-premium-four-bedroom-apartment-3f",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": 12,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Stay Nozawa apt. 7-night min still applies. Still sold out.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://cdn.prod.website-files.com/64b8b38c2fd64bfc7cfd8685/666547d04b083403a5402f74_Tanuki-Apartment---L3-DINING-LOUNGE.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min"
+      ]
+    },
+    {
+      "id": "tanuki-premium-4bed-4f",
+      "name": "Tanuki Premium 4Bed 4F",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/tanuki-premium-four-bedroom-apartment-4f",
+      "property_url": "https://www.staynozawa.com/stay/tanuki-premium-four-bedroom-apartment-4f",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Stay Nozawa apt. 7-night min still applies. Still sold out.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "tanuki-lodge-premium-3br",
+      "name": "Tanuki Lodge Premium 3BR",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/tanuki-lodge-premium-three-bedroom-apartment",
+      "property_url": "https://www.staynozawa.com/stay/tanuki-lodge-premium-three-bedroom-apartment",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "sleeps": 8,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "3BR — faded on the 4BR list. Stay Nozawa apt. 7-night min still applies.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "3 bedrooms",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "iroha-ichi-ni",
+      "name": "Iroha Ichi + Ni",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/properties/iroha-nozawa",
+      "property_url": "https://www.staynozawa.com/properties/iroha-nozawa",
+      "type": "apartment pairing",
+      "bedrooms": 6,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        6
+      ],
+      "scenario_notes": "True 6 bedrooms. Stay Nozawa still sold out. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://cdn.prod.website-files.com/64b8b38c2fd64bfc7cfd8685/66651eb833a214e57b9f971f_iroha-exterior.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "Fits 6 only"
+      ]
+    },
+    {
+      "id": "bonbori-ichi",
+      "name": "Bonbori Ichi",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/bonbori-ichi",
+      "property_url": "https://www.staynozawa.com/stay/bonbori-ichi",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "sleeps": 10,
+      "scenarios": [
+        5
+      ],
+      "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://cdn.prod.website-files.com/64b8b38c2fd64bfc7cfd8685/6943836b3ac6c1ae44dec3fb_20251216-Bonbori-656-HDR-HERO.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "3 bedrooms"
+      ]
+    },
+    {
+      "id": "maru-sumi",
+      "name": "MARU SUMI",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/maru-sumi",
+      "property_url": "https://www.staynozawa.com/stay/maru-sumi",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "sleeps": 8,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "dennojo-units",
+      "name": "Dennojo units",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/properties/dennojo",
+      "property_url": "https://www.staynozawa.com/properties/dennojo",
+      "type": "apartments",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Stay Nozawa Dennojo units. Still sold out. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "oguma-apartment-1",
+      "name": "Oguma Apt 1",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/stay/oguma-apartment-1",
+      "property_url": "https://www.staynozawa.com/stay/oguma-apartment-1",
+      "type": "apartment",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": 8,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "7-night min",
+        "No official hero this re-check"
+      ]
+    },
+    {
+      "id": "megumi",
+      "name": "Megumi",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/all-accommodation",
+      "property_url": "https://www.staynozawa.com/all-accommodation",
+      "type": "Stay Nozawa",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Stay Nozawa. Sold out. No waitlist. No dedicated property page found on this re-check.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "No waitlist.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "No waitlist",
+        "No dedicated property URL"
+      ]
+    },
+    {
+      "id": "hei-hachi",
+      "name": "Hei Hachi",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/all-accommodation",
+      "property_url": "https://www.staynozawa.com/all-accommodation",
+      "type": "apartment",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "2BR anyway — faded on the 4BR list. No dedicated Stay Nozawa property page found (hei-hachi slugs 404); catalog is the official listing.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Stay Nozawa still sold out.",
+      "booking_method": "RoomBoss search",
+      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "2 bedrooms",
+        "No dedicated property URL"
+      ]
+    },
+    {
+      "id": "mimaru-tokyo-station-east-last4",
+      "name": "MIMARU Tokyo Station East · Stay B",
+      "location": "tokyo",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Stay B / last 4 nights 5–9 Jan 2027. Fits 4–6 via 2–3 apartments. 9p / 3 apts ≈ $550 pp. Inventory existed 23 Aug.",
+      "price": {
+        "amount": 261702,
+        "currency": "JPY",
+        "covers": "1 apt",
+        "per": "4 nights",
+        "as_of": "2026-08-23",
+        "source": "member FROM 5–9 Jan 2027, published/typical not a hold",
+        "how_to_get_quote": "Book online or email tokyo-station-east@chm.cigr.co.jp"
+      },
+      "availability_status": "available",
+      "availability_notes": "Stay B / last 4 nights. FROM ¥261,702 / apt / 4n. Same property as the first 3 nights, second stay. Inventory existed 23 Aug 2026.",
+      "booking_method": "online or email",
+      "booking_url": "https://mimaruhotels.com/en/hotel/tokyo-station-east/",
+      "booking_contact": "tokyo-station-east@chm.cigr.co.jp",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": {
+        "neighborhood": "Tokyo Station East · Stay B / last 4 nights",
+        "walk_to_tokyo_shinkansen_min": null
+      },
+      "address": null,
+      "lat": 35.677035,
+      "lng": 139.778664,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-2.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Same building as the first 3 nights",
+        "Member FROM ¥261,702 / apt / 4 nights",
+        "Inventory existed 23 Aug 2026"
+      ],
+      "cons": [
+        "Second stay — last 4 nights 5–9 Jan",
+        "Per apartment FROM, not a group lockup"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "mimaru-kyoto-station",
+      "name": "MIMARU Kyoto Station",
+      "location": "kyoto",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/kyoto-station/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Connecting Family Apt 8 adults + extra apt for 9–12. 2 min Kyoto Station. Typical 9p/4n $294–$461 (not a quote). Scenarios 4, 5, 6 via 2–3 apts.",
+      "price": {
+        "amount": null,
+        "currency": "USD",
+        "covers": "typical 9p / 4 nights",
+        "per": "person",
+        "as_of": null,
+        "source": "typical $294–$461 pp / 4n, not a live Jan 2027 quote",
+        "how_to_get_quote": "Book online"
+      },
+      "availability_status": "unknown",
+      "availability_notes": "Typical 9p/4n $294–$461 (not a quote). No live Jan 2027 calendar hold.",
+      "booking_method": "online",
+      "booking_url": "https://mimaruhotels.com/en/hotel/kyoto-station/",
+      "booking_contact": null,
+      "onsen": {
+        "type": "none",
+        "nearest": null
+      },
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-14.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "2 min Kyoto Station",
+        "Connecting Family Apt 8 adults + extra apt for 9–12",
+        "Fits 4, 5, and 6 via 2–3 apts"
+      ],
+      "cons": [
+        "Status unknown",
+        "Typical band only — not a hold",
+        "No onsen",
+        "List-only — no map pin"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "mimaru-kyoto-nijo-castle",
+      "name": "MIMARU Kyoto Nijo Castle",
+      "location": "kyoto",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/nijo-castle/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Connecting Japanese Apt 10 adults. Best MIMARU for 9–10 in one lockup. +1 apt for 12. 4-bed if connecting-8. Nijo not Station. Typical 9p/4n $294–$461 (not a quote).",
+      "price": {
+        "amount": null,
+        "currency": "USD",
+        "covers": "typical 9p / 4 nights",
+        "per": "person",
+        "as_of": null,
+        "source": "typical $294–$461 pp / 4n, not a live Jan 2027 quote",
+        "how_to_get_quote": "Book online"
+      },
+      "availability_status": "unknown",
+      "availability_notes": "Typical 9p/4n $294–$461 (not a quote). No live Jan 2027 calendar hold.",
+      "booking_method": "online",
+      "booking_url": "https://mimaruhotels.com/en/hotel/nijo-castle/",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-17.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "Connecting Japanese Apt 10 adults",
+        "Best MIMARU for 9–10 in one lockup",
+        "4-bed if connecting-8"
+      ],
+      "cons": [
+        "Nijo, not Kyoto Station",
+        "Status unknown",
+        "Typical band only — not a hold",
+        "List-only — no map pin"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "mimaru-suites-kyoto-shijo",
+      "name": "MIMARU SUITES Kyoto Shijo",
+      "location": "kyoto",
+      "operator": "MIMARU",
+      "official_url": "https://mimaruhotels.com/en/hotel/suites-kyoto-shijo/",
+      "type": "apartment hotel",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "All 2–3 BR suites. Two suites = 4–6 bedrooms in one building. Shijo/Karasuma. Typical 9p/4n $294–$461 (not a quote).",
+      "price": {
+        "amount": null,
+        "currency": "USD",
+        "covers": "typical 9p / 4 nights",
+        "per": "person",
+        "as_of": null,
+        "source": "typical $294–$461 pp / 4n, not a live Jan 2027 quote",
+        "how_to_get_quote": "Book online"
+      },
+      "availability_status": "unknown",
+      "availability_notes": "Typical 9p/4n $294–$461 (not a quote). No live Jan 2027 calendar hold.",
+      "booking_method": "online",
+      "booking_url": "https://mimaruhotels.com/en/hotel/suites-kyoto-shijo/",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://mimaruhotels.com/app/uploads/2025/01/pc-1-18.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "All 2–3 BR suites",
+        "Two suites = 4–6 bedrooms in one building",
+        "Shijo/Karasuma"
+      ],
+      "cons": [
+        "Status unknown",
+        "Typical band only — not a hold",
+        "List-only — no map pin"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "miyagawacho-samurai-machiya",
+      "name": "Miyagawacho Samurai Machiya",
+      "location": "kyoto",
+      "operator": "My Kyoto Machiya",
+      "official_url": "https://mykyotomachiya.com/miyagawacho-machiya/booking-miyagawacho-machiya/",
+      "type": "whole-house",
+      "bedrooms": 5,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Whole house Gion. 5 BR / 6LDK / 165㎡, licensed 15, recommend ≤12. Min 3 nights. BEST whole-house card.",
+      "price": {
+        "amount": 44550,
+        "currency": "JPY",
+        "covers": "per person at 9, published tariff",
+        "per": "4 nights",
+        "as_of": null,
+        "source": "published tariff NOT dated hold; 9p/4n ¥44,550 ≈ $280; 12p/4n ≈ $234 pp",
+        "how_to_get_quote": "Enquire. English 24/7."
+      },
+      "availability_status": "enquire",
+      "availability_notes": "Published tariff not a dated hold. 9p/4n ≈ $280. 12p/4n ≈ $234 pp.",
+      "booking_method": "enquire",
+      "booking_url": "https://mykyotomachiya.com/miyagawacho-machiya/booking-miyagawacho-machiya/",
+      "booking_contact": null,
+      "onsen": {
+        "type": "none",
+        "nearest": null
+      },
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://i0.wp.com/mykyotomachiya.com/wp-content/uploads/2025/02/Miyagawacho_Machiya-60789.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "BEST whole-house card",
+        "Published 9p/4n ¥44,550 ≈ $280",
+        "English 24/7",
+        "Min 3 nights"
+      ],
+      "cons": [
+        "Not a dated hold",
+        "No onsen",
+        "List-only — no map pin"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "machiya-ruikou",
+      "name": "Machiya Ruikou",
+      "location": "kyoto",
+      "operator": "Machiya Residence Inn Kyoto",
+      "official_url": "https://www.kyoto-machiya-inn.com/accommodations/ruikou/",
+      "type": "whole-house",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "sleeps": 9,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "4 BR, max 9, 2 baths. Station-adjacent Shimabara. Booking window open (8 months). Rate unknown. Scenarios 4 only.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "Rate unknown. Reservations accepted up to 8 months in advance.",
+      "booking_method": "enquire",
+      "booking_url": "https://www.kyoto-machiya-inn.com/accommodations/ruikou/",
+      "booking_contact": "info@machiya-inn-japan.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": "60-2 Nishishinyashiki Chudojicho Shimogyo Ward, Kyoto, 600-8816, Japan",
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://www.kyoto-machiya-inn.com/en/wp-content/uploads/2026/03/ruikou_0869.webp",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "4 bedrooms / 2 bathrooms",
+        "Station-adjacent Shimabara",
+        "Booking window open (8 months)"
+      ],
+      "cons": [
+        "Max 9 — 4-bed scenario only",
+        "Rate unknown",
+        "List-only — no map pin"
+      ],
+      "default_card": true
+    },
+    {
+      "id": "cocon-nara-sanjyo",
+      "name": "Cocon Nara Sanjyo",
+      "location": "kyoto",
+      "operator": "eni.",
+      "official_url": "https://go2eni.com/en/stay/cocon-narasanjyo/",
+      "type": "house",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Nara. Day trip base — not recommended as a 4-night stay. Comparison only. Lives in the Kyoto list.",
+      "price": null,
+      "availability_status": "unknown",
+      "availability_notes": "Nara day trip from Kyoto. Don’t sell 4 nights here. Do not use the listing teaser rate as a price.",
+      "booking_method": null,
+      "booking_url": "https://go2eni.com/en/stay/cocon-narasanjyo/",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": "593-48 Sanjo-cho, Nara City, Nara 630-8244, Japan",
+      "lat": null,
+      "lng": null,
+      "images": [
+        {
+          "url": "https://go2eni.com/wp-content/uploads/2025/12/cocon-narasanjyo.jpg",
+          "source": "official"
+        }
+      ],
+      "pros": [
+        "7 min JR Nara"
+      ],
+      "cons": [
+        "Nara day trip from Kyoto — not a 4-night base",
+        "Not recommended",
+        "List-only — no map pin"
+      ],
+      "default_card": false,
+      "nara_not_base": true,
+      "badge": "Not recommended"
+    }
+  ],
+  "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
+  "nozawa_as_of": "Waguri booking confirmed Sep 2026; other Nozawa statuses from Aug live checks unless noted.",
+  "nozawa_checked_at": "2026-08-27T13:43:00Z",
+  "checked_at": "2026-08-27T13:43:00Z"
+}

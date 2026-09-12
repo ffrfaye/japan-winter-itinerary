@@ -1,0 +1,123 @@
+{
+  "heading": "Budget",
+  "label": "Working · not locked",
+  "identityName": "The Waguri House (Akari)",
+  "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+  "foot": "Waguri booked B22754491 for 8 guests (Sep 2026). 9-person friend-poll math stays off-site. Cars not a hold.",
+  "last_refreshed": "11 Sep 2026",
+  "sharedLines": [
+    {
+      "id": "flight",
+      "title": "Flight",
+      "detail": "$1,400",
+      "note": "$1,260–1,750."
+    },
+    {
+      "id": "lifts",
+      "title": "Lifts 4d",
+      "detail": "$182"
+    },
+    {
+      "id": "tickets",
+      "title": "Monkey tour",
+      "detail": "$57"
+    }
+  ],
+  "rental": {
+    "id": "rental",
+    "title": "Rental (optional)",
+    "detail": "$127"
+  },
+  "carRental": {
+    "id": "car-rental",
+    "title": "Car rental",
+    "label": "Waguri cars required · village optional.",
+    "notes": [
+      "2× compact SUV/4WD · ¥232,100 / $1,457 total. Pickup Toyota Nagano shop (no Toyota Iiyama). 2 cars, not 1 van. NY +20% (26 Dec 2026–3 Jan 2027) + 4WD + DPP + ETC. Working, tariff-based, sold-out risk high. Not a hold.",
+      "Village path (Kashmir / bakery 4BR): default $0. Optional 1 car $91 pp at 8 ($728).",
+      "IDP $20/driver (AAA 1949 Geneva) — not in the 8-way split. Fuel ~$26 both cars. Last 4 city nights still excluded. FX Xe 1 USD = 159.31 JPY."
+    ]
+  },
+  "last4": {
+    "id": "last-4",
+    "title": "Last 4 nights",
+    "tokyo": {
+      "detail": "~$550",
+      "note": "Tokyo MIMARU Stay B ~$550 pp (3 apts, inventory 23 Aug)"
+    },
+    "kyoto": {
+      "detail": "~$280–$461",
+      "note": "Kyoto ~$280–$461 pp typical (machiya/MIMARU; not a hold) + ~$89 shinkansen"
+    }
+  },
+  "defaultBedrooms": 4,
+  "scenarios": [
+    {
+      "id": 4,
+      "label": "4 bedrooms · 8 people",
+      "hero": "~$3,143",
+      "working9Note": null,
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo 3n MIMARU Station East",
+        "detail": "$545",
+        "note": "2 apts."
+      },
+      "waguri": {
+        "id": "waguri",
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$777",
+        "note": "Booked for 8 guests. ¥990,000 / 6n tax-in. FX 159.31."
+      },
+      "cars": {
+        "detail": "$182",
+        "note": "$182 at 8 from the same two-car total ($1,457)."
+      }
+    },
+    {
+      "id": 5,
+      "label": "5 bedrooms · 10 people",
+      "hero": "~$3,058",
+      "working9Note": null,
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo 3n MIMARU Station East",
+        "detail": "$652",
+        "note": "3 apts."
+      },
+      "waguri": {
+        "id": "waguri",
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$621",
+        "note": "Booked for 8 guests; 10-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
+      },
+      "cars": {
+        "detail": "$146",
+        "note": "$146 at 10 ($1,457/10) from the same two-car total."
+      }
+    },
+    {
+      "id": 6,
+      "label": "6 bedrooms · 12 people",
+      "hero": "~$2,823",
+      "working9Note": null,
+      "quietNote": "Waguri still 5BR, sleeps 12",
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo 3n MIMARU Station East",
+        "detail": "$545",
+        "note": "3 apts."
+      },
+      "waguri": {
+        "id": "waguri",
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$518",
+        "note": "Booked for 8 guests; 12-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
+      },
+      "cars": {
+        "detail": "$121",
+        "note": "$121 at 12 ($1,457/12) from the same two-car total."
+      }
+    }
+  ]
+}
