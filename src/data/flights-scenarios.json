@@ -8,10 +8,10 @@
     "start": "2026-12-27",
     "end": "2027-01-09"
   },
-  "source": "Google Flights live search (USD, 1 adult, Economy)",
+  "source": "Google Flights Aug research quotes (USD, 1 adult, Economy). Stale — not live.",
   "target_dates_actually_quoted": true,
   "caveats": [
-    "Fares are live quotes as of refreshed_at; holiday peak inventory changes quickly.",
+    "Aug research quotes. Last refreshed 24 Aug 2026, 9:46 AM PT (SEA 10:05 AM PT). Stale — not live. Holiday peak inventory changes quickly.",
     "Outbound details and RT price shown; return itinerary not listed until outbound is selected.",
     "Flight numbers taken from Google Flights travel-impact itinerary URLs on the same result page.",
     "No KIX/open-jaw needed: round-trips to HND/NRT exist from SFO, SEA, YVR, and STL.",

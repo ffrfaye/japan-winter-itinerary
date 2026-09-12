@@ -104,7 +104,7 @@ function OriginGroup({ group }: { group: FlightOriginGroup }) {
         ) : null}
       </div>
       {group.options.length === 0 ? (
-        <p className="py-4 text-sm text-zinc-500">Waiting on live quotes.</p>
+        <p className="py-4 text-sm text-zinc-500">No quotes in this origin.</p>
       ) : (
         <ul className="divide-y divide-zinc-200">
           {group.options.map((option) => (
@@ -132,14 +132,14 @@ export function FlightsPage() {
         {booked.map((booking) => (
           <div key={booking.pnr} className="space-y-1">
             <Badge variant="outline">
-              {booking.names} · {booking.pnr} · booked
+              {booking.pnr} Booked
             </Badge>
             <p className="text-sm text-zinc-500">{bookedFlightLine(booking)}</p>
           </div>
         ))}
         <p className="text-sm text-zinc-600">
-          Quotes for 27 Dec 2026 – 9 Jan 2027, 1 adult economy RT, Google
-          Flights. Target dates were quoted.
+          Aug research quotes for 27 Dec 2026 – 9 Jan 2027, 1 adult economy RT.
+          Last refreshed {flights.refreshed_at.label}. Stale — not live.
         </p>
         {caveat ? <p className="text-sm text-zinc-500">{caveat}</p> : null}
         {returnLeg ? (

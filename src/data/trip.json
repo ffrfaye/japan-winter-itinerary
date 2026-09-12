@@ -11,14 +11,14 @@
     "nightsBreakdown": "Tokyo 3 + Nozawa 6 + Tokyo or other city 4 = 13",
     "tone": "Un-hectic. Anime fans. May bring ski gear.",
     "cityBase": "Tokyo only",
-    "airports": "HND / NRT — not yet chosen",
+    "airports": "Land 27 Dec NRT. Faye + Will booked UA837 (GSCT9K). Other tickets not booked.",
     "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Nozawa Onsen",
     "lockedNote": "",
     "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite). Yamato Cool TA-Q-BIN truck, 2016.",
     "planningBanner": {
       "eyebrow": "",
       "title": "",
-      "body": "Still open: HND vs NRT, bring vs rent, Ghibli Lawson sale, hotels, budget."
+      "body": "Still open: bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
     }
   },
   "group": {
@@ -30,7 +30,7 @@
     "rsvpHeadline": "Can you come?",
     "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
-    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out or waitlist. Lodging is not booked.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is The Waguri House, booked.",
     "pairs": [
       {
         "id": "fyll",
@@ -139,8 +139,8 @@
     }
   ],
   "route": {
-    "label": "Locked line",
-    "status": "locked",
+    "label": "Quiet Tokyo then Waguri",
+    "status": "recommended",
     "stops": [
       {
         "id": "tokyo-1",
@@ -156,7 +156,7 @@
         "cityKey": "Nozawa",
         "dates": "30 Dec–4 Jan",
         "nights": 6,
-        "note": "In 30 Dec, out 5 Jan · village NYE"
+        "note": "In 30 Dec, out 5 Jan · Waguri booked"
       },
       {
         "id": "tokyo-2",
@@ -172,7 +172,7 @@
         "cityKey": "Tokyo",
         "dates": "9 Jan",
         "nights": 0,
-        "note": "HND or NRT — TBD"
+        "note": "Faye + Will UA838 NRT 9 Jan. Other returns not booked."
       }
     ]
   },
@@ -201,12 +201,12 @@
       "city": "Overview",
       "status": "locked",
       "title": "The trip",
-      "summary": "13 nights · 3 Tokyo · 6 Nozawa · 4 Tokyo or other city travel",
+      "summary": "13 nights · quiet Tokyo 3 · Waguri booked 6 · 4 Tokyo or other city travel",
       "blocks": [
         {
           "title": "Beats",
-          "detail": "3 nights Tokyo → 6 nights Nozawa Onsen Snow Resort → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
-          "status": "locked"
+          "detail": "Quiet Tokyo 27–29 Dec → The Waguri House booked 30 Dec–5 Jan → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
+          "status": "recommended"
         }
       ],
       "places": [
@@ -220,7 +220,7 @@
         },
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "NYE and NYD are quiet in Tokyo, so we spend them at an onsen ski resort and get village life.",
+          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -244,12 +244,12 @@
       "dayNumber": 1,
       "city": "Tokyo",
       "status": "recommended",
-      "title": "Traveling to Tokyo",
-      "summary": "Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+      "title": "Land NRT",
+      "summary": "27 Dec NRT. Faye + Will booked UA837 (GSCT9K). Other arrivals not booked.",
       "blocks": [
         {
           "title": "Land",
-          "detail": "Traveling to Tokyo. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
+          "detail": "Land 27 Dec NRT. Faye + Will booked UA837, arrive 15:00. Other air tickets not booked. Optional: ship ski bags with Yamato Ski TA-Q-BIN.",
           "status": "recommended"
         }
       ],
@@ -316,7 +316,7 @@
       "places": [
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "NYE and NYD are quiet in Tokyo, so we spend them at an onsen ski resort and get village life.",
+          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -527,11 +527,11 @@
       "city": "Tokyo",
       "status": "recommended",
       "title": "Fly home",
-      "summary": "Fly home from wherever you are that morning.",
+      "summary": "Faye + Will UA838 NRT 9 Jan. Other returns not booked.",
       "blocks": [
         {
           "title": "Depart",
-          "detail": "Fly home from wherever you are that morning. Airport not chosen.",
+          "detail": "Faye + Will UA838 NRT 16:50 → SFO. Other returns not booked.",
           "status": "recommended"
         }
       ]
@@ -540,9 +540,9 @@
   "openDecisions": [
     {
       "id": "nye-fork",
-      "status": "locked",
-      "title": "Village NYE is locked — Tokyo fork not chosen",
-      "detail": "Nozawa village NYE is locked (arrive 30 Dec). The alternate stay-in-Tokyo through 2 Jan / train 3 Jan / ski 4–8 Jan is not chosen."
+      "status": "recommended",
+      "title": "Quiet Tokyo, then Waguri",
+      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then The Waguri House booked 30 Dec–5 Jan. Not a village-walkable stay."
     },
     {
       "id": "uverworld",
@@ -552,9 +552,9 @@
     },
     {
       "id": "lodging",
-      "status": "open",
-      "title": "Lodging is unbooked",
-      "detail": "Nothing is held. Bedroom = couple room. At least 4 couples committed (8 people). Invite list still 6 pairs / 12. Tokyo: Station East first. Nozawa: Kashmir is the available 4-room floor; Kamoshika is waitlist with no price. Slopeside is hidden."
+      "status": "recommended",
+      "title": "Ski lodging is Waguri, booked",
+      "detail": "The Waguri House booked B22754491, ¥990,000 / 6n for 8 guests (30 Dec 2026–5 Jan 2027). Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
     },
     {
       "id": "ghibli",
@@ -565,8 +565,8 @@
     {
       "id": "headcount-airport-gear",
       "status": "open",
-      "title": "Airport, ski bags",
-      "detail": "Haneda vs Narita. Who brings skis vs who rents. Headcount is 12."
+      "title": "Other flights, ski bags",
+      "detail": "Land is 27 Dec NRT. Faye + Will booked GSCT9K (2 tickets). Other air tickets not booked — do not invent RSVPs. Who brings skis vs who rents is still open."
     }
   ],
   "concert": {
@@ -861,14 +861,14 @@
             "id": "waguri-4",
             "property": "The Waguri House (Akari)",
             "city": "Nozawa",
-            "beds": "5 BR / 3 bath · sleeps 12 · 4-bed if only 8",
+            "beds": "5 BR / 3 bath · sleeps 12 · booked for 8",
             "status": "available",
-            "perPerson": "~$870",
-            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "perPerson": "~$777",
+            "nextStep": "Booked B22754491.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "6 nights (30 Dec 2026–5 Jan 2027) OK. ¥185,000/n flat for 8/10/12, ¥1,110,000 tax-in. Same house rate. ~$870 pp at 8 (FX 158.96). 10 min outside town, 4WD + studless. Not booked."
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Cars required. 10 min outside town, 4WD + studless. Not village-walkable."
           },
           {
             "id": "tanuki-4",
@@ -926,12 +926,12 @@
             "city": "Nozawa",
             "beds": "5 BR / 3 bath · sleeps 12",
             "status": "available",
-            "perPerson": "~$700",
-            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "perPerson": "~$621",
+            "nextStep": "Booked B22754491 for 8 guests.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "5-bed default. ¥185,000/n flat, ¥1,110,000 / 6 nights tax-in. ~$700 pp at 10 (FX 158.96). 10 min outside town, 4WD + studless. Not booked."
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 10-person split is illustrative. Cars required. Not village-walkable."
           },
           {
             "id": "kiriya-tokiwaya-5",
@@ -978,12 +978,12 @@
             "city": "Nozawa",
             "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
             "status": "available",
-            "perPerson": "~$580",
-            "nextStep": "Email or WhatsApp Gabriel for a hold or official quote.",
+            "perPerson": "~$518",
+            "nextStep": "Booked B22754491 for 8 guests.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "6 couples only if two pairs share a room. ¥185,000/n flat, ¥1,110,000 / 6 nights tax-in. ~$580 pp at 12 (FX 158.96). Not booked."
+            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 12-person split is illustrative. Cars required. Not village-walkable."
           },
           {
             "id": "kamoshika-6",
@@ -1033,10 +1033,10 @@
     "label": "Estimate",
     "asOf": "24 Aug 2026",
     "placeholder": "Working estimate. Not locked.",
-    "workingNote": "Headcount 9. FX 1 USD = 158.96 JPY. Last 4 nights omitted. Waguri not booked.",
-    "basis": "USD per person at 9. Working estimate as of 24 Aug 2026. Last 4 nights omitted.",
-    "summary": "Subtotal ~$3,140 without rental, ~$3,270 with.",
-    "subtotalWithoutRental": "~$3,140",
+    "workingNote": "Tabs 8/10/12. FX 1 USD = 159.31 JPY. Last 4 nights omitted. Waguri booked ¥990,000.",
+    "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
+    "summary": "Subtotal ~$3,143 without rental at 8, with Waguri cars.",
+    "subtotalWithoutRental": "~$3,143",
     "subtotalWithRental": "~$3,270",
     "band": "$2,900–3,800 with airfare only",
     "lines": [
@@ -1049,14 +1049,14 @@
       {
         "id": "tokyo-stay",
         "title": "Tokyo accommodation",
-        "detail": "$725",
-        "note": "3 nights 27–30 Dec. MIMARU 3 apts ÷ 9. 9 people need a 3rd unit. Last 4 nights omitted."
+        "detail": "$545",
+        "note": "3 nights 27–30 Dec. MIMARU 2 apts ÷ 8. Last 4 nights omitted."
       },
       {
         "id": "nozawa-stay",
         "title": "Nozawa accommodation — The Waguri House, 6 nights",
-        "detail": "$776",
-        "note": "The Waguri House (Akari). ¥1,110,000 total ÷ 9. Not Tamanegi. Not booked."
+        "detail": "$777",
+        "note": "The Waguri House booked B22754491. ¥990,000 / 6n for 8 guests. Not Tamanegi."
       },
       {
         "id": "lifts",
@@ -1159,9 +1159,9 @@
   "checklist": [
     {
       "id": "confirm-skeleton",
-      "title": "Route is locked",
-      "detail": "Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–4 Jan (in 30 Dec, out 5 Jan) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
-      "status": "locked",
+      "title": "Quiet Tokyo then Waguri",
+      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → Waguri booked 30 Dec–5 Jan → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
+      "status": "recommended",
       "priority": "now"
     },
     {
@@ -1173,9 +1173,9 @@
     },
     {
       "id": "airport",
-      "title": "Choose HND or NRT",
-      "detail": "Do not build a last-day transfer until flights exist.",
-      "status": "open",
+      "title": "Land is 27 Dec NRT",
+      "detail": "Faye + Will booked UA837/UA838 (GSCT9K). Other air tickets not booked. Do not invent RSVPs.",
+      "status": "recommended",
       "priority": "now"
     },
     {
@@ -1187,16 +1187,16 @@
     },
     {
       "id": "nozawa-hotel",
-      "title": "Book Nozawa stay",
-      "detail": "Not booked. For 12: Kamoshika 16 waitlist, Tanuki 4BR 3F 12 waitlist, Tamanegi 10–12 enquire, or Iroha Ichi+Ni (8+8). Kashmir (8) and Tanuki 4F (11) are not a fit.",
-      "status": "open",
+      "title": "Ski lodging is Waguri, booked",
+      "detail": "The Waguri House B22754491, ¥990,000 / 6n for 8 guests. Bakery and Tamanegi sold out. Stay Nozawa houses sold out, not on hold.",
+      "status": "recommended",
       "priority": "now"
     },
     {
       "id": "nye",
-      "title": "Village NYE is locked",
-      "detail": "Nozawa village NYE is locked. The Tokyo-through-2-Jan fork is not chosen.",
-      "status": "locked",
+      "title": "Quiet Tokyo then Waguri",
+      "detail": "Quiet Tokyo 27–29 Dec, then Waguri booked 30 Dec–5 Jan. Not village-walkable; cars required.",
+      "status": "recommended",
       "priority": "now"
     },
     {
@@ -1280,7 +1280,7 @@
     },
     {
       "id": "nye-dinner",
-      "title": "Village NYE hotel dinner",
+      "title": "NYE dinner",
       "detail": "Eat where you sleep if the property does dinner; otherwise book early. Restaurant TBD.",
       "status": "open",
       "priority": "soon"
@@ -1339,7 +1339,7 @@
       "kind": "single",
       "min": 8,
       "max": 12,
-      "note": "5 BR / sleeps 12. Available via Akari quote. Not booked.",
+      "note": "Booked B22754491. ¥990,000 / 6n for 8 guests. Cars required.",
       "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
       "email": "admin@akarihouse.jp",
       "phone": "+81 70 9026 60 26"

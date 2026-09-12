@@ -54,16 +54,15 @@ export function flightNumbersLabel(option: FlightOption) {
 }
 
 export function originLastRefreshed(group: FlightOriginGroup): string {
-  if (group.id === 'SEA') {
-    return (
-      group.last_refreshed ??
-      group.refreshed_at?.label ??
-      group.refreshed_at?.pt ??
-      flights.refreshed_at.label ??
-      flights.refreshed_at.pt
-    )
-  }
-  return flights.refreshed_at.label
+  const raw =
+    group.id === 'SEA'
+      ? (group.last_refreshed ??
+        group.refreshed_at?.label ??
+        group.refreshed_at?.pt ??
+        flights.refreshed_at.label ??
+        flights.refreshed_at.pt)
+      : flights.refreshed_at.label
+  return raw.startsWith('Last refreshed') ? raw : `Last refreshed ${raw}`
 }
 
 export function bookedFlights() {
@@ -88,5 +87,6 @@ export function optionLastRefreshed(
   if (group.id === 'SEA') {
     return originLastRefreshed(group)
   }
-  return option.last_refreshed || flights.refreshed_at.label
+  const raw = option.last_refreshed || flights.refreshed_at.label
+  return raw.startsWith('Last refreshed') ? raw : `Last refreshed ${raw}`
 }
