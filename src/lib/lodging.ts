@@ -124,6 +124,7 @@ export function isOversizeOrMismatch(
 }
 
 export function isFadedCard(card: LodgingProperty, bedrooms: BedroomCount) {
+  if (isBooked(card)) return false
   return isSoldOut(card) || isOversizeOrMismatch(card, bedrooms)
 }
 
