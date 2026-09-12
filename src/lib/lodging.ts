@@ -87,15 +87,20 @@ export function availabilityKey(status: string) {
   return status.toLowerCase().replaceAll('_', '-')
 }
 
+export function isBooked(card: LodgingProperty) {
+  return availabilityKey(card.availability_status) === 'booked'
+}
+
 export function lodgingStatusRank(card: LodgingProperty) {
   const status = availabilityKey(card.availability_status)
-  if (status === 'available') return 0
+  if (status === 'booked') return 0
+  if (status === 'available') return 1
   if (status === 'enquire' || status === 'enquire/hold' || status === 'hold') {
-    return 1
+    return 2
   }
-  if (status === 'unknown') return 2
-  if (status === 'sold-out') return 3
-  return 2
+  if (status === 'unknown') return 3
+  if (status === 'sold-out') return 4
+  return 3
 }
 
 export function isSoldOut(card: LodgingProperty) {
@@ -207,6 +212,7 @@ export function onsenLabel(onsen: LodgingOnsen | null) {
 export function availabilityLabel(status: string) {
   const key = availabilityKey(status)
   if (key === 'sold-out') return 'Sold out'
+  if (key === 'booked') return 'Booked'
   if (key === 'enquire') return 'Enquire'
   if (key === 'enquire/hold' || key === 'hold') return 'Hold'
   if (key === 'available') return 'Available'

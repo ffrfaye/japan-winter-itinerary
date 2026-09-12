@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import {
   availabilityLabel,
   contactHref,
+  isBooked,
   onsenLabel,
   priceLine,
   propertyUrl,
@@ -36,8 +37,11 @@ export function LodgingCompareCard({
     ? contactHref(card.booking_contact)
     : null
   const listing = propertyUrl(card)
+  const booked = isBooked(card)
+  const confirmation = card.confirmation?.trim() || null
   const availability = [
     availabilityLabel(card.availability_status),
+    confirmation,
     card.availability_notes,
   ]
     .filter(Boolean)
@@ -79,12 +83,19 @@ export function LodgingCompareCard({
               <span className="text-zinc-500">· {typical}</span>
             ) : null}
           </div>
-          {card.badge || faded ? (
+          {booked || card.badge || faded ? (
             <div className="flex flex-wrap items-center gap-1">
+              {booked ? (
+                <Badge variant="outline">
+                  {confirmation
+                    ? `Booked · ${confirmation}`
+                    : availabilityLabel(card.availability_status)}
+                </Badge>
+              ) : null}
               {card.badge ? (
                 <Badge variant="outline">{card.badge}</Badge>
               ) : null}
-              {faded ? (
+              {faded && !booked ? (
                 <Badge variant="outline">
                   {availabilityLabel(card.availability_status)}
                 </Badge>

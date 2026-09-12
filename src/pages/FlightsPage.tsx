@@ -3,6 +3,8 @@ import { Badge } from '@/components/ui/badge'
 import { GhostTabs } from '@/components/GhostTabs'
 import { cn } from '@/lib/utils'
 import {
+  bookedFlightLine,
+  bookedFlights,
   flightGroups,
   flightNumbersLabel,
   flightOriginTabs,
@@ -121,11 +123,20 @@ export function FlightsPage() {
   const caveat = flights.caveats[0]
   const returnLeg = flights.caveats[1]
   const kix = flights.caveats[3]
+  const booked = bookedFlights()
 
   return (
     <div className="space-y-8">
       <header className="space-y-2">
         <h1 className="text-3xl font-medium tracking-tight">Flights</h1>
+        {booked.map((booking) => (
+          <div key={booking.pnr} className="space-y-1">
+            <Badge variant="outline">
+              {booking.names} · {booking.pnr} · booked
+            </Badge>
+            <p className="text-sm text-zinc-500">{bookedFlightLine(booking)}</p>
+          </div>
+        ))}
         <p className="text-sm text-zinc-600">
           Quotes for 27 Dec 2026 – 9 Jan 2027, 1 adult economy RT, Google
           Flights. Target dates were quoted.

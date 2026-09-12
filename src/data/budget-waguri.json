@@ -3,8 +3,8 @@
   "label": "Working · not locked",
   "identityName": "The Waguri House (Akari)",
   "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
-  "foot": "Waguri not booked (hold requested). Cars not a hold.",
-  "last_refreshed": "27 Aug 2026, 7:41 AM PT",
+  "foot": "Waguri booked B22754491 for 8 guests (Sep 2026). 9-person friend-poll math stays off-site. Cars not a hold.",
+  "last_refreshed": "11 Sep 2026",
   "sharedLines": [
     {
       "id": "flight",
@@ -55,7 +55,7 @@
     {
       "id": 4,
       "label": "4 bedrooms · 8 people",
-      "hero": "~$3,239",
+      "hero": "~$3,143",
       "working9Note": null,
       "tokyo": {
         "id": "tokyo-stay",
@@ -65,9 +65,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "Nozawa accommodation — The Waguri House, 6 nights",
-        "detail": "$873",
-        "note": "House ¥1,110,000."
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$777",
+        "note": "Booked for 8 guests. ¥990,000 / 6n tax-in. FX 159.31."
       },
       "cars": {
         "detail": "$182",
@@ -77,8 +77,8 @@
     {
       "id": 5,
       "label": "5 bedrooms · 10 people",
-      "hero": "~$3,135",
-      "working9Note": "Working-9 (4 couples + 1 single): Tokyo 3 apts ≈ $725, Waguri ≈ $776.",
+      "hero": "~$3,058",
+      "working9Note": null,
       "tokyo": {
         "id": "tokyo-stay",
         "title": "Tokyo 3n MIMARU Station East",
@@ -87,9 +87,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "Nozawa accommodation — The Waguri House, 6 nights",
-        "detail": "$698",
-        "note": "House ¥1,110,000."
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$621",
+        "note": "Booked for 8 guests; 10-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
       },
       "cars": {
         "detail": "$146",
@@ -99,7 +99,7 @@
     {
       "id": 6,
       "label": "6 bedrooms · 12 people",
-      "hero": "~$2,887",
+      "hero": "~$2,823",
       "working9Note": null,
       "quietNote": "Waguri still 5BR, sleeps 12",
       "tokyo": {
@@ -110,9 +110,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "Nozawa accommodation — The Waguri House, 6 nights",
-        "detail": "$582",
-        "note": "House ¥1,110,000."
+        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "detail": "$518",
+        "note": "Booked for 8 guests; 12-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
       },
       "cars": {
         "detail": "$121",

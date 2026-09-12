@@ -49,11 +49,29 @@ export type FlightOriginGroup = {
   options: FlightOption[]
 }
 
+export type BookedFlightLeg = {
+  flight: string
+  from: string
+  to: string
+  depart: string
+  arrive: string
+}
+
+export type BookedFlight = {
+  names: string
+  pnr: string
+  status: 'booked'
+  outbound: BookedFlightLeg
+  return: BookedFlightLeg
+  price_each_usd: number
+}
+
 export type FlightsScenarios = {
   refreshed_at: FlightRefreshedAt
   trip_dates: FlightQuotedDates
   source: string
   target_dates_actually_quoted: boolean
   caveats: string[]
+  booked?: BookedFlight[]
   origins: Partial<Record<FlightOriginId, FlightOriginGroup>>
 }

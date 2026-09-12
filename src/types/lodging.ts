@@ -48,6 +48,7 @@ export type LodgingProperty = {
   scenarios: BedroomCount[]
   scenario_notes: string | null
   quiet_notes?: string[]
+  confirmation?: string | null
   price: LodgingPrice | null
   availability_status: string
   availability_notes: string | null

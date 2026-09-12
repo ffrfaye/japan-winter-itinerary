@@ -66,6 +66,21 @@ export function originLastRefreshed(group: FlightOriginGroup): string {
   return flights.refreshed_at.label
 }
 
+export function bookedFlights() {
+  return Array.isArray(flights.booked) ? flights.booked : []
+}
+
+export function bookedFlightLine(
+  booking: NonNullable<FlightsScenarios['booked']>[number],
+) {
+  const { outbound, return: inbound } = booking
+  const price = booking.price_each_usd.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })
+  return `${booking.names} · ${booking.pnr} · booked · ${outbound.flight} ${outbound.from} ${outbound.depart} → ${outbound.to} ${outbound.arrive}; ${inbound.flight} ${inbound.from} ${inbound.depart} → ${inbound.to} ${inbound.arrive} · $${price} each`
+}
+
 export function optionLastRefreshed(
   option: FlightOption,
   group: FlightOriginGroup,

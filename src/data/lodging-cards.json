@@ -249,19 +249,20 @@
         5,
         6
       ],
-      "scenario_notes": "5BR sleeps 12. Same ¥1,110,000 tax-in at 8 or 9. 6 nights OK.",
+      "scenario_notes": "5BR sleeps 12. Booked for 8 guests. ¥990,000 tax-in / 6n. Same house on the 8/10/12 tabs.",
+      "confirmation": "B22754491",
       "price": {
-        "amount": 1110000,
+        "amount": 990000,
         "currency": "JPY",
-        "covers": "whole house, same at 8 or 9, tax-in",
+        "covers": "whole house, 8 guests, tax-in",
         "per": "6 nights",
-        "as_of": "2026-08-26",
-        "source": "Hold offered 24 Aug 2026. Not booked.",
-        "how_to_get_quote": "Email admin@akarihouse.jp"
+        "as_of": "2026-09-08",
+        "source": "Booked B22754491. Supersedes Aug verbal ¥1,110,000 and Lodgify defaults. Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
+        "how_to_get_quote": null
       },
-      "availability_status": "enquire",
-      "availability_notes": "Hold offered, not booked.",
-      "booking_method": "email",
+      "availability_status": "booked",
+      "availability_notes": "¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
+      "booking_method": "booked",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/821269/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
       "onsen": {
@@ -284,9 +285,9 @@
         }
       ],
       "pros": [
-        "Hold offered, not booked",
-        "¥1,110,000 tax-in same at 8 or 9",
-        "6 nights OK"
+        "Booked B22754491",
+        "¥990,000 tax-in / 6 nights for 8 guests",
+        "Deposit ¥198,000 paid 8 Sep 2026"
       ],
       "cons": [
         "Kijimadaira ~10 min drive, 4WD+studless",
@@ -308,10 +309,10 @@
       "scenarios": [
         4
       ],
-      "scenario_notes": "Enquire. Gab did not offer 24 Aug. Default rate unconfirmed — not a hold.",
+      "scenario_notes": "Sold out for 30 Dec–5 Jan. Gab: only free Dec 22–31.",
       "price": null,
-      "availability_status": "enquire",
-      "availability_notes": "Enquire. Gab did not offer 24 Aug. Default rate unconfirmed — do not treat as hold.",
+      "availability_status": "sold-out",
+      "availability_notes": "Gab: not available 30 Dec–5 Jan (only free Dec 22–31).",
       "booking_method": "enquire",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/390089/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
@@ -324,8 +325,8 @@
       "images": [],
       "pros": [],
       "cons": [
-        "No hold",
-        "Default rate unconfirmed",
+        "Sold out 30 Dec–5 Jan",
+        "Only free Dec 22–31",
         "No official hero"
       ]
     },
@@ -1524,7 +1525,7 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "27 Aug 2026, 6:43 AM PT",
+  "nozawa_as_of": "Waguri booking confirmed Sep 2026; other Nozawa statuses from Aug live checks unless noted.",
   "nozawa_checked_at": "2026-08-27T13:43:00Z",
   "checked_at": "2026-08-27T13:43:00Z"
 }

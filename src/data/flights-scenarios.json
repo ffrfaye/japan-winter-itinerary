@@ -17,6 +17,28 @@
     "No KIX/open-jaw needed: round-trips to HND/NRT exist from SFO, SEA, YVR, and STL.",
     "Typical block times: SFO–TYO nonstop ~11h, YVR–TYO ~10h, STL via West Coast/ORD ~16–20h."
   ],
+  "booked": [
+    {
+      "names": "Faye + Will",
+      "pnr": "GSCT9K",
+      "status": "booked",
+      "outbound": {
+        "flight": "UA837",
+        "from": "SFO",
+        "to": "NRT",
+        "depart": "26 Dec 10:40",
+        "arrive": "27 Dec 15:00"
+      },
+      "return": {
+        "flight": "UA838",
+        "from": "NRT",
+        "to": "SFO",
+        "depart": "9 Jan 16:50",
+        "arrive": "9:25"
+      },
+      "price_each_usd": 1670.93
+    }
+  ],
   "origins": {
     "SFO": {
       "id": "SFO",
