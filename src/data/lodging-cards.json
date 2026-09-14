@@ -169,6 +169,88 @@
       ]
     },
     {
+      "bathrooms": null,
+      "sleeps": null,
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": null,
+        "walk_to_village": "~15 min to Nozawa, 4WD",
+        "vehicle_access": "4WD required"
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "price": null,
+      "pros": [],
+      "cons": [
+        "Togari, not village-walkable",
+        "7 bedrooms",
+        "Not available"
+      ],
+      "id": "hunters-gate-togari",
+      "name": "Hunters Gate (Togari)",
+      "location": "nozawa",
+      "operator": "Mountain Holidays",
+      "official_url": "https://book.hostfully.com/mountain-holidays/property-details/d898298f-189e-4c65-8fe5-3851b9ff255a/Hunters%20Gate%20-%20A%20mountain%20lodge%20made%20for%20families",
+      "property_url": "https://book.hostfully.com/mountain-holidays/property-details/d898298f-189e-4c65-8fe5-3851b9ff255a/Hunters%20Gate%20-%20A%20mountain%20lodge%20made%20for%20families",
+      "type": "lodge",
+      "bedrooms": 7,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "7BR Togari lodge. ~15 min to Nozawa, 4WD. Enquire — not live available.",
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire. Not a live 5BR.",
+      "booking_method": "enquire",
+      "booking_url": "https://book.hostfully.com/mountain-holidays/property-details/d898298f-189e-4c65-8fe5-3851b9ff255a/Hunters%20Gate%20-%20A%20mountain%20lodge%20made%20for%20families"
+    },
+    {
+      "bathrooms": null,
+      "sleeps": null,
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": "Togari Inn ski-in/out",
+        "walk_to_village": "Togari, not Nozawa village",
+        "vehicle_access": null
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "price": null,
+      "pros": [],
+      "cons": [
+        "Togari, not Nozawa village",
+        "7 bedrooms",
+        "Not available"
+      ],
+      "id": "mountainside-penthouse-togari",
+      "name": "Mountainside Penthouse @ Togari Inn",
+      "location": "nozawa",
+      "operator": "Togari Inn / Mountain Holidays",
+      "official_url": "https://book.hostfully.com/mountain-holidays/property-details/e43e42c7-772b-4e52-ba8c-29f5e812d16a/Ski-InOut%207%20Room%20Penthouse%20|%20Japanese%20Bathhouse",
+      "property_url": "https://book.hostfully.com/mountain-holidays/property-details/e43e42c7-772b-4e52-ba8c-29f5e812d16a/Ski-InOut%207%20Room%20Penthouse%20|%20Japanese%20Bathhouse",
+      "type": "penthouse",
+      "bedrooms": 7,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "7BR ski-in/out penthouse at Togari Inn. Enquire — not live available.",
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire. Not a live 5BR.",
+      "booking_method": "enquire",
+      "booking_url": "https://togari-nozawa.com/hotel/togari-inn/"
+    },
+    {
       "id": "kashmir-house",
       "name": "Kashmir House",
       "location": "nozawa",
@@ -180,9 +262,10 @@
       "bathrooms": null,
       "sleeps": 8,
       "scenarios": [
-        4
+        4,
+        5
       ],
-      "scenario_notes": "4 rooms (3 Double + 1 Cosy Double) / 8 adults, not 9. Enquire — not a live available house.",
+      "scenario_notes": "Multi-room block. Cannot assemble 5 continuous rooms. Enquire Stay Nozawa — not available.",
       "quiet_notes": [
         "13 Sep 2026, 6:48 PM PT: no green available ski house. Enquire Stay Nozawa; cannot assemble 5 continuous rooms.",
         "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms."
@@ -197,9 +280,9 @@
         "how_to_get_quote": "Email bookings@staynozawa.com"
       },
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire, not available.",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire, not available. Cannot assemble 5 continuous rooms.",
       "booking_method": "enquire",
-      "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
+      "booking_url": "https://book.staynozawa.com/search?checkIn=2026-12-30&checkOut=2027-01-05&numberGuests=10",
       "listing_url": "https://book.staynozawa.com/search/listing/402890829f0f7f29019f124c465544e8?sv=1&segment=Website&i18n=en&checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
       "onsen": {
@@ -236,8 +319,8 @@
       "name": "The Waguri House",
       "location": "nozawa",
       "operator": "Akari House",
-      "official_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
-      "property_url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
+      "official_url": "https://booking.akarihouse.jp/en/5545514/the-waguri-house-snow-country-basecamp",
+      "property_url": "https://booking.akarihouse.jp/en/5545514/the-waguri-house-snow-country-basecamp",
       "type": "whole-house",
       "bedrooms": 5,
       "bathrooms": 3,
@@ -262,9 +345,9 @@
         "how_to_get_quote": null
       },
       "availability_status": "cancelled",
-      "availability_notes": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void.",
+      "availability_notes": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Calendar also sold out.",
       "booking_method": "cancelled",
-      "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/821269/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
+      "booking_url": "https://booking.akarihouse.jp/en/5545514/the-waguri-house-snow-country-basecamp",
       "booking_contact": "admin@akarihouse.jp",
       "onsen": {
         "type": "none",
@@ -342,11 +425,11 @@
         4,
         5
       ],
-      "scenario_notes": "5BR. Enquire. Gab did not offer 24 Aug.",
+      "scenario_notes": "5BR. Sold out. Not enquire.",
       "price": null,
-      "availability_status": "enquire",
-      "availability_notes": "Enquire. Gab did not offer 24 Aug.",
-      "booking_method": "enquire",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Sold out / faded. Gab did not offer; not enquire-as-open.",
+      "booking_method": "sold-out",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/391343/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
       "onsen": null,
@@ -358,7 +441,7 @@
       "images": [],
       "pros": [],
       "cons": [
-        "No hold",
+        "Sold out",
         "No official hero"
       ]
     },
@@ -367,23 +450,24 @@
       "name": "Kiriya Ryokan",
       "location": "nozawa",
       "operator": "Kiriya Ryokan",
-      "official_url": "https://kiriya.jp/eng/accommodation",
-      "property_url": "https://kiriya.jp/eng/accommodation",
+      "official_url": "https://kiriya.jp/eng",
+      "property_url": "https://kiriya.jp/eng",
       "type": "ryokan",
       "bedrooms": null,
       "bathrooms": null,
       "sleeps": null,
       "scenarios": [
         4,
-        5
+        5,
+        6
       ],
-      "scenario_notes": "Enquire / phone.",
+      "scenario_notes": "Multi-room enquire. Not a live 5BR.",
       "price": null,
       "availability_status": "enquire",
-      "availability_notes": "Enquire / phone.",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Multi-room enquire. Not available.",
       "booking_method": "phone",
       "booking_url": "https://reserve.489ban.net/client/kiriya/4/plan",
-      "booking_contact": null,
+      "booking_contact": "contact@kiriya.jp",
       "onsen": {
         "type": "in_house",
         "nearest": null
@@ -405,6 +489,44 @@
       "cons": [
         "Enquire / phone"
       ]
+    },
+    {
+      "bathrooms": null,
+      "sleeps": null,
+      "booking_contact": "team@nozawaholidays.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "price": null,
+      "pros": [
+        "Operator contact for unlisted inventory"
+      ],
+      "cons": [
+        "Not a named house",
+        "Not available"
+      ],
+      "id": "nozawa-holidays-operator",
+      "name": "Nozawa Holidays",
+      "location": "nozawa",
+      "operator": "Nozawa Holidays",
+      "official_url": "https://www.nozawaholidays.com/availability/",
+      "property_url": "https://www.nozawaholidays.com/availability/",
+      "type": "operator enquiry",
+      "bedrooms": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Unlisted quote. Email the operator — not a named house, not available.",
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire for unlisted inventory.",
+      "booking_method": "enquire",
+      "booking_url": "https://www.nozawaholidays.com/availability/"
     },
     {
       "id": "tokiwaya-ryokan",
@@ -461,7 +583,7 @@
       "availability_status": "unknown",
       "availability_notes": "Calendar didn’t load — not sold out.",
       "booking_method": null,
-      "booking_url": null,
+      "booking_url": "https://www.samuraisnow.com/nozawa-onsen/karabiner/4-bedroom-house",
       "booking_contact": null,
       "onsen": null,
       "ski_logistics": null,
@@ -796,13 +918,13 @@
         5,
         6
       ],
-      "scenario_notes": "Calendar didn’t load.",
+      "scenario_notes": "5-room / group enquire. Not a live 5BR.",
       "price": null,
-      "availability_status": "unknown",
-      "availability_notes": "Calendar didn’t load — not sold out.",
-      "booking_method": null,
-      "booking_url": null,
-      "booking_contact": null,
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. 5-room/group enquire. Not available.",
+      "booking_method": "enquire",
+      "booking_url": "https://www.ryokan-sakaya.co.jp/en.html",
+      "booking_contact": "0269-85-3119",
       "onsen": null,
       "ski_logistics": null,
       "tokyo_logistics": null,
@@ -818,25 +940,27 @@
     },
     {
       "id": "ridge-nozawa-4br",
-      "name": "Ridge Nozawa 4BR",
+      "name": "The Ridge Nozawa",
       "location": "nozawa",
-      "operator": "Snow Monkey Resorts",
-      "official_url": "https://www.snowmonkeyresorts.com/hotels/the-ridge-nozawa-apartments/",
-      "property_url": "https://www.snowmonkeyresorts.com/hotels/the-ridge-nozawa-apartments/",
-      "type": "apartment",
-      "bedrooms": 4,
+      "operator": "The Ridge Nozawa",
+      "official_url": "https://www.theridgenozawa.com/",
+      "property_url": "https://www.theridgenozawa.com/",
+      "type": "apartment pairing",
+      "bedrooms": null,
       "bathrooms": null,
       "sleeps": null,
       "scenarios": [
-        4
+        4,
+        5,
+        6
       ],
-      "scenario_notes": "Calendar didn’t load.",
+      "scenario_notes": "Multi-apt enquire. Not a live 5BR lockup.",
       "price": null,
-      "availability_status": "unknown",
-      "availability_notes": "Calendar didn’t load — not sold out.",
-      "booking_method": null,
-      "booking_url": null,
-      "booking_contact": null,
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Multi-apt enquire. Not available.",
+      "booking_method": "enquire",
+      "booking_url": "https://www.theridgenozawa.com/enquiry/",
+      "booking_contact": "info@theridgenozawa.com",
       "onsen": null,
       "ski_logistics": null,
       "tokyo_logistics": null,
@@ -931,6 +1055,40 @@
       "cons": [
         "Sold out"
       ]
+    },
+    {
+      "bathrooms": 3,
+      "sleeps": 8,
+      "booking_contact": "info@kihachikan.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "price": null,
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "4 bedrooms"
+      ],
+      "id": "azalea-lodge",
+      "name": "Azalea Lodge",
+      "location": "nozawa",
+      "operator": "Kihachikan",
+      "official_url": "https://kihachikan-nozawa.lodgify.com/en/overview-azalea-lodge",
+      "property_url": "https://kihachikan-nozawa.lodgify.com/en/overview-azalea-lodge",
+      "type": "lodge",
+      "bedrooms": 4,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "13 Sep 2026, 6:48 PM PT. Sold out / faded. 4BR — not a live 5BR.",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Sold out. Not available.",
+      "booking_method": "sold-out",
+      "booking_url": "https://kihachikan-nozawa.lodgify.com/en/overview-azalea-lodge"
     },
     {
       "id": "kamoshika-ski-lodge",
@@ -1721,7 +1879,8 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Live 5BR: none. Waguri cancelled. Kawazen / James / Himecho / Kamoshika SamuraiSnow sold out. Enquire SamuraiSnow for unlisted inventory — not those named houses.",
+  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Live 5BR: none. Hunting 5BR. Waguri cancelled. Kawazen / James / Himecho / Kamoshika SamuraiSnow sold out.",
   "nozawa_checked_at": "2026-09-14T01:48:00Z",
-  "checked_at": "2026-09-14T01:48:00Z"
+  "checked_at": "2026-09-14T01:48:00Z",
+  "nozawa_banner": "No live 5BR for 30 Dec 2026–5 Jan 2027 — enquire operators today."
 }

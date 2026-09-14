@@ -145,7 +145,7 @@ export function LodgingCompareCard({
                   Official page
                 </a>
               ) : null}
-              {card.booking_url && !cancelled ? (
+              {card.booking_url ? (
                 <>
                   {listing ? ' · ' : null}
                   <a

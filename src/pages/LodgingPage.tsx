@@ -15,7 +15,7 @@ import type { BedroomCount, LodgingLocation } from '@/types/lodging'
 export function LodgingPage() {
   const catalog = useMemo(() => loadLodgingFile(), [])
   const [location, setLocation] = useState<LodgingLocation>('nozawa')
-  const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
+  const [bedrooms, setBedrooms] = useState<BedroomCount>(5)
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
   const cards = useMemo(
@@ -35,6 +35,9 @@ export function LodgingPage() {
     <div className="space-y-4">
       <header className="space-y-3">
         <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
+        {location === 'nozawa' && catalog.nozawa_banner ? (
+          <p className="text-sm text-zinc-600">{catalog.nozawa_banner}</p>
+        ) : null}
         {location === 'nozawa' && catalog.nozawa_as_of ? (
           <p className="text-sm text-zinc-500">{catalog.nozawa_as_of}</p>
         ) : catalog.research_as_of ? (

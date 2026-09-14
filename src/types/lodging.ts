@@ -79,6 +79,7 @@ export type LodgingCardsFile = {
   research_as_of?: string | null
   checked_at?: string | null
   nozawa_as_of?: string | null
+  nozawa_banner?: string | null
   nozawa_checked_at?: string | null
   nozawa_map_notes?: string | LodgingMapNotes | null
   kyoto_notes?: string | null

@@ -68,6 +68,8 @@ export function loadLodgingFile(): LodgingCardsFile {
     checked_at: typeof file.checked_at === 'string' ? file.checked_at : null,
     nozawa_as_of:
       typeof file.nozawa_as_of === 'string' ? file.nozawa_as_of : null,
+    nozawa_banner:
+      typeof file.nozawa_banner === 'string' ? file.nozawa_banner : null,
     nozawa_checked_at:
       typeof file.nozawa_checked_at === 'string' ? file.nozawa_checked_at : null,
     nozawa_map_notes: file.nozawa_map_notes ?? null,
@@ -108,8 +110,7 @@ export function lodgingStatusRank(card: LodgingProperty) {
     return 2
   }
   if (status === 'unknown') return 3
-  if (status === 'sold-out') return 4
-  if (status === 'cancelled') return 5
+  if (status === 'sold-out' || status === 'cancelled') return 4
   return 3
 }
 
@@ -134,7 +135,7 @@ export function isOversizeOrMismatch(
 }
 
 export function isFadedCard(card: LodgingProperty, bedrooms: BedroomCount) {
-  if (isBooked(card)) return false
+  if (isBooked(card) || isEnquire(card)) return false
   return (
     isSoldOut(card) ||
     isCancelled(card) ||
