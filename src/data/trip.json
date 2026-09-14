@@ -30,7 +30,7 @@
     "rsvpHeadline": "Can you come?",
     "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
-    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is locked — AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J). Waguri cancelled.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is locked — AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J). Waguri refunded · closed.",
     "pairs": [
       {
         "id": "fyll",
@@ -553,7 +553,7 @@
       "id": "lodging",
       "status": "locked",
       "title": "Ski lodging is locked — AlpineCottage Ryuo",
-      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J. USD $6,193.11, not paid yet — Visa ••••9886 charge 22 Nov 2026. 8 adults. 8032-2 Yomase, Yamanochi, Shimotakai District, Nagano 381-0405. Check-in Wed 30 Dec 2026 after 15:00 · check-out Tue 5 Jan 2027 by 10:00. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles. Waguri cancelled. Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
+      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J. USD $6,193.11, not paid yet — Visa ••••9886 charge 22 Nov 2026. 8 adults. 8032-2 Yomase, Yamanochi, Shimotakai District, Nagano 381-0405. Check-in Wed 30 Dec 2026 after 15:00 · check-out Tue 5 Jan 2027 by 10:00. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles. Waguri B22754491 refunded · closed · ¥198,000 Wise #2369887205. Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
     },
     {
       "id": "ghibli",
@@ -873,12 +873,11 @@
             "city": "Nozawa",
             "beds": "5 BR / 3 bath · sleeps 12",
             "status": "cancelled",
-            "perPerson": "~$777",
-            "nextStep": "Cancelled. Not the ski house.",
+            "nextStep": "Refunded · closed. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. Not village-walkable."
+            "note": "Refunded · closed. ¥198,000 received · Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cancelled earlier for licensing / Hokenjo. Confirmation B22754491 void. Not an active lodging cost."
           },
           {
             "id": "tanuki-4",
@@ -947,12 +946,11 @@
             "city": "Nozawa",
             "beds": "5 BR / 3 bath · sleeps 12",
             "status": "cancelled",
-            "perPerson": "~$621",
-            "nextStep": "Cancelled. Not the ski house.",
+            "nextStep": "Refunded · closed. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. 10-person split is illustrative."
+            "note": "Refunded · closed. ¥198,000 received · Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cancelled earlier for licensing / Hokenjo. Confirmation B22754491 void. Not an active lodging cost."
           },
           {
             "id": "kiriya-tokiwaya-5",
@@ -1010,12 +1008,11 @@
             "city": "Nozawa",
             "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
             "status": "cancelled",
-            "perPerson": "~$518",
-            "nextStep": "Cancelled. Not the ski house.",
+            "nextStep": "Refunded · closed. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. 12-person split is illustrative."
+            "note": "Refunded · closed. ¥198,000 received · Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cancelled earlier for licensing / Hokenjo. Confirmation B22754491 void. Not an active lodging cost."
           },
           {
             "id": "kamoshika-6",
@@ -1067,7 +1064,7 @@
     "label": "Estimate",
     "asOf": "14 Sep 2026",
     "placeholder": "Working estimate. Not locked.",
-    "workingNote": "Tabs 8/10/12, default 8. Last 4 nights omitted. AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Waguri cancelled. Cars required for the Yomase / Ryuo base.",
+    "workingNote": "Tabs 8/10/12, default 8. Last 4 nights omitted. AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Waguri B22754491 refunded · closed · ¥198,000 Wise #2369887205. Cars required for the Yomase / Ryuo base.",
     "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
     "summary": "Subtotal ~$3,140 without rental at 8 (Tokyo $545 + AlpineCottage Ryuo $774 + cars $182 + lifts $182 + monkey $57 + flight $1,400). Ski lodging reserved · charge pending.",
     "subtotalWithoutRental": "~$3,140",
@@ -1222,7 +1219,7 @@
     {
       "id": "nozawa-hotel",
       "title": "Ski lodging is locked — AlpineCottage Ryuo",
-      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J, $6,193.11, charge pending 22 Nov. 8 adults. 8032-2 Yomase. Closest hill Ryuoo. Cars required. Waguri cancelled. Do not invent Tokyo/Kyoto holds.",
+      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J, $6,193.11, charge pending 22 Nov. 8 adults. 8032-2 Yomase. Closest hill Ryuoo. Cars required. Waguri B22754491 refunded · closed · ¥198,000 Wise #2369887205. Do not invent Tokyo/Kyoto holds.",
       "status": "locked",
       "priority": "now"
     },
@@ -1383,7 +1380,7 @@
       "kind": "single",
       "min": 8,
       "max": 12,
-      "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Not booked.",
+      "note": "Refunded · closed. ¥198,000 received · Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cancelled earlier for licensing / Hokenjo. Confirmation B22754491 void. Not booked.",
       "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
       "email": "admin@akarihouse.jp",
       "phone": "+81 70 9026 60 26"

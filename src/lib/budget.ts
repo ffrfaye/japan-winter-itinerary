@@ -65,5 +65,6 @@ export function scenarioLines(scenario: BudgetScenario): BudgetLine[] {
     byId('tickets'),
     budget.rental,
     last4Line(budget.last4),
+    byId('waguri-closed'),
   ].filter((line): line is BudgetLine => Boolean(line))
 }

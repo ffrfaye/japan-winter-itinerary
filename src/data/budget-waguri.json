@@ -3,7 +3,7 @@
   "label": "Ski lodging reserved · charge pending",
   "identityName": "AlpineCottage Ryuo",
   "identityUrl": "https://www.airbnb.com/rooms/1536728419485230997",
-  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Waguri cancelled. Cars required — Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. 9p ≈ $688 if needed (off-default). Last 4 nights omitted. Tokyo stay unbooked.",
+  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Waguri B22754491 refunded · closed · ¥198,000 Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cars required — Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. 9p ≈ $688 if needed (off-default). Last 4 nights omitted. Tokyo stay unbooked.",
   "last_refreshed": "14 Sep 2026",
   "sharedLines": [
     {
@@ -21,6 +21,12 @@
       "id": "tickets",
       "title": "Monkey tour",
       "detail": "$57"
+    },
+    {
+      "id": "waguri-closed",
+      "title": "Waguri B22754491",
+      "detail": "refunded · closed",
+      "note": "¥198,000 received · Wise #2369887205 · ~8:12 AM PT 14 Sep 2026 · from AkariHouseSwissBakery. Cancelled earlier for licensing. Not an active lodging cost."
     }
   ],
   "rental": {
