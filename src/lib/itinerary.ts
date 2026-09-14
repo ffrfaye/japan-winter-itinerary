@@ -4,11 +4,22 @@ export type TabId = 'itinerary' | 'rsvp' | 'planning' | 'budget' | 'lodging' | '
 
 export type ViewMode = 'list' | 'cards'
 
-export type MapPlace = 'Tokyo' | 'Stay' | 'Shiga' | 'Nozawa' | 'Jigokudani'
+export type MapPlace =
+  | 'Tokyo'
+  | 'Stay'
+  | 'Ryuoo'
+  | 'Shiga'
+  | 'Nozawa'
+  | 'Jigokudani'
 
 export type PinState = 'primary' | 'secondary' | 'idle'
 
 export type PinStates = Record<MapPlace, PinState>
+
+export type DayStrip = {
+  title: string
+  detail: string
+}
 
 export type ItineraryDay = {
   id: string
@@ -20,6 +31,7 @@ export type ItineraryDay = {
   title: string
   summary: string
   body: string[]
+  strips: DayStrip[]
   places: PlaceCard[]
   stayId: string
   stayLabel: string
@@ -58,6 +70,7 @@ export const tabs: { id: TabId; label: string }[] = [
 const pinUrls = {
   Tokyo: 'https://www.gotokyo.org/en/',
   Stay: 'https://www.airbnb.com/rooms/1536728419485230997',
+  Ryuoo: 'https://www.ryuoo.com/en/',
   Shiga: 'https://shigakogen-ski.or.jp/english/',
   Nozawa: 'https://en.nozawaski.com/',
   Jigokudani: 'https://en.jigokudani-yaenkoen.co.jp/',
@@ -66,12 +79,12 @@ const pinUrls = {
 const idlePins: PinStates = {
   Tokyo: 'idle',
   Stay: 'idle',
+  Ryuoo: 'idle',
   Shiga: 'idle',
   Nozawa: 'idle',
   Jigokudani: 'idle',
 }
 
-const skiDays = new Set(['2026-12-31', '2027-01-01', '2027-01-03', '2027-01-04'])
 const travelDays = new Set(['2026-12-30', '2027-01-05'])
 
 function pinsFor(day: TripDay): Pick<
@@ -84,7 +97,7 @@ function pinsFor(day: TripDay): Pick<
         ...idlePins,
         Tokyo: 'primary',
         Stay: 'primary',
-        Jigokudani: 'primary',
+        Ryuoo: 'secondary',
       },
       pinLinks: pinUrls,
     }
@@ -96,35 +109,35 @@ function pinsFor(day: TripDay): Pick<
       pinLinks: { Tokyo: pinUrls.Tokyo, Stay: pinUrls.Stay },
     }
   }
+  if (day.id === '2026-12-31') {
+    return {
+      pins: { ...idlePins, Stay: 'secondary', Ryuoo: 'primary' },
+      pinLinks: { Stay: pinUrls.Stay, Ryuoo: pinUrls.Ryuoo },
+    }
+  }
+  if (day.id === '2027-01-01' || day.id === '2027-01-03') {
+    return {
+      pins: { ...idlePins, Stay: 'secondary', Shiga: 'primary' },
+      pinLinks: { Stay: pinUrls.Stay, Shiga: pinUrls.Shiga },
+    }
+  }
   if (day.id === '2027-01-02') {
+    return {
+      pins: { ...idlePins, Stay: 'secondary', Nozawa: 'primary' },
+      pinLinks: { Stay: pinUrls.Stay, Nozawa: pinUrls.Nozawa },
+    }
+  }
+  if (day.id === '2027-01-04') {
     return {
       pins: {
         ...idlePins,
         Stay: 'secondary',
         Jigokudani: 'primary',
-        Shiga: 'secondary',
       },
       showCluster: true,
       pinLinks: {
         Stay: pinUrls.Stay,
         Jigokudani: pinUrls.Jigokudani,
-        Shiga: pinUrls.Shiga,
-      },
-    }
-  }
-  if (skiDays.has(day.id)) {
-    return {
-      pins: {
-        ...idlePins,
-        Stay: 'primary',
-        Shiga: 'secondary',
-        Nozawa: 'secondary',
-        Jigokudani: 'idle',
-      },
-      pinLinks: {
-        Stay: pinUrls.Stay,
-        Shiga: pinUrls.Shiga,
-        Nozawa: pinUrls.Nozawa,
       },
     }
   }
@@ -159,8 +172,11 @@ function toItinerary(
   stayId: string,
   stayLabel: string,
 ): ItineraryDay {
-  const details = day.blocks.map((block) => block.detail).filter(Boolean)
-  const body = details.length > 0 ? details : [day.summary]
+  const strips = day.blocks
+    .filter((block) => block.detail)
+    .map((block) => ({ title: block.title, detail: block.detail }))
+  const body =
+    strips.length > 0 ? strips.map((block) => block.detail) : [day.summary]
   return {
     id: day.id,
     date: day.date,
@@ -171,6 +187,7 @@ function toItinerary(
     title: day.title,
     summary: day.summary,
     body,
+    strips,
     places: day.places ?? [],
     stayId,
     stayLabel,

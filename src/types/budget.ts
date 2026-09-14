@@ -36,7 +36,7 @@ export type BudgetScenario = {
   cars: Pick<BudgetLine, 'detail' | 'note'>
 }
 
-export type BudgetWaguri = {
+export type BudgetFile = {
   heading: string
   label: string
   identityName: string

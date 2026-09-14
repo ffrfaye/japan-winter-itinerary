@@ -100,7 +100,7 @@ export function PlanningPage() {
 
       <section className="space-y-2">
         <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
-          Nozawa
+          Ski week
         </h2>
         <ul className="divide-y divide-zinc-200">
           {nozawa.map((idea) => (

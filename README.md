@@ -1,8 +1,12 @@
 # Japan ski trip — winter itinerary
 
-Shareable, no-login itinerary for a group winter in Tokyo and Nozawa Onsen (27 Dec 2026 – 9 Jan 2027). Vite + React + TypeScript + Tailwind + shadcn. Light zinc list. Mobile-first.
+Shareable, no-login itinerary for a group winter in Tokyo and Yomase (27 Dec 2026 – 9 Jan 2027). Vite + React + TypeScript + Tailwind + shadcn. Light zinc list. Mobile-first.
 
-The **route and village NYE are locked**. Lodging is not booked. Open decisions stay marked open. Ghibli Museum Mitaka calendar is published (open 3–9 Jan 2027; closed 27 Dec 2026–2 Jan 2027). Tickets are not purchased.
+**Booked:** Faye + Will flights United **GSCT9K**; ski house **AlpineCottage Ryuo** (Airbnb **HMCZA2Z53J**), 30 Dec 2026–5 Jan 2027.
+
+**Open:** Tokyo lodging both ends, cars / IDPs, other guests’ flights, lifts, monkeys / Shibu, Ghibli if last city is Tokyo 6–8 Jan. The site does not invent holds.
+
+Ghibli Museum Mitaka calendar is published (open 3–9 Jan 2027; closed 27 Dec 2026–2 Jan 2027). Tickets are not on sale.
 
 ## Run locally
 
@@ -20,28 +24,16 @@ npm run preview  # serve the built files
 
 ## Edit the trip (this is the only source of facts)
 
-Change **`src/data/trip.json`**. The UI imports that file and does not invent dates, prices, or venues.
+Change **`src/data/trip.json`**, **`src/data/budget.json`**, **`src/data/lodging-cards.json`**, and **`src/data/flights-scenarios.json`**. The UI imports those files and does not invent dates, prices, or venues.
 
-Keys this page actually reads:
-
-- `meta.title`, `meta.datesLabel`, `meta.tone`, `meta.planningBanner`
-- `group.sizeLabel`
-- `statusLegend` — labels for recommended / open / calendar-published / locked
-- `openDecisions[]` — `title`, `detail`, `status`
-- `checklist[]` — urgent stays are `tokyo-hotel` and `nozawa-hotel`; later line uses `priority: "later"` plus `hakutaka`
-- `route.stops` — city blocks and night counts
-- `days[]` — `weekday`, `short`, `city`, `title`, `summary`, `blocks`, `status`
-- `lodging` / `ghibli.unpublished` — Planning tab shortlists
-- `budget` — estimate-only per-person range on RSVP; not locked, not a booking
-- `rsvpHouses` — capacity-filtered lodging on RSVP
-- Hash tabs: `#itinerary` (default), `#rsvp`, `#planning`
+Hash tabs: `#itinerary` (default), `#lodging`, `#planning`, `#budget`, `#flights`.
 
 Status values:
 
 - `recommended` — a suggested extra, not a booking
 - `open` — still deciding, or unpublished
 - `calendar-published` — official open days are listed; not a booking
-- `locked` — route, village NYE, or another closed window
+- `locked` — a confirmed fact we will not pretend is flexible
 
 After you edit JSON, refresh the dev server.
 
@@ -63,5 +55,5 @@ If the repository is ever renamed, change the `base` path in `vite.config.ts` to
 
 - Not a booking engine and not a login app.
 - Not a claim that Ghibli January 2027 tickets exist.
-- Not an Osaka / Kyoto / Nagoya / Ghibli Park itinerary.
+- Not a changelog of cancelled houses.
 - Schneider is closed through December 2027 and is not shown as bookable.

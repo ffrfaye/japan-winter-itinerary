@@ -14,6 +14,7 @@ type JapanMapProps = {
 const places = {
   Tokyo: { lat: 35.6762, lng: 139.6503 },
   Stay: { lat: 36.78108, lng: 138.46881 },
+  Ryuoo: { lat: 36.7603, lng: 138.4567 },
   Shiga: { lat: 36.705725, lng: 138.5079 },
   Nozawa: { lat: 36.9226, lng: 138.4406 },
   Jigokudani: { lat: 36.7333, lng: 138.462 },
@@ -22,6 +23,7 @@ const places = {
 const labels: Record<MapPlace, string> = {
   Tokyo: 'Tokyo',
   Stay: 'Yomase / Ryuo',
+  Ryuoo: 'Ryuoo',
   Shiga: 'Shiga',
   Nozawa: 'Nozawa',
   Jigokudani: 'Jigokudani',

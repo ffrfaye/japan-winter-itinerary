@@ -5,7 +5,6 @@ import {
   contactHref,
   isBooked,
   isCancelled,
-  isEnquire,
   onsenLabel,
   priceLine,
   propertyUrl,
@@ -40,10 +39,9 @@ export function LodgingCompareCard({
     : null
   const listing = propertyUrl(card)
   const booked = isBooked(card)
-  const cancelled = isCancelled(card)
-  const enquire = isEnquire(card)
+  const option = !booked && !isCancelled(card)
   const confirmation =
-    booked && !cancelled ? card.confirmation?.trim() || null : null
+    booked ? card.confirmation?.trim() || null : null
   const availability = [
     availabilityLabel(card.availability_status),
     confirmation,
@@ -88,30 +86,26 @@ export function LodgingCompareCard({
               <span className="text-zinc-500">· {typical}</span>
             ) : null}
           </div>
-          {booked || cancelled || enquire || card.badge || faded ? (
+          {booked || option || card.badge ? (
             <div className="flex flex-wrap items-center gap-1">
-              {cancelled ? (
-                <Badge variant="destructive">Cancelled</Badge>
-              ) : booked ? (
+              {booked ? (
                 <Badge variant="outline">
                   {confirmation
                     ? `Booked · ${confirmation}`
                     : availabilityLabel(card.availability_status)}
                 </Badge>
-              ) : enquire ? (
-                <Badge variant="outline">Enquire</Badge>
-              ) : null}
-              {card.badge ? (
+              ) : (
+                <Badge variant="outline">Not booked</Badge>
+              )}
+              {card.badge && card.badge !== 'Not booked' && card.badge !== 'Booked' ? (
                 <Badge variant="outline">{card.badge}</Badge>
-              ) : null}
-              {faded && !booked && !cancelled && !enquire ? (
-                <Badge variant="outline">
-                  {availabilityLabel(card.availability_status)}
-                </Badge>
               ) : null}
             </div>
           ) : null}
           {rooms ? <p className="text-sm text-zinc-600">{rooms}</p> : null}
+          {card.address ? (
+            <p className="text-sm text-zinc-600">{card.address}</p>
+          ) : null}
           <div className="flex flex-wrap gap-1">
             {card.scenarios.map((count) => (
               <Badge key={count} variant="outline">

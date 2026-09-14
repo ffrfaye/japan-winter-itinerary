@@ -1,0 +1,125 @@
+{
+  "heading": "Budget",
+  "label": "Ski lodging reserved · charge pending",
+  "identityName": "AlpineCottage Ryuo",
+  "identityUrl": "https://www.airbnb.com/rooms/1536728419485230997",
+  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Cars required — Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. Last 4 nights omitted. Tokyo stay unbooked.",
+  "last_refreshed": "14 Sep 2026",
+  "sharedLines": [
+    {
+      "id": "flight",
+      "title": "Flight",
+      "detail": "$1,400",
+      "note": "Working group figure. Faye + Will booked GSCT9K ~$1,671 each. Other tickets not booked."
+    },
+    {
+      "id": "lifts",
+      "title": "Lifts 4d",
+      "detail": "$182",
+      "note": "Working. Not a hold. Ryuoo / Shiga / Nozawa as ski days."
+    },
+    {
+      "id": "tickets",
+      "title": "Monkey park",
+      "detail": "$57",
+      "note": "Optional. Not booked."
+    }
+  ],
+  "rental": {
+    "id": "rental",
+    "title": "Ski rental (optional)",
+    "detail": "$127",
+    "note": "Optional. Not booked. Who brings vs rents is still open."
+  },
+  "carRental": {
+    "id": "car-rental",
+    "title": "Car rental",
+    "label": "Required for this base — not booked. 1–2× 4WD studless. Host parking free for 3 vehicles.",
+    "notes": [
+      "Working estimate: 2× compact SUV/4WD · ¥232,100 / $1,457 total. Pickup Toyota Nagano shop (no Toyota Iiyama). NY +20% (26 Dec 2026–3 Jan 2027) + 4WD + DPP + ETC. Not a hold.",
+      "IDP $20/driver (AAA 1949 Geneva Convention) — not in the split. Fuel ~$26 both cars. Last 4 city nights still excluded. FX Xe 1 USD = 159.31 JPY."
+    ]
+  },
+  "last4": {
+    "id": "last-4",
+    "title": "Last 4 nights",
+    "tokyo": {
+      "detail": "~$550",
+      "note": "Tokyo lodging TBD · not booked"
+    },
+    "kyoto": {
+      "detail": "~$280–$461",
+      "note": "Other city TBD · not booked. Typical Kyoto band only, not a hold."
+    }
+  },
+  "defaultBedrooms": 4,
+  "scenarios": [
+    {
+      "id": 4,
+      "label": "8 people",
+      "hero": "~$3,140",
+      "working9Note": null,
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo lodging both ends",
+        "detail": "$545",
+        "note": "First 3 nights working figure. Not booked. Last 4 nights omitted from this total."
+      },
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$774",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. ~$774 at 8. 8 adults on the booking."
+      },
+      "cars": {
+        "detail": "$182",
+        "note": "Future option · required. $182 at 8 from the same two-car total ($1,457). Not a hold."
+      }
+    },
+    {
+      "id": 5,
+      "label": "10 people",
+      "hero": "~$3,056",
+      "working9Note": null,
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo lodging both ends",
+        "detail": "$652",
+        "note": "First 3 nights working figure. Not booked. Last 4 nights omitted from this total."
+      },
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$619",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. ~$619 at 10. Same house total."
+      },
+      "cars": {
+        "detail": "$146",
+        "note": "Future option · required. $146 at 10 ($1,457/10). Not a hold."
+      }
+    },
+    {
+      "id": 6,
+      "label": "12 people",
+      "hero": "~$2,821",
+      "working9Note": null,
+      "quietNote": "Listing sleeps 12; booking is 8 adults. Same $6,193.11 house. Cars required — Yomase / Ryuo.",
+      "tokyo": {
+        "id": "tokyo-stay",
+        "title": "Tokyo lodging both ends",
+        "detail": "$545",
+        "note": "First 3 nights working figure. Not booked. Last 4 nights omitted from this total."
+      },
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$516",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. ~$516 at 12. Same house total."
+      },
+      "cars": {
+        "detail": "$121",
+        "note": "Future option · required. $121 at 12 ($1,457/12). Not a hold."
+      }
+    }
+  ]
+}

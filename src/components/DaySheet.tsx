@@ -61,9 +61,15 @@ export function DaySheet({
           </button>
         </div>
         <div className="mt-4 space-y-3 text-sm text-zinc-600">
-          {day.body.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
+          {day.strips.length > 0
+            ? day.strips.map((strip) => (
+                <p key={`${strip.title}-${strip.detail}`}>
+                  <span className="font-medium text-zinc-900">{strip.title}</span>
+                  <span className="text-zinc-400"> · </span>
+                  {strip.detail}
+                </p>
+              ))
+            : day.body.map((line) => <p key={line}>{line}</p>)}
         </div>
         {day.places.length > 0 ? (
           <div className="mt-4">

@@ -1,13 +1,13 @@
-import raw from '@/data/budget-waguri.json'
+import raw from '@/data/budget.json'
 import type {
+  BudgetFile,
   BudgetLine,
   BudgetLast4,
   BudgetScenario,
   BudgetSide,
-  BudgetWaguri,
 } from '@/types/budget'
 
-export const budget = raw as BudgetWaguri
+export const budget = raw as BudgetFile
 
 export const budgetBedroomTabs = budget.scenarios.map((scenario) => ({
   id: scenario.id,
@@ -65,6 +65,5 @@ export function scenarioLines(scenario: BudgetScenario): BudgetLine[] {
     byId('tickets'),
     budget.rental,
     last4Line(budget.last4),
-    byId('waguri-closed'),
   ].filter((line): line is BudgetLine => Boolean(line))
 }

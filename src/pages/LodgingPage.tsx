@@ -15,7 +15,7 @@ import type { BedroomCount, LodgingLocation } from '@/types/lodging'
 export function LodgingPage() {
   const catalog = useMemo(() => loadLodgingFile(), [])
   const [location, setLocation] = useState<LodgingLocation>('nozawa')
-  const [bedrooms, setBedrooms] = useState<BedroomCount>(5)
+  const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
   const cards = useMemo(
@@ -37,11 +37,15 @@ export function LodgingPage() {
         <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
         {location === 'nozawa' && catalog.nozawa_banner ? (
           <p className="text-sm text-zinc-600">{catalog.nozawa_banner}</p>
-        ) : null}
-        {location === 'nozawa' && catalog.nozawa_as_of ? (
-          <p className="text-sm text-zinc-500">{catalog.nozawa_as_of}</p>
-        ) : catalog.research_as_of ? (
-          <p className="text-sm text-zinc-500">{catalog.research_as_of}</p>
+        ) : location === 'tokyo' ? (
+          <p className="text-sm text-zinc-600">
+            Tokyo lodging both ends is not booked — first 3 nights and last 4
+            nights (or another last city).
+          </p>
+        ) : location === 'kyoto' ? (
+          <p className="text-sm text-zinc-600">
+            Last-city option only if 5–9 Jan is not Tokyo. Nothing held.
+          </p>
         ) : null}
         <GhostTabs
           label="Location"

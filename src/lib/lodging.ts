@@ -13,14 +13,14 @@ const file = raw as LodgingCardsFile
 
 export const lodgingLocations: { id: LodgingLocation; label: string }[] = [
   { id: 'tokyo', label: 'Tokyo' },
-  { id: 'nozawa', label: 'Nozawa' },
+  { id: 'nozawa', label: 'Yomase' },
   { id: 'kyoto', label: 'Kyoto' },
 ]
 
 export const lodgingBedrooms: { id: BedroomCount; label: string }[] = [
-  { id: 4, label: '4 bedrooms' },
-  { id: 5, label: '5 bedrooms' },
-  { id: 6, label: '6 bedrooms' },
+  { id: 4, label: '8 people' },
+  { id: 5, label: '10 people' },
+  { id: 6, label: '12 people' },
 ]
 
 export const tokyoLandmarks = [
@@ -30,6 +30,7 @@ export const tokyoLandmarks = [
 ] as const
 
 export const nozawaLandmarks = [
+  { id: 'ryuoo', label: 'Ryuoo', lat: 36.7603, lng: 138.4567 },
   { id: 'village', label: 'Nozawa village', lat: 36.9226, lng: 138.4406 },
   { id: 'shiga', label: 'Shiga', lat: 36.705725, lng: 138.5079 },
 ] as const
@@ -105,13 +106,17 @@ export function isEnquire(card: LodgingProperty) {
 export function lodgingStatusRank(card: LodgingProperty) {
   const status = availabilityKey(card.availability_status)
   if (status === 'booked') return 0
-  if (status === 'available') return 1
+  if (status === 'available' || status === 'open') return 1
   if (status === 'enquire' || status === 'enquire/hold' || status === 'hold') {
     return 2
   }
   if (status === 'unknown') return 3
   if (status === 'sold-out' || status === 'cancelled') return 4
   return 3
+}
+
+export function isCemeteryCard(card: LodgingProperty) {
+  return isSoldOut(card) || isCancelled(card)
 }
 
 export function isSoldOut(card: LodgingProperty) {
@@ -136,11 +141,8 @@ export function isOversizeOrMismatch(
 
 export function isFadedCard(card: LodgingProperty, bedrooms: BedroomCount) {
   if (isBooked(card) || isEnquire(card)) return false
-  return (
-    isSoldOut(card) ||
-    isCancelled(card) ||
-    isOversizeOrMismatch(card, bedrooms)
-  )
+  if (availabilityKey(card.availability_status) === 'open') return false
+  return isCemeteryCard(card) || isOversizeOrMismatch(card, bedrooms)
 }
 
 export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
@@ -161,7 +163,8 @@ export function filterLodgingCards(
     .map((card, index) => ({ card, index }))
     .filter(({ card }) => {
       if (card.location !== location) return false
-      if (location === 'nozawa') return true
+      if (isCemeteryCard(card)) return false
+      if (location === 'nozawa') return isBooked(card) || card.scenarios.includes(bedrooms)
       return card.scenarios.includes(bedrooms)
     })
     .sort((a, b) => {
@@ -232,14 +235,15 @@ export function onsenLabel(onsen: LodgingOnsen | null) {
 
 export function availabilityLabel(status: string) {
   const key = availabilityKey(status)
-  if (key === 'sold-out') return 'Sold out'
   if (key === 'booked') return 'Booked'
+  if (key === 'open') return 'Not booked'
+  if (key === 'enquire') return 'Option'
+  if (key === 'enquire/hold' || key === 'hold') return 'Option'
+  if (key === 'available') return 'Not booked'
+  if (key === 'unknown') return 'Option'
+  if (key === 'sold-out') return 'Sold out'
   if (key === 'cancelled') return 'Cancelled'
-  if (key === 'enquire') return 'Enquire'
-  if (key === 'enquire/hold' || key === 'hold') return 'Hold'
-  if (key === 'available') return 'Available'
-  if (key === 'unknown') return 'Unknown'
-  if (key === 'inquiry sent') return 'Inquiry sent'
+  if (key === 'inquiry sent') return 'Option'
   return status
 }
 

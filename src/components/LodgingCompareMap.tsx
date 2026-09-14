@@ -158,7 +158,7 @@ export function LodgingCompareMap({
             location === 'tokyo'
               ? 'Map of Tokyo Station, Hatchobori, and Nihonbashi'
               : location === 'nozawa'
-                ? 'Map of Yomase / Ryuo, Nozawa village, and Shiga'
+                ? 'Map of Yomase / Ryuo, Ryuoo, Nozawa village, and Shiga'
                 : 'Map of Kyoto. Listings without coordinates are not pinned.'
           }
         />

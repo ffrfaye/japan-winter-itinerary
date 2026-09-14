@@ -228,6 +228,17 @@ function OverviewCard({ day }: { day: ItineraryDay }) {
       <p className="mt-1 text-sm font-medium">{day.title}</p>
       <p className="mt-1 text-[13px] text-zinc-500">Trip at a glance</p>
       <p className="mt-2 text-sm text-zinc-600">{day.summary}</p>
+      {day.strips.length > 0 ? (
+        <div className="mt-3 space-y-1">
+          {day.strips.map((strip) => (
+            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
+              <span className="text-zinc-500">{strip.title}</span>
+              <span className="text-zinc-400"> · </span>
+              {strip.detail}
+            </p>
+          ))}
+        </div>
+      ) : null}
       {day.places.length > 0 ? (
         <div className="mt-3">
           <PlaceCards places={day.places} />
@@ -249,6 +260,15 @@ function DayRow({ day }: { day: ItineraryDay }) {
         </p>
         <p className="mt-1 text-sm font-medium">{day.title}</p>
         <p className="mt-1 text-sm text-zinc-600">{day.summary}</p>
+        <div className="mt-3 space-y-1">
+          {day.strips.map((strip) => (
+            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
+              <span className="text-zinc-500">{strip.title}</span>
+              <span className="text-zinc-400"> · </span>
+              {strip.detail}
+            </p>
+          ))}
+        </div>
         <div className="mt-3">
           <PlaceCards places={day.places} />
         </div>
@@ -267,7 +287,17 @@ function DayRow({ day }: { day: ItineraryDay }) {
       </div>
       <div className="min-w-0 space-y-1">
         <p className="text-sm font-medium">{day.title}</p>
-        <p className="text-sm text-zinc-600">{day.summary}</p>
+        {day.strips.length > 0 ? (
+          day.strips.map((strip) => (
+            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
+              <span className="text-zinc-500">{strip.title}</span>
+              <span className="text-zinc-400"> · </span>
+              {strip.detail}
+            </p>
+          ))
+        ) : (
+          <p className="text-sm text-zinc-600">{day.summary}</p>
+        )}
         <PlaceCards places={day.places} />
       </div>
     </li>
