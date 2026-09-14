@@ -30,23 +30,7 @@ export function lastBlockIdeas(): PlanningIdea[] {
 }
 
 export function planningOpenDecisions() {
-  const skeleton = trip.checklist.find((item) => item.id === 'confirm-skeleton')
-  const fromTrip = trip.openDecisions
-  const items: { id: string; status: StatusId; title: string; detail: string }[] =
-    []
-  if (skeleton) {
-    items.push({
-      id: skeleton.id,
-      status: skeleton.status,
-      title: skeleton.title,
-      detail: skeleton.detail,
-    })
-  }
-  for (const item of fromTrip) {
-    if (items.some((existing) => existing.id === item.id)) continue
-    items.push(item)
-  }
-  return items
+  return trip.openDecisions
 }
 
 export function planningCalendar(priority: 'soon' | 'later') {

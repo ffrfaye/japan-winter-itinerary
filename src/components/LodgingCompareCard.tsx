@@ -40,15 +40,12 @@ export function LodgingCompareCard({
   const listing = propertyUrl(card)
   const booked = isBooked(card)
   const option = !booked && !isCancelled(card)
-  const confirmation =
-    booked ? card.confirmation?.trim() || null : null
-  const availability = [
-    availabilityLabel(card.availability_status),
-    confirmation,
-    card.availability_notes,
-  ]
-    .filter(Boolean)
-    .join(' · ')
+  const confirmation = booked ? card.confirmation?.trim() || null : null
+  const availability = booked
+    ? card.availability_notes
+    : [availabilityLabel(card.availability_status), card.availability_notes]
+        .filter(Boolean)
+        .join(' · ')
 
   return (
     <article
@@ -105,16 +102,6 @@ export function LodgingCompareCard({
           {rooms ? <p className="text-sm text-zinc-600">{rooms}</p> : null}
           {card.address ? (
             <p className="text-sm text-zinc-600">{card.address}</p>
-          ) : null}
-          <div className="flex flex-wrap gap-1">
-            {card.scenarios.map((count) => (
-              <Badge key={count} variant="outline">
-                {count}
-              </Badge>
-            ))}
-          </div>
-          {card.scenario_notes ? (
-            <p className="text-sm text-zinc-500">{card.scenario_notes}</p>
           ) : null}
           {card.quiet_notes && card.quiet_notes.length > 0
             ? card.quiet_notes.map((note) => (
