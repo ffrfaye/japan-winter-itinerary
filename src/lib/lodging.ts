@@ -95,6 +95,11 @@ export function isCancelled(card: LodgingProperty) {
   return availabilityKey(card.availability_status) === 'cancelled'
 }
 
+export function isEnquire(card: LodgingProperty) {
+  const status = availabilityKey(card.availability_status)
+  return status === 'enquire' || status === 'enquire/hold' || status === 'hold'
+}
+
 export function lodgingStatusRank(card: LodgingProperty) {
   const status = availabilityKey(card.availability_status)
   if (status === 'booked') return 0

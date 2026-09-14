@@ -5,6 +5,7 @@ import {
   contactHref,
   isBooked,
   isCancelled,
+  isEnquire,
   onsenLabel,
   priceLine,
   propertyUrl,
@@ -40,6 +41,7 @@ export function LodgingCompareCard({
   const listing = propertyUrl(card)
   const booked = isBooked(card)
   const cancelled = isCancelled(card)
+  const enquire = isEnquire(card)
   const confirmation =
     booked && !cancelled ? card.confirmation?.trim() || null : null
   const availability = [
@@ -86,7 +88,7 @@ export function LodgingCompareCard({
               <span className="text-zinc-500">· {typical}</span>
             ) : null}
           </div>
-          {booked || cancelled || card.badge || faded ? (
+          {booked || cancelled || enquire || card.badge || faded ? (
             <div className="flex flex-wrap items-center gap-1">
               {cancelled ? (
                 <Badge variant="destructive">Cancelled</Badge>
@@ -96,11 +98,13 @@ export function LodgingCompareCard({
                     ? `Booked · ${confirmation}`
                     : availabilityLabel(card.availability_status)}
                 </Badge>
+              ) : enquire ? (
+                <Badge variant="outline">Enquire</Badge>
               ) : null}
               {card.badge ? (
                 <Badge variant="outline">{card.badge}</Badge>
               ) : null}
-              {faded && !booked && !cancelled ? (
+              {faded && !booked && !cancelled && !enquire ? (
                 <Badge variant="outline">
                   {availabilityLabel(card.availability_status)}
                 </Badge>

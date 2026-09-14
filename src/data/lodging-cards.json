@@ -182,23 +182,23 @@
       "scenarios": [
         4
       ],
-      "scenario_notes": "4 rooms (3 Double + 1 Cosy Double) / 8 adults, not 9. 5-night min so 6 nights OK.",
+      "scenario_notes": "4 rooms (3 Double + 1 Cosy Double) / 8 adults, not 9. Enquire — not a live available house.",
       "quiet_notes": [
-        "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms.",
-        "Family/Triple still 0. 4 couples still use 3 Double + 1 Cosy."
+        "13 Sep 2026, 6:48 PM PT: no green available ski house. Enquire Stay Nozawa; cannot assemble 5 continuous rooms.",
+        "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms."
       ],
       "price": {
         "amount": 1102100,
         "currency": "JPY",
         "covers": "4 rooms / 8 adults, breakfast",
         "per": "6 nights",
-        "as_of": "2026-08-27",
-        "source": "Live RoomBoss 30 Dec 2026–5 Jan 2027",
-        "how_to_get_quote": "Instant book at book.staynozawa.com"
+        "as_of": "2026-09-13",
+        "source": "Last RoomBoss figure. Enquire — not live available 13 Sep 2026, 6:48 PM PT.",
+        "how_to_get_quote": "Email bookings@staynozawa.com"
       },
-      "availability_status": "available",
-      "availability_notes": "Instant RoomBoss. Breakfast included. Same mix as 26 Aug.",
-      "booking_method": "RoomBoss instant",
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire, not available.",
+      "booking_method": "enquire",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "listing_url": "https://book.staynozawa.com/search/listing/402890829f0f7f29019f124c465544e8?sv=1&segment=Website&i18n=en&checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -222,9 +222,7 @@
         }
       ],
       "pros": [
-        "Available for 6 nights",
         "Ski-in Hikage",
-        "Instant RoomBoss",
         "Breakfast included"
       ],
       "cons": [
@@ -509,6 +507,205 @@
       "pros": [],
       "cons": [
         "Calendar didn’t load",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "samuraisnow-operator",
+      "name": "SamuraiSnow",
+      "location": "nozawa",
+      "operator": "SamuraiSnow",
+      "official_url": "https://www.samuraisnow.com/nozawa-accommodation",
+      "property_url": "https://www.samuraisnow.com/get-in-touch",
+      "type": "operator enquiry",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Email / enquiry for unlisted inventory. Not a named house. Not available.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Ask SamuraiSnow for unlisted 5BR dates. Kawazen / James / Himecho / Kamoshika stay sold out — do not treat those units as enquire.",
+      "booking_method": "enquire",
+      "booking_url": "https://www.samuraisnow.com/get-in-touch",
+      "booking_contact": "info@samuraisnow.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [
+        "Operator contact for unlisted inventory"
+      ],
+      "cons": [
+        "Not a named house",
+        "Not available"
+      ]
+    },
+    {
+      "id": "kawazen-5br",
+      "name": "Kawazen 5BR",
+      "location": "nozawa",
+      "operator": "SamuraiSnow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/kawazen/5bedroom",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/kawazen/5bedroom",
+      "type": "house",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "sleeps": 12,
+      "scenarios": [
+        5,
+        6
+      ],
+      "scenario_notes": "Emergency list. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire, not available.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Do not label as enquire.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.samuraisnow.com/nozawa-onsen/kawazen/5bedroom",
+      "booking_contact": "info@samuraisnow.com",
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": "5 min to Hikage Gondola via Yu Road",
+        "walk_to_village": "West Village",
+        "vehicle_access": null
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "Not enquire",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "james-house-5br",
+      "name": "James House 5BR",
+      "location": "nozawa",
+      "operator": "SamuraiSnow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/james-house/5-bedroom",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/james-house/5-bedroom",
+      "type": "house",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "sleeps": 15,
+      "scenarios": [
+        5,
+        6
+      ],
+      "scenario_notes": "Emergency list. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire, not available.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Do not label as enquire.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.samuraisnow.com/nozawa-onsen/james-house/5-bedroom",
+      "booking_contact": "info@samuraisnow.com",
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": "4 min to Nagasaka Contact Pair",
+        "walk_to_village": "Walkable to village centre",
+        "vehicle_access": null
+      },
+      "tokyo_logistics": null,
+      "address": "6686-2 Toyosato, Nozawaonsen, Shimotakai District, Nagano 389-2502, Japan",
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "Not enquire",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "himecho-5br",
+      "name": "Himecho 5BR",
+      "location": "nozawa",
+      "operator": "SamuraiSnow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/himecho/5bedroom",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/himecho/5bedroom",
+      "type": "house",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "sleeps": 12,
+      "scenarios": [
+        5,
+        6
+      ],
+      "scenario_notes": "Emergency list. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.samuraisnow.com/nozawa-onsen/himecho/5bedroom",
+      "booking_contact": "info@samuraisnow.com",
+      "onsen": {
+        "type": "in_house",
+        "nearest": null
+      },
+      "ski_logistics": {
+        "walk_to_lift": "1 min to Hikage Gondola via Yu Road",
+        "walk_to_village": "Village Centre",
+        "vehicle_access": null
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "No official hero"
+      ]
+    },
+    {
+      "id": "kamoshika-samuraisnow-5br",
+      "name": "Kamoshika 5BR (SamuraiSnow)",
+      "location": "nozawa",
+      "operator": "SamuraiSnow",
+      "official_url": "https://www.samuraisnow.com/nozawa-onsen/kamoshika/5-bedroom-lodge",
+      "property_url": "https://www.samuraisnow.com/nozawa-onsen/kamoshika/5-bedroom-lodge",
+      "type": "lodge",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "sleeps": 16,
+      "scenarios": [
+        5,
+        6
+      ],
+      "scenario_notes": "SamuraiSnow listing. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire. Separate from Stay Nozawa Kamoshika.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.samuraisnow.com/nozawa-onsen/kamoshika/5-bedroom-lodge",
+      "booking_contact": "info@samuraisnow.com",
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": "Ski-in / ski-out Nagasaka",
+        "walk_to_village": null,
+        "vehicle_access": null
+      },
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
         "No official hero"
       ]
     },
@@ -1524,7 +1721,7 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "Waguri cancelled Sep 14 (licensing / Hokenjo). Other Nozawa statuses from Aug live checks unless noted.",
-  "nozawa_checked_at": "2026-08-27T13:43:00Z",
-  "checked_at": "2026-08-27T13:43:00Z"
+  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Live 5BR: none. Waguri cancelled. Kawazen / James / Himecho / Kamoshika SamuraiSnow sold out. Enquire SamuraiSnow for unlisted inventory — not those named houses.",
+  "nozawa_checked_at": "2026-09-14T01:48:00Z",
+  "checked_at": "2026-09-14T01:48:00Z"
 }
