@@ -249,20 +249,23 @@
         5,
         6
       ],
-      "scenario_notes": "5BR sleeps 12. Booked for 8 guests. ¥990,000 tax-in / 6n. Same house on the 8/10/12 tabs.",
-      "confirmation": "B22754491",
+      "scenario_notes": "5BR sleeps 12. Cancelled / unavailable. Same house on the 8/10/12 tabs — not a live hold.",
+      "quiet_notes": [
+        "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. No Akari alternatives offered."
+      ],
+      "confirmation": null,
       "price": {
         "amount": 990000,
         "currency": "JPY",
-        "covers": "whole house, 8 guests, tax-in",
+        "covers": "whole house, 8 guests, tax-in (was booked)",
         "per": "6 nights",
-        "as_of": "2026-09-08",
-        "source": "Booked B22754491. Supersedes Aug verbal ¥1,110,000 and Lodgify defaults. Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
+        "as_of": "2026-09-14",
+        "source": "Cancelled. Was booked ¥990,000 tax-in / 6n. Confirmation B22754491 void. Deposit refund pending.",
         "how_to_get_quote": null
       },
-      "availability_status": "booked",
-      "availability_notes": "¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Deposit ¥198,000 paid 8 Sep 2026; balance ¥792,000 due.",
-      "booking_method": "booked",
+      "availability_status": "cancelled",
+      "availability_notes": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void.",
+      "booking_method": "cancelled",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/821269/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
       "onsen": {
@@ -284,15 +287,11 @@
           "source": "official"
         }
       ],
-      "pros": [
-        "Booked B22754491",
-        "¥990,000 tax-in / 6 nights for 8 guests",
-        "Deposit ¥198,000 paid 8 Sep 2026"
-      ],
+      "pros": [],
       "cons": [
+        "Cancelled / unavailable",
         "Kijimadaira ~10 min drive, 4WD+studless",
-        "NOT village-walkable",
-        "No in-house onsen"
+        "NOT village-walkable"
       ]
     },
     {
@@ -1525,7 +1524,7 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "Waguri booking confirmed Sep 2026; other Nozawa statuses from Aug live checks unless noted.",
+  "nozawa_as_of": "Waguri cancelled Sep 14 (licensing / Hokenjo). Other Nozawa statuses from Aug live checks unless noted.",
   "nozawa_checked_at": "2026-08-27T13:43:00Z",
   "checked_at": "2026-08-27T13:43:00Z"
 }

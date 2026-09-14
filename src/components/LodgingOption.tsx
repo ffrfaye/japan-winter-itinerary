@@ -6,6 +6,7 @@ const statusLabel: Record<LodgingBookStatus, string> = {
   enquire: 'Enquire',
   waitlist: 'Waitlist',
   'sold-out': 'Sold out',
+  cancelled: 'Cancelled',
 }
 
 function telHref(phone: string) {
@@ -29,12 +30,20 @@ export function LodgingOption({ option }: { option: LodgingOptionData }) {
   )
 
   return (
-    <li className="space-y-1 py-3">
+    <li
+      className={
+        option.status === 'cancelled' || option.status === 'sold-out'
+          ? 'space-y-1 py-3 opacity-[0.48]'
+          : 'space-y-1 py-3'
+      }
+    >
       <div className="flex flex-wrap items-baseline gap-x-1.5 gap-y-1 text-sm">
         {name}
         <span className="text-zinc-600">· {option.city}</span>
         <span className="text-zinc-600">· {option.beds}</span>
-        <Badge variant="outline">{statusLabel[option.status]}</Badge>
+        <Badge variant={option.status === 'cancelled' ? 'destructive' : 'outline'}>
+          {statusLabel[option.status]}
+        </Badge>
         {option.perPerson ? (
           <span className="text-zinc-600">{option.perPerson} pp</span>
         ) : null}

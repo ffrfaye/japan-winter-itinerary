@@ -31,7 +31,7 @@ export function lastBlockIdeas(): PlanningIdea[] {
 
 export function planningOpenDecisions() {
   const skeleton = trip.checklist.find((item) => item.id === 'confirm-skeleton')
-  const fromTrip = trip.openDecisions.filter((item) => item.id !== 'lodging')
+  const fromTrip = trip.openDecisions
   const items: { id: string; status: StatusId; title: string; detail: string }[] =
     []
   if (skeleton) {

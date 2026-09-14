@@ -91,6 +91,10 @@ export function isBooked(card: LodgingProperty) {
   return availabilityKey(card.availability_status) === 'booked'
 }
 
+export function isCancelled(card: LodgingProperty) {
+  return availabilityKey(card.availability_status) === 'cancelled'
+}
+
 export function lodgingStatusRank(card: LodgingProperty) {
   const status = availabilityKey(card.availability_status)
   if (status === 'booked') return 0
@@ -100,6 +104,7 @@ export function lodgingStatusRank(card: LodgingProperty) {
   }
   if (status === 'unknown') return 3
   if (status === 'sold-out') return 4
+  if (status === 'cancelled') return 5
   return 3
 }
 
@@ -125,7 +130,11 @@ export function isOversizeOrMismatch(
 
 export function isFadedCard(card: LodgingProperty, bedrooms: BedroomCount) {
   if (isBooked(card)) return false
-  return isSoldOut(card) || isOversizeOrMismatch(card, bedrooms)
+  return (
+    isSoldOut(card) ||
+    isCancelled(card) ||
+    isOversizeOrMismatch(card, bedrooms)
+  )
 }
 
 export function isSoldOutWaitlistEmpty(card: LodgingProperty) {
@@ -214,6 +223,7 @@ export function availabilityLabel(status: string) {
   const key = availabilityKey(status)
   if (key === 'sold-out') return 'Sold out'
   if (key === 'booked') return 'Booked'
+  if (key === 'cancelled') return 'Cancelled'
   if (key === 'enquire') return 'Enquire'
   if (key === 'enquire/hold' || key === 'hold') return 'Hold'
   if (key === 'available') return 'Available'

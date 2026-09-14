@@ -18,7 +18,7 @@
     "planningBanner": {
       "eyebrow": "",
       "title": "",
-      "body": "Still open: bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
+      "body": "Still open: ski lodging (hunting 5BR Nozawa), bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
     }
   },
   "group": {
@@ -30,7 +30,7 @@
     "rsvpHeadline": "Can you come?",
     "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
-    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is The Waguri House, booked.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is open / hunting a 5BR Nozawa house. Waguri cancelled Sep 14.",
     "pairs": [
       {
         "id": "fyll",
@@ -139,7 +139,7 @@
     }
   ],
   "route": {
-    "label": "Quiet Tokyo then Waguri",
+    "label": "Quiet Tokyo then Nozawa",
     "status": "recommended",
     "stops": [
       {
@@ -156,7 +156,7 @@
         "cityKey": "Nozawa",
         "dates": "30 Dec–4 Jan",
         "nights": 6,
-        "note": "In 30 Dec, out 5 Jan · Waguri booked"
+        "note": "In 30 Dec, out 5 Jan · ski lodging open / hunting 5BR"
       },
       {
         "id": "tokyo-2",
@@ -201,11 +201,11 @@
       "city": "Overview",
       "status": "locked",
       "title": "The trip",
-      "summary": "13 nights · quiet Tokyo 3 · Waguri booked 6 · 4 Tokyo or other city travel",
+      "summary": "13 nights · quiet Tokyo 3 · Nozawa 6 · 4 Tokyo or other city travel",
       "blocks": [
         {
           "title": "Beats",
-          "detail": "Quiet Tokyo 27–29 Dec → The Waguri House booked 30 Dec–5 Jan → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
+          "detail": "Quiet Tokyo 27–29 Dec → Nozawa 30 Dec–5 Jan (ski lodging open / hunting 5BR) → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
           "status": "recommended"
         }
       ],
@@ -220,7 +220,7 @@
         },
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
+          "description": "Ski days after quiet Tokyo. Ski lodging open — hunting a 5BR Nozawa house.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -316,7 +316,7 @@
       "places": [
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "Ski days after quiet Tokyo. Lodging is The Waguri House, booked.",
+          "description": "Ski days after quiet Tokyo. Ski lodging open — hunting a 5BR Nozawa house.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -324,11 +324,12 @@
         },
         {
           "title": "The Waguri House",
-          "description": "Booked · B22754491. 10 min outside Nozawa (4WD). Cars required — not village-walkable.",
+          "description": "Cancelled. Not the ski house — hunting a 5BR Nozawa stay. Kijimadaira, not village-walkable.",
           "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
           "thumb": "/lodging-thumbs/waguri-house.jpg",
           "thumbPosition": "50% 30%",
-          "mark": "W"
+          "mark": "W",
+          "badge": "Cancelled"
         }
       ]
     },
@@ -541,8 +542,8 @@
     {
       "id": "nye-fork",
       "status": "recommended",
-      "title": "Quiet Tokyo, then Waguri",
-      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then The Waguri House booked 30 Dec–5 Jan. Not a village-walkable stay."
+      "title": "Quiet Tokyo, then Nozawa",
+      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then Nozawa 30 Dec–5 Jan. Ski lodging open / hunting a 5BR house. Do not claim a locked house."
     },
     {
       "id": "uverworld",
@@ -552,9 +553,9 @@
     },
     {
       "id": "lodging",
-      "status": "recommended",
-      "title": "Ski lodging is Waguri, booked",
-      "detail": "The Waguri House booked B22754491, ¥990,000 / 6n for 8 guests (30 Dec 2026–5 Jan 2027). Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
+      "status": "open",
+      "title": "Ski lodging · open / hunting 5BR Nozawa",
+      "detail": "Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Looking again. Do not invent a replacement house or Tokyo/Kyoto holds."
     },
     {
       "id": "ghibli",
@@ -826,7 +827,7 @@
   ],
   "lodging": {
     "status": "open",
-    "asOf": "24 Aug 2026",
+    "asOf": "14 Sep 2026",
     "tokyoNote": "Default Tokyo lodging is the first 3 nights (27–30 Dec). Station East member FROM ¥345,519 / apt for those nights. Last 4 nights are city travel and may not be Tokyo — not in the pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
     "bands": [
       {
@@ -861,14 +862,14 @@
             "id": "waguri-4",
             "property": "The Waguri House (Akari)",
             "city": "Nozawa",
-            "beds": "5 BR / 3 bath · sleeps 12 · booked for 8",
-            "status": "available",
+            "beds": "5 BR / 3 bath · sleeps 12",
+            "status": "cancelled",
             "perPerson": "~$777",
-            "nextStep": "Booked B22754491.",
+            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Booked B22754491. ¥990,000 / 6n tax-in for 8 guests (30 Dec 2026–5 Jan 2027). Cars required. 10 min outside town, 4WD + studless. Not village-walkable."
+            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. Not village-walkable."
           },
           {
             "id": "tanuki-4",
@@ -925,13 +926,13 @@
             "property": "The Waguri House (Akari)",
             "city": "Nozawa",
             "beds": "5 BR / 3 bath · sleeps 12",
-            "status": "available",
+            "status": "cancelled",
             "perPerson": "~$621",
-            "nextStep": "Booked B22754491 for 8 guests.",
+            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 10-person split is illustrative. Cars required. Not village-walkable."
+            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. 10-person split is illustrative."
           },
           {
             "id": "kiriya-tokiwaya-5",
@@ -977,13 +978,13 @@
             "property": "The Waguri House (Akari)",
             "city": "Nozawa",
             "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
-            "status": "available",
+            "status": "cancelled",
             "perPerson": "~$518",
-            "nextStep": "Booked B22754491 for 8 guests.",
+            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
-            "note": "Booked B22754491. ¥990,000 / 6n tax-in. 12-person split is illustrative. Cars required. Not village-walkable."
+            "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Was ¥990,000 / 6n. 12-person split is illustrative."
           },
           {
             "id": "kamoshika-6",
@@ -1031,11 +1032,11 @@
     "status": "open",
     "heading": "Budget",
     "label": "Estimate",
-    "asOf": "24 Aug 2026",
+    "asOf": "14 Sep 2026",
     "placeholder": "Working estimate. Not locked.",
-    "workingNote": "Tabs 8/10/12. FX 1 USD = 159.31 JPY. Last 4 nights omitted. Waguri booked ¥990,000.",
+    "workingNote": "Tabs 8/10/12. FX 1 USD = 159.31 JPY. Last 4 nights omitted. Ski lodging open / TBD. Waguri cancelled ¥990,000 (was booked).",
     "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
-    "summary": "Subtotal ~$3,143 without rental at 8, with Waguri cars.",
+    "summary": "Subtotal ~$3,143 without rental at 8. Ski lodging open / TBD; cancelled Waguri figure kept as the working estimate.",
     "subtotalWithoutRental": "~$3,143",
     "subtotalWithRental": "~$3,270",
     "band": "$2,900–3,800 with airfare only",
@@ -1054,9 +1055,9 @@
       },
       {
         "id": "nozawa-stay",
-        "title": "Nozawa accommodation — The Waguri House, 6 nights",
+        "title": "Ski lodging · open / TBD",
         "detail": "$777",
-        "note": "The Waguri House booked B22754491. ¥990,000 / 6n for 8 guests. Not Tamanegi."
+        "note": "Waguri cancelled ¥990,000 (was booked). Looking again. Confirmation B22754491 void. Not a locked house."
       },
       {
         "id": "lifts",
@@ -1159,8 +1160,8 @@
   "checklist": [
     {
       "id": "confirm-skeleton",
-      "title": "Quiet Tokyo then Waguri",
-      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → Waguri booked 30 Dec–5 Jan → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
+      "title": "Quiet Tokyo then Nozawa",
+      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–5 Jan (ski lodging open / hunting 5BR) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
       "status": "recommended",
       "priority": "now"
     },
@@ -1187,15 +1188,15 @@
     },
     {
       "id": "nozawa-hotel",
-      "title": "Ski lodging is Waguri, booked",
-      "detail": "The Waguri House B22754491, ¥990,000 / 6n for 8 guests. Bakery and Tamanegi sold out. Stay Nozawa houses sold out, not on hold.",
-      "status": "recommended",
+      "title": "Ski lodging · open / hunting 5BR Nozawa",
+      "detail": "Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Bakery and Tamanegi sold out. Do not invent a replacement house.",
+      "status": "open",
       "priority": "now"
     },
     {
       "id": "nye",
-      "title": "Quiet Tokyo then Waguri",
-      "detail": "Quiet Tokyo 27–29 Dec, then Waguri booked 30 Dec–5 Jan. Not village-walkable; cars required.",
+      "title": "Quiet Tokyo then Nozawa",
+      "detail": "Quiet Tokyo 27–29 Dec, then Nozawa 30 Dec–5 Jan. Ski lodging open / hunting 5BR. Do not claim a locked house.",
       "status": "recommended",
       "priority": "now"
     },
@@ -1339,7 +1340,7 @@
       "kind": "single",
       "min": 8,
       "max": 12,
-      "note": "Booked B22754491. ¥990,000 / 6n for 8 guests. Cars required.",
+      "note": "Cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Not booked.",
       "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
       "email": "admin@akarihouse.jp",
       "phone": "+81 70 9026 60 26"

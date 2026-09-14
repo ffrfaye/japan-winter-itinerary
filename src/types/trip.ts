@@ -17,6 +17,7 @@ export type PlaceCard = {
   thumb?: string
   thumbPosition?: string
   mark: string
+  badge?: string
 }
 
 export type StatusLegend = {
@@ -64,6 +65,7 @@ export type LodgingBookStatus =
   | 'enquire'
   | 'waitlist'
   | 'sold-out'
+  | 'cancelled'
 
 export type LodgingOption = {
   id: string

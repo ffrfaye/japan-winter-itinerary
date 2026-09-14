@@ -1,10 +1,10 @@
 {
   "heading": "Budget",
   "label": "Working · not locked",
-  "identityName": "The Waguri House (Akari)",
-  "identityUrl": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
-  "foot": "Waguri booked B22754491 for 8 guests (Sep 2026). 9-person friend-poll math stays off-site. Cars not a hold.",
-  "last_refreshed": "11 Sep 2026",
+  "identityName": "Ski lodging · open / TBD",
+  "identityUrl": "",
+  "foot": "Ski lodging open / TBD until a new 5BR shortlist. Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. 9-person friend-poll math stays off-site. Cars not a hold.",
+  "last_refreshed": "14 Sep 2026",
   "sharedLines": [
     {
       "id": "flight",
@@ -31,7 +31,7 @@
   "carRental": {
     "id": "car-rental",
     "title": "Car rental",
-    "label": "Waguri cars required · village optional.",
+    "label": "Kijimadaira-style house would need cars; village replacement, cars become optional.",
     "notes": [
       "2× compact SUV/4WD · ¥232,100 / $1,457 total. Pickup Toyota Nagano shop (no Toyota Iiyama). 2 cars, not 1 van. NY +20% (26 Dec 2026–3 Jan 2027) + 4WD + DPP + ETC. Working, tariff-based, sold-out risk high. Not a hold.",
       "Village path (Kashmir / bakery 4BR): default $0. Optional 1 car $91 pp at 8 ($728).",
@@ -65,9 +65,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "title": "Ski lodging · open / TBD",
         "detail": "$777",
-        "note": "Booked for 8 guests. ¥990,000 / 6n tax-in. FX 159.31."
+        "note": "Cancelled ¥990,000 (was booked). Looking again. Not a locked house. Confirmation B22754491 void."
       },
       "cars": {
         "detail": "$182",
@@ -87,9 +87,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "title": "Ski lodging · open / TBD",
         "detail": "$621",
-        "note": "Booked for 8 guests; 10-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
+        "note": "Cancelled ¥990,000 (was booked). 10-person split is illustrative. Looking again. Confirmation B22754491 void."
       },
       "cars": {
         "detail": "$146",
@@ -101,7 +101,7 @@
       "label": "6 bedrooms · 12 people",
       "hero": "~$2,823",
       "working9Note": null,
-      "quietNote": "Waguri still 5BR, sleeps 12",
+      "quietNote": "Hunting 5BR Nozawa; 12-person split is illustrative",
       "tokyo": {
         "id": "tokyo-stay",
         "title": "Tokyo 3n MIMARU Station East",
@@ -110,9 +110,9 @@
       },
       "waguri": {
         "id": "waguri",
-        "title": "The Waguri House · BOOKED B22754491 · ¥990,000",
+        "title": "Ski lodging · open / TBD",
         "detail": "$518",
-        "note": "Booked for 8 guests; 12-person split is illustrative. ¥990,000 / 6n tax-in. FX 159.31."
+        "note": "Cancelled ¥990,000 (was booked). 12-person split is illustrative. Looking again. Confirmation B22754491 void."
       },
       "cars": {
         "detail": "$121",

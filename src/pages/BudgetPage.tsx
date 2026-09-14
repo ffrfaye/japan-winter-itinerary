@@ -19,16 +19,22 @@ export function BudgetPage() {
         {budget.last_refreshed ? (
           <p className="text-sm text-zinc-500">{budget.last_refreshed}</p>
         ) : null}
-        <p className="text-sm text-zinc-600">
-          <a
-            href={budget.identityUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="underline-offset-2 hover:underline"
-          >
-            {budget.identityName}
-          </a>
-        </p>
+        {budget.identityName ? (
+          <p className="text-sm text-zinc-600">
+            {budget.identityUrl.startsWith('http') ? (
+              <a
+                href={budget.identityUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-2 hover:underline"
+              >
+                {budget.identityName}
+              </a>
+            ) : (
+              budget.identityName
+            )}
+          </p>
+        ) : null}
       </header>
 
       <GhostTabs
