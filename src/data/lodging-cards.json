@@ -203,10 +203,10 @@
         5,
         6
       ],
-      "scenario_notes": "7BR Togari lodge. ~15 min to Nozawa, 4WD. Enquire — not live available.",
-      "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire. Not a live 5BR.",
-      "booking_method": "enquire",
+      "scenario_notes": "7BR Togari lodge. Calendar unavailable all 6 nights 30 Dec–5 Jan. Sold out — not enquire-as-open.",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Calendar unavailable all 6 nights. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://book.hostfully.com/mountain-holidays/property-details/d898298f-189e-4c65-8fe5-3851b9ff255a/Hunters%20Gate%20-%20A%20mountain%20lodge%20made%20for%20families"
     },
     {
@@ -229,7 +229,7 @@
       "cons": [
         "Togari, not Nozawa village",
         "7 bedrooms",
-        "Not available"
+        "Partial only — not available"
       ],
       "id": "mountainside-penthouse-togari",
       "name": "Mountainside Penthouse @ Togari Inn",
@@ -244,9 +244,12 @@
         5,
         6
       ],
-      "scenario_notes": "7BR ski-in/out penthouse at Togari Inn. Enquire — not live available.",
+      "scenario_notes": "Partial only — not the full 6 nights. Calendar unavailable most nights of 30 Dec–5 Jan. Enquire operator; not available.",
+      "quiet_notes": [
+        "13 Sep 2026, ~7:24 PM PT. Partial only. Do not mark available / green."
+      ],
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire. Not a live 5BR.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Partial only — not available for the full stay. Not green.",
       "booking_method": "enquire",
       "booking_url": "https://togari-nozawa.com/hotel/togari-inn/"
     },
@@ -265,9 +268,9 @@
         4,
         5
       ],
-      "scenario_notes": "Multi-room block. Cannot assemble 5 continuous rooms. Enquire Stay Nozawa — not available.",
+      "scenario_notes": "Cannot assemble 4–5 rooms all 6 nights. Double rate-blocked for 6n. Enquire Stay Nozawa — not available.",
       "quiet_notes": [
-        "13 Sep 2026, 6:48 PM PT: no green available ski house. Enquire Stay Nozawa; cannot assemble 5 continuous rooms.",
+        "13 Sep 2026, ~7:24 PM PT: cannot assemble 4–5 rooms all 6 nights. Double rate-blocked for 6n. Not green.",
         "Japanese Quad qty 1 · ¥495,945 / 6 nights breakfast · sleeps 4 in one room, not 4 couple rooms."
       ],
       "price": {
@@ -276,11 +279,11 @@
         "covers": "4 rooms / 8 adults, breakfast",
         "per": "6 nights",
         "as_of": "2026-09-13",
-        "source": "Last RoomBoss figure. Enquire — not live available 13 Sep 2026, 6:48 PM PT.",
+        "source": "Last RoomBoss figure. Enquire — not live available 13 Sep 2026, ~7:24 PM PT.",
         "how_to_get_quote": "Email bookings@staynozawa.com"
       },
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire, not available. Cannot assemble 5 continuous rooms.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Partial / cannot assemble 4–5 rooms all 6 nights. Double rate-blocked. Not available.",
       "booking_method": "enquire",
       "booking_url": "https://book.staynozawa.com/search?checkIn=2026-12-30&checkOut=2027-01-05&numberGuests=10",
       "listing_url": "https://book.staynozawa.com/search/listing/402890829f0f7f29019f124c465544e8?sv=1&segment=Website&i18n=en&checkIn=20261230&checkOut=20270105&numberGuests=8",
@@ -329,7 +332,7 @@
       "scenario_notes": "Email / enquiry for unlisted Stay Nozawa inventory. Not a named house. Not available.",
       "price": null,
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire — not available. Zero live 5BR.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Enquire for unlisted inventory. Zero live 4–5BR. Not available.",
       "booking_method": "enquire",
       "booking_url": "https://book.staynozawa.com/search?checkIn=2026-12-30&checkOut=2027-01-05&numberGuests=10",
       "booking_contact": "bookings@staynozawa.com",
@@ -418,10 +421,10 @@
       "scenarios": [
         4
       ],
-      "scenario_notes": "Sold out for 30 Dec–5 Jan. Gab: only free Dec 22–31.",
+      "scenario_notes": "Sold out / faded for 30 Dec–5 Jan. Gab: only free Dec 22–31.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Gab: not available 30 Dec–5 Jan (only free Dec 22–31).",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Gab: only free Dec 22–31.",
       "booking_method": "enquire",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/390089/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
@@ -454,10 +457,10 @@
         4,
         5
       ],
-      "scenario_notes": "5BR. Sold out. Not enquire.",
+      "scenario_notes": "5BR. Sold out / faded. Not enquire.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Sold out / faded. Gab did not offer; not enquire-as-open.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Gab did not offer; not enquire-as-open.",
       "booking_method": "sold-out",
       "booking_url": "https://checkout.lodgify.com/en/gabriel-sutter/391343/reservation?currency=JPY&arrival=2026-12-30&departure=2027-01-05&guests=8",
       "booking_contact": "admin@akarihouse.jp",
@@ -553,7 +556,7 @@
       ],
       "scenario_notes": "Unlisted quote. Email the operator — not a named house, not available.",
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire for unlisted inventory.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Enquire for unlisted quote. Not a named house. Not available.",
       "booking_method": "enquire",
       "booking_url": "https://www.nozawaholidays.com/availability/"
     },
@@ -641,11 +644,11 @@
       "scenarios": [
         4
       ],
-      "scenario_notes": "Calendar didn’t load.",
+      "scenario_notes": "Sold out / faded. 4BR — not a live 5BR.",
       "price": null,
-      "availability_status": "unknown",
-      "availability_notes": "Calendar didn’t load — not sold out.",
-      "booking_method": null,
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.booking.com/hotel/jp/kawamotoya.html",
       "booking_contact": null,
       "onsen": null,
@@ -657,7 +660,7 @@
       "images": [],
       "pros": [],
       "cons": [
-        "Calendar didn’t load",
+        "Sold out",
         "No official hero"
       ]
     },
@@ -680,7 +683,7 @@
       "scenario_notes": "Email / enquiry for unlisted inventory. Not a named house. Not available.",
       "price": null,
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Ask SamuraiSnow for unlisted 5BR dates. Kawazen and James House are named enquire cards (waitlist / Not Available). Himecho / Kamoshika stay sold out.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Ask SamuraiSnow for unlisted 5BR dates. Kawazen / James stay sold-out faded. Not available.",
       "booking_method": "enquire",
       "booking_url": "https://www.samuraisnow.com/get-in-touch",
       "booking_contact": "info@samuraisnow.com",
@@ -714,11 +717,11 @@
         5,
         6
       ],
-      "scenario_notes": "Waitlist / confirm Not Available. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Enquire operator — not live available.",
+      "scenario_notes": "AJAX Not Available. Sold out / faded — not enquire-as-open.",
       "price": null,
-      "availability_status": "enquire",
-      "availability_notes": "Enquire — not available. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Waitlist / operator contact only.",
-      "booking_method": "enquire",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. AJAX Not Available. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.samuraisnow.com/nozawa-onsen/kawazen/5bedroom",
       "booking_contact": "info@samuraisnow.com",
       "onsen": null,
@@ -734,7 +737,7 @@
       "images": [],
       "pros": [],
       "cons": [
-        "AJAX Not Available",
+        "Sold out",
         "Not available",
         "No official hero"
       ]
@@ -754,11 +757,11 @@
         5,
         6
       ],
-      "scenario_notes": "Waitlist / confirm Not Available. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Enquire operator — not live available.",
+      "scenario_notes": "AJAX Not Available. Sold out / faded — not enquire-as-open.",
       "price": null,
-      "availability_status": "enquire",
-      "availability_notes": "Enquire — not available. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Waitlist / operator contact only.",
-      "booking_method": "enquire",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. AJAX Not Available. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.samuraisnow.com/nozawa-onsen/james-house/5-bedroom",
       "booking_contact": "info@samuraisnow.com",
       "onsen": null,
@@ -774,7 +777,7 @@
       "images": [],
       "pros": [],
       "cons": [
-        "AJAX Not Available",
+        "Sold out",
         "Not available",
         "No official hero"
       ]
@@ -861,6 +864,76 @@
       ]
     },
     {
+      "id": "nozawa-central-101",
+      "name": "Nozawa Central 101",
+      "location": "nozawa",
+      "operator": "Nozawa Holidays",
+      "official_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-101/",
+      "property_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-101/",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "sleeps": 8,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "3BR ground floor. Sold out / faded. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-101/",
+      "booking_contact": "team@nozawaholidays.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "3 bedrooms",
+        "7-night min"
+      ]
+    },
+    {
+      "id": "nozawa-central-201",
+      "name": "Nozawa Central 201",
+      "location": "nozawa",
+      "operator": "Nozawa Holidays",
+      "official_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-201/",
+      "property_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-201/",
+      "type": "apartment",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "sleeps": 6,
+      "scenarios": [
+        4
+      ],
+      "scenario_notes": "2BR middle floor. Sold out / faded. 7-night min.",
+      "price": null,
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
+      "booking_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-201/",
+      "booking_contact": "team@nozawaholidays.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": [],
+      "cons": [
+        "Sold out",
+        "2 bedrooms",
+        "7-night min"
+      ]
+    },
+    {
       "id": "nozawa-central-301",
       "name": "Nozawa Central 301",
       "location": "nozawa",
@@ -874,13 +947,13 @@
       "scenarios": [
         4
       ],
-      "scenario_notes": "3BR — keep faded if not 4BR. 7-night min still applies to Nozawa Holidays houses.",
+      "scenario_notes": "3BR top floor. Sold out / faded. 7-night min.",
       "price": null,
-      "availability_status": "unknown",
-      "availability_notes": "Calendar didn’t load — not sold out. 7-night min.",
-      "booking_method": null,
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.nozawaholidays.com/properties/nozawa-central-apartments-301/",
-      "booking_contact": null,
+      "booking_contact": "team@nozawaholidays.com",
       "onsen": null,
       "ski_logistics": null,
       "tokyo_logistics": null,
@@ -890,8 +963,8 @@
       "images": [],
       "pros": [],
       "cons": [
+        "Sold out",
         "3 bedrooms",
-        "Calendar didn’t load",
         "7-night min"
       ]
     },
@@ -910,11 +983,11 @@
         4,
         5
       ],
-      "scenario_notes": "Calendar didn’t load. 7-night min still applies to Nozawa Holidays houses.",
+      "scenario_notes": "4BR. Sold out / faded. 7-night min.",
       "price": null,
-      "availability_status": "unknown",
-      "availability_notes": "Calendar didn’t load — not sold out. 7-night min.",
-      "booking_method": null,
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.nozawaholidays.com/properties/nozawa-slopeside-chalet/",
       "booking_contact": null,
       "onsen": null,
@@ -926,7 +999,7 @@
       "images": [],
       "pros": [],
       "cons": [
-        "Calendar didn’t load",
+        "Sold out",
         "7-night min",
         "No official hero"
       ]
@@ -983,11 +1056,11 @@
         5,
         6
       ],
-      "scenario_notes": "Multi-apt enquire. Not a live 5BR lockup.",
+      "scenario_notes": "Operator EOY sold — fully booked 24 Dec–early Feb. Sold out / faded — not enquire-as-open.",
       "price": null,
-      "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Multi-apt enquire. Not available.",
-      "booking_method": "enquire",
+      "availability_status": "sold-out",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Operator EOY sold (24 Dec–early Feb). Sold out / faded. Not available.",
+      "booking_method": "sold-out",
       "booking_url": "https://www.theridgenozawa.com/enquiry/",
       "booking_contact": "info@theridgenozawa.com",
       "onsen": null,
@@ -999,7 +1072,8 @@
       "images": [],
       "pros": [],
       "cons": [
-        "Calendar didn’t load",
+        "Sold out EOY",
+        "Not available",
         "No official hero"
       ]
     },
@@ -1058,10 +1132,10 @@
         5,
         6
       ],
-      "scenario_notes": "4BR duplex.",
+      "scenario_notes": "4BR duplex. Sold out / faded.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Operator sold out Gab 24 Aug.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Sold out / faded. Not available.",
       "booking_method": "email",
       "booking_url": "https://www.akarihouse.jp/tamanegi-house",
       "booking_contact": "admin@akarihouse.jp",
@@ -1134,10 +1208,10 @@
         5,
         6
       ],
-      "scenario_notes": "5BR. Stay Nozawa still sold out.",
+      "scenario_notes": "5BR. Stay Nozawa sold out / faded.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. Not available.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1177,7 +1251,7 @@
       "scenario_notes": "Stay Nozawa apt. 7-night min still applies. Still sold out.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1218,7 +1292,7 @@
       "scenario_notes": "Stay Nozawa apt. 7-night min still applies. Still sold out.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1255,7 +1329,7 @@
       "scenario_notes": "3BR — faded on the 4BR list. Stay Nozawa apt. 7-night min still applies.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1288,10 +1362,10 @@
       "scenarios": [
         6
       ],
-      "scenario_notes": "True 6 bedrooms. Stay Nozawa still sold out. 7-night min.",
+      "scenario_notes": "True 6 bedrooms. Stay Nozawa sold out / faded. 7-night min.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1331,7 +1405,7 @@
       "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1371,7 +1445,7 @@
       "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1408,7 +1482,7 @@
       "scenario_notes": "Stay Nozawa Dennojo units. Still sold out. 7-night min.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1443,7 +1517,7 @@
       "scenario_notes": "Stay Nozawa apt. Still sold out. 7-night min.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out. 7-night min.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded. 7-night min.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1517,7 +1591,7 @@
       "scenario_notes": "2BR anyway — faded on the 4BR list. No dedicated Stay Nozawa property page found (hei-hachi slugs 404); catalog is the official listing.",
       "price": null,
       "availability_status": "sold-out",
-      "availability_notes": "Stay Nozawa still sold out.",
+      "availability_notes": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out / faded.",
       "booking_method": "RoomBoss search",
       "booking_url": "https://book.staynozawa.com/?checkIn=20261230&checkOut=20270105&numberGuests=8",
       "booking_contact": "bookings@staynozawa.com",
@@ -1908,8 +1982,8 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Open / hunting. Zero live stock for 30 Dec–5 Jan. Enquire — not available. Waguri cancelled.",
-  "nozawa_checked_at": "2026-09-14T01:48:00Z",
-  "checked_at": "2026-09-14T01:48:00Z",
-  "nozawa_banner": "Nozawa lodging is open / hunting. Zero live 5BR for 30 Dec 2026–5 Jan 2027 — enquire operators today. Not available."
+  "nozawa_as_of": "13 Sep 2026, ~7:24 PM PT. Open / hunting. Zero live 4–5BR for 30 Dec–5 Jan. Enquire — not available. Waguri cancelled.",
+  "nozawa_checked_at": "2026-09-14T02:24:00Z",
+  "checked_at": "2026-09-14T02:24:00Z",
+  "nozawa_banner": "Nozawa lodging is open / hunting. Zero live 4–5BR for 30 Dec 2026–5 Jan 2027 — enquire operators. Not available."
 }

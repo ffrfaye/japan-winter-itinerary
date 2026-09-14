@@ -856,7 +856,7 @@
             "perPerson": "~$870",
             "nextStep": "Enquire — not live available.",
             "url": "https://book.staynozawa.com/search/",
-            "note": "13 Sep 2026, 6:48 PM PT. Enquire Stay Nozawa, not a green available ski house. Breakfast, no dinner. Walk-in lodge. Last figure ~¥1,102,100 / 6n."
+            "note": "13 Sep 2026, ~7:24 PM PT. Cannot assemble 4–5 rooms all 6 nights. Double rate-blocked for 6n. Enquire Stay Nozawa — not green. Last figure ~¥1,102,100 / 6n."
           },
           {
             "id": "waguri-4",
@@ -876,10 +876,10 @@
             "property": "Tanuki 4BR 3F / 4F",
             "city": "Nozawa",
             "beds": "3F sleeps 12 · 4F sleeps 11",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
             "email": "bookings@staynozawa.com",
-            "note": "RoomBoss sold out 24 Dec–6 Jan."
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           },
           {
             "id": "kiriya-4",
@@ -916,10 +916,10 @@
             "property": "Kamoshika Ski Lodge",
             "city": "Nozawa",
             "beds": "5BR / 5 bath · sleeps 16",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
             "email": "bookings@staynozawa.com",
-            "note": "Best one-house if a 5th couple is yes. Sold out 24 Dec–9 Jan."
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           },
           {
             "id": "waguri-5",
@@ -949,10 +949,10 @@
             "property": "Two Stay Nozawa units",
             "city": "Nozawa",
             "beds": "5 bedrooms combined",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
             "email": "bookings@staynozawa.com",
-            "note": "e.g. Dennojo West (ask layout) + a 2-bed, or Tanuki 3BR + 2BR. All blocked 24 Dec–6 Jan."
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           }
         ]
       },
@@ -991,38 +991,40 @@
             "property": "Kamoshika Ski Lodge",
             "city": "Nozawa",
             "beds": "5BR · sleeps 16",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
             "email": "bookings@staynozawa.com",
-            "note": "6 pairs only if two pairs share a bunk/flex room."
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           },
           {
             "id": "iroha",
             "property": "Iroha Ichi + Iroha Ni",
             "city": "Nozawa",
             "beds": "3+3 bed · 8+8",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
             "email": "bookings@staynozawa.com",
-            "note": "True 6 bedrooms. Same operator, next to each other."
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           },
           {
             "id": "tanuki-6",
             "property": "Tanuki 4BR 3F + a 2/3BR",
             "city": "Nozawa",
             "beds": "4BR + 2/3BR · same building",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
-            "email": "bookings@staynozawa.com"
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
+            "email": "bookings@staynozawa.com",
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           },
           {
             "id": "bonbori",
             "property": "Bonbori Ichi + Bonbori Ni",
             "city": "Nozawa",
             "beds": "3BR/10 + 3BR/8",
-            "status": "waitlist",
-            "nextStep": "Email waitlist.",
-            "email": "bookings@staynozawa.com"
+            "status": "sold-out",
+            "nextStep": "Sold out / faded.",
+            "email": "bookings@staynozawa.com",
+            "note": "13 Sep 2026, ~7:24 PM PT. Stay Nozawa sold out. Not available."
           }
         ]
       }
