@@ -1,9 +1,9 @@
 {
   "heading": "Budget",
-  "label": "Working · not locked",
-  "identityName": "Ski lodging · open / TBD",
-  "identityUrl": "",
-  "foot": "Ski lodging open / TBD. 13 Sep 2026, ~7:24 PM PT: zero live 4–5BR for 30 Dec–5 Jan — enquire operators. Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. 9-person friend-poll math stays off-site. Cars not a hold.",
+  "label": "Ski lodging reserved · charge pending",
+  "identityName": "AlpineCottage Ryuo",
+  "identityUrl": "https://www.airbnb.com/rooms/1536728419485230997",
+  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Waguri cancelled. Cars required — Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. 9p ≈ $688 if needed (off-default). Last 4 nights omitted. Tokyo stay unbooked.",
   "last_refreshed": "14 Sep 2026",
   "sharedLines": [
     {
@@ -31,7 +31,7 @@
   "carRental": {
     "id": "car-rental",
     "title": "Car rental",
-    "label": "Kijimadaira-style house would need cars; village replacement, cars become optional.",
+    "label": "Yomase / Ryuo requires cars — not village-walkable. Host parking free for 3 vehicles.",
     "notes": [
       "2× compact SUV/4WD · ¥232,100 / $1,457 total. Pickup Toyota Nagano shop (no Toyota Iiyama). 2 cars, not 1 van. NY +20% (26 Dec 2026–3 Jan 2027) + 4WD + DPP + ETC. Working, tariff-based, sold-out risk high. Not a hold.",
       "Village path (Kashmir / bakery 4BR): default $0. Optional 1 car $91 pp at 8 ($728).",
@@ -55,19 +55,19 @@
     {
       "id": 4,
       "label": "4 bedrooms · 8 people",
-      "hero": "~$3,143",
-      "working9Note": null,
+      "hero": "~$3,140",
+      "working9Note": "9-person split of the same $6,193.11 house ≈ $688. Off-default; tabs stay 8/10/12.",
       "tokyo": {
         "id": "tokyo-stay",
         "title": "Tokyo 3n MIMARU Station East",
         "detail": "$545",
         "note": "2 apts."
       },
-      "waguri": {
-        "id": "waguri",
-        "title": "Ski lodging · open / TBD",
-        "detail": "$777",
-        "note": "Cancelled ¥990,000 (was booked). Looking again. Not a locked house. Confirmation B22754491 void."
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$774",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 8 adults on the booking. Same house total on every tab."
       },
       "cars": {
         "detail": "$182",
@@ -77,7 +77,7 @@
     {
       "id": 5,
       "label": "5 bedrooms · 10 people",
-      "hero": "~$3,058",
+      "hero": "~$3,056",
       "working9Note": null,
       "tokyo": {
         "id": "tokyo-stay",
@@ -85,11 +85,11 @@
         "detail": "$652",
         "note": "3 apts."
       },
-      "waguri": {
-        "id": "waguri",
-        "title": "Ski lodging · open / TBD",
-        "detail": "$621",
-        "note": "Cancelled ¥990,000 (was booked). 10-person split is illustrative. Looking again. Confirmation B22754491 void."
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$619",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 10-person split of the same house total."
       },
       "cars": {
         "detail": "$146",
@@ -99,20 +99,20 @@
     {
       "id": 6,
       "label": "6 bedrooms · 12 people",
-      "hero": "~$2,823",
+      "hero": "~$2,821",
       "working9Note": null,
-      "quietNote": "Hunting 5BR Nozawa; 12-person split is illustrative",
+      "quietNote": "Listing sleeps 12; booking is 8 adults. Same $6,193.11 house. Cars required — Yomase / Ryuo.",
       "tokyo": {
         "id": "tokyo-stay",
         "title": "Tokyo 3n MIMARU Station East",
         "detail": "$545",
         "note": "3 apts."
       },
-      "waguri": {
-        "id": "waguri",
-        "title": "Ski lodging · open / TBD",
-        "detail": "$518",
-        "note": "Cancelled ¥990,000 (was booked). 12-person split is illustrative. Looking again. Confirmation B22754491 void."
+      "skiLodging": {
+        "id": "ski-airbnb",
+        "title": "AlpineCottage Ryuo",
+        "detail": "$516",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 12-person split of the same house total."
       },
       "cars": {
         "detail": "$121",

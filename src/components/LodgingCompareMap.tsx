@@ -71,7 +71,7 @@ export function LodgingCompareMap({
     const next = L.map(node, {
       scrollWheelZoom: false,
       attributionControl: true,
-      minZoom: 12,
+      minZoom: 10,
       maxZoom: 17,
     })
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -158,7 +158,7 @@ export function LodgingCompareMap({
             location === 'tokyo'
               ? 'Map of Tokyo Station, Hatchobori, and Nihonbashi'
               : location === 'nozawa'
-                ? 'Map of Nozawa village and ski base'
+                ? 'Map of Yomase / Ryuo, Nozawa village, and Shiga'
                 : 'Map of Kyoto. Listings without coordinates are not pinned.'
           }
         />

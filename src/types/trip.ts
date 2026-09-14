@@ -66,6 +66,7 @@ export type LodgingBookStatus =
   | 'waitlist'
   | 'sold-out'
   | 'cancelled'
+  | 'booked'
 
 export type LodgingOption = {
   id: string

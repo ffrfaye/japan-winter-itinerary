@@ -4,7 +4,7 @@ export type TabId = 'itinerary' | 'rsvp' | 'planning' | 'budget' | 'lodging' | '
 
 export type ViewMode = 'list' | 'cards'
 
-export type MapPlace = 'Tokyo' | 'Nozawa' | 'Jigokudani'
+export type MapPlace = 'Tokyo' | 'Stay' | 'Shiga' | 'Nozawa' | 'Jigokudani'
 
 export type PinState = 'primary' | 'secondary' | 'idle'
 
@@ -57,9 +57,19 @@ export const tabs: { id: TabId; label: string }[] = [
 
 const pinUrls = {
   Tokyo: 'https://www.gotokyo.org/en/',
+  Stay: 'https://www.airbnb.com/rooms/1536728419485230997',
+  Shiga: 'https://shigakogen-ski.or.jp/english/',
   Nozawa: 'https://en.nozawaski.com/',
   Jigokudani: 'https://en.jigokudani-yaenkoen.co.jp/',
 } as const
+
+const idlePins: PinStates = {
+  Tokyo: 'idle',
+  Stay: 'idle',
+  Shiga: 'idle',
+  Nozawa: 'idle',
+  Jigokudani: 'idle',
+}
 
 const skiDays = new Set(['2026-12-31', '2027-01-01', '2027-01-03', '2027-01-04'])
 const travelDays = new Set(['2026-12-30', '2027-01-05'])
@@ -70,30 +80,57 @@ function pinsFor(day: TripDay): Pick<
 > {
   if (day.overview) {
     return {
-      pins: { Tokyo: 'primary', Nozawa: 'primary', Jigokudani: 'primary' },
+      pins: {
+        ...idlePins,
+        Tokyo: 'primary',
+        Stay: 'primary',
+        Jigokudani: 'primary',
+      },
       pinLinks: pinUrls,
     }
   }
   if (travelDays.has(day.id)) {
     return {
-      pins: { Tokyo: 'primary', Nozawa: 'primary', Jigokudani: 'idle' },
+      pins: { ...idlePins, Tokyo: 'primary', Stay: 'primary' },
       showTravelLine: true,
+      pinLinks: { Tokyo: pinUrls.Tokyo, Stay: pinUrls.Stay },
     }
   }
   if (day.id === '2027-01-02') {
     return {
-      pins: { Tokyo: 'idle', Nozawa: 'secondary', Jigokudani: 'primary' },
+      pins: {
+        ...idlePins,
+        Stay: 'secondary',
+        Jigokudani: 'primary',
+        Shiga: 'secondary',
+      },
       showCluster: true,
-      pinLinks: { Nozawa: pinUrls.Nozawa, Jigokudani: pinUrls.Jigokudani },
+      pinLinks: {
+        Stay: pinUrls.Stay,
+        Jigokudani: pinUrls.Jigokudani,
+        Shiga: pinUrls.Shiga,
+      },
     }
   }
   if (skiDays.has(day.id)) {
     return {
-      pins: { Tokyo: 'idle', Nozawa: 'primary', Jigokudani: 'secondary' },
+      pins: {
+        ...idlePins,
+        Stay: 'primary',
+        Shiga: 'secondary',
+        Nozawa: 'secondary',
+        Jigokudani: 'idle',
+      },
+      pinLinks: {
+        Stay: pinUrls.Stay,
+        Shiga: pinUrls.Shiga,
+        Nozawa: pinUrls.Nozawa,
+      },
     }
   }
   return {
-    pins: { Tokyo: 'primary', Nozawa: 'idle', Jigokudani: 'idle' },
+    pins: { ...idlePins, Tokyo: 'primary' },
+    pinLinks: { Tokyo: pinUrls.Tokyo },
   }
 }
 

@@ -13,15 +13,21 @@ type JapanMapProps = {
 
 const places = {
   Tokyo: { lat: 35.6762, lng: 139.6503 },
+  Stay: { lat: 36.78108, lng: 138.46881 },
+  Shiga: { lat: 36.705725, lng: 138.5079 },
   Nozawa: { lat: 36.9226, lng: 138.4406 },
   Jigokudani: { lat: 36.7333, lng: 138.462 },
 } as const
 
-const labels = {
+const labels: Record<MapPlace, string> = {
   Tokyo: 'Tokyo',
-  Nozawa: 'Nozawa Onsen',
+  Stay: 'Yomase / Ryuo',
+  Shiga: 'Shiga',
+  Nozawa: 'Nozawa',
   Jigokudani: 'Jigokudani',
-} as const
+}
+
+const mapPlaces = Object.keys(places) as MapPlace[]
 
 function pinIcon(city: MapPlace, state: PinState, soft: boolean) {
   const filled = state === 'primary'
@@ -34,10 +40,9 @@ function pinIcon(city: MapPlace, state: PinState, soft: boolean) {
     state === 'idle'
       ? ''
       : `<span style="font:${weight} 10px/1 Inter Variable,Inter,sans-serif;color:${color};white-space:nowrap;">${labels[city]}</span>`
-  const width = state === 'idle' ? 16 : city === 'Jigokudani' ? 96 : 104
+  const width = state === 'idle' ? 16 : city === 'Stay' ? 112 : city === 'Jigokudani' ? 96 : 80
   const height = state === 'idle' ? 16 : 32
-  const anchorX = city === 'Jigokudani' && state !== 'idle' ? 36 : width / 2
-  const anchorY = city === 'Jigokudani' && state !== 'idle' ? 14 : state === 'idle' ? 8 : 8
+  const anchorX = width / 2
   return L.divIcon({
     className: 'trip-pin',
     html: `<div style="display:flex;flex-direction:column;align-items:center;gap:2px;">
@@ -45,17 +50,32 @@ function pinIcon(city: MapPlace, state: PinState, soft: boolean) {
       ${label}
     </div>`,
     iconSize: [width, height],
-    iconAnchor: [anchorX, anchorY],
+    iconAnchor: [anchorX, 8],
   })
 }
 
-const bounds = L.latLngBounds(
-  [places.Tokyo.lat, places.Tokyo.lng],
-  [places.Nozawa.lat, places.Nozawa.lng],
-).extend([places.Jigokudani.lat, places.Jigokudani.lng])
+function visibleBounds(pins: PinStates) {
+  const bounds = L.latLngBounds([])
+  for (const city of mapPlaces) {
+    if (pins[city] === 'idle') continue
+    bounds.extend([places[city].lat, places[city].lng])
+  }
+  if (!bounds.isValid()) {
+    return L.latLngBounds(
+      [places.Tokyo.lat, places.Tokyo.lng],
+      [places.Stay.lat, places.Stay.lng],
+    ).extend([places.Jigokudani.lat, places.Jigokudani.lng])
+  }
+  return bounds
+}
 
-function fitTrip(map: L.Map) {
-  map.fitBounds(bounds, { padding: [24, 24], maxZoom: 7 })
+function fitPins(map: L.Map, pins: PinStates) {
+  const bounds = visibleBounds(pins)
+  const regionalOnly = pins.Tokyo === 'idle'
+  map.fitBounds(bounds, {
+    padding: [24, 24],
+    maxZoom: regionalOnly ? 10 : 7,
+  })
 }
 
 export function JapanMap({
@@ -79,7 +99,7 @@ export function JapanMap({
       scrollWheelZoom: false,
       attributionControl: true,
       minZoom: 5,
-      maxZoom: 8,
+      maxZoom: 11,
     })
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution:
@@ -87,12 +107,10 @@ export function JapanMap({
       subdomains: 'abcd',
       maxZoom: 19,
     }).addTo(next)
-    fitTrip(next)
     setMap(next)
 
     const resize = new ResizeObserver(() => {
       next.invalidateSize()
-      fitTrip(next)
     })
     resize.observe(node)
 
@@ -108,15 +126,18 @@ export function JapanMap({
 
   useEffect(() => {
     if (!map) return
+    fitPins(map, pins)
 
-    for (const city of ['Tokyo', 'Nozawa', 'Jigokudani'] as const) {
+    for (const city of mapPlaces) {
       const state = pins[city]
       const latlng: L.LatLngExpression = [places[city].lat, places[city].lng]
       const href = pinLinks?.[city]
       const existing = markers.current[city]
       if (existing) {
         existing.setIcon(pinIcon(city, state, Boolean(softLabels)))
-        existing.setZIndexOffset(state === 'primary' ? 200 : state === 'secondary' ? 100 : 0)
+        existing.setZIndexOffset(
+          state === 'primary' ? 200 : state === 'secondary' ? 100 : 0,
+        )
         existing.off('click')
         if (href) {
           existing.on('click', () => window.open(href, '_blank', 'noreferrer'))
@@ -137,7 +158,7 @@ export function JapanMap({
     if (showTravelLine) {
       const path: L.LatLngExpression[] = [
         [places.Tokyo.lat, places.Tokyo.lng],
-        [places.Nozawa.lat, places.Nozawa.lng],
+        [places.Stay.lat, places.Stay.lng],
       ]
       if (lineRef.current) {
         lineRef.current.setLatLngs(path)
@@ -155,12 +176,12 @@ export function JapanMap({
 
     if (showCluster) {
       const center: L.LatLngExpression = [
-        (places.Nozawa.lat + places.Jigokudani.lat) / 2,
-        (places.Nozawa.lng + places.Jigokudani.lng) / 2,
+        (places.Stay.lat + places.Jigokudani.lat) / 2,
+        (places.Stay.lng + places.Jigokudani.lng) / 2,
       ]
       const radius =
         map.distance(
-          [places.Nozawa.lat, places.Nozawa.lng],
+          [places.Stay.lat, places.Stay.lng],
           [places.Jigokudani.lat, places.Jigokudani.lng],
         ) /
           2 +
@@ -196,7 +217,7 @@ export function JapanMap({
         ref={root}
         className="absolute inset-0 [&_.leaflet-container]:z-0 [&_.leaflet-container]:h-full [&_.leaflet-container]:w-full [&_.leaflet-container]:bg-zinc-100 [&_.leaflet-control-attribution]:text-[10px] [&_.trip-pin]:border-0 [&_.trip-pin]:bg-transparent"
         role="img"
-        aria-label={`Map of Tokyo, Nozawa Onsen, and Jigokudani. ${primary} highlighted.`}
+        aria-label={`Map of Tokyo, Yomase / Ryuo, Ryuoo, Shiga, Nozawa, and Jigokudani. ${primary} highlighted.`}
       />
     </div>
   )

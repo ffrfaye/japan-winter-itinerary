@@ -59,7 +59,7 @@ export function scenarioLines(scenario: BudgetScenario): BudgetLine[] {
   return [
     byId('flight'),
     scenario.tokyo,
-    scenario.waguri,
+    scenario.skiLodging,
     carsLine(scenario),
     byId('lifts'),
     byId('tickets'),

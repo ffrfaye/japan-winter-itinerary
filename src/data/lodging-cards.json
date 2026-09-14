@@ -1,9 +1,9 @@
 {
   "research_as_of": "2026-08-23",
   "nozawa_map_notes": {
-    "village": "Village",
-    "nagasaka": "Nagasaka",
-    "hikage": "Hikage"
+    "village": "Nozawa village — not the stay",
+    "nagasaka": "Stay pin is Yomase / Ryuo (AlpineCottage Ryuo), not Waguri",
+    "hikage": "Closest hill Ryuoo · cars required"
   },
   "properties": [
     {
@@ -169,6 +169,70 @@
       ]
     },
     {
+      "id": "alpinecottage-ryuo",
+      "name": "AlpineCottage Ryuo",
+      "location": "nozawa",
+      "operator": "Alpine Cottage-MARU",
+      "official_url": "https://www.airbnb.com/rooms/1536728419485230997",
+      "property_url": "https://www.airbnb.com/rooms/1536728419485230997",
+      "listing_url": "https://www.airbnb.com/rooms/1536728419485230997",
+      "type": "whole-house",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": 12,
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
+      "scenario_notes": "Booked for 8 adults. Listing sleeps 12. Same house total on the 8/10/12 tabs.",
+      "quiet_notes": [
+        "Reserved / pending payment · HMCZA2Z53J · $6,193.11. Visa ••••9886 charge 22 Nov 2026. Not paid yet.",
+        "Check-in Wed 30 Dec 2026 after 15:00 · check-out Tue 5 Jan 2027 by 10:00. Self check-in after OneStay registration.",
+        "Yomase / Ryuo — not Nozawa village, not Waguri. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles.",
+        "Free cancel before 15:00 30 Nov; partial before 15:00 23 Dec.",
+        "Waguri cancelled; this Airbnb is the locked ski lodging."
+      ],
+      "confirmation": "HMCZA2Z53J",
+      "price": {
+        "amount": 6193.11,
+        "currency": "USD",
+        "covers": "whole house, 8 adults",
+        "per": "6 nights",
+        "as_of": "2026-09-14",
+        "source": "Airbnb confirmation HMCZA2Z53J. USD $6,193.11. Charge pending 22 Nov 2026.",
+        "how_to_get_quote": null
+      },
+      "availability_status": "booked",
+      "availability_notes": "Reserved · pending Visa ••••9886 charge 22 Nov 2026 · 8 adults",
+      "booking_method": "booked",
+      "booking_url": "https://www.airbnb.com/rooms/1536728419485230997",
+      "booking_contact": null,
+      "onsen": null,
+      "ski_logistics": {
+        "walk_to_lift": "Closest ski: Ryuoo",
+        "walk_to_village": "Yomase / Ryuo. NOT Nozawa village. NOT village-walkable.",
+        "vehicle_access": "Cars required · host parking free for 3 vehicles"
+      },
+      "tokyo_logistics": null,
+      "address": "8032-2 Yomase, Yamanochi, Shimotakai District, Nagano 381-0405",
+      "lat": 36.78108,
+      "lng": 138.46881,
+      "images": [],
+      "pros": [
+        "Booked HMCZA2Z53J",
+        "USD $6,193.11 / 6 nights",
+        "Sleeps 12 · booked for 8 adults",
+        "Host parking free for 3 vehicles"
+      ],
+      "cons": [
+        "Yomase / Ryuo — not Nozawa village",
+        "Cars required",
+        "Charge pending 22 Nov 2026"
+      ],
+      "badge": "Pending payment"
+    },
+    {
       "bathrooms": null,
       "sleeps": null,
       "booking_contact": null,
@@ -328,7 +392,11 @@
       "bedrooms": null,
       "bathrooms": null,
       "sleeps": null,
-      "scenarios": [4, 5, 6],
+      "scenarios": [
+        4,
+        5,
+        6
+      ],
       "scenario_notes": "Email / enquiry for unlisted Stay Nozawa inventory. Not a named house. Not available.",
       "price": null,
       "availability_status": "enquire",
@@ -343,8 +411,13 @@
       "lat": null,
       "lng": null,
       "images": [],
-      "pros": ["Operator contact for unlisted inventory"],
-      "cons": ["Not a named house", "Not available"]
+      "pros": [
+        "Operator contact for unlisted inventory"
+      ],
+      "cons": [
+        "Not a named house",
+        "Not available"
+      ]
     },
     {
       "id": "waguri-house",
@@ -1982,8 +2055,8 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "13 Sep 2026, ~7:24 PM PT. Open / hunting. Zero live 4–5BR for 30 Dec–5 Jan. Enquire — not available. Waguri cancelled.",
-  "nozawa_checked_at": "2026-09-14T02:24:00Z",
-  "checked_at": "2026-09-14T02:24:00Z",
-  "nozawa_banner": "Nozawa lodging is open / hunting. Zero live 4–5BR for 30 Dec 2026–5 Jan 2027 — enquire operators. Not available."
+  "nozawa_as_of": "14 Sep 2026. AlpineCottage Ryuo booked HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Other Nozawa houses from 13 Sep, ~7:24 PM PT recheck — enquire / faded. Waguri cancelled.",
+  "nozawa_checked_at": "2026-09-14T06:24:00Z",
+  "checked_at": "2026-09-14T06:24:00Z",
+  "nozawa_banner": "Ski lodging is locked: AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J). Reserved · $6,193.11 · charge pending 22 Nov. Cars required. Closest hill Ryuoo. Waguri cancelled."
 }

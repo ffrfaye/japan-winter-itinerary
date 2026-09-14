@@ -7,6 +7,7 @@ const statusLabel: Record<LodgingBookStatus, string> = {
   waitlist: 'Waitlist',
   'sold-out': 'Sold out',
   cancelled: 'Cancelled',
+  booked: 'Booked',
 }
 
 function telHref(phone: string) {

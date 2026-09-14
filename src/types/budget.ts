@@ -32,7 +32,7 @@ export type BudgetScenario = {
   working9Note: string | null
   quietNote?: string | null
   tokyo: BudgetLine
-  waguri: BudgetLine
+  skiLodging: BudgetLine
   cars: Pick<BudgetLine, 'detail' | 'note'>
 }
 

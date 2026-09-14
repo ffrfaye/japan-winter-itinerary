@@ -30,8 +30,8 @@ export const tokyoLandmarks = [
 ] as const
 
 export const nozawaLandmarks = [
-  { id: 'village', label: 'Village', lat: 36.9226, lng: 138.4406 },
-  { id: 'ski-base', label: 'Ski base', lat: 36.9165, lng: 138.453 },
+  { id: 'village', label: 'Nozawa village', lat: 36.9226, lng: 138.4406 },
+  { id: 'shiga', label: 'Shiga', lat: 36.705725, lng: 138.5079 },
 ] as const
 
 function isBedroom(value: unknown): value is BedroomCount {
@@ -191,7 +191,12 @@ export function priceLine(price: LodgingPrice | null) {
   const amount =
     price.currency === 'JPY'
       ? `¥${price.amount.toLocaleString('en-US')}`
-      : `${price.currency} ${price.amount.toLocaleString('en-US')}`
+      : price.currency === 'USD' || price.currency === '$'
+        ? `$${price.amount.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          })}`
+        : `${price.currency} ${price.amount.toLocaleString('en-US')}`
   const per = price.per ? ` / ${price.per}` : ''
   return `${amount}${per}`
 }

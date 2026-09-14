@@ -18,7 +18,7 @@
     "planningBanner": {
       "eyebrow": "",
       "title": "",
-      "body": "Still open: ski lodging (hunting 5BR Nozawa), bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
+      "body": "Still open: bring vs rent, Ghibli Lawson sale, Tokyo stay, last 4 nights."
     }
   },
   "group": {
@@ -30,7 +30,7 @@
     "rsvpHeadline": "Can you come?",
     "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
-    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is open / hunting a 5BR Nozawa house. Waguri cancelled Sep 14.",
+    "nyeSoldoutNote": "NY week: many Nozawa houses are sold out. Ski lodging is locked — AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J). Waguri cancelled.",
     "pairs": [
       {
         "id": "fyll",
@@ -152,11 +152,11 @@
       },
       {
         "id": "nozawa",
-        "city": "Nozawa",
+        "city": "Yomase / Ryuo",
         "cityKey": "Nozawa",
         "dates": "30 Dec–4 Jan",
         "nights": 6,
-        "note": "In 30 Dec, out 5 Jan · ski lodging open / hunting 5BR"
+        "note": "In 30 Dec after 15:00, out 5 Jan by 10:00 · AlpineCottage Ryuo booked HMCZA2Z53J"
       },
       {
         "id": "tokyo-2",
@@ -205,7 +205,7 @@
       "blocks": [
         {
           "title": "Beats",
-          "detail": "Quiet Tokyo 27–29 Dec → Nozawa 30 Dec–5 Jan (ski lodging open / hunting 5BR) → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
+          "detail": "Quiet Tokyo 27–29 Dec → AlpineCottage Ryuo (Yomase / Ryuo) 30 Dec after 15:00–5 Jan by 10:00 (HMCZA2Z53J) → 4 nights Tokyo or other city travel. Last 4 nights unbooked.",
           "status": "recommended"
         }
       ],
@@ -220,7 +220,7 @@
         },
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "Ski days after quiet Tokyo. Ski lodging open — hunting a 5BR Nozawa house.",
+          "description": "One ski option after quiet Tokyo. Sleep is AlpineCottage Ryuo in Yomase. Closest hill Ryuoo. Cars required.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
@@ -228,7 +228,7 @@
         },
         {
           "title": "Jigokudani Wild Snow Monkey Park",
-          "description": "Wild macaques in a hot spring. Rest-day trip from Nozawa.",
+          "description": "Wild macaques in a hot spring. Rest-day trip from Yomase. Cars required.",
           "url": "https://en.jigokudani-yaenkoen.co.jp/",
           "thumb": "/jigokudani.jpg",
           "thumbPosition": "42% 72%",
@@ -304,8 +304,8 @@
       "dayNumber": 4,
       "city": "Nozawa",
       "status": "recommended",
-      "title": "Travel day to Nozawa",
-      "summary": "Hakutaka to Iiyama. Not a ski day.",
+      "title": "Travel day to Yomase",
+      "summary": "Hakutaka toward Iiyama, then Yomase / Ryuo. Check-in after 15:00. Cars required. Closest hill Ryuoo. Not a ski day.",
       "blocks": [
         {
           "title": "Hakutaka",
@@ -316,20 +316,18 @@
       "places": [
         {
           "title": "Nozawa Onsen Snow Resort",
-          "description": "Ski days after quiet Tokyo. Ski lodging open — hunting a 5BR Nozawa house.",
+          "description": "Ski option later in the week. Sleep is AlpineCottage Ryuo. Closest hill Ryuoo. Cars required.",
           "url": "https://en.nozawaski.com/",
           "thumb": "/nozawa.jpg",
           "thumbPosition": "50% 38%",
           "mark": "N"
         },
         {
-          "title": "The Waguri House",
-          "description": "Cancelled. Not the ski house — hunting a 5BR Nozawa stay. Kijimadaira, not village-walkable.",
-          "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
-          "thumb": "/lodging-thumbs/waguri-house.jpg",
-          "thumbPosition": "50% 30%",
-          "mark": "W",
-          "badge": "Cancelled"
+          "title": "AlpineCottage Ryuo",
+          "description": "Booked · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 8032-2 Yomase. Check-in after 15:00. Cars required. Closest hill Ryuoo.",
+          "url": "https://www.airbnb.com/rooms/1536728419485230997",
+          "mark": "A",
+          "badge": "Booked"
         }
       ]
     },
@@ -342,11 +340,11 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "NYE · ski day 1",
-      "summary": "First proper ski day.",
+      "summary": "First proper ski day. Closest hill Ryuoo. Cars required.",
       "blocks": [
         {
           "title": "NYE",
-          "detail": "New Year’s Eve. First proper ski day.",
+          "detail": "New Year’s Eve. First proper ski day. Closest hill Ryuoo. Shiga / Nozawa are other options. Cars required.",
           "status": "recommended"
         }
       ]
@@ -360,11 +358,11 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "NYD · ski day 2",
-      "summary": "Optional: village shrine for New Year.",
+      "summary": "Closest hill Ryuoo. Optional: Nozawa village shrine. Cars required.",
       "blocks": [
         {
           "title": "NYD",
-          "detail": "Second ski day. Optional: visit the village shrine for New Year.",
+          "detail": "Second ski day from Yomase / Ryuo. Optional: Nozawa village shrine for New Year. Cars required.",
           "status": "recommended"
         }
       ]
@@ -389,7 +387,7 @@
       "places": [
         {
           "title": "Jigokudani Wild Snow Monkey Park",
-          "description": "Wild macaques in a hot spring. Rest-day trip from Nozawa.",
+          "description": "Wild macaques in a hot spring. Rest-day trip from Yomase. Cars required.",
           "url": "https://en.jigokudani-yaenkoen.co.jp/",
           "thumb": "/jigokudani.jpg",
           "thumbPosition": "42% 72%",
@@ -406,7 +404,7 @@
       "city": "Nozawa",
       "status": "recommended",
       "title": "Ski day 3",
-      "summary": "Third ski day.",
+      "summary": "Third ski day. Closest hill Ryuoo. Cars required.",
       "blocks": []
     },
     {
@@ -422,7 +420,7 @@
       "blocks": [
         {
           "title": "Ski 4",
-          "detail": "Fourth ski day. Optional: send bags back to Tokyo with Yamato.",
+          "detail": "Fourth ski day. Closest hill Ryuoo. Optional: send bags back to Tokyo with Yamato. Cars required.",
           "status": "recommended"
         }
       ],
@@ -542,8 +540,8 @@
     {
       "id": "nye-fork",
       "status": "recommended",
-      "title": "Quiet Tokyo, then Nozawa",
-      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then Nozawa 30 Dec–5 Jan. Ski lodging open / hunting a 5BR house. Do not claim a locked house."
+      "title": "Quiet Tokyo, then AlpineCottage Ryuo",
+      "detail": "Land 27 Dec NRT, quiet Tokyo 27–29 Dec, then AlpineCottage Ryuo 30 Dec after 15:00–5 Jan by 10:00 (HMCZA2Z53J). Yomase / Ryuo — cars required. Closest hill Ryuoo. Not village-walkable."
     },
     {
       "id": "uverworld",
@@ -553,9 +551,9 @@
     },
     {
       "id": "lodging",
-      "status": "open",
-      "title": "Ski lodging · open / hunting 5BR Nozawa",
-      "detail": "Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Looking again. Do not invent a replacement house or Tokyo/Kyoto holds."
+      "status": "locked",
+      "title": "Ski lodging is locked — AlpineCottage Ryuo",
+      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J. USD $6,193.11, not paid yet — Visa ••••9886 charge 22 Nov 2026. 8 adults. 8032-2 Yomase, Yamanochi, Shimotakai District, Nagano 381-0405. Check-in Wed 30 Dec 2026 after 15:00 · check-out Tue 5 Jan 2027 by 10:00. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles. Waguri cancelled. Tokyo stay and last 4 nights still unbooked. Do not invent Tokyo or Kyoto holds."
     },
     {
       "id": "ghibli",
@@ -826,7 +824,7 @@
     }
   ],
   "lodging": {
-    "status": "open",
+    "status": "locked",
     "asOf": "14 Sep 2026",
     "tokyoNote": "Default Tokyo lodging is the first 3 nights (27–30 Dec). Station East member FROM ¥345,519 / apt for those nights. Last 4 nights are city travel and may not be Tokyo — not in the pp numbers. Live vacant Station East A:26 / B:13. Hatchobori and Suites Nihombashi are backups.",
     "bands": [
@@ -835,6 +833,17 @@
         "heading": "4 bedrooms",
         "why": "",
         "options": [
+          {
+            "id": "alpinecottage-ryuo-4",
+            "property": "AlpineCottage Ryuo",
+            "city": "Nozawa",
+            "beds": "8 adults on booking · sleeps 12",
+            "status": "booked",
+            "perPerson": "~$774",
+            "nextStep": "Reserved · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge.",
+            "url": "https://www.airbnb.com/rooms/1536728419485230997",
+            "note": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 8032-2 Yomase. Check-in 30 Dec after 15:00 · out 5 Jan by 10:00. Yomase / Ryuo — not Nozawa village. Closest hill Ryuoo. Cars required. Host parking free for 3 vehicles. Same house total on every tab."
+          },
           {
             "id": "tokyo-4",
             "property": "MIMARU Tokyo Station East",
@@ -865,7 +874,7 @@
             "beds": "5 BR / 3 bath · sleeps 12",
             "status": "cancelled",
             "perPerson": "~$777",
-            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
+            "nextStep": "Cancelled. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
@@ -900,6 +909,17 @@
         "why": "",
         "options": [
           {
+            "id": "alpinecottage-ryuo-5",
+            "property": "AlpineCottage Ryuo",
+            "city": "Nozawa",
+            "beds": "8 adults on booking · sleeps 12",
+            "status": "booked",
+            "perPerson": "~$619",
+            "nextStep": "Reserved · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge.",
+            "url": "https://www.airbnb.com/rooms/1536728419485230997",
+            "note": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 10-person split of the same house total. Yomase / Ryuo. Cars required."
+          },
+          {
             "id": "tokyo-5",
             "property": "MIMARU Tokyo Station East",
             "city": "Tokyo",
@@ -928,7 +948,7 @@
             "beds": "5 BR / 3 bath · sleeps 12",
             "status": "cancelled",
             "perPerson": "~$621",
-            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
+            "nextStep": "Cancelled. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
@@ -962,6 +982,17 @@
         "why": "",
         "options": [
           {
+            "id": "alpinecottage-ryuo-6",
+            "property": "AlpineCottage Ryuo",
+            "city": "Nozawa",
+            "beds": "8 adults on booking · sleeps 12",
+            "status": "booked",
+            "perPerson": "~$516",
+            "nextStep": "Reserved · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge.",
+            "url": "https://www.airbnb.com/rooms/1536728419485230997",
+            "note": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 12-person split of the same house total. Yomase / Ryuo. Cars required."
+          },
+          {
             "id": "tokyo-6",
             "property": "MIMARU Tokyo Station East",
             "city": "Tokyo",
@@ -980,7 +1011,7 @@
             "beds": "5 BR · sleeps 12 · share a room for 6 pairs",
             "status": "cancelled",
             "perPerson": "~$518",
-            "nextStep": "Cancelled. Looking again for a 5BR Nozawa house.",
+            "nextStep": "Cancelled. Not the ski house.",
             "url": "https://booking.akarihouse.jp/en/the-waguri-house-snow-country-basecamp",
             "email": "admin@akarihouse.jp",
             "phone": "+81 70 9026 60 26",
@@ -1036,11 +1067,11 @@
     "label": "Estimate",
     "asOf": "14 Sep 2026",
     "placeholder": "Working estimate. Not locked.",
-    "workingNote": "Tabs 8/10/12. FX 1 USD = 159.31 JPY. Last 4 nights omitted. Ski lodging open / TBD. Waguri cancelled ¥990,000 (was booked).",
+    "workingNote": "Tabs 8/10/12, default 8. Last 4 nights omitted. AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Waguri cancelled. Cars required for the Yomase / Ryuo base.",
     "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
-    "summary": "Subtotal ~$3,143 without rental at 8. Ski lodging open / TBD; cancelled Waguri figure kept as the working estimate.",
-    "subtotalWithoutRental": "~$3,143",
-    "subtotalWithRental": "~$3,270",
+    "summary": "Subtotal ~$3,140 without rental at 8 (Tokyo $545 + AlpineCottage Ryuo $774 + cars $182 + lifts $182 + monkey $57 + flight $1,400). Ski lodging reserved · charge pending.",
+    "subtotalWithoutRental": "~$3,140",
+    "subtotalWithRental": "~$3,267",
     "band": "$2,900–3,800 with airfare only",
     "lines": [
       {
@@ -1057,9 +1088,9 @@
       },
       {
         "id": "nozawa-stay",
-        "title": "Ski lodging · open / TBD",
-        "detail": "$777",
-        "note": "Waguri cancelled ¥990,000 (was booked). Looking again. Confirmation B22754491 void. Not a locked house."
+        "title": "AlpineCottage Ryuo",
+        "detail": "$774",
+        "note": "HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. ~$774 at 8 / ~$619 at 10 / ~$516 at 12. 9p ≈ $688 off-default."
       },
       {
         "id": "lifts",
@@ -1162,8 +1193,8 @@
   "checklist": [
     {
       "id": "confirm-skeleton",
-      "title": "Quiet Tokyo then Nozawa",
-      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → Nozawa 30 Dec–5 Jan (ski lodging open / hunting 5BR) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan.",
+      "title": "Quiet Tokyo then AlpineCottage Ryuo",
+      "detail": "Land 27 Dec NRT. Quiet Tokyo 27–29 Dec (in 27, out 30) → AlpineCottage Ryuo 30 Dec after 15:00–5 Jan by 10:00 (HMCZA2Z53J) → Tokyo 5–8 Jan (in 5, out 9) → fly 9 Jan. Faye + Will GSCT9K.",
       "status": "recommended",
       "priority": "now"
     },
@@ -1190,15 +1221,15 @@
     },
     {
       "id": "nozawa-hotel",
-      "title": "Ski lodging · open / hunting 5BR Nozawa",
-      "detail": "Waguri cancelled Sep 14 — licensing / Hokenjo. Deposit refund pending. Confirmation B22754491 void. Bakery and Tamanegi sold out. Do not invent a replacement house.",
-      "status": "open",
+      "title": "Ski lodging is locked — AlpineCottage Ryuo",
+      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J, $6,193.11, charge pending 22 Nov. 8 adults. 8032-2 Yomase. Closest hill Ryuoo. Cars required. Waguri cancelled. Do not invent Tokyo/Kyoto holds.",
+      "status": "locked",
       "priority": "now"
     },
     {
       "id": "nye",
-      "title": "Quiet Tokyo then Nozawa",
-      "detail": "Quiet Tokyo 27–29 Dec, then Nozawa 30 Dec–5 Jan. Ski lodging open / hunting 5BR. Do not claim a locked house.",
+      "title": "Quiet Tokyo then AlpineCottage Ryuo",
+      "detail": "Quiet Tokyo 27–29 Dec, then AlpineCottage Ryuo 30 Dec after 15:00–5 Jan by 10:00. Yomase / Ryuo. Cars required. Closest hill Ryuoo.",
       "status": "recommended",
       "priority": "now"
     },
@@ -1304,6 +1335,16 @@
     }
   ],
   "rsvpHouses": [
+    {
+      "id": "alpinecottage-ryuo",
+      "name": "AlpineCottage Ryuo",
+      "city": "Nozawa",
+      "kind": "single",
+      "min": 1,
+      "max": 12,
+      "note": "Booked · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. 8 adults on booking. Yomase / Ryuo. Cars required. Sleeps 12.",
+      "url": "https://www.airbnb.com/rooms/1536728419485230997"
+    },
     {
       "id": "kamoshika",
       "name": "Kamoshika",
