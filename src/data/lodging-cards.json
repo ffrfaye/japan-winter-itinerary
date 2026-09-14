@@ -315,6 +315,35 @@
       ]
     },
     {
+      "id": "staynozawa-operator",
+      "name": "Stay Nozawa",
+      "location": "nozawa",
+      "operator": "Stay Nozawa",
+      "official_url": "https://www.staynozawa.com/all-accommodation",
+      "property_url": "https://www.staynozawa.com/all-accommodation",
+      "type": "operator enquiry",
+      "bedrooms": null,
+      "bathrooms": null,
+      "sleeps": null,
+      "scenarios": [4, 5, 6],
+      "scenario_notes": "Email / enquiry for unlisted Stay Nozawa inventory. Not a named house. Not available.",
+      "price": null,
+      "availability_status": "enquire",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Enquire — not available. Zero live 5BR.",
+      "booking_method": "enquire",
+      "booking_url": "https://book.staynozawa.com/search?checkIn=2026-12-30&checkOut=2027-01-05&numberGuests=10",
+      "booking_contact": "bookings@staynozawa.com",
+      "onsen": null,
+      "ski_logistics": null,
+      "tokyo_logistics": null,
+      "address": null,
+      "lat": null,
+      "lng": null,
+      "images": [],
+      "pros": ["Operator contact for unlisted inventory"],
+      "cons": ["Not a named house", "Not available"]
+    },
+    {
       "id": "waguri-house",
       "name": "The Waguri House",
       "location": "nozawa",
@@ -1879,8 +1908,8 @@
     }
   ],
   "kyoto_notes": "Nozomi ~2h10, ~¥14,170 ≈ $89. Fly KIX 9 Jan if they stay. Manga Museum closed through 6 Jan. Nara is a day trip, not a 4-night base.",
-  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Live 5BR: none. Hunting 5BR. Waguri cancelled. Kawazen / James / Himecho / Kamoshika SamuraiSnow sold out.",
+  "nozawa_as_of": "13 Sep 2026, 6:48 PM PT. Open / hunting. Zero live stock for 30 Dec–5 Jan. Enquire — not available. Waguri cancelled.",
   "nozawa_checked_at": "2026-09-14T01:48:00Z",
   "checked_at": "2026-09-14T01:48:00Z",
-  "nozawa_banner": "No live 5BR for 30 Dec 2026–5 Jan 2027 — enquire operators today."
+  "nozawa_banner": "Nozawa lodging is open / hunting. Zero live 5BR for 30 Dec 2026–5 Jan 2027 — enquire operators today. Not available."
 }
