@@ -680,7 +680,7 @@
       "scenario_notes": "Email / enquiry for unlisted inventory. Not a named house. Not available.",
       "price": null,
       "availability_status": "enquire",
-      "availability_notes": "13 Sep 2026, 6:48 PM PT. Ask SamuraiSnow for unlisted 5BR dates. Kawazen / James / Himecho / Kamoshika stay sold out — do not treat those units as enquire.",
+      "availability_notes": "13 Sep 2026, 6:48 PM PT. Ask SamuraiSnow for unlisted 5BR dates. Kawazen and James House are named enquire cards (waitlist / Not Available). Himecho / Kamoshika stay sold out.",
       "booking_method": "enquire",
       "booking_url": "https://www.samuraisnow.com/get-in-touch",
       "booking_contact": "info@samuraisnow.com",
@@ -714,11 +714,11 @@
         5,
         6
       ],
-      "scenario_notes": "Emergency list. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire, not available.",
+      "scenario_notes": "Waitlist / confirm Not Available. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Enquire operator — not live available.",
       "price": null,
-      "availability_status": "sold-out",
-      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Do not label as enquire.",
-      "booking_method": "sold-out",
+      "availability_status": "enquire",
+      "availability_notes": "Enquire — not available. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Waitlist / operator contact only.",
+      "booking_method": "enquire",
       "booking_url": "https://www.samuraisnow.com/nozawa-onsen/kawazen/5bedroom",
       "booking_contact": "info@samuraisnow.com",
       "onsen": null,
@@ -734,8 +734,8 @@
       "images": [],
       "pros": [],
       "cons": [
-        "Sold out",
-        "Not enquire",
+        "AJAX Not Available",
+        "Not available",
         "No official hero"
       ]
     },
@@ -754,11 +754,11 @@
         5,
         6
       ],
-      "scenario_notes": "Emergency list. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Sold out — not enquire, not available.",
+      "scenario_notes": "Waitlist / confirm Not Available. AJAX Not Available 13 Sep 2026, 6:48 PM PT. Enquire operator — not live available.",
       "price": null,
-      "availability_status": "sold-out",
-      "availability_notes": "Sold out. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Do not label as enquire.",
-      "booking_method": "sold-out",
+      "availability_status": "enquire",
+      "availability_notes": "Enquire — not available. 13 Sep 2026, 6:48 PM PT AJAX Not Available. Waitlist / operator contact only.",
+      "booking_method": "enquire",
       "booking_url": "https://www.samuraisnow.com/nozawa-onsen/james-house/5-bedroom",
       "booking_contact": "info@samuraisnow.com",
       "onsen": null,
@@ -774,8 +774,8 @@
       "images": [],
       "pros": [],
       "cons": [
-        "Sold out",
-        "Not enquire",
+        "AJAX Not Available",
+        "Not available",
         "No official hero"
       ]
     },
