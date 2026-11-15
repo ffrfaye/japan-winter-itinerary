@@ -1,14 +1,17 @@
 import { useEffect, useRef } from 'react'
 import {
+  LngLatBounds,
   Map as MapLibreMap,
   Marker,
   NavigationControl,
+  Popup,
   setWorkerUrl,
   type StyleSpecification,
 } from 'maplibre-gl'
 import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?url'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { mapPlaces, type MapFocus } from '@/lib/map-focus'
+import { stayOrder, stays, type StayId } from '@/data/stays'
 
 setWorkerUrl(maplibreWorkerUrl)
 
@@ -57,42 +60,114 @@ function placeOf(focus: MapFocus) {
   return mapPlaces[focus]
 }
 
-function sameView(map: MapLibreMap, focus: MapFocus) {
-  const place = placeOf(focus)
-  const center = map.getCenter()
-  return (
-    Math.abs(center.lng - place.lng) < 0.02 &&
-    Math.abs(center.lat - place.lat) < 0.02 &&
-    Math.abs(map.getZoom() - place.zoom) < 0.15
-  )
+function emphasizeStay(markers: Partial<Record<StayId, Marker>>, stayId: StayId | null) {
+  for (const id of stayOrder) {
+    const marker = markers[id]
+    if (!marker) continue
+    const button = marker.getElement() as HTMLButtonElement
+    paintLodgingPin(button, id === stayId)
+  }
 }
 
-function showPlace(map: MapLibreMap, marker: Marker, focus: MapFocus, animate: boolean) {
+function kmBetween(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
+  const rad = Math.PI / 180
+  const dLat = (b.lat - a.lat) * rad
+  const dLng = (b.lng - a.lng) * rad
+  const lat = ((a.lat + b.lat) / 2) * rad
+  const x = dLng * Math.cos(lat) * 6371
+  const y = dLat * 6371
+  return Math.hypot(x, y)
+}
+
+const houseSvg = (color: string) =>
+  `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z" fill="${color}"/></svg>`
+
+function paintLodgingPin(el: HTMLButtonElement, active: boolean) {
+  const size = active ? 32 : 22
+  el.style.cssText = [
+    `width:${size}px`,
+    `height:${size}px`,
+    'border-radius:999px',
+    'border:2px solid #fff',
+    'display:flex',
+    'align-items:center',
+    'justify-content:center',
+    'padding:0',
+    'cursor:pointer',
+    'box-shadow:0 1px 4px rgba(0,0,0,.28)',
+    `background:${active ? '#18181b' : '#fff'}`,
+    `opacity:${active ? '1' : '0.72'}`,
+    `z-index:${active ? 3 : 1}`,
+  ].join(';')
+  el.innerHTML = houseSvg(active ? '#fff' : '#52525b')
+}
+
+function lodgingMarker(id: StayId) {
+  const stay = stays[id]
+  const button = document.createElement('button')
+  button.type = 'button'
+  button.className = 'lodging-pin'
+  button.dataset.stay = id
+  button.setAttribute('aria-label', stay.shortName)
+  paintLodgingPin(button, false)
+  const popup = new Popup({ offset: 16, closeButton: true, maxWidth: '220px' }).setHTML(
+    `<p style="margin:0;font:600 13px/1.3 Inter Variable,Inter,sans-serif;color:#18181b;">${stay.shortName}</p>
+     <p style="margin:3px 0 0;font:400 12px/1.35 Inter Variable,Inter,sans-serif;color:#71717a;">${stay.dateLine}</p>
+     <a href="${stay.invite}" target="_blank" rel="noreferrer" style="display:inline-block;margin-top:8px;font:600 12px/1.3 Inter Variable,Inter,sans-serif;color:#18181b;">Join this trip on Airbnb</a>`,
+  )
+  return new Marker({ element: button, anchor: 'center' })
+    .setLngLat([stay.lng, stay.lat])
+    .setPopup(popup)
+}
+
+function frameDay(
+  map: MapLibreMap,
+  marker: Marker,
+  focus: MapFocus,
+  stayId: StayId | null,
+  animate: boolean,
+) {
   const place = placeOf(focus)
   marker.setLngLat([place.lng, place.lat])
   const label = marker.getElement().querySelector('[data-label]')
   if (label) label.textContent = place.label
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  if (!animate || reduced || sameView(map, focus)) {
-    if (!sameView(map, focus)) {
-      map.jumpTo({ center: [place.lng, place.lat], zoom: place.zoom })
-    }
+  const duration = !animate || reduced ? 0 : 1100
+  const stay = stayId ? stays[stayId] : null
+  const near = stay != null && kmBetween(place, stay) < 25
+  if (!stay || !near || kmBetween(place, stay) < 0.4) {
+    map.flyTo({
+      center: [place.lng, place.lat],
+      zoom: place.zoom,
+      duration,
+      essential: true,
+    })
     return
   }
-  map.flyTo({
-    center: [place.lng, place.lat],
-    zoom: place.zoom,
-    duration: 1100,
+  const bounds = new LngLatBounds([place.lng, place.lat], [stay.lng, stay.lat])
+  map.fitBounds(bounds, {
+    padding: { top: 56, bottom: 48, left: 48, right: 36 },
+    maxZoom: 13,
+    duration,
     essential: true,
   })
 }
 
-export function JapanMap({ focus }: { focus: MapFocus }) {
+export function JapanMap({
+  focus,
+  stayId,
+}: {
+  focus: MapFocus
+  stayId: StayId | null
+}) {
   const root = useRef<HTMLDivElement>(null)
   const mapRef = useRef<MapLibreMap | null>(null)
   const markerRef = useRef<Marker | null>(null)
+  const lodgingRef = useRef<Partial<Record<StayId, Marker>>>({})
   const focusRef = useRef(focus)
+  const stayRef = useRef(stayId)
   focusRef.current = focus
+  stayRef.current = stayId
 
   useEffect(() => {
     const node = root.current
@@ -135,8 +210,14 @@ export function JapanMap({ focus }: { focus: MapFocus }) {
       })
         .setLngLat([initial.lng, initial.lat])
         .addTo(map)
+      const lodging: Partial<Record<StayId, Marker>> = {}
+      for (const id of stayOrder) {
+        lodging[id] = lodgingMarker(id).addTo(map)
+      }
       mapRef.current = map
       markerRef.current = marker
+      lodgingRef.current = lodging
+      emphasizeStay(lodging, stayRef.current)
 
       const remember = () => {
         const center = map?.getCenter()
@@ -150,9 +231,8 @@ export function JapanMap({ focus }: { focus: MapFocus }) {
       map.once('load', () => {
         map?.resize()
         remember()
-        const latest = focusRef.current
-        if (latest !== initialFocus && map && markerRef.current) {
-          showPlace(map, markerRef.current, latest, true)
+        if (map && markerRef.current) {
+          frameDay(map, markerRef.current, focusRef.current, stayRef.current, true)
         }
       })
 
@@ -168,6 +248,7 @@ export function JapanMap({ focus }: { focus: MapFocus }) {
       map?.remove()
       mapRef.current = null
       markerRef.current = null
+      lodgingRef.current = {}
     }
   }, [])
 
@@ -175,8 +256,9 @@ export function JapanMap({ focus }: { focus: MapFocus }) {
     const map = mapRef.current
     const marker = markerRef.current
     if (!map || !marker) return
-    showPlace(map, marker, focus, true)
-  }, [focus])
+    emphasizeStay(lodgingRef.current, stayId)
+    frameDay(map, marker, focus, stayId, true)
+  }, [focus, stayId])
 
   const place = placeOf(focus)
 

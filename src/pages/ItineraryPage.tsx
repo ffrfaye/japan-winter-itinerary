@@ -4,6 +4,7 @@ import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { JapanMap } from '@/components/JapanMap'
+import { stayForNight } from '@/data/stays'
 import { FlightDayLine } from '@/components/FlightDayLine'
 import { LodgingJoinRow } from '@/components/LodgingJoinRow'
 import { useFlights } from '@/lib/flights-context'
@@ -142,7 +143,7 @@ export function ItineraryPage({
         </div>
       ) : (
         <div className="relative z-10 space-y-3">
-          <JapanMap focus={active.mapFocus} />
+          <JapanMap focus={active.mapFocus} stayId={stayForNight(active.id)} />
           <div className="relative">
             {showPager ? (
               <CardPager

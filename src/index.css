@@ -148,4 +148,14 @@
   .trip-map .maplibregl-canvas-container.maplibregl-interactive {
     touch-action: none;
   }
+  .trip-map .maplibregl-popup-content {
+    border-radius: 12px;
+    padding: 10px 12px 12px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+  }
+  .trip-map .maplibregl-popup-close-button {
+    font-size: 16px;
+    padding: 2px 6px;
+    color: #71717a;
+  }
 }

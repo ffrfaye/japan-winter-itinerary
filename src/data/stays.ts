@@ -26,6 +26,10 @@ export const stays = {
     invite: 'https://www.airbnb.com/l/F73W8xFV',
     listing: 'https://www.airbnb.com/rooms/1739051335302845037',
     note: null,
+    /** Higashimukōjima neighborhood. The listing does not publish a street address. */
+    lat: 35.72433,
+    lng: 139.81932,
+    coordApprox: true,
   },
   ski: {
     id: 'ski',
@@ -48,6 +52,10 @@ export const stays = {
     invite: 'https://www.airbnb.com/l/PAKj2Brw',
     listing: 'https://www.airbnb.com/rooms/1536728419485230997',
     note: 'Free parking for 3 cars',
+    /** Yomase quarter, not the cottage door. The listing does not publish a street address. */
+    lat: 36.78421,
+    lng: 138.4342,
+    coordApprox: true,
   },
   kokoro: {
     id: 'kokoro',
@@ -71,6 +79,10 @@ export const stays = {
     invite: 'https://www.airbnb.com/l/HX0YVhIg',
     listing: 'https://www.airbnb.com/rooms/1584476764724908680',
     note: null,
+    /** Asakusa neighborhood, a short walk from Sensō-ji. The listing does not publish a street address. */
+    lat: 35.7176,
+    lng: 139.79756,
+    coordApprox: true,
   },
 } as const
 
@@ -86,4 +98,12 @@ export function stayById(id: StayId): Stay {
 
 export function stayNeighborhood(stay: Stay) {
   return stay.area.split(',')[0] ?? stay.area
+}
+
+/** Where the group sleeps that night. Jan 9 is a morning checkout, so no stay is emphasized. */
+export function stayForNight(dayId: string): StayId | null {
+  if (dayId >= '2026-12-27' && dayId <= '2026-12-29') return 'sumida'
+  if (dayId >= '2026-12-30' && dayId <= '2027-01-04') return 'ski'
+  if (dayId >= '2027-01-05' && dayId <= '2027-01-08') return 'kokoro'
+  return null
 }
