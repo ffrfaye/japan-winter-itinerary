@@ -655,9 +655,9 @@
     },
     {
       "id": "ghibli",
-      "status": "calendar-published",
-      "title": "Ghibli if last city is Tokyo 6–8 Jan",
-      "detail": "Tickets not on sale. Museum closed 27 Dec 2026–2 Jan 2027. Open 3–9 Jan 2027. Realistic only if the last city is Tokyo: 6–8 Jan (5 Jan is travel). Lawson: 10 Dec 2026, 10:00 JST. Do not claim tickets exist."
+      "status": "locked",
+      "title": "Ghibli Museum Mitaka — booked 6 Jan",
+      "detail": "Booked for Wed 6 Jan 2027 via GetYourGuide, run by Yummy Guide. English-speaking guide, about 1.5 hours, then free time. 9 adults. Entry time TBD (possible slots 10:00–16:00 JST). Meet outside the museum, 1-1-83 Shimorenjaku, Mitaka. Night at KOKORO INN, Asakusa. No confirmation code on this page."
     },
     {
       "id": "headcount-airport-gear",
@@ -745,16 +745,16 @@
     {
       "id": "ghibli",
       "group": "tokyo",
-      "title": "Ghibli Museum, Mitaka",
-      "status": "calendar-published",
-      "when": "Only if last city is Tokyo: 6–8 Jan 2027. Tickets not on sale.",
-      "detail": "Calendar published. Closed 27 Dec–2 Jan. Do not claim tickets exist or are purchased.",
+      "title": "Ghibli Museum Mitaka tour with local guide (booked)",
+      "status": "locked",
+      "when": "Wed 6 Jan 2027",
+      "detail": "Booked via GetYourGuide, run by Yummy Guide. English-speaking guide, about 1.5 hours: guided highlights, then free time (rooftop garden, cafe, shop). 9 adults. Entry time TBD, set by Yummy Guide. The group sleeps at KOKORO INN, Asakusa.",
       "lines": [
-        "CLOSED 27 Dec 2026–2 Jan 2027.",
-        "OPEN 3–9 Jan 2027, including Tue 5 Jan.",
-        "Realistic only after ski week, and only if last city is Tokyo: 6–8 Jan.",
-        "Lawson Ticket 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec).",
-        "Max 6 tickets per account. Two named purchasers for 8–12. Both must attend.",
+        "Possible entry slots: 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, or 16:00 JST. They message the meeting time once confirmed.",
+        "Meet outside the museum entrance, 1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013. No pickup. The tour ends at the museum.",
+        "Asakusa to Mitaka by train is about 1 hour: JR Chuo line to Mitaka, then about a 15 min walk along Tamagawa Josui, or the community bus.",
+        "Bring a passport or ID matching the booking name, comfy shoes, and cash plus a card. The GetYourGuide QR is not the museum ticket; the guide hands out tickets at the meeting point.",
+        "No food, drinks, or photos inside the museum.",
         "This is Mitaka, not Ghibli Park (Aichi)."
       ],
       "links": [
@@ -1193,9 +1193,9 @@
     },
     {
       "id": "ghibli-watch",
-      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
-      "detail": "Calendar published. Closed 27 Dec–2 Jan. Only if last city is Tokyo: 6–8 Jan. Lawson 10 Dec 2026, 10:00 JST. Do not claim tickets exist.",
-      "status": "calendar-published",
+      "title": "Ghibli Museum Mitaka — booked 6 Jan",
+      "detail": "Booked via GetYourGuide with Yummy Guide for Wed 6 Jan. Entry time TBD. Based at KOKORO INN, Asakusa.",
+      "status": "locked",
       "priority": "later"
     },
     {
@@ -1223,9 +1223,9 @@
     },
     {
       "id": "ghibli-watch",
-      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
-      "detail": "Only if last city is Tokyo: 6–8 Jan. Closed 27 Dec–2 Jan. Do not claim tickets exist.",
-      "status": "calendar-published",
+      "title": "Ghibli Museum Mitaka — booked 6 Jan",
+      "detail": "Booked via GetYourGuide with Yummy Guide for Wed 6 Jan. Entry time TBD. Based at KOKORO INN, Asakusa.",
+      "status": "locked",
       "priority": "later"
     },
     {

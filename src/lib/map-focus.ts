@@ -17,6 +17,12 @@ export const mapPlaces = {
     zoom: 14,
     label: 'Jigokudani',
   },
+  Ghibli: {
+    lat: 35.6962,
+    lng: 139.5704,
+    zoom: 14,
+    label: 'Ghibli',
+  },
 } as const
 
 export type MapFocus = keyof typeof mapPlaces
