@@ -23,7 +23,7 @@ export function budgetScenario(bedrooms: BudgetScenario['id']): BudgetScenario {
 
 function sideDetail(side: BudgetSide | null | undefined) {
   const value = side?.detail?.trim()
-  return value ? value : '—'
+  return value ? value : 'n/a'
 }
 
 function last4Line(last4: BudgetLast4): BudgetLine {

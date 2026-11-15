@@ -1,4 +1,4 @@
-# Japan ski trip — winter itinerary
+# Japan ski trip: winter itinerary
 
 Shareable, no-login itinerary for a group winter in Tokyo and Yomase (27 Dec 2026 – 9 Jan 2027). Vite + React + TypeScript + Tailwind + shadcn. Light zinc list. Mobile-first.
 
@@ -30,10 +30,10 @@ Hash tabs: `#itinerary` (default), `#lodging`, `#planning`, `#budget`, `#flights
 
 Status values:
 
-- `recommended` — a suggested extra, not a booking
-- `open` — still deciding, or unpublished
-- `calendar-published` — official open days are listed; not a booking
-- `locked` — a confirmed fact we will not pretend is flexible
+- `recommended`: a suggested extra, not a booking
+- `open`: still deciding, or unpublished
+- `calendar-published`: official open days are listed; not a booking
+- `locked`: a confirmed fact we will not pretend is flexible
 
 After you edit JSON, refresh the dev server.
 

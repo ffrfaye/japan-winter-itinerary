@@ -46,7 +46,7 @@ export function FlightsPage() {
           onSaved={(label, count) => {
             setSheet(null)
             void reload()
-            setToast(`Got it — ${label} ${count === 1 ? 'is' : 'are'} on the flights list.`)
+            setToast(`Got it. ${label} ${count === 1 ? 'is' : 'are'} on the flights list.`)
             window.setTimeout(() => setToast(null), 2600)
           }}
         />

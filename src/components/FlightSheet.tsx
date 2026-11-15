@@ -291,7 +291,7 @@ function DropZone() {
         <Upload className="size-5 text-zinc-700" aria-hidden />
       </span>
       <p className="mt-3 max-w-[16rem] text-[15px] leading-snug font-semibold tracking-tight">
-        Upload your flight screenshot — we’ll read the details
+        Upload your flight screenshot. We’ll read the details
       </p>
       <span className="mt-4 inline-flex items-center justify-center rounded-xl bg-zinc-950 px-4 py-2.5 text-sm font-medium text-white">
         Choose a screenshot

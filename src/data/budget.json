@@ -3,7 +3,7 @@
   "label": "Ski lodging reserved · charge pending",
   "identityName": "AlpineCottage Ryuo",
   "identityUrl": "https://www.airbnb.com/rooms/1536728419485230997",
-  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Cars required — Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. Last 4 nights omitted. Tokyo stay unbooked.",
+  "foot": "AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Visa ••••9886 charge 22 Nov 2026. Booked for 8 adults. Cars required. Yomase / Ryuo, not village-walkable. Host parking free for 3 vehicles. Last 4 nights omitted. Tokyo stay unbooked.",
   "last_refreshed": "14 Sep 2026",
   "sharedLines": [
     {
@@ -34,10 +34,10 @@
   "carRental": {
     "id": "car-rental",
     "title": "Car rental",
-    "label": "Required for this base — not booked. 1–2× 4WD studless. Host parking free for 3 vehicles.",
+    "label": "Required for this base, not booked. 1–2× 4WD studless. Host parking free for 3 vehicles.",
     "notes": [
       "Working estimate: 2× compact SUV/4WD · ¥232,100 / $1,457 total. Pickup Toyota Nagano shop (no Toyota Iiyama). NY +20% (26 Dec 2026–3 Jan 2027) + 4WD + DPP + ETC. Not a hold.",
-      "IDP $20/driver (AAA 1949 Geneva Convention) — not in the split. Fuel ~$26 both cars. Last 4 city nights still excluded. FX Xe 1 USD = 159.31 JPY."
+      "IDP $20/driver (AAA 1949 Geneva Convention), not in the split. Fuel ~$26 both cars. Last 4 city nights still excluded. FX Xe 1 USD = 159.31 JPY."
     ]
   },
   "last4": {
@@ -103,7 +103,7 @@
       "label": "12 people",
       "hero": "~$2,821",
       "working9Note": null,
-      "quietNote": "Listing sleeps 12; booking is 8 adults. Same $6,193.11 house. Cars required — Yomase / Ryuo.",
+      "quietNote": "Listing sleeps 12; booking is 8 adults. Same $6,193.11 house. Cars required. Yomase / Ryuo.",
       "tokyo": {
         "id": "tokyo-stay",
         "title": "Tokyo lodging both ends",
