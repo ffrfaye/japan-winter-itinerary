@@ -1,11 +1,11 @@
-import type { FlightEntry, FlightLeg } from '../flight-store.ts'
+import type { FlightEntry, FlightLeg } from '../flight-store'
 import {
   publicFlights,
   readStoredFlights,
   removeScreenshot,
   saveScreenshot,
   writeStoredFlights,
-} from '../flight-store.ts'
+} from '../flight-store'
 
 function cleanLeg(value: unknown): FlightLeg | null {
   if (!value || typeof value !== 'object') return null

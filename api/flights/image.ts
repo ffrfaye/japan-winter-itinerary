@@ -1,5 +1,5 @@
 import { get } from '@vercel/blob'
-import { readStoredFlights } from '../flight-store.ts'
+import { readStoredFlights } from '../flight-store'
 
 export async function GET(request: Request) {
   const id = new URL(request.url).searchParams.get('id')
