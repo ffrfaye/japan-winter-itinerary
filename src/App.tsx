@@ -23,14 +23,17 @@ export default function App() {
   const [tab, setTab] = useState<TabId>(() =>
     parseTab(typeof window === 'undefined' ? '' : window.location.hash),
   )
-  const [mode, setMode] = useState<ViewMode>('cards')
+  const [mode, setMode] = useState<ViewMode>('list')
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 768px)')
-    const sync = () => setMode(media.matches ? 'list' : 'cards')
-    sync()
-    media.addEventListener('change', sync)
-    return () => media.removeEventListener('change', sync)
+    try {
+      for (const key of Object.keys(localStorage)) {
+        const value = localStorage.getItem(key)
+        if (value === 'cards' || value === 'list') localStorage.removeItem(key)
+      }
+    } catch {
+      // Storage can be blocked. The list default does not depend on it.
+    }
   }, [])
 
   useEffect(() => {
