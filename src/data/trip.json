@@ -4,7 +4,7 @@
     "kicker": "A recommended winter",
     "japaneseTitle": "冬の旅",
     "seal": "雪",
-    "datesLabel": "Sun 27 Dec 2026 – Sat 9 Jan 2027",
+    "datesLabel": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Yamanouchi",
     "start": "2026-12-27",
     "end": "2027-01-09",
     "nights": 13,
@@ -12,7 +12,7 @@
     "tone": "Un-hectic. Anime fans. May bring ski gear.",
     "cityBase": "Tokyo only",
     "airports": "Land 27 Dec NRT. Faye + Will booked UA837 (GSCT9K). Other tickets not booked.",
-    "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Yomase ski",
+    "shareLine": "Sun 27 Dec 2026 – Sat 9 Jan 2027 · 13 nights · Tokyo + Yamanouchi",
     "lockedNote": "",
     "photoCredit": "Place photos: Wikimedia Commons. Tokyo from Roppongi Hills Mori Tower (Laitr Keiows). Nozawa Onsen Snow Resort (E-190). Jigokudani hot spring, 2005 (Yosemite). Yamato Cool TA-Q-BIN truck, 2016.",
     "planningBanner": {
@@ -23,14 +23,14 @@
   },
   "group": {
     "lead": "Faye Fan",
-    "sizeLabel": "12 people · 6 pairs",
+    "sizeLabel": "10 people · 5 pairs",
     "sizeOpen": "Headcount locked for display",
     "sizeStatus": "locked",
-    "invited": 12,
+    "invited": 10,
     "rsvpHeadline": "Can you come?",
-    "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
+    "rsvpSub": "Headcount picks the house and the trains. 10 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
-    "nyeSoldoutNote": "Ski lodging is booked — AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J).",
+    "nyeSoldoutNote": "Ski lodging is booked: AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J).",
     "pairs": [
       {
         "id": "fyll",
@@ -62,14 +62,6 @@
         "names": [
           "Eric",
           "Macy"
-        ]
-      },
-      {
-        "id": "andriha",
-        "nickname": "Andriha",
-        "names": [
-          "Andrew",
-          "Spriha"
         ]
       },
       {
@@ -108,7 +100,7 @@
     {
       "id": "lodging-style",
       "status": "open",
-      "text": "Tokyo lodging both ends is not booked. One building for the group is the working idea — not a hold."
+      "text": "Tokyo lodging both ends is not booked. One building for the group is the working idea, not a hold."
     }
   ],
   "statusLegend": [
@@ -376,7 +368,7 @@
       "places": [
         {
           "title": "Ryuoo Ski Park",
-          "description": "Closest hill from the house. Option — lifts not held.",
+          "description": "Closest hill from the house. Option: lifts not held.",
           "url": "https://www.ryuoo.com/en/",
           "mark": "R"
         }
@@ -641,19 +633,19 @@
       "id": "nye-fork",
       "status": "recommended",
       "title": "Quiet Tokyo, then AlpineCottage Ryuo",
-      "detail": "Land 27 Dec NRT, quiet Tokyo 27–30 Dec, then AlpineCottage Ryuo 30 Dec after 15:00–5 Jan by 10:00 (HMCZA2Z53J). Yomase / Ryuo — cars required. Closest hill Ryuoo."
+      "detail": "Land 27 Dec, quiet Tokyo at the Sumida house, then the ski house in Yomase, Yamanouchi (30 Dec after 3pm–5 Jan by 10am). Closest hill Ryuoo. Not Nozawa village."
     },
     {
       "id": "lodging",
       "status": "locked",
-      "title": "Ski lodging is booked — AlpineCottage Ryuo",
-      "detail": "AlpineCottage Ryuo booked HMCZA2Z53J. USD $6,193.11, not paid yet — Visa ••••9886 charge 22 Nov 2026. 8 adults. 8032-2 Yomase, Yamanochi, Nagano 381-0405. Check-in Wed 30 Dec 2026 after 15:00 · check-out Tue 5 Jan 2027 by 10:00. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles. Tokyo lodging both ends still unbooked."
+      "title": "Ski lodging is booked: AlpineCottage Ryuo",
+      "detail": "Alpine Cottage ski house is booked in Yomase, Yamanouchi, not Nozawa village. Check-in Wed 30 Dec 2026 after 3pm · check-out Tue 5 Jan 2027 by 10am. Closest ski Ryuoo. Cars required. Host parking free for 3 vehicles. Tokyo stays are booked: Sumida house and KOKORO INN."
     },
     {
       "id": "tokyo-lodging",
       "status": "open",
       "title": "Tokyo lodging both ends",
-      "detail": "Not booked. First 3 nights 27–30 Dec and last 4 nights 5–9 Jan (or another city). Do not invent a hold."
+      "detail": "Booked. Sumida house 27–30 Dec and KOKORO INN in Asakusa 5–9 Jan. Join links are on the Lodging tab."
     },
     {
       "id": "cars",
@@ -663,9 +655,9 @@
     },
     {
       "id": "ghibli",
-      "status": "calendar-published",
-      "title": "Ghibli if last city is Tokyo 6–8 Jan",
-      "detail": "Tickets not on sale. Museum closed 27 Dec 2026–2 Jan 2027. Open 3–9 Jan 2027. Realistic only if the last city is Tokyo: 6–8 Jan (5 Jan is travel). Lawson: 10 Dec 2026, 10:00 JST. Do not claim tickets exist."
+      "status": "locked",
+      "title": "Ghibli Museum Mitaka: booked 6 Jan",
+      "detail": "Booked for Wed 6 Jan 2027 via GetYourGuide, run by Yummy Guide. English-speaking guide, about 1.5 hours, then free time. 9 adults. Entry time TBD (possible slots 10:00–16:00 JST). Meet outside the museum, 1-1-83 Shimorenjaku, Mitaka. Night at KOKORO INN, Asakusa. No confirmation code on this page."
     },
     {
       "id": "headcount-airport-gear",
@@ -676,7 +668,7 @@
     {
       "id": "uverworld",
       "status": "open",
-      "title": "Fukuoka UVERworld — optional 1–2 people only",
+      "title": "Fukuoka UVERworld: optional 1–2 people only",
       "detail": "Full group skips it. Optional 1–2 people only; overnight Fukuoka on the 30th. Same-night return is not realistic."
     }
   ],
@@ -707,7 +699,7 @@
       "creatorLifeSize": "TAKUYA∞の創り方 and LIFEsize lotteries run through about 30 Aug 2026 (23:59).",
       "generalSale": "Fukuoka general sale is not posted. Do not invent a date."
     },
-    "sameNightReturn": "Same-night return Tokyo or Nozawa is not realistic.",
+    "sameNightReturn": "Same-night return to Tokyo or Yamanouchi is not realistic.",
     "links": [
       {
         "label": "Official 2026 live page",
@@ -727,7 +719,7 @@
     "status": "calendar-published",
     "unpublished": false,
     "doNotClaimTickets": true,
-    "museum": "Ghibli Museum, Mitaka — not Ghibli Park (Aichi).",
+    "museum": "Ghibli Museum, Mitaka, not Ghibli Park (Aichi).",
     "lastYearClosure": "CLOSED winter: 27–31 Dec 2026 and 1–2 Jan 2027.",
     "tuesdayNote": "Usually closed Tuesdays, but Tue 5 Jan 2027 is marked open. Regular Tuesday closes resume 12, 19, and 26 Jan 2027.",
     "primaryDay": "Only if last city is Tokyo: 6–8 Jan 2027. 5 Jan is travel day. 3–4 Jan the museum is open but the group is still at Yomase. Do not lock a Ghibli day on the itinerary.",
@@ -753,16 +745,16 @@
     {
       "id": "ghibli",
       "group": "tokyo",
-      "title": "Ghibli Museum, Mitaka",
-      "status": "calendar-published",
-      "when": "Only if last city is Tokyo: 6–8 Jan 2027. Tickets not on sale.",
-      "detail": "Calendar published. Closed 27 Dec–2 Jan. Do not claim tickets exist or are purchased.",
+      "title": "Ghibli Museum Mitaka tour with local guide (booked)",
+      "status": "locked",
+      "when": "Wed 6 Jan 2027",
+      "detail": "Booked via GetYourGuide, run by Yummy Guide. English-speaking guide, about 1.5 hours: guided highlights, then free time (rooftop garden, cafe, shop). 9 adults. Entry time TBD, set by Yummy Guide. The group sleeps at KOKORO INN, Asakusa.",
       "lines": [
-        "CLOSED 27 Dec 2026–2 Jan 2027.",
-        "OPEN 3–9 Jan 2027, including Tue 5 Jan.",
-        "Realistic only after ski week, and only if last city is Tokyo: 6–8 Jan.",
-        "Lawson Ticket 10 Dec 2026, 10:00 JST (5:00 PM PT on 9 Dec).",
-        "Max 6 tickets per account. Two named purchasers for 8–12. Both must attend.",
+        "Possible entry slots: 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, or 16:00 JST. They message the meeting time once confirmed.",
+        "Meet outside the museum entrance, 1-1-83 Shimorenjaku, Mitaka, Tokyo 181-0013. No pickup. The tour ends at the museum.",
+        "Asakusa to Mitaka by train is about 1 hour: JR Chuo line to Mitaka, then about a 15 min walk along Tamagawa Josui, or the community bus.",
+        "Bring a passport or ID matching the booking name, comfy shoes, and cash plus a card. The GetYourGuide QR is not the museum ticket; the guide hands out tickets at the meeting point.",
+        "No food, drinks, or photos inside the museum.",
         "This is Mitaka, not Ghibli Park (Aichi)."
       ],
       "links": [
@@ -779,7 +771,7 @@
     {
       "id": "teamlab",
       "group": "tokyo",
-      "title": "teamLab Planets or Borderless — pick one",
+      "title": "teamLab Planets or Borderless: pick one",
       "status": "open",
       "when": "29 Dec",
       "detail": "Planets (Toyosu) is the water-walk museum, open through the end of 2027. Borderless is at Azabudai Hills. Timed tickets; buy ahead. Not booked.",
@@ -899,7 +891,7 @@
       "group": "nozawa",
       "title": "Snow monkeys",
       "status": "open",
-      "when": "4 Jan · mid-week option",
+      "when": "2 Jan · rest day",
       "detail": "Drive from Yomase. Not booked.",
       "lines": [
         "Park gate Adult 18+ ~$5 (¥800).",
@@ -917,7 +909,7 @@
       "group": "nozawa",
       "title": "Shibu / Yudanaka onsen",
       "status": "open",
-      "when": "4 Jan with monkeys, or another rest window",
+      "when": "2 Jan with monkeys, or another rest window",
       "detail": "Onsen towns near Jigokudani. Cars from Yomase. Not booked.",
       "lines": [],
       "links": []
@@ -936,7 +928,7 @@
     {
       "id": "disney-usj",
       "group": "last-block",
-      "title": "DisneySea or USJ — not both",
+      "title": "DisneySea or USJ, not both",
       "status": "deferred",
       "when": "Last 4 nights, after Tokyo vs Kyoto is chosen",
       "detail": "Faye deferred Disney vs USJ until the last 4 nights are Tokyo or Kyoto. Not booked. No tickets bought.",
@@ -968,7 +960,7 @@
             "perPerson": "~$774",
             "nextStep": "Reserved · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge.",
             "url": "https://www.airbnb.com/rooms/1536728419485230997",
-            "note": "8032-2 Yomase. Check-in 30 Dec after 15:00 · out 5 Jan by 10:00. Yomase / Ryuo — not Nozawa village. Closest hill Ryuoo. Cars required. Host parking free for 3 vehicles."
+            "note": "8032-2 Yomase. Check-in 30 Dec after 15:00 · out 5 Jan by 10:00. Yomase / Ryuo, not Nozawa village. Closest hill Ryuoo. Cars required. Host parking free for 3 vehicles."
           },
           {
             "id": "tokyo-4",
@@ -1043,7 +1035,7 @@
     "label": "Estimate",
     "asOf": "14 Sep 2026",
     "placeholder": "Working estimate. Not locked.",
-    "workingNote": "Tabs 8/10/12, default 8. Last 4 nights omitted. AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Cars required for the Yomase / Ryuo base — not booked.",
+    "workingNote": "Tabs 8/10/12, default 8. Last 4 nights omitted. AlpineCottage Ryuo · HMCZA2Z53J · $6,193.11 · pending Nov 22 charge. Cars required for the Yomase / Ryuo base, not booked.",
     "basis": "USD per person at 8/10/12. Working estimate. Last 4 nights omitted.",
     "summary": "Subtotal ~$3,140 without rental at 8 (Tokyo $545 + AlpineCottage Ryuo $774 + cars $182 + lifts $182 + monkey $57 + flight $1,400). Ski lodging reserved · charge pending. Tokyo stay and cars are options.",
     "subtotalWithoutRental": "~$3,140",
@@ -1101,7 +1093,7 @@
     },
     "train": {
       "status": "open",
-      "text": "Trains are a future option — no seats held. Hakutaka stops at Iiyama; Kagayaki skips it. Ski-week logistics are cars, not a village van.",
+      "text": "Trains are a future option: no seats held. Hakutaka stops at Iiyama; Kagayaki skips it. Ski-week logistics are cars, not a village van.",
       "links": [
         {
           "label": "JR-EAST Train Reservation",
@@ -1124,7 +1116,7 @@
       "season": "Nozawa 2026–27 regular season (19 Dec 2026–28 Mar 2027 on the official table). Other hills buy at the window."
     },
     "rental": {
-      "shop": "Still open — bring vs rent",
+      "shop": "Still open: bring vs rent",
       "adultDaySet": "TBD"
     },
     "onsen": {
@@ -1180,7 +1172,7 @@
     },
     {
       "id": "nozawa-hotel",
-      "title": "Ski lodging is booked — AlpineCottage Ryuo",
+      "title": "Ski lodging is booked: AlpineCottage Ryuo",
       "detail": "AlpineCottage Ryuo booked HMCZA2Z53J, $6,193.11, charge pending 22 Nov. 8 adults. 8032-2 Yomase. Closest hill Ryuoo. Cars required.",
       "status": "locked",
       "priority": "now"
@@ -1201,9 +1193,9 @@
     },
     {
       "id": "ghibli-watch",
-      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
-      "detail": "Calendar published. Closed 27 Dec–2 Jan. Only if last city is Tokyo: 6–8 Jan. Lawson 10 Dec 2026, 10:00 JST. Do not claim tickets exist.",
-      "status": "calendar-published",
+      "title": "Ghibli Museum Mitaka: booked 6 Jan",
+      "detail": "Booked via GetYourGuide with Yummy Guide for Wed 6 Jan. Entry time TBD. Based at KOKORO INN, Asakusa.",
+      "status": "locked",
       "priority": "later"
     },
     {
@@ -1225,15 +1217,15 @@
     {
       "id": "tokyo-hotel",
       "title": "Tokyo lodging both ends",
-      "detail": "Not booked.",
+      "detail": "Booked. Sumida house and KOKORO INN. Join links are on the Lodging tab.",
       "status": "open",
       "priority": "soon"
     },
     {
       "id": "ghibli-watch",
-      "title": "Ghibli Lawson sale 10 Dec 2026 — do not buy yet",
-      "detail": "Only if last city is Tokyo: 6–8 Jan. Closed 27 Dec–2 Jan. Do not claim tickets exist.",
-      "status": "calendar-published",
+      "title": "Ghibli Museum Mitaka: booked 6 Jan",
+      "detail": "Booked via GetYourGuide with Yummy Guide for Wed 6 Jan. Entry time TBD. Based at KOKORO INN, Asakusa.",
+      "status": "locked",
       "priority": "later"
     },
     {

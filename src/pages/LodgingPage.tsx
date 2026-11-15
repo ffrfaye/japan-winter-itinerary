@@ -1,105 +1,113 @@
-import { useCallback, useMemo, useState } from 'react'
-import { GhostTabs } from '@/components/GhostTabs'
-import { LodgingCompareCard } from '@/components/LodgingCompareCard'
-import { LodgingCompareMap } from '@/components/LodgingCompareMap'
-import {
-  filterLodgingCards,
-  isFadedCard,
-  loadLodgingFile,
-  lodgingBedrooms,
-  lodgingLocations,
-  nozawaMapCaption,
-} from '@/lib/lodging'
-import type { BedroomCount, LodgingLocation } from '@/types/lodging'
+import { stayOrder, stays, type StayId } from '@/data/stays'
+import { Button } from '@/components/ui/button'
 
 export function LodgingPage() {
-  const catalog = useMemo(() => loadLodgingFile(), [])
-  const [location, setLocation] = useState<LodgingLocation>('nozawa')
-  const [bedrooms, setBedrooms] = useState<BedroomCount>(4)
-  const [selectedId, setSelectedId] = useState<string | null>(null)
-
-  const cards = useMemo(
-    () => filterLodgingCards(catalog.properties, location, bedrooms),
-    [catalog, location, bedrooms],
-  )
-
-  const select = useCallback((id: string) => {
-    setSelectedId(id)
-    document.getElementById(`lodging-card-${id}`)?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-    })
-  }, [])
-
   return (
-    <div className="space-y-4">
-      <header className="space-y-3">
-        <h1 className="text-3xl font-medium tracking-tight">Lodging</h1>
-        {location === 'nozawa' && catalog.nozawa_banner ? (
-          <p className="text-sm text-zinc-600">{catalog.nozawa_banner}</p>
-        ) : location === 'tokyo' ? (
-          <p className="text-sm text-zinc-600">
-            Tokyo lodging both ends is not booked — first 3 nights and last 4
-            nights (or another last city).
+    <div>
+      <div className="mb-5 rounded-xl border border-zinc-200 bg-white px-3 pt-3.5 pb-4 shadow-sm">
+        <div className="mb-3 flex items-center justify-between px-1">
+          <p className="text-[11px] font-medium tracking-wider text-zinc-400 uppercase">
+            Three stays
           </p>
-        ) : location === 'kyoto' ? (
-          <p className="text-sm text-zinc-600">
-            Last-city option only if 5–9 Jan is not Tokyo. Nothing held.
-          </p>
-        ) : null}
-        <GhostTabs
-          label="Location"
-          value={location}
-          onChange={(next) => {
-            setLocation(next)
-            setSelectedId(null)
-          }}
-          options={lodgingLocations}
-        />
-        <GhostTabs
-          label="Bedrooms"
-          value={bedrooms}
-          onChange={(next) => {
-            setBedrooms(next)
-            setSelectedId(null)
-          }}
-          options={lodgingBedrooms}
-        />
-      </header>
-
-      <div className="flex flex-col gap-4 md:flex-row md:items-start">
-        <div className="order-1 h-[40vh] md:order-2 md:sticky md:top-6 md:h-[calc(100svh-8rem)] md:w-[40%] md:shrink-0">
-          <LodgingCompareMap
-            location={location}
-            cards={cards}
-            bedrooms={bedrooms}
-            selectedId={selectedId}
-            onSelect={select}
-            caption={
-              location === 'nozawa'
-                ? nozawaMapCaption(catalog.nozawa_map_notes)
-                : location === 'kyoto'
-                  ? catalog.kyoto_notes ?? null
-                  : null
-            }
-          />
+          <p className="text-[11px] font-medium text-zinc-500">13 nights · booked</p>
         </div>
-        <div className="order-2 min-w-0 space-y-4 md:order-1 md:w-[60%]">
-          {cards.length === 0 ? (
-            <p className="text-sm text-zinc-600">No places in this filter</p>
-          ) : (
-            cards.map((card) => (
-              <LodgingCompareCard
-                key={card.id}
-                card={card}
-                faded={isFadedCard(card, bedrooms)}
-                active={card.id === selectedId}
-                onSelect={() => setSelectedId(card.id)}
-              />
-            ))
-          )}
+        <div className="grid grid-cols-3 gap-1">
+          {stayOrder.map((id) => {
+            const stay = stays[id]
+            return (
+              <a
+                key={id}
+                href={`#stay-${id}`}
+                className="min-w-0 px-1 text-center"
+                onClick={(event) => {
+                  event.preventDefault()
+                  document.getElementById(`stay-${id}`)?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  })
+                }}
+              >
+                <p className="text-[12px] font-semibold tracking-tight">
+                  {stay.timelineCity}
+                </p>
+                <p className="mt-0.5 text-[11px] text-zinc-500">{stay.timelineDates}</p>
+                <p className="text-[10px] text-zinc-400">{stay.nights} nights</p>
+              </a>
+            )
+          })}
+        </div>
+        <div className="mt-3 flex items-center px-5" aria-hidden>
+          <span className="size-2.5 shrink-0 rounded-full bg-zinc-950" />
+          <span className="h-px flex-1 bg-zinc-200" />
+          <span className="size-2.5 shrink-0 rounded-full bg-zinc-950" />
+          <span className="h-px flex-1 bg-zinc-200" />
+          <span className="size-2.5 shrink-0 rounded-full bg-zinc-950" />
         </div>
       </div>
+      <div className="space-y-4 pb-6">
+        {stayOrder.map((id) => (
+          <StayCard key={id} id={id} />
+        ))}
+      </div>
     </div>
+  )
+}
+
+function StayCard({ id }: { id: StayId }) {
+  const stay = stays[id]
+  return (
+    <article
+      id={`stay-${id}`}
+      className="scroll-mt-6 overflow-hidden rounded-xl border border-zinc-200 bg-white shadow-sm"
+    >
+      <div className="relative aspect-video overflow-hidden bg-zinc-100">
+        <img
+          src={stay.photo}
+          alt={stay.shortName}
+          className="h-full w-full object-cover"
+          style={{ objectPosition: stay.photoPos }}
+        />
+      </div>
+      <div className="px-4 pt-3 pb-4">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <span className="inline-flex rounded-md bg-zinc-950 px-1.5 py-px text-[10px] font-medium text-white">
+            Booked
+          </span>
+          <span className="inline-flex rounded-md border border-zinc-200 bg-zinc-50 px-1.5 py-px text-[10px] font-medium text-zinc-600">
+            {stay.cityChip}
+          </span>
+        </div>
+        <h2 className="mt-2 text-[16px] leading-snug font-semibold tracking-tight">
+          {stay.titleEn}
+        </h2>
+        <p className="mt-1 text-[11px] leading-snug text-zinc-400">{stay.titleJp}</p>
+        <p className="mt-3 text-[13px] font-medium text-zinc-950">{stay.dateLine}</p>
+        <p className="mt-0.5 text-[13px] leading-snug text-zinc-500">
+          Check-in {stay.checkIn} · Check-out {stay.checkOut} · {stay.nights} nights
+        </p>
+        <p className="mt-1.5 text-[13px] leading-snug text-zinc-500">{stay.area}</p>
+        <p className="mt-1 text-[13px] text-zinc-500">
+          {stay.guests} · Host {stay.host}
+        </p>
+        {stay.note ? (
+          <p className="mt-1 text-[13px] text-zinc-500">{stay.note}</p>
+        ) : null}
+        <Button asChild className="mt-4 h-10 w-full rounded-xl">
+          <a href={stay.invite} target="_blank" rel="noreferrer">
+            Join this trip on Airbnb
+          </a>
+        </Button>
+        <p className="mt-3 text-center">
+          <a
+            href={stay.listing}
+            target="_blank"
+            rel="noreferrer"
+            className="text-[13px] font-medium text-zinc-600 underline decoration-zinc-300 underline-offset-2"
+          >
+            View listing
+          </a>
+        </p>
+      </div>
+    </article>
   )
 }

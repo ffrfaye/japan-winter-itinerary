@@ -5,9 +5,9 @@ import { cn } from '@/lib/utils'
 const items = [
   { id: 'itinerary', label: 'Itinerary', Icon: Calendar },
   { id: 'lodging', label: 'Lodging', Icon: BedDouble },
-  { id: 'planning', label: 'Planning', Icon: ClipboardList },
-  { id: 'budget', label: 'Budget', Icon: Wallet },
   { id: 'flights', label: 'Flights', Icon: Plane },
+  { id: 'budget', label: 'Budget', Icon: Wallet },
+  { id: 'planning', label: 'Planning', Icon: ClipboardList },
 ] as const
 
 export function PageDock({

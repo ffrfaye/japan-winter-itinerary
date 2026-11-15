@@ -7,6 +7,7 @@ import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { BudgetPage } from '@/pages/BudgetPage'
 import { FlightsPage } from '@/pages/FlightsPage'
+import { FlightsProvider } from '@/lib/flights-context'
 import { trip } from '@/trip'
 
 const widths: Record<TabId, string> = {
@@ -14,7 +15,7 @@ const widths: Record<TabId, string> = {
   rsvp: 'max-w-xl',
   planning: 'max-w-lg',
   budget: 'max-w-lg',
-  lodging: 'max-w-6xl',
+  lodging: 'max-w-lg',
   flights: 'max-w-lg',
 }
 
@@ -22,14 +23,17 @@ export default function App() {
   const [tab, setTab] = useState<TabId>(() =>
     parseTab(typeof window === 'undefined' ? '' : window.location.hash),
   )
-  const [mode, setMode] = useState<ViewMode>('cards')
+  const [mode, setMode] = useState<ViewMode>('list')
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 768px)')
-    const sync = () => setMode(media.matches ? 'list' : 'cards')
-    sync()
-    media.addEventListener('change', sync)
-    return () => media.removeEventListener('change', sync)
+    try {
+      for (const key of Object.keys(localStorage)) {
+        const value = localStorage.getItem(key)
+        if (value === 'cards' || value === 'list') localStorage.removeItem(key)
+      }
+    } catch {
+      // Storage can be blocked. The list default does not depend on it.
+    }
   }, [])
 
   useEffect(() => {
@@ -47,6 +51,7 @@ export default function App() {
   }
 
   return (
+    <FlightsProvider>
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
       <main
         className={cn(
@@ -68,5 +73,6 @@ export default function App() {
       </main>
       <PageDock tab={tab} onChange={go} />
     </div>
+    </FlightsProvider>
   )
 }
