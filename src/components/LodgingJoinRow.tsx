@@ -1,3 +1,4 @@
+import { ExternalLink } from 'lucide-react'
 import { stayById, stayNeighborhood, type StayId } from '@/data/stays'
 
 export function LodgingJoinRow({
@@ -15,6 +16,7 @@ export function LodgingJoinRow({
       href={stay.invite}
       target="_blank"
       rel="noreferrer"
+      aria-label={`Open ${stay.shortName} on Airbnb`}
       className="mt-2 flex items-center gap-2.5 rounded-lg border border-zinc-200 bg-zinc-50/80 px-2 py-1.5 hover:bg-zinc-50"
     >
       <img
@@ -32,7 +34,7 @@ export function LodgingJoinRow({
           <span className="whitespace-nowrap">{stay.guests}</span>
         </span>
       </span>
-      <span className="shrink-0 text-[11px] font-medium text-zinc-700">Join</span>
+      <ExternalLink className="size-3.5 shrink-0 text-zinc-400" aria-hidden="true" />
     </a>
   )
 }
