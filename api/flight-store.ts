@@ -1,5 +1,56 @@
 import { del, get, put } from '@vercel/blob'
-import { seedFlights, type FlightEntry } from '../src/lib/flight-record.ts'
+
+export type FlightLeg = {
+  airport: string
+  date: string
+  time: string
+  flight: string
+  airline: string
+  fromAirport?: string
+  fromDate?: string
+  fromTime?: string
+  toAirport?: string
+  toDate?: string
+  toTime?: string
+}
+
+export type FlightEntry = {
+  id: string
+  people: string[]
+  nickname: string | null
+  screenshotPath: string | null
+  arrival: FlightLeg | null
+  departure: FlightLeg | null
+}
+
+const seedFlights: FlightEntry[] = [
+  {
+    id: 'seed-fyll',
+    people: ['Faye', 'Will'],
+    nickname: 'Fyll',
+    screenshotPath: null,
+    arrival: {
+      airport: 'NRT',
+      date: '2026-12-27',
+      time: '15:00',
+      flight: 'UA837',
+      airline: 'United',
+      fromAirport: 'SFO',
+      fromDate: '2026-12-26',
+      fromTime: '10:40',
+    },
+    departure: {
+      airport: 'NRT',
+      date: '2027-01-09',
+      time: '16:50',
+      flight: 'UA838',
+      airline: 'United',
+      toAirport: 'SFO',
+      toDate: '2027-01-09',
+      toTime: '09:25',
+    },
+  },
+]
 
 const indexPath = 'flights/index.json'
 

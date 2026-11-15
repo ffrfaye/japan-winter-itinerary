@@ -1,4 +1,4 @@
-import type { FlightEntry, FlightLeg } from '../../src/lib/flight-record.ts'
+import type { FlightEntry, FlightLeg } from '../flight-store.ts'
 import {
   publicFlights,
   readStoredFlights,
