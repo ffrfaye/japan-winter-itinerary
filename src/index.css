@@ -131,4 +131,21 @@
   body {
     overflow-x: hidden;
     }
+  .trip-map .maplibregl-ctrl-group {
+    border: 1px solid #e4e4e7;
+    border-radius: 10px;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .trip-map .maplibregl-ctrl-group button {
+    width: 36px;
+    height: 36px;
+  }
+  .trip-map .maplibregl-ctrl-attrib {
+    font-size: 10px;
+    background: rgb(255 255 255 / 80%);
+  }
+  .trip-map .maplibregl-canvas-container.maplibregl-interactive {
+    touch-action: none;
+  }
 }
