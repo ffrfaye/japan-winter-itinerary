@@ -23,12 +23,12 @@
   },
   "group": {
     "lead": "Faye Fan",
-    "sizeLabel": "12 people · 6 pairs",
+    "sizeLabel": "10 people · 5 pairs",
     "sizeOpen": "Headcount locked for display",
     "sizeStatus": "locked",
-    "invited": 12,
+    "invited": 10,
     "rsvpHeadline": "Can you come?",
-    "rsvpSub": "Headcount picks the house and the trains. 12 invited.",
+    "rsvpSub": "Headcount picks the house and the trains. 10 invited.",
     "rsvpSaveNote": "Picks don’t save yet. Refreshing the page clears them.",
     "nyeSoldoutNote": "Ski lodging is booked — AlpineCottage Ryuo, Yomase / Ryuo (HMCZA2Z53J).",
     "pairs": [
@@ -62,14 +62,6 @@
         "names": [
           "Eric",
           "Macy"
-        ]
-      },
-      {
-        "id": "andriha",
-        "nickname": "Andriha",
-        "names": [
-          "Andrew",
-          "Spriha"
         ]
       },
       {

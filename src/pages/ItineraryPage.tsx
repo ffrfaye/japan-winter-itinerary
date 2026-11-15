@@ -4,7 +4,9 @@ import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
 import { JapanMap } from '@/components/JapanMap'
+import { FlightDayLine } from '@/components/FlightDayLine'
 import { LodgingJoinRow } from '@/components/LodgingJoinRow'
+import { useFlights } from '@/lib/flights-context'
 import { ViewToggle } from '@/components/ViewToggle'
 import { groupDays, itineraryDays, type ItineraryDay, type ViewMode } from '@/lib/itinerary'
 
@@ -191,6 +193,7 @@ function CityChip({ city }: { city: string }) {
 }
 
 function DayRow({ day }: { day: ItineraryDay }) {
+  const { flights } = useFlights()
   return (
     <div id={`day-${day.id}`} className="flex scroll-mt-6 gap-3 px-3.5 py-3">
       <div className="w-14 shrink-0 pt-0.5 text-[13px] font-medium whitespace-nowrap text-zinc-500">
@@ -207,6 +210,7 @@ function DayRow({ day }: { day: ItineraryDay }) {
         </div>
         <p className="mt-0.5 text-sm font-medium text-zinc-950">{day.title}</p>
         <p className="mt-0.5 text-[13px] leading-snug text-zinc-500">{day.summary}</p>
+        <FlightDayLine dayId={day.id} flights={flights} />
         {day.lodging.length > 0 ? (
           <div className="mt-1">
             {day.lodging.map((stop) => (
@@ -225,6 +229,7 @@ function DayRow({ day }: { day: ItineraryDay }) {
 }
 
 function DayCard({ day, onOpen }: { day: ItineraryDay; onOpen: () => void }) {
+  const { flights } = useFlights()
   return (
     <article className="rounded-xl border border-zinc-200 bg-white px-3.5 py-2.5 shadow-sm">
       <button type="button" onClick={onOpen} className="w-full text-left">
@@ -238,6 +243,7 @@ function DayCard({ day, onOpen }: { day: ItineraryDay; onOpen: () => void }) {
             <p className="mt-0.5 line-clamp-2 text-[13px] leading-snug text-zinc-500">
               {day.summary}
             </p>
+            <FlightDayLine dayId={day.id} flights={flights} />
             {day.lodging.length > 0 ? (
               <p className="mt-1 text-[11px] font-medium text-zinc-500">
                 {day.lodging.map((stop) => `${stop.action}`).join(' · ')}

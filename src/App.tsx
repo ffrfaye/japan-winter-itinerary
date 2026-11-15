@@ -7,6 +7,7 @@ import { LodgingPage } from '@/pages/LodgingPage'
 import { PlanningPage } from '@/pages/PlanningPage'
 import { BudgetPage } from '@/pages/BudgetPage'
 import { FlightsPage } from '@/pages/FlightsPage'
+import { FlightsProvider } from '@/lib/flights-context'
 import { trip } from '@/trip'
 
 const widths: Record<TabId, string> = {
@@ -47,6 +48,7 @@ export default function App() {
   }
 
   return (
+    <FlightsProvider>
     <div className="min-h-svh bg-zinc-50 text-zinc-950">
       <main
         className={cn(
@@ -68,5 +70,6 @@ export default function App() {
       </main>
       <PageDock tab={tab} onChange={go} />
     </div>
+    </FlightsProvider>
   )
 }
