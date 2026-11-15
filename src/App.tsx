@@ -14,7 +14,7 @@ const widths: Record<TabId, string> = {
   rsvp: 'max-w-xl',
   planning: 'max-w-lg',
   budget: 'max-w-lg',
-  lodging: 'max-w-6xl',
+  lodging: 'max-w-lg',
   flights: 'max-w-lg',
 }
 

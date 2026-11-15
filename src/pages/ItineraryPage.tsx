@@ -3,17 +3,10 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { CardPager } from '@/components/CardPager'
 import { DayJump } from '@/components/DayJump'
 import { DaySheet } from '@/components/DaySheet'
-import { PlaceCards } from '@/components/PlaceCards'
-import { ViewToggle } from '@/components/ViewToggle'
 import { JapanMap } from '@/components/JapanMap'
-import {
-  dayHeading,
-  groupDays,
-  mapDays,
-  type ItineraryDay,
-  type ViewMode,
-} from '@/lib/itinerary'
-import { trip } from '@/trip'
+import { LodgingJoinRow } from '@/components/LodgingJoinRow'
+import { ViewToggle } from '@/components/ViewToggle'
+import { groupDays, itineraryDays, type ItineraryDay, type ViewMode } from '@/lib/itinerary'
 
 export function ItineraryPage({
   mode,
@@ -22,7 +15,7 @@ export function ItineraryPage({
   mode: ViewMode
   onModeChange: (next: ViewMode) => void
 }) {
-  const days = useMemo(() => mapDays(trip), [])
+  const days = useMemo(() => itineraryDays, [])
   const groups = useMemo(() => groupDays(days), [days])
   const [desktop, setDesktop] = useState(false)
   const [index, setIndex] = useState(0)
@@ -131,31 +124,23 @@ export function ItineraryPage({
         <ViewToggle mode={mode} onChange={onModeChange} />
       </div>
       {mode === 'list' ? (
-        <div className="space-y-8">
+        <div className="space-y-7">
           {groups.map((group) => (
             <section key={group.id}>
-              {group.id === 'overview' ? null : (
-                <h2 className="text-xs font-medium tracking-wide text-zinc-600 uppercase">
-                  {group.label}
-                </h2>
-              )}
-              <ul className={group.id === 'overview' ? '' : 'divide-y divide-zinc-200'}>
+              <h2 className="mb-2 text-[11px] font-medium tracking-wider text-zinc-400 uppercase">
+                {group.label}
+              </h2>
+              <div className="divide-y divide-zinc-100 overflow-hidden rounded-xl border border-zinc-200 bg-white">
                 {group.days.map((day) => (
                   <DayRow key={day.id} day={day} />
                 ))}
-              </ul>
+              </div>
             </section>
           ))}
         </div>
       ) : (
-        <div className="relative z-10 space-y-4">
-          <JapanMap
-            pins={active.pins}
-            showTravelLine={active.showTravelLine}
-            showCluster={active.showCluster}
-            pinLinks={active.pinLinks}
-            softLabels={active.overview}
-          />
+        <div className="relative z-10 space-y-3">
+          <JapanMap focus={active.mapFocus} />
           <div className="relative">
             {showPager ? (
               <CardPager
@@ -165,46 +150,26 @@ export function ItineraryPage({
                 onNext={() => emblaApi?.scrollNext()}
               />
             ) : null}
-            <div className="overflow-hidden" ref={emblaRef}>
+            <div className="overflow-hidden" ref={emblaRef} data-card-scroller>
               <div className="flex">
                 {days.map((day) => (
                   <div key={day.id} className="min-w-0 shrink-0 grow-0 basis-full px-px">
-                    {day.overview ? (
-                      <OverviewCard day={day} />
-                    ) : (
-                      <article className="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                        <button
-                          type="button"
-                          onClick={() => openCard(day.id)}
-                          className="w-full text-left"
-                        >
-                          <p className="text-sm text-zinc-600">{dayHeading(day)}</p>
-                          <p className="mt-1 text-sm font-medium">{day.title}</p>
-                          <p className="mt-1 line-clamp-2 text-sm text-zinc-600">
-                            {day.summary}
-                          </p>
-                        </button>
-                        {day.places.length > 0 ? (
-                          <div className="mt-3">
-                            <PlaceCards places={day.places} />
-                          </div>
-                        ) : null}
-                      </article>
-                    )}
+                    <DayCard day={day} onOpen={() => openCard(day.id)} />
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="flex justify-center gap-1.5">
+          <div className="flex flex-wrap justify-center gap-1.5">
             {days.map((day, dayIndex) => (
               <button
                 key={day.id}
                 type="button"
-                aria-label={day.overview ? 'Overview' : `Day ${day.dayNumber}`}
+                aria-label={`${day.dateLabel}, ${day.title}`}
+                aria-current={dayIndex === index ? 'true' : undefined}
                 onClick={() => emblaApi?.scrollTo(dayIndex)}
-                className={`size-1.5 rounded-full ${
-                  dayIndex === index ? 'bg-zinc-900' : 'bg-zinc-300'
+                className={`h-1.5 rounded-full transition-all ${
+                  dayIndex === index ? 'w-4 bg-zinc-900' : 'w-1.5 bg-zinc-300'
                 }`}
               />
             ))}
@@ -212,94 +177,96 @@ export function ItineraryPage({
         </div>
       )}
 
-      {openDay ? (
-        <DaySheet day={openDay} onClose={() => setOpenId(null)} />
-      ) : null}
+      {openDay ? <DaySheet day={openDay} onClose={() => setOpenId(null)} /> : null}
     </div>
   )
 }
 
-function OverviewCard({ day }: { day: ItineraryDay }) {
+function CityChip({ city }: { city: string }) {
   return (
-    <article className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
-      <p className="text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
-        Overview
-      </p>
-      <p className="mt-1 text-sm font-medium">{day.title}</p>
-      <p className="mt-1 text-[13px] text-zinc-500">Trip at a glance</p>
-      <p className="mt-2 text-sm text-zinc-600">{day.summary}</p>
-      {day.strips.length > 0 ? (
-        <div className="mt-3 space-y-1">
-          {day.strips.map((strip) => (
-            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
-              <span className="text-zinc-500">{strip.title}</span>
-              <span className="text-zinc-400"> · </span>
-              {strip.detail}
-            </p>
-          ))}
-        </div>
-      ) : null}
-      {day.places.length > 0 ? (
-        <div className="mt-3">
-          <PlaceCards places={day.places} />
-        </div>
-      ) : null}
-    </article>
+    <span className="inline-flex rounded-md border border-zinc-200 bg-zinc-50 px-1.5 py-px text-[10px] font-medium text-zinc-600">
+      {city}
+    </span>
   )
 }
 
 function DayRow({ day }: { day: ItineraryDay }) {
-  if (day.overview) {
-    return (
-      <li
-        id={`day-${day.id}`}
-        className="scroll-mt-6 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4"
-      >
-        <p className="text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
-          Overview
-        </p>
-        <p className="mt-1 text-sm font-medium">{day.title}</p>
-        <p className="mt-1 text-sm text-zinc-600">{day.summary}</p>
-        <div className="mt-3 space-y-1">
-          {day.strips.map((strip) => (
-            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
-              <span className="text-zinc-500">{strip.title}</span>
-              <span className="text-zinc-400"> · </span>
-              {strip.detail}
-            </p>
+  return (
+    <div id={`day-${day.id}`} className="flex scroll-mt-6 gap-3 px-3.5 py-3">
+      <div className="w-14 shrink-0 pt-0.5 text-[13px] font-medium whitespace-nowrap text-zinc-500">
+        {day.dateLabel}
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-center gap-1.5">
+          <CityChip city={day.city} />
+          {day.kinds.map((kind) => (
+            <span key={kind} className="text-[10px] text-zinc-400">
+              {kind}
+            </span>
           ))}
         </div>
-        <div className="mt-3">
-          <PlaceCards places={day.places} />
-        </div>
-      </li>
-    )
-  }
+        <p className="mt-0.5 text-sm font-medium text-zinc-950">{day.title}</p>
+        <p className="mt-0.5 text-[13px] leading-snug text-zinc-500">{day.summary}</p>
+        {day.lodging.length > 0 ? (
+          <div className="mt-1">
+            {day.lodging.map((stop) => (
+              <LodgingJoinRow
+                key={`${stop.stayId}-${stop.action}`}
+                stayId={stop.stayId}
+                action={stop.action}
+                when={stop.when}
+              />
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </div>
+  )
+}
 
+function DayCard({ day, onOpen }: { day: ItineraryDay; onOpen: () => void }) {
   return (
-    <li
-      id={`day-${day.id}`}
-      className="grid scroll-mt-6 grid-cols-[4.5rem_1fr] gap-4 px-0 py-4"
-    >
-      <div className="text-sm">
-        <p className="text-zinc-600">Day {day.dayNumber}</p>
-        <p className="font-medium">{day.short}</p>
-      </div>
-      <div className="min-w-0 space-y-1">
-        <p className="text-sm font-medium">{day.title}</p>
-        {day.strips.length > 0 ? (
-          day.strips.map((strip) => (
-            <p key={`${strip.title}-${strip.detail}`} className="text-sm text-zinc-600">
-              <span className="text-zinc-500">{strip.title}</span>
-              <span className="text-zinc-400"> · </span>
-              {strip.detail}
+    <article className="rounded-xl border border-zinc-200 bg-white px-3.5 py-2.5 shadow-sm">
+      <button type="button" onClick={onOpen} className="w-full text-left">
+        <div className="flex items-start gap-3">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-center gap-2">
+              <span className="text-[13px] font-medium text-zinc-500">{day.dateLabel}</span>
+              <CityChip city={day.city} />
+            </div>
+            <h3 className="mt-0.5 text-[15px] font-semibold tracking-tight">{day.title}</h3>
+            <p className="mt-0.5 line-clamp-2 text-[13px] leading-snug text-zinc-500">
+              {day.summary}
             </p>
-          ))
-        ) : (
-          <p className="text-sm text-zinc-600">{day.summary}</p>
-        )}
-        <PlaceCards places={day.places} />
-      </div>
-    </li>
+            {day.lodging.length > 0 ? (
+              <p className="mt-1 text-[11px] font-medium text-zinc-500">
+                {day.lodging.map((stop) => `${stop.action}`).join(' · ')}
+              </p>
+            ) : (
+              <p className="mt-1 text-[11px] font-medium text-zinc-400">Tap for the full day</p>
+            )}
+          </div>
+          {day.photo ? (
+            <img
+              src={day.photo.src}
+              alt=""
+              className="h-11 w-11 shrink-0 rounded-lg object-cover"
+            />
+          ) : null}
+        </div>
+      </button>
+      {day.lodging.length > 0 ? (
+        <div className="mt-1">
+          {day.lodging.map((stop) => (
+            <LodgingJoinRow
+              key={`${stop.stayId}-${stop.action}`}
+              stayId={stop.stayId}
+              action={stop.action}
+              when={stop.when}
+            />
+          ))}
+        </div>
+      ) : null}
+    </article>
   )
 }

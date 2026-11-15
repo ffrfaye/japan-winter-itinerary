@@ -25,10 +25,7 @@ export function DayJump({
   const menu = useRef<HTMLDivElement>(null)
   const [pos, setPos] = useState({ top: 0, left: 0 })
   const current = days[index]
-  const overview = days.find((day) => day.overview)
-  const dated = days
-    .map((day, dayIndex) => ({ day, dayIndex }))
-    .filter(({ day }) => !day.overview)
+  const dated = days.map((day, dayIndex) => ({ day, dayIndex }))
 
   function placeMenu() {
     const rect = trigger.current?.getBoundingClientRect()
@@ -80,7 +77,7 @@ export function DayJump({
         }}
         className={cn(
           'w-full px-3 py-1.5 text-left text-sm hover:bg-zinc-50',
-          day.overview ? 'font-medium text-zinc-900' : 'text-zinc-700',
+          'text-zinc-700',
         )}
       >
         {day.jumpLabel}
@@ -110,18 +107,9 @@ export function DayJump({
               style={{ top: pos.top, left: pos.left }}
               className="fixed z-[3000] max-h-80 min-w-44 overflow-y-auto rounded-xl border border-zinc-200 bg-white py-1 shadow-sm"
             >
-              {overview ? option(overview, days.indexOf(overview)) : null}
-              {dated.length > 0 ? (
-                <>
-                  <div className="my-1 border-t border-zinc-200" />
-                  <p className="px-3 pt-1 pb-0.5 text-[11px] font-medium tracking-wide text-zinc-500 uppercase">
-                    Days
-                  </p>
-                  {dated.map(({ day, dayIndex }) => (
-                    <div key={day.id}>{option(day, dayIndex)}</div>
-                  ))}
-                </>
-              ) : null}
+              {dated.map(({ day, dayIndex }) => (
+                <div key={day.id}>{option(day, dayIndex)}</div>
+              ))}
             </div>,
             document.body,
           )
