@@ -150,17 +150,42 @@ export function splitLocal(value: string) {
   return { date: date ?? '', time: (time ?? '').slice(0, 5) }
 }
 
+export const tripStart = '2026-12-27'
+
+const japanAirports = new Set(['HND', 'NRT', 'KIX', 'ITM', 'NGO', 'FUK', 'CTS', 'OKA'])
+
+export function landsInJapan(code: string) {
+  return japanAirports.has(code.toUpperCase())
+}
+
+export function earlyArrivals(entries: FlightEntry[]) {
+  return entries
+    .filter((entry) => {
+      const arrival = entry.arrival
+      return Boolean(
+        arrival && arrival.date && arrival.date < tripStart && landsInJapan(arrival.airport),
+      )
+    })
+    .sort((a, b) => {
+      const left = `${a.arrival?.date ?? ''}T${a.arrival?.time ?? ''}`
+      const right = `${b.arrival?.date ?? ''}T${b.arrival?.time ?? ''}`
+      return left.localeCompare(right)
+    })
+}
+
 export function legsFromParsed(flights: ParsedLeg[]) {
   const arrivalFlight =
+    flights.find((flight) => flight.direction === 'arrival' && landsInJapan(flight.to)) ??
+    flights.find((flight) => landsInJapan(flight.to)) ??
     flights.find((flight) => flight.direction === 'arrival') ??
-    flights.find((flight) => flight.to === 'NRT' || flight.to === 'HND') ??
     flights[0]
   const departureFlight =
-    flights.find((flight) => flight.direction === 'departure') ??
     flights.find(
       (flight) =>
-        (flight.from === 'NRT' || flight.from === 'HND') && flight !== arrivalFlight,
-    )
+        flight !== arrivalFlight &&
+        flight.direction === 'departure' &&
+        landsInJapan(flight.from),
+    ) ?? flights.find((flight) => flight !== arrivalFlight && landsInJapan(flight.from))
 
   function toArrival(flight: ParsedLeg | undefined): FlightLeg | null {
     if (!flight) return null

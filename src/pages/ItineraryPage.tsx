@@ -8,6 +8,7 @@ import { stayForNight } from '@/data/stays'
 import { FlightDayLine } from '@/components/FlightDayLine'
 import { LodgingJoinRow } from '@/components/LodgingJoinRow'
 import { useFlights } from '@/lib/flights-context'
+import { earlyArrivals, formatFlightDate, peopleLabel } from '@/lib/flight-record'
 import { ViewToggle } from '@/components/ViewToggle'
 import { groupDays, itineraryDays, type ItineraryDay, type ViewMode } from '@/lib/itinerary'
 
@@ -128,6 +129,7 @@ export function ItineraryPage({
       </div>
       {mode === 'list' ? (
         <div className="space-y-7">
+          <PreTripCard />
           {groups.map((group) => (
             <section key={group.id}>
               <h2 className="mb-2 text-[11px] font-medium tracking-wider text-zinc-400 uppercase">
@@ -190,6 +192,39 @@ function CityChip({ city }: { city: string }) {
     <span className="inline-flex rounded-md border border-zinc-200 bg-zinc-50 px-1.5 py-px text-[10px] font-medium text-zinc-600">
       {city}
     </span>
+  )
+}
+
+function PreTripCard() {
+  const { flights } = useFlights()
+  const early = earlyArrivals(flights)
+  if (early.length === 0) return null
+  return (
+    <section>
+      <h2 className="mb-2 text-[11px] font-medium tracking-wider text-zinc-400 uppercase">
+        Pre-trip
+      </h2>
+      <div className="divide-y divide-zinc-100 overflow-hidden rounded-xl border border-zinc-200 bg-white">
+        {early.map((entry) => {
+          const arrival = entry.arrival
+          if (!arrival) return null
+          return (
+            <div key={entry.id} className="flex gap-3 px-3.5 py-3">
+              <div className="w-14 shrink-0 pt-0.5 text-[13px] font-medium whitespace-nowrap text-zinc-500">
+                {formatFlightDate(arrival.date).split(' ').slice(0, 2).join(' ')}
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="text-sm font-medium text-zinc-950">{peopleLabel(entry.people)}</p>
+                <p className="mt-0.5 text-[13px] leading-snug text-zinc-500">
+                  Arrives {formatFlightDate(arrival.date)}, {arrival.time}, {arrival.airport},{' '}
+                  {arrival.flight}
+                </p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </section>
   )
 }
 
