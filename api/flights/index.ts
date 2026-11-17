@@ -83,7 +83,7 @@ function cleanLeg(value: unknown): FlightLeg | null {
     airport: String(leg.airport ?? '').toUpperCase(),
     date: String(leg.date ?? ''),
     time: String(leg.time ?? ''),
-    flight: String(leg.flight ?? '').toUpperCase(),
+    flight: String(leg.flight ?? '').replace(/\s+/g, '').toUpperCase(),
     airline: String(leg.airline ?? ''),
     fromAirport: leg.fromAirport ? String(leg.fromAirport).toUpperCase() : undefined,
     fromDate: leg.fromDate ? String(leg.fromDate) : undefined,

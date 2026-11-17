@@ -20,10 +20,13 @@ const flightSchema = z.object({
 
 const prompt = `Read this flight itinerary or boarding-pass screenshot.
 Return the passenger first name only if it is clearly visible.
-Each leg needs direction, flightNumber, airline, from, to, departLocal, and arriveLocal.
-direction is "arrival" when the leg lands in Tokyo (NRT or HND) and "departure" when it leaves Tokyo.
+Each visible leg needs direction, flightNumber, airline, from, to, departLocal, and arriveLocal.
+A connection inside another country is not the Japan arrival. The arrival is the leg that lands in Japan: HND, NRT, KIX, ITM, NGO, FUK, CTS, or OKA.
+direction is "arrival" for that Japan landing and "departure" for the leg that leaves Japan.
+If the page says the flight arrives on a later calendar day, arriveLocal uses that arrival date and local time, not the departure date.
 from and to are IATA airport codes.
 departLocal and arriveLocal are local times as YYYY-MM-DDTHH:mm with no timezone.
+Do not invent a return or any leg that is not visible.
 Do not put confirmation codes, record locators, ticket numbers, or payment details in any field.
 If the image is not a readable flight, return an empty flights array.`
 
